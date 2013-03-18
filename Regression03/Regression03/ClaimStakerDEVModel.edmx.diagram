@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fba123dc538c458fb3ae96a9119157fc" Name="Diagram1" ZoomLevel="12">
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Batch_T" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Claim_T" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_T" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBase_T" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimReport_T" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Profession_T" Width="1.5" PointX="5.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Provider_T" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SoftwareConversion_T" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Statement_T" Width="1.5" PointX="5.25" PointY="24.5" IsExpanded="true" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Batch_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Statement_Provider" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

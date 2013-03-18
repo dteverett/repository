@@ -1,0 +1,1 @@
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\ApplicationExe\obj\Debug\ApplicationExe.csprojResolveAssemblyReference.cache

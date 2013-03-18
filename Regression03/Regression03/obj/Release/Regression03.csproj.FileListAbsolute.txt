@@ -1,0 +1,14 @@
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Regression03.dll.config
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Regression03.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Regression03.pdb
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\DatabaseConnection.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\EntityFramework.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Execute.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Logger.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Logger.pdb
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\DatabaseConnection.pdb
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\EntityFramework.xml
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\bin\Release\Execute.pdb
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\obj\Release\Regression03.csprojResolveAssemblyReference.cache
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\obj\Release\Regression03.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\obj\Release\Regression03.pdb

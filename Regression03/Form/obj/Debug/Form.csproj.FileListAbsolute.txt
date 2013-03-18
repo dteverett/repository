@@ -1,0 +1,5 @@
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\bin\Debug\Form.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\bin\Debug\Form.pdb
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\obj\Debug\Form.dll
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\obj\Debug\Form.pdb
+\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\obj\Debug\Form.csprojResolveAssemblyReference.cache

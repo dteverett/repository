@@ -1,0 +1,1928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ClaimStakerDEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ClaimStakerDEVModelStoreContainer">
+          <EntitySet Name="Batch_T" EntityType="ClaimStakerDEVModel.Store.Batch_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Claim_T" EntityType="ClaimStakerDEVModel.Store.Claim_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ClaimDentalBase_T" EntityType="ClaimStakerDEVModel.Store.ClaimDentalBase_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ClaimMedicalBase_T" EntityType="ClaimStakerDEVModel.Store.ClaimMedicalBase_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ClaimReport_T" EntityType="ClaimStakerDEVModel.Store.ClaimReport_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Profession_T" EntityType="ClaimStakerDEVModel.Store.Profession_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Provider_T" EntityType="ClaimStakerDEVModel.Store.Provider_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SoftwareConversion_T" EntityType="ClaimStakerDEVModel.Store.SoftwareConversion_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Statement_T" EntityType="ClaimStakerDEVModel.Store.Statement_T" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Batch_T_Profession_T" Association="ClaimStakerDEVModel.Store.FK_Batch_T_Profession_T">
+            <End Role="Profession_T" EntitySet="Profession_T" />
+            <End Role="Batch_T" EntitySet="Batch_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClaimDentalBase_T_Provider_T" Association="ClaimStakerDEVModel.Store.FK_ClaimDentalBase_T_Provider_T">
+            <End Role="Provider_T" EntitySet="Provider_T" />
+            <End Role="ClaimDentalBase_T" EntitySet="ClaimDentalBase_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClaimMedicalBase_T_Provider_T" Association="ClaimStakerDEVModel.Store.FK_ClaimMedicalBase_T_Provider_T">
+            <End Role="Provider_T" EntitySet="Provider_T" />
+            <End Role="ClaimMedicalBase_T" EntitySet="ClaimMedicalBase_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Provider_T_SoftwareConversion_T" Association="ClaimStakerDEVModel.Store.FK_Provider_T_SoftwareConversion_T">
+            <End Role="SoftwareConversion_T" EntitySet="SoftwareConversion_T" />
+            <End Role="Provider_T" EntitySet="Provider_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Statement_Provider" Association="ClaimStakerDEVModel.Store.FK_Statement_Provider">
+            <End Role="Provider_T" EntitySet="Provider_T" />
+            <End Role="Statement_T" EntitySet="Statement_T" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Batch_T">
+          <Key>
+            <PropertyRef Name="Batch_ID" />
+          </Key>
+          <Property Name="Batch_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Profession_ID" Type="int" Nullable="false" />
+          <Property Name="BatchStatus_ID" Type="int" Nullable="false" />
+          <Property Name="ClientID_VC" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="BatchName_VC" Type="char" Nullable="false" MaxLength="14" />
+          <Property Name="WhenUploaded_DT" Type="datetime" Nullable="false" />
+          <Property Name="NumFailed_IN" Type="int" Nullable="false" />
+          <Property Name="NumTotal_IN" Type="int" Nullable="false" />
+          <Property Name="UploadStatus_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsCheckedForAttachment_BT" Type="bit" />
+          <Property Name="IsFromWeb_BT" Type="bit" />
+        </EntityType>
+        <EntityType Name="Claim_T">
+          <Key>
+            <PropertyRef Name="Claim_ID" />
+          </Key>
+          <Property Name="Claim_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="apexPayerID" Type="varchar" MaxLength="5" />
+          <Property Name="claimControlNumber" Type="varchar" MaxLength="50" />
+          <Property Name="claimStatus" Type="varchar" MaxLength="3" />
+          <Property Name="errorDesc" Type="varchar" MaxLength="250" />
+          <Property Name="patientFirstName" Type="varchar" MaxLength="35" />
+          <Property Name="patientLastName" Type="varchar" MaxLength="60" />
+          <Property Name="patientMiddleInitial" Type="varchar" MaxLength="25" />
+          <Property Name="patientSuffix" Type="varchar" MaxLength="10" />
+          <Property Name="patientID" Type="varchar" MaxLength="50" />
+          <Property Name="patientAddress" Type="varchar" MaxLength="55" />
+          <Property Name="patientCity" Type="varchar" MaxLength="30" />
+          <Property Name="patientState" Type="varchar" MaxLength="2" />
+          <Property Name="patientZip" Type="varchar" MaxLength="15" />
+          <Property Name="patientDOB" Type="varchar" MaxLength="10" />
+          <Property Name="patientSex" Type="varchar" MaxLength="16" />
+          <Property Name="patientAccountNumber" Type="varchar" MaxLength="128" />
+          <Property Name="patientRelationship" Type="varchar" MaxLength="24" />
+          <Property Name="patientMaritalType" Type="varchar" MaxLength="24" />
+          <Property Name="patientStudentType" Type="varchar" MaxLength="24" />
+          <Property Name="patientSignature" Type="varchar" MaxLength="128" />
+          <Property Name="patientSignatureDate" Type="varchar" MaxLength="10" />
+          <Property Name="patientPhone" Type="varchar" MaxLength="24" />
+          <Property Name="subscriberFirstName" Type="varchar" MaxLength="35" />
+          <Property Name="subscriberLastName" Type="varchar" MaxLength="60" />
+          <Property Name="subscriberMiddleInitial" Type="varchar" MaxLength="25" />
+          <Property Name="subscriberID" Type="varchar" MaxLength="24" />
+          <Property Name="subscriberAddress1" Type="varchar" MaxLength="128" />
+          <Property Name="subscriberCity" Type="varchar" MaxLength="48" />
+          <Property Name="subscriberState" Type="varchar" MaxLength="2" />
+          <Property Name="subscriberZip" Type="varchar" MaxLength="15" />
+          <Property Name="subscriberDOB" Type="varchar" MaxLength="10" />
+          <Property Name="subscriberSex" Type="varchar" MaxLength="16" />
+          <Property Name="subscriberPhone" Type="varchar" MaxLength="24" />
+          <Property Name="subscriberSignature" Type="varchar" MaxLength="128" />
+          <Property Name="subscriberSignatureDate" Type="varchar" MaxLength="10" />
+          <Property Name="subscriberEmployerName" Type="varchar" MaxLength="128" />
+          <Property Name="subscriberPlanName" Type="varchar" MaxLength="128" />
+          <Property Name="subscriberSuffix" Type="varchar" MaxLength="10" />
+          <Property Name="otherSubscriberFirstName" Type="varchar" MaxLength="35" />
+          <Property Name="otherSubscriberLastName" Type="varchar" MaxLength="60" />
+          <Property Name="otherSubscriberMiddleInitial" Type="varchar" MaxLength="15" />
+          <Property Name="otherSubscriberID" Type="varchar" MaxLength="48" />
+          <Property Name="otherSubscriberAddress1" Type="varchar" MaxLength="128" />
+          <Property Name="otherSubscriberCity" Type="varchar" MaxLength="128" />
+          <Property Name="otherSubscriberState" Type="varchar" MaxLength="2" />
+          <Property Name="otherSubscriberZip" Type="varchar" MaxLength="15" />
+          <Property Name="otherSubscriberDOB" Type="varchar" MaxLength="10" />
+          <Property Name="otherSubscriberGroupNumber" Type="varchar" MaxLength="48" />
+          <Property Name="otherSubscriberSex" Type="varchar" MaxLength="16" />
+          <Property Name="otherSubscriberPlanName" Type="varchar" MaxLength="96" />
+          <Property Name="otherSubscriberRelationship" Type="varchar" MaxLength="25" />
+          <Property Name="providerName" Type="varchar" MaxLength="128" />
+          <Property Name="serviceStartDate" Type="varchar" MaxLength="10" />
+          <Property Name="serviceEndDate" Type="varchar" MaxLength="10" />
+          <Property Name="clientID" Type="varchar" MaxLength="256" />
+          <Property Name="payerName" Type="varchar" MaxLength="128" />
+          <Property Name="payerAddress1" Type="varchar" MaxLength="128" />
+          <Property Name="payerAddress2" Type="varchar" MaxLength="128" />
+          <Property Name="payerCity" Type="varchar" MaxLength="48" />
+          <Property Name="payerState" Type="varchar" MaxLength="2" />
+          <Property Name="payerZip" Type="varchar" MaxLength="10" />
+          <Property Name="payerRecDate" Type="varchar" MaxLength="10" />
+          <Property Name="totalAmount" Type="varchar" MaxLength="16" />
+          <Property Name="provFirstName" Type="varchar" MaxLength="50" />
+          <Property Name="provLastName" Type="varchar" MaxLength="60" />
+          <Property Name="provMiddleInitial" Type="varchar" MaxLength="1" />
+          <Property Name="provAddress1" Type="varchar" MaxLength="128" />
+          <Property Name="provAddress2" Type="varchar" MaxLength="128" />
+          <Property Name="provCity" Type="varchar" MaxLength="48" />
+          <Property Name="provState" Type="varchar" MaxLength="2" />
+          <Property Name="provZip" Type="varchar" MaxLength="10" />
+          <Property Name="provID" Type="varchar" MaxLength="16" />
+          <Property Name="provPayerIssuedID" Type="varchar" MaxLength="16" />
+          <Property Name="provSignature" Type="varchar" MaxLength="128" />
+          <Property Name="provSignatureDate" Type="varchar" MaxLength="10" />
+          <Property Name="provPhone" Type="varchar" MaxLength="16" />
+          <Property Name="facilityName" Type="varchar" MaxLength="128" />
+          <Property Name="facilityAddress1" Type="varchar" MaxLength="128" />
+          <Property Name="facilityAddress2" Type="varchar" MaxLength="128" />
+          <Property Name="facilityCity" Type="varchar" MaxLength="48" />
+          <Property Name="facilityState" Type="varchar" MaxLength="2" />
+          <Property Name="facilityZip" Type="varchar" MaxLength="15" />
+          <Property Name="placeOfService" Type="varchar" MaxLength="24" />
+          <Property Name="lastVisit" Type="varchar" MaxLength="10" />
+          <Property Name="condRelatedToEmployment" Type="bit" />
+          <Property Name="condRelatedToAutoAccident" Type="bit" />
+          <Property Name="condRelatedToOtherAccident" Type="bit" />
+          <Property Name="accidentDate" Type="varchar" MaxLength="10" />
+          <Property Name="accidentState" Type="varchar" MaxLength="2" />
+          <Property Name="isOtherPlan" Type="bit" />
+          <Property Name="referProvFirstName" Type="varchar" MaxLength="48" />
+          <Property Name="referProvLastName" Type="varchar" MaxLength="48" />
+          <Property Name="referProvMiddleInitial" Type="varchar" MaxLength="1" />
+          <Property Name="referProvID" Type="varchar" MaxLength="16" />
+          <Property Name="priorAuthorizationNumber" Type="varchar" MaxLength="48" />
+          <Property Name="remark1" Type="varchar" MaxLength="96" />
+          <Property Name="remark2" Type="varchar" MaxLength="96" />
+          <Property Name="remark3" Type="varchar" MaxLength="96" />
+          <Property Name="remark4" Type="varchar" MaxLength="96" />
+          <Property Name="remark5" Type="varchar" MaxLength="96" />
+          <Property Name="remark6" Type="varchar" MaxLength="96" />
+          <Property Name="provNPI" Type="varchar" MaxLength="16" />
+          <Property Name="referProvNPI" Type="varchar" MaxLength="16" />
+          <Property Name="facilityNPI" Type="varchar" MaxLength="16" />
+          <Property Name="referProvIDQual" Type="varchar" MaxLength="2" />
+          <Property Name="primaryPayerPaidAmount" Type="varchar" MaxLength="16" />
+          <Property Name="approvedAmount" Type="varchar" MaxLength="16" />
+          <Property Name="allowedAmount" Type="varchar" MaxLength="16" />
+          <Property Name="patientResponsibleAmount" Type="varchar" MaxLength="16" />
+          <Property Name="patientPaidAmount" Type="varchar" MaxLength="16" />
+          <Property Name="otherAdjustmentsAmount" Type="varchar" MaxLength="16" />
+          <Property Name="discountAmount" Type="varchar" MaxLength="16" />
+          <Property Name="taxAmount" Type="varchar" MaxLength="16" />
+          <Property Name="totalClaimBeforeTaxes" Type="varchar" MaxLength="16" />
+          <Property Name="attachmentReportTypeCode1" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentReportTypeCode2" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentReportTypeCode3" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentTransmissionCode1" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentTransmissionCode2" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentTransmissionCode3" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentIDCodeQualifier1" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentIDCodeQualifier2" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentIDCodeQualifier3" Type="varchar" MaxLength="2" />
+          <Property Name="attachmentControlNumber1" Type="varchar" MaxLength="16" />
+          <Property Name="attachmentControlNumber2" Type="varchar" MaxLength="16" />
+          <Property Name="attachmentControlNumber3" Type="varchar" MaxLength="16" />
+          <Property Name="provTaxIDType" Type="varchar" MaxLength="8" />
+          <Property Name="provTaxID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ClaimDentalBase_T">
+          <Key>
+            <PropertyRef Name="ClaimDentalBase_ID" />
+          </Key>
+          <Property Name="ClaimDentalBase_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimDentalBillingProvider_ID" Type="int" />
+          <Property Name="Provider_ID" Type="int" />
+          <Property Name="ClaimDentalPayer_ID" Type="bigint" />
+          <Property Name="Payer_ID" Type="int" />
+          <Property Name="OutputSub_ID" Type="int" />
+          <Property Name="ClaimStatusType_ID" Type="int" Nullable="false" />
+          <Property Name="BatchNumber_VC" Type="varchar" MaxLength="14" />
+          <Property Name="ReportDate_DT" Type="datetime" />
+          <Property Name="NPI_VC" Type="varchar" MaxLength="10" />
+          <Property Name="LastProcessDate_DT" Type="datetime" />
+          <Property Name="ClientID_VC" Type="varchar" MaxLength="3" />
+          <Property Name="LegacyClaim_ID" Type="bigint" />
+          <Property Name="LastUpdateDate_DT" Type="datetime" Nullable="false" />
+          <Property Name="IsNoCharge_BT" Type="bit" Nullable="false" />
+          <Property Name="IsProcessNow_BT" Type="bit" Nullable="false" />
+          <Property Name="InternalNotes_VC" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ApexPayerID_VC" Type="varchar" MaxLength="5" />
+          <Property Name="ClaimVendorID_VC" Type="varchar" MaxLength="20" />
+          <Property Name="EventPhase_ID" Type="int" />
+          <Property Name="EventType_ID" Type="bigint" />
+          <Property Name="Vendor_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="ClaimMedicalBase_T">
+          <Key>
+            <PropertyRef Name="ClaimMedicalBase_ID" />
+          </Key>
+          <Property Name="ClaimMedicalBase_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimMedicalBillingProvider_ID" Type="int" />
+          <Property Name="Provider_ID" Type="int" />
+          <Property Name="ClaimMedicalPayer_ID" Type="bigint" />
+          <Property Name="Payer_ID" Type="int" />
+          <Property Name="OutputSub_ID" Type="int" />
+          <Property Name="ClaimStatusType_ID" Type="int" Nullable="false" />
+          <Property Name="BatchNumber_VC" Type="varchar" MaxLength="14" />
+          <Property Name="ReportDate_DT" Type="datetime" />
+          <Property Name="NPI_VC" Type="varchar" MaxLength="10" />
+          <Property Name="LastProcessDate_DT" Type="datetime" />
+          <Property Name="ClientID_VC" Type="varchar" MaxLength="3" />
+          <Property Name="LegacyClaim_ID" Type="bigint" />
+          <Property Name="LastUpdateDate_DT" Type="datetime" Nullable="false" />
+          <Property Name="IsNoCharge_BT" Type="bit" Nullable="false" />
+          <Property Name="IsProcessNow_BT" Type="bit" Nullable="false" />
+          <Property Name="InternalNotes_VC" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="ApexPayerID_VC" Type="varchar" MaxLength="5" />
+          <Property Name="ClaimVendorID_VC" Type="varchar" MaxLength="20" />
+          <Property Name="EventPhase_ID" Type="int" />
+          <Property Name="EventType_ID" Type="bigint" />
+          <Property Name="Vendor_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="ClaimReport_T">
+          <Key>
+            <PropertyRef Name="ClaimReport_ID" />
+          </Key>
+          <Property Name="ClaimReport_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimReportType_ID" Type="int" Nullable="false" />
+          <Property Name="ReportName_VC" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ReceivedDate_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Profession_T">
+          <Key>
+            <PropertyRef Name="Profession_ID" />
+          </Key>
+          <Property Name="Profession_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name_VC" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Provider_T">
+          <Key>
+            <PropertyRef Name="Provider_ID" />
+          </Key>
+          <Property Name="Provider_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WebUserSettings_ID" Type="int" Nullable="false" />
+          <Property Name="PaymentMethod_ID" Type="int" Nullable="false" />
+          <Property Name="LastUpdate_DT" Type="datetime" />
+          <Property Name="ClientID_VC" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="LastName_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FirstName_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MI_VC" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="FirstNameIsMI_BT" Type="bit" Nullable="false" />
+          <Property Name="OrganizationName_VC" Type="varchar" Nullable="false" MaxLength="35" />
+          <Property Name="UseOrganizationName_BT" Type="bit" Nullable="false" />
+          <Property Name="ContactName_VC" Type="varchar" MaxLength="75" />
+          <Property Name="UniqueNameOnClaim_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ProviderStartDate_DT" Type="smalldatetime" />
+          <Property Name="SiteIsOnHold_BT" Type="bit" Nullable="false" />
+          <Property Name="IsOnWeb_BT" Type="bit" Nullable="false" />
+          <Property Name="ShowPaperClaims_BT" Type="bit" Nullable="false" />
+          <Property Name="RejectPaperClaims_BT" Type="bit" Nullable="false" />
+          <Property Name="BillDocIfNoClaims_BT" Type="bit" Nullable="false" />
+          <Property Name="DocIsInactive_BT" Type="bit" Nullable="false" />
+          <Property Name="DontSendAcceptanceReports_BT" Type="bit" Nullable="false" />
+          <Property Name="Address1_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="Address2_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="City_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="ST_ID" Type="int" />
+          <Property Name="ST_VC" Type="varchar" MaxLength="2" />
+          <Property Name="Zip_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="CountryCode_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="IsPayToProviderPerson_BT" Type="bit" Nullable="false" />
+          <Property Name="PayToAddressAddress1_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="PayToAddressAddress2_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="PayToAddressCity_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="PayToAddressST_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="PayToAddressZip_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="PayToAddressCountryCode_VC" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="DeliveryPoint_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="CheckDigit_VC" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="Phone_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Fax_VC" Type="varchar" MaxLength="10" />
+          <Property Name="EmailAddress_VC" Type="varchar" MaxLength="255" />
+          <Property Name="NPI_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="TaxID_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="IsTaxIDTypeEIN_BT" Type="bit" Nullable="false" />
+          <Property Name="IsUseTaxIDonClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="IsUseNPIOnClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="IsUseFacilityAddOnClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="License_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="KeyFieldData_VC" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="NEICSiteCode_VC" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="ProvTypeOrg_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="PayerSpecificID_VC" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="NetworkID_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ElectronicSubmitterID_VC" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="BCBSIndividual_VC" Type="varchar" Nullable="false" MaxLength="125" />
+          <Property Name="BCBSGroup_VC" Type="varchar" Nullable="false" MaxLength="125" />
+          <Property Name="Medicaid_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MedicaidGroup_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MamoCertNumber_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="WorkersComp_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="MedicareIndividual_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MedicareGroup_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RailroadMedicare_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="RailroadMedicareGroup_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DMERC_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Tricare_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="BlueShield_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="BlueCross_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UPIN_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="DeltaDental_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="NEICSpecialtyCode_ID" Type="int" />
+          <Property Name="Profession_ID" Type="int" />
+          <Property Name="PaymentMethod_TI" Type="tinyint" Nullable="false" />
+          <Property Name="CardCheckingAcctNum_VB" Type="varbinary" Nullable="false" MaxLength="32" />
+          <Property Name="CheckingRoutingNum_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="CardExpiration_VC" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="IsRenderingProvider_BT" Type="bit" Nullable="false" />
+          <Property Name="RenderingProvTaxID_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="IsRenderingProvTaxIDTypeEIN_BT" Type="bit" Nullable="false" />
+          <Property Name="RenderingProvNPI_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="RenderingProvOrganization_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="RenderingProvUseOrganizationName_BT" Type="bit" Nullable="false" />
+          <Property Name="RenderingProvLastName_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="RenderingProvFirstName_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="RenderingProvMI_VC" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="RenderingProvNEICSpecialtyCode_ID" Type="int" />
+          <Property Name="RenderingProvAddress_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="RenderingProvAddress2_VC" Type="varchar" MaxLength="55" />
+          <Property Name="RenderingProvCity_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="RenderingProvST_ID" Type="int" />
+          <Property Name="RenderingProvST_VC" Type="varchar" MaxLength="2" />
+          <Property Name="RenderingProvZip_VC" Type="varchar" MaxLength="9" />
+          <Property Name="SoftwareMapName_ID" Type="int" />
+          <Property Name="BillMethod_TI" Type="tinyint" Nullable="false" />
+          <Property Name="ClaimProductPurchased_ID" Type="int" Nullable="false" />
+          <Property Name="BillPerVolume_BT" Type="bit" Nullable="false" />
+          <Property Name="MonthlyFee_SM" Type="smallmoney" Nullable="false" />
+          <Property Name="MinimumFee_SM" Type="smallmoney" Nullable="false" />
+          <Property Name="MonthlyClaimThreshold_IN" Type="int" Nullable="false" />
+          <Property Name="ChargePerClaimOverThresholdOrElect_SM" Type="smallmoney" Nullable="false" />
+          <Property Name="ChargePerClaimUnderThresholdOrPaper_SM" Type="smallmoney" Nullable="false" />
+          <Property Name="ChargePerClaimPaper_SM" Type="smallmoney" Nullable="false" />
+          <Property Name="SoftwareName_VC" Type="varchar" MaxLength="50" />
+          <Property Name="SoftwareVersion_VC" Type="varchar" MaxLength="15" />
+          <Property Name="SoftwareConversion_ID" Type="int" />
+          <Property Name="LineItemMappingMin_VC" Type="varchar" MaxLength="25" />
+          <Property Name="LineItemMappingMax_VC" Type="varchar" MaxLength="25" />
+          <Property Name="StripString_VC" Type="varchar" Nullable="false" MaxLength="2000" />
+          <Property Name="Qualifications_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="SalesCode_VC" Type="varchar" MaxLength="10" />
+          <Property Name="SalesRep1_ID" Type="int" />
+          <Property Name="CommissionElectronic1_SM" Type="smallmoney" />
+          <Property Name="CommissionPaper1_SM" Type="smallmoney" />
+          <Property Name="SalesRep2_ID" Type="int" />
+          <Property Name="CommissionElectronic2_SM" Type="smallmoney" />
+          <Property Name="CommissionPaper2_SM" Type="smallmoney" />
+          <Property Name="Vendor1_ID" Type="int" />
+          <Property Name="Vendor2_ID" Type="int" />
+          <Property Name="BillAllDocsAtThisSiteSeparately_BT" Type="bit" Nullable="false" />
+          <Property Name="BillClaimsOnAnotherProvider_ID" Type="int" />
+          <Property Name="BillingName_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="BillingAddress_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="BillingAddress2_VC" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="BillingCity_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="BillingST_ID" Type="int" />
+          <Property Name="BillingST_VC" Type="varchar" MaxLength="2" />
+          <Property Name="BillingZip_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="Notes_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ReportIDNumbers_VC" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="RegistrationFee_SM" Type="smallmoney" />
+          <Property Name="Adjustment_SM" Type="smallmoney" />
+          <Property Name="AdjustmentDesc_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DepositAmount_SM" Type="smallmoney" />
+          <Property Name="PayerEnrollmentPending_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PayerEnrollment_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ForceOutputFrom0_ID" Type="int" />
+          <Property Name="ForceOutputTo0_ID" Type="int" />
+          <Property Name="ForceOutputFrom1_ID" Type="int" />
+          <Property Name="ForceOutputTo1_ID" Type="int" />
+          <Property Name="KWApexMap_ID" Type="int" />
+          <Property Name="PEHP_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="CLIA_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="BCBSMedicaid_VC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Stat_MonthlyStatThreshold_IN" Type="int" />
+          <Property Name="Stat_ChargePerStatOverThreshold_SM" Type="smallmoney" />
+          <Property Name="Stat_ChargePerStatUnderThreshold_SM" Type="smallmoney" />
+          <Property Name="Stat_ChargePerStatSecondPage_SM" Type="smallmoney" />
+          <Property Name="Stat_MinimumFeeAmount_SM" Type="smallmoney" />
+          <Property Name="Stat_SoftwareMapName_ID" Type="int" />
+          <Property Name="Stat_SoftwareConversion_ID" Type="int" />
+          <Property Name="Stat_StripString_VC" Type="varchar" MaxLength="2000" />
+          <Property Name="Stat_KWApexMap_ID" Type="int" />
+          <Property Name="Stat_KeyFieldData_VC" Type="varchar" MaxLength="100" />
+          <Property Name="Stat_ProductType_TI" Type="tinyint" Nullable="false" />
+          <Property Name="Stat_Backprinting_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_CreditCardsAccepted_CH" Type="char" MaxLength="4" />
+          <Property Name="Stat_IndustryType_TI" Type="tinyint" />
+          <Property Name="Stat_IndustryCommercialType_VC" Type="varchar" MaxLength="30" />
+          <Property Name="Stat_CustomLogo_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_IncludePaymentDueByDate_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_IncludePaymentDueByDateNumberOfDays_TI" Type="tinyint" />
+          <Property Name="Stat_PaySalesRep1_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_PaySalesRep2_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_PayVendor1_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_PayVendor2_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_StatementStartDate_DT" Type="smalldatetime" />
+          <Property Name="Stat_Note_VC" Type="varchar" MaxLength="500" />
+          <Property Name="Stat_Note1_VC" Type="varchar" MaxLength="80" />
+          <Property Name="Stat_Note2_VC" Type="varchar" MaxLength="80" />
+          <Property Name="Stat_Note3_VC" Type="varchar" MaxLength="80" />
+          <Property Name="Stat_Note4_VC" Type="varchar" MaxLength="80" />
+          <Property Name="Stat_Note5_VC" Type="varchar" MaxLength="80" />
+          <Property Name="Stat_UniqueName_VC" Type="varchar" MaxLength="200" />
+          <Property Name="Stat_RemitName_VC" Type="varchar" MaxLength="50" />
+          <Property Name="Stat_RemitAddress1_VC" Type="varchar" MaxLength="55" />
+          <Property Name="Stat_RemitAddress2_VC" Type="varchar" MaxLength="55" />
+          <Property Name="Stat_RemitCity_VC" Type="varchar" MaxLength="30" />
+          <Property Name="Stat_RemitST_ID" Type="int" />
+          <Property Name="Stat_RemitST_VC" Type="varchar" MaxLength="2" />
+          <Property Name="Stat_RemitZip_VC" Type="varchar" MaxLength="9" />
+          <Property Name="Stat_RemitDeliveryPoint_VC" Type="varchar" MaxLength="2" />
+          <Property Name="Stat_RemitCheckDigit_VC" Type="varchar" MaxLength="1" />
+          <Property Name="Stat_RemitPhone_VC" Type="varchar" MaxLength="10" />
+          <Property Name="Stat_RemitPhoneAlt_VC" Type="varchar" MaxLength="10" />
+          <Property Name="Stat_RemitPhoneExt_VC" Type="varchar" MaxLength="10" />
+          <Property Name="Stat_RemitPhoneAltExt_VC" Type="varchar" MaxLength="10" />
+          <Property Name="Stat_ShiftFirstLine_VC" Type="varchar" MaxLength="50" />
+          <Property Name="Stat_ShiftSpaceLo_VC" Type="varchar" MaxLength="50" />
+          <Property Name="Stat_ShiftSpaceHi_VC" Type="varchar" MaxLength="50" />
+          <Property Name="Stat_UseUniqueSettings_IN" Type="int" Nullable="false" />
+          <Property Name="Stat_PaperColor_TI" Type="tinyint" Nullable="false" />
+          <Property Name="Stat_PullOfficeInfoFromStatement_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_PullRemitToInfoFromStatement_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_ExcludeBalanceDue_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_HasFloatingFooterHeader_BT" Type="bit" Nullable="false" />
+          <Property Name="Stat_FooterHeaderCorrectLineNumber_IN" Type="int" />
+          <Property Name="Stat_FooterHeaderString_VC" Type="varchar" MaxLength="200" />
+          <Property Name="Stat_ClaimStartString_VC" Type="varchar" MaxLength="200" />
+          <Property Name="Stat_LineItemStartsWithRegex_VC" Type="varchar" MaxLength="200" />
+          <Property Name="Stat_LineItemStartsWithRegexPatternLength_IN" Type="int" />
+          <Property Name="AcceptTermsDate_DT" Type="datetime" />
+          <Property Name="DontSendHumanReadableEOBReports_BT" Type="bit" Nullable="false" />
+          <Property Name="DontSendMachineReadableEOBReports_BT" Type="bit" Nullable="false" />
+          <Property Name="RejectAllClaims_BT" Type="bit" Nullable="false" />
+          <Property Name="BillingStartDate_DT" Type="smalldatetime" Nullable="false" />
+          <Property Name="PGPPubKey_VC" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="AcctVerifiedByApex_BT" Type="bit" Nullable="false" />
+          <Property Name="AcctVerifiedByClient_BT" Type="bit" Nullable="false" />
+          <Property Name="ServiceLevel_TI" Type="tinyint" Nullable="false" />
+          <Property Name="SendUTMedicareERAOnly_BT" Type="bit" Nullable="false" />
+          <Property Name="HoldStatementsForReview_BT" Type="bit" Nullable="false" />
+          <Property Name="RequireSoftwareUpdate_BT" Type="bit" Nullable="false" />
+          <Property Name="ReportOnPreviousFailedClaims_BT" Type="bit" Nullable="false" />
+          <Property Name="OutputMedicareLegacy_BT" Type="bit" Nullable="false" />
+          <Property Name="SendApexReports_BT" Type="bit" Nullable="false" />
+          <Property Name="DocIsAlwaysBilled_BT" Type="bit" Nullable="false" />
+          <Property Name="DaysOldClaims_IN" Type="int" />
+          <Property Name="OldClaims_SM" Type="smallmoney" />
+          <Property Name="DentalERAAmount_VC" Type="varchar" MaxLength="10" />
+          <Property Name="NumberOfDaysFreeClaims_IN" Type="int" />
+          <Property Name="InnovationsMonthlyAmount_SM" Type="smallmoney" />
+          <Property Name="EligibilityBaseAmountMed_VC" Type="varchar" MaxLength="10" />
+          <Property Name="NumberOfEligibilityTransBlockMed_IN" Type="int" />
+          <Property Name="EligibilityAmountOverThresholdMed_SM" Type="smallmoney" />
+          <Property Name="IsSubscribedSales_BT" Type="bit" Nullable="false" />
+          <Property Name="SubscribedSales_DT" Type="smalldatetime" />
+          <Property Name="SubscribedSalesIP_VC" Type="varchar" MaxLength="50" />
+          <Property Name="UnsubscribedSales_DT" Type="smalldatetime" />
+          <Property Name="IsTestAccount_BT" Type="bit" Nullable="false" />
+          <Property Name="PracticeGUID" Type="uniqueidentifier" />
+          <Property Name="IsMigratable_BT" Type="bit" Nullable="false" />
+          <Property Name="StatementForm_ID" Type="int" />
+          <Property Name="UseClaimRemedi_BT" Type="bit" Nullable="false" />
+          <Property Name="NEAFacilityID_VC" Type="varchar" MaxLength="50" />
+          <Property Name="IsNEAClient_BT" Type="bit" Nullable="false" />
+          <Property Name="IsUseProviderFromClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="IsUsePayToProviderFromClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="Use5010Tables_BT" Type="bit" />
+          <Property Name="WhiteLabel_ID" Type="bigint" />
+          <Property Name="ProviderSale_DT" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="SoftwareConversion_T">
+          <Key>
+            <PropertyRef Name="SoftwareConversion_ID" />
+          </Key>
+          <Property Name="SoftwareConversion_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConversionName_VC" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Statement_T">
+          <Key>
+            <PropertyRef Name="Claim_ID" />
+          </Key>
+          <Property Name="Claim_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_ID" Type="bigint" Nullable="false" />
+          <Property Name="LastUpdate_DT" Type="datetime" Nullable="false" />
+          <Property Name="Payer_ID" Type="int" Nullable="false" />
+          <Property Name="Provider_ID" Type="int" Nullable="false" />
+          <Property Name="BatchNum_VC" Type="varchar" Nullable="false" MaxLength="14" />
+          <Property Name="ClientID_VC" Type="varchar" MaxLength="3" />
+          <Property Name="VendorClaimID_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="IsDuplicateClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="ReportDate_DT" Type="datetime" />
+          <Property Name="LastProcessDate_DT" Type="datetime" />
+          <Property Name="ClaimStatus_TI" Type="tinyint" Nullable="false" />
+          <Property Name="IsProcessNow_BT" Type="bit" Nullable="false" />
+          <Property Name="IsDoNotProcess_BT" Type="bit" Nullable="false" />
+          <Property Name="IsNoCharge_BT" Type="bit" Nullable="false" />
+          <Property Name="IsNewDocClaim_BT" Type="bit" Nullable="false" />
+          <Property Name="Errors_CH" Type="char" Nullable="false" MaxLength="225" />
+          <Property Name="NumberOfClaims_TI" Type="tinyint" Nullable="false" />
+          <Property Name="OutputSub_ID" Type="int" Nullable="false" />
+          <Property Name="Note_VC" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="F01_RecipientAccountNumber_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="F02_RecipientLastName_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="F02_RecipientFirstName_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F02_RecipientMI_VC" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="F03A_RecipientAddress1_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="F03B_RecipientAddress2_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="F04_RecipientCity_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F05_RecipientST_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="F06_RecipientZip_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="F51_PatientLastName_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="F51_PatientFirstName_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F51_PatientMI_VC" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="F07_OfficeName_VC" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="F08A_OfficeAddress1_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="F08B_OfficeAddress2_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="F09_OfficeCity_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F10_OfficeST_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="F11_OfficeZip_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="F12_OfficePhone_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="F13_PatientAccountNumber_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F14_StatementDate_VC" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="F15_PageNumber_VC" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="F16_RemitToName_VC" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="F17_RemitToAddress1_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="F18_RemitToAddress2_VC" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="F19_RemitToCity_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F20_RemitToST_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="F21_RemitToZip_VC" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="F22_RemitToPhone_VC" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="F23_RenderingProviderLastName_VC" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="F23_RenderingProviderFirstName_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F23_RenderingProviderMI_VC" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="F24_RenderingProviderID_VC" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="F25_RenderingProviderST_VC" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="F26_PriorStatementDate_VC" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="F27_PaymentDueDate_VC" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="F28_PriorBalance_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F29_Adjustments_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F30_BalanceDue_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F30B_AccountBalance_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F31_FinanceCharge_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F32_Credits_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F33_EstimatedInsurancePayment_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F34_PatientShare_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F35_CurrentBalance_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F36_PastDue30_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F37_PastDue60_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F38_PastDue90_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="F39_PastDue120_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="TopNote_VC" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="F40_Notes1_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F41_Notes2_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F42_Notes3_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F43_Notes4_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F44_Notes5_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F45_Notes6_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F46_Notes7_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F47_Notes8_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F48_Notes9_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F49_Notes10_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="F00_StatementTitle_VC" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="F50_PendingAtInsurance_VC" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="ServiceDate_VC" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="UniqueNameOnClaim_VC" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Vendor_ID" Type="int" />
+        </EntityType>
+        <Association Name="FK_Batch_T_Profession_T">
+          <End Role="Profession_T" Type="ClaimStakerDEVModel.Store.Profession_T" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Batch_T" Type="ClaimStakerDEVModel.Store.Batch_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profession_T">
+              <PropertyRef Name="Profession_ID" />
+            </Principal>
+            <Dependent Role="Batch_T">
+              <PropertyRef Name="Profession_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClaimDentalBase_T_Provider_T">
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Store.Provider_T" Multiplicity="0..1" />
+          <End Role="ClaimDentalBase_T" Type="ClaimStakerDEVModel.Store.ClaimDentalBase_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider_T">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="ClaimDentalBase_T">
+              <PropertyRef Name="Provider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClaimMedicalBase_T_Provider_T">
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Store.Provider_T" Multiplicity="0..1" />
+          <End Role="ClaimMedicalBase_T" Type="ClaimStakerDEVModel.Store.ClaimMedicalBase_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider_T">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="ClaimMedicalBase_T">
+              <PropertyRef Name="Provider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Provider_T_SoftwareConversion_T">
+          <End Role="SoftwareConversion_T" Type="ClaimStakerDEVModel.Store.SoftwareConversion_T" Multiplicity="0..1" />
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Store.Provider_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SoftwareConversion_T">
+              <PropertyRef Name="SoftwareConversion_ID" />
+            </Principal>
+            <Dependent Role="Provider_T">
+              <PropertyRef Name="SoftwareConversion_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Statement_Provider">
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Store.Provider_T" Multiplicity="1" />
+          <End Role="Statement_T" Type="ClaimStakerDEVModel.Store.Statement_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider_T">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="Statement_T">
+              <PropertyRef Name="Provider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClaimStakerDEVModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ClaimStakerDEVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Batch_T" EntityType="ClaimStakerDEVModel.Batch_T" />
+          <EntitySet Name="Claim_T" EntityType="ClaimStakerDEVModel.Claim_T" />
+          <EntitySet Name="ClaimDentalBase_T" EntityType="ClaimStakerDEVModel.ClaimDentalBase_T" />
+          <EntitySet Name="ClaimMedicalBase_T" EntityType="ClaimStakerDEVModel.ClaimMedicalBase_T" />
+          <EntitySet Name="ClaimReport_T" EntityType="ClaimStakerDEVModel.ClaimReport_T" />
+          <EntitySet Name="Profession_T" EntityType="ClaimStakerDEVModel.Profession_T" />
+          <EntitySet Name="Provider_T" EntityType="ClaimStakerDEVModel.Provider_T" />
+          <EntitySet Name="SoftwareConversion_T" EntityType="ClaimStakerDEVModel.SoftwareConversion_T" />
+          <EntitySet Name="Statement_T" EntityType="ClaimStakerDEVModel.Statement_T" />
+          <AssociationSet Name="FK_Batch_T_Profession_T" Association="ClaimStakerDEVModel.FK_Batch_T_Profession_T">
+            <End Role="Profession_T" EntitySet="Profession_T" />
+            <End Role="Batch_T" EntitySet="Batch_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClaimDentalBase_T_Provider_T" Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Provider_T">
+            <End Role="Provider_T" EntitySet="Provider_T" />
+            <End Role="ClaimDentalBase_T" EntitySet="ClaimDentalBase_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClaimMedicalBase_T_Provider_T" Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T">
+            <End Role="Provider_T" EntitySet="Provider_T" />
+            <End Role="ClaimMedicalBase_T" EntitySet="ClaimMedicalBase_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Provider_T_SoftwareConversion_T" Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T">
+            <End Role="SoftwareConversion_T" EntitySet="SoftwareConversion_T" />
+            <End Role="Provider_T" EntitySet="Provider_T" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Statement_Provider" Association="ClaimStakerDEVModel.FK_Statement_Provider">
+            <End Role="Provider_T" EntitySet="Provider_T" />
+            <End Role="Statement_T" EntitySet="Statement_T" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Batch_T">
+          <Key>
+            <PropertyRef Name="Batch_ID" />
+          </Key>
+          <Property Name="Batch_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Profession_ID" Type="Int32" Nullable="false" />
+          <Property Name="BatchStatus_ID" Type="Int32" Nullable="false" />
+          <Property Name="ClientID_VC" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="BatchName_VC" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="true" />
+          <Property Name="WhenUploaded_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NumFailed_IN" Type="Int32" Nullable="false" />
+          <Property Name="NumTotal_IN" Type="Int32" Nullable="false" />
+          <Property Name="UploadStatus_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsCheckedForAttachment_BT" Type="Boolean" />
+          <Property Name="IsFromWeb_BT" Type="Boolean" />
+          <NavigationProperty Name="Profession_T" Relationship="ClaimStakerDEVModel.FK_Batch_T_Profession_T" FromRole="Batch_T" ToRole="Profession_T" />
+        </EntityType>
+        <EntityType Name="Claim_T">
+          <Key>
+            <PropertyRef Name="Claim_ID" />
+          </Key>
+          <Property Name="Claim_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="apexPayerID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="claimControlNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="claimStatus" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="errorDesc" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="patientFirstName" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+          <Property Name="patientLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="patientMiddleInitial" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="patientSuffix" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="patientID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="patientAddress" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="patientCity" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="patientState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="patientZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="patientDOB" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="patientSex" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="patientAccountNumber" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="patientRelationship" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="patientMaritalType" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="patientStudentType" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="patientSignature" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="patientSignatureDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="patientPhone" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberFirstName" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberMiddleInitial" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberID" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberDOB" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberSex" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberPhone" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberSignature" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberSignatureDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberEmployerName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberPlanName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="subscriberSuffix" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberFirstName" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberMiddleInitial" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberID" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberCity" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberDOB" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberGroupNumber" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberSex" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberPlanName" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="otherSubscriberRelationship" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="providerName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="serviceStartDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="serviceEndDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="clientID" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="payerName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="payerAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="payerAddress2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="payerCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="payerState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="payerZip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="payerRecDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="totalAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="provFirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="provLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="provMiddleInitial" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="provAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="provAddress2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="provCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="provState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="provZip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="provID" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="provPayerIssuedID" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="provSignature" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="provSignatureDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="provPhone" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="facilityName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="facilityAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="facilityAddress2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="facilityCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="facilityState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="facilityZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="placeOfService" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+          <Property Name="lastVisit" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="condRelatedToEmployment" Type="Boolean" />
+          <Property Name="condRelatedToAutoAccident" Type="Boolean" />
+          <Property Name="condRelatedToOtherAccident" Type="Boolean" />
+          <Property Name="accidentDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="accidentState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="isOtherPlan" Type="Boolean" />
+          <Property Name="referProvFirstName" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="referProvLastName" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="referProvMiddleInitial" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="referProvID" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="priorAuthorizationNumber" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+          <Property Name="remark1" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="remark2" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="remark3" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="remark4" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="remark5" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="remark6" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+          <Property Name="provNPI" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="referProvNPI" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="facilityNPI" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="referProvIDQual" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="primaryPayerPaidAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="approvedAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="allowedAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="patientResponsibleAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="patientPaidAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="otherAdjustmentsAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="discountAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="taxAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="totalClaimBeforeTaxes" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentReportTypeCode1" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentReportTypeCode2" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentReportTypeCode3" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentTransmissionCode1" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentTransmissionCode2" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentTransmissionCode3" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentIDCodeQualifier1" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentIDCodeQualifier2" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentIDCodeQualifier3" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentControlNumber1" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentControlNumber2" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="attachmentControlNumber3" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="provTaxIDType" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="provTaxID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ClaimDentalBase_T">
+          <Key>
+            <PropertyRef Name="ClaimDentalBase_ID" />
+          </Key>
+          <Property Name="ClaimDentalBase_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimDentalBillingProvider_ID" Type="Int32" />
+          <Property Name="Provider_ID" Type="Int32" />
+          <Property Name="ClaimDentalPayer_ID" Type="Int64" />
+          <Property Name="Payer_ID" Type="Int32" />
+          <Property Name="OutputSub_ID" Type="Int32" />
+          <Property Name="ClaimStatusType_ID" Type="Int32" Nullable="false" />
+          <Property Name="BatchNumber_VC" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="ReportDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="NPI_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LastProcessDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="ClientID_VC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="LegacyClaim_ID" Type="Int64" />
+          <Property Name="LastUpdateDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsNoCharge_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsProcessNow_BT" Type="Boolean" Nullable="false" />
+          <Property Name="InternalNotes_VC" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="ApexPayerID_VC" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ClaimVendorID_VC" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EventPhase_ID" Type="Int32" />
+          <Property Name="EventType_ID" Type="Int64" />
+          <Property Name="Vendor_ID" Type="Int32" />
+          <NavigationProperty Name="Provider_T" Relationship="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Provider_T" FromRole="ClaimDentalBase_T" ToRole="Provider_T" />
+        </EntityType>
+        <EntityType Name="ClaimMedicalBase_T">
+          <Key>
+            <PropertyRef Name="ClaimMedicalBase_ID" />
+          </Key>
+          <Property Name="ClaimMedicalBase_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimMedicalBillingProvider_ID" Type="Int32" />
+          <Property Name="Provider_ID" Type="Int32" />
+          <Property Name="ClaimMedicalPayer_ID" Type="Int64" />
+          <Property Name="Payer_ID" Type="Int32" />
+          <Property Name="OutputSub_ID" Type="Int32" />
+          <Property Name="ClaimStatusType_ID" Type="Int32" Nullable="false" />
+          <Property Name="BatchNumber_VC" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="ReportDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="NPI_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LastProcessDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="ClientID_VC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="LegacyClaim_ID" Type="Int64" />
+          <Property Name="LastUpdateDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsNoCharge_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsProcessNow_BT" Type="Boolean" Nullable="false" />
+          <Property Name="InternalNotes_VC" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="ApexPayerID_VC" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ClaimVendorID_VC" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EventPhase_ID" Type="Int32" />
+          <Property Name="EventType_ID" Type="Int64" />
+          <Property Name="Vendor_ID" Type="Int32" />
+          <NavigationProperty Name="Provider_T" Relationship="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T" FromRole="ClaimMedicalBase_T" ToRole="Provider_T" />
+        </EntityType>
+        <EntityType Name="ClaimReport_T">
+          <Key>
+            <PropertyRef Name="ClaimReport_ID" />
+          </Key>
+          <Property Name="ClaimReport_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClaimReportType_ID" Type="Int32" Nullable="false" />
+          <Property Name="ReportName_VC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ReceivedDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Profession_T">
+          <Key>
+            <PropertyRef Name="Profession_ID" />
+          </Key>
+          <Property Name="Profession_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Batch_T" Relationship="ClaimStakerDEVModel.FK_Batch_T_Profession_T" FromRole="Profession_T" ToRole="Batch_T" />
+        </EntityType>
+        <EntityType Name="Provider_T">
+          <Key>
+            <PropertyRef Name="Provider_ID" />
+          </Key>
+          <Property Name="Provider_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WebUserSettings_ID" Type="Int32" Nullable="false" />
+          <Property Name="PaymentMethod_ID" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdate_DT" Type="DateTime" Precision="3" />
+          <Property Name="ClientID_VC" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="LastName_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="MI_VC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="FirstNameIsMI_BT" Type="Boolean" Nullable="false" />
+          <Property Name="OrganizationName_VC" Type="String" Nullable="false" MaxLength="35" Unicode="false" FixedLength="false" />
+          <Property Name="UseOrganizationName_BT" Type="Boolean" Nullable="false" />
+          <Property Name="ContactName_VC" Type="String" MaxLength="75" Unicode="false" FixedLength="false" />
+          <Property Name="UniqueNameOnClaim_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ProviderStartDate_DT" Type="DateTime" Precision="0" />
+          <Property Name="SiteIsOnHold_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsOnWeb_BT" Type="Boolean" Nullable="false" />
+          <Property Name="ShowPaperClaims_BT" Type="Boolean" Nullable="false" />
+          <Property Name="RejectPaperClaims_BT" Type="Boolean" Nullable="false" />
+          <Property Name="BillDocIfNoClaims_BT" Type="Boolean" Nullable="false" />
+          <Property Name="DocIsInactive_BT" Type="Boolean" Nullable="false" />
+          <Property Name="DontSendAcceptanceReports_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Address1_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="Address2_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="City_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ST_ID" Type="Int32" />
+          <Property Name="ST_VC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="Zip_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="CountryCode_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="IsPayToProviderPerson_BT" Type="Boolean" Nullable="false" />
+          <Property Name="PayToAddressAddress1_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="PayToAddressAddress2_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="PayToAddressCity_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="PayToAddressST_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PayToAddressZip_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="PayToAddressCountryCode_VC" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="DeliveryPoint_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="CheckDigit_VC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Fax_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="EmailAddress_VC" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="NPI_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TaxID_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="IsTaxIDTypeEIN_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsUseTaxIDonClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsUseNPIOnClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsUseFacilityAddOnClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="License_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="KeyFieldData_VC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="NEICSiteCode_VC" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="ProvTypeOrg_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PayerSpecificID_VC" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="NetworkID_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ElectronicSubmitterID_VC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="BCBSIndividual_VC" Type="String" Nullable="false" MaxLength="125" Unicode="false" FixedLength="false" />
+          <Property Name="BCBSGroup_VC" Type="String" Nullable="false" MaxLength="125" Unicode="false" FixedLength="false" />
+          <Property Name="Medicaid_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MedicaidGroup_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MamoCertNumber_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="WorkersComp_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="MedicareIndividual_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MedicareGroup_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RailroadMedicare_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="RailroadMedicareGroup_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DMERC_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Tricare_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="BlueShield_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="BlueCross_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UPIN_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="DeltaDental_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="NEICSpecialtyCode_ID" Type="Int32" />
+          <Property Name="Profession_ID" Type="Int32" />
+          <Property Name="PaymentMethod_TI" Type="Byte" Nullable="false" />
+          <Property Name="CardCheckingAcctNum_VB" Type="Binary" Nullable="false" MaxLength="32" FixedLength="false" />
+          <Property Name="CheckingRoutingNum_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="CardExpiration_VC" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="IsRenderingProvider_BT" Type="Boolean" Nullable="false" />
+          <Property Name="RenderingProvTaxID_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="IsRenderingProvTaxIDTypeEIN_BT" Type="Boolean" Nullable="false" />
+          <Property Name="RenderingProvNPI_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvOrganization_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvUseOrganizationName_BT" Type="Boolean" Nullable="false" />
+          <Property Name="RenderingProvLastName_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvFirstName_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvMI_VC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvNEICSpecialtyCode_ID" Type="Int32" />
+          <Property Name="RenderingProvAddress_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvAddress2_VC" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvCity_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvST_ID" Type="Int32" />
+          <Property Name="RenderingProvST_VC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="RenderingProvZip_VC" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="SoftwareMapName_ID" Type="Int32" />
+          <Property Name="BillMethod_TI" Type="Byte" Nullable="false" />
+          <Property Name="ClaimProductPurchased_ID" Type="Int32" Nullable="false" />
+          <Property Name="BillPerVolume_BT" Type="Boolean" Nullable="false" />
+          <Property Name="MonthlyFee_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="MinimumFee_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="MonthlyClaimThreshold_IN" Type="Int32" Nullable="false" />
+          <Property Name="ChargePerClaimOverThresholdOrElect_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="ChargePerClaimUnderThresholdOrPaper_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="ChargePerClaimPaper_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="SoftwareName_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SoftwareVersion_VC" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="SoftwareConversion_ID" Type="Int32" />
+          <Property Name="LineItemMappingMin_VC" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="LineItemMappingMax_VC" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="StripString_VC" Type="String" Nullable="false" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="Qualifications_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SalesCode_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="SalesRep1_ID" Type="Int32" />
+          <Property Name="CommissionElectronic1_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="CommissionPaper1_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="SalesRep2_ID" Type="Int32" />
+          <Property Name="CommissionElectronic2_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="CommissionPaper2_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Vendor1_ID" Type="Int32" />
+          <Property Name="Vendor2_ID" Type="Int32" />
+          <Property Name="BillAllDocsAtThisSiteSeparately_BT" Type="Boolean" Nullable="false" />
+          <Property Name="BillClaimsOnAnotherProvider_ID" Type="Int32" />
+          <Property Name="BillingName_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="BillingAddress_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="BillingAddress2_VC" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="BillingCity_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="BillingST_ID" Type="Int32" />
+          <Property Name="BillingST_VC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="BillingZip_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="Notes_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ReportIDNumbers_VC" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="RegistrationFee_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Adjustment_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AdjustmentDesc_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepositAmount_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PayerEnrollmentPending_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="PayerEnrollment_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ForceOutputFrom0_ID" Type="Int32" />
+          <Property Name="ForceOutputTo0_ID" Type="Int32" />
+          <Property Name="ForceOutputFrom1_ID" Type="Int32" />
+          <Property Name="ForceOutputTo1_ID" Type="Int32" />
+          <Property Name="KWApexMap_ID" Type="Int32" />
+          <Property Name="PEHP_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CLIA_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="BCBSMedicaid_VC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_MonthlyStatThreshold_IN" Type="Int32" />
+          <Property Name="Stat_ChargePerStatOverThreshold_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Stat_ChargePerStatUnderThreshold_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Stat_ChargePerStatSecondPage_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Stat_MinimumFeeAmount_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Stat_SoftwareMapName_ID" Type="Int32" />
+          <Property Name="Stat_SoftwareConversion_ID" Type="Int32" />
+          <Property Name="Stat_StripString_VC" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_KWApexMap_ID" Type="Int32" />
+          <Property Name="Stat_KeyFieldData_VC" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_ProductType_TI" Type="Byte" Nullable="false" />
+          <Property Name="Stat_Backprinting_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_CreditCardsAccepted_CH" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="Stat_IndustryType_TI" Type="Byte" />
+          <Property Name="Stat_IndustryCommercialType_VC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_CustomLogo_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_IncludePaymentDueByDate_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_IncludePaymentDueByDateNumberOfDays_TI" Type="Byte" />
+          <Property Name="Stat_PaySalesRep1_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_PaySalesRep2_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_PayVendor1_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_PayVendor2_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_StatementStartDate_DT" Type="DateTime" Precision="0" />
+          <Property Name="Stat_Note_VC" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_Note1_VC" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_Note2_VC" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_Note3_VC" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_Note4_VC" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_Note5_VC" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_UniqueName_VC" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitName_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitAddress1_VC" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitAddress2_VC" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitCity_VC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitST_ID" Type="Int32" />
+          <Property Name="Stat_RemitST_VC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitZip_VC" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitDeliveryPoint_VC" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitCheckDigit_VC" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitPhone_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitPhoneAlt_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitPhoneExt_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_RemitPhoneAltExt_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_ShiftFirstLine_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_ShiftSpaceLo_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_ShiftSpaceHi_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_UseUniqueSettings_IN" Type="Int32" Nullable="false" />
+          <Property Name="Stat_PaperColor_TI" Type="Byte" Nullable="false" />
+          <Property Name="Stat_PullOfficeInfoFromStatement_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_PullRemitToInfoFromStatement_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_ExcludeBalanceDue_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_HasFloatingFooterHeader_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Stat_FooterHeaderCorrectLineNumber_IN" Type="Int32" />
+          <Property Name="Stat_FooterHeaderString_VC" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_ClaimStartString_VC" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_LineItemStartsWithRegex_VC" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Stat_LineItemStartsWithRegexPatternLength_IN" Type="Int32" />
+          <Property Name="AcceptTermsDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="DontSendHumanReadableEOBReports_BT" Type="Boolean" Nullable="false" />
+          <Property Name="DontSendMachineReadableEOBReports_BT" Type="Boolean" Nullable="false" />
+          <Property Name="RejectAllClaims_BT" Type="Boolean" Nullable="false" />
+          <Property Name="BillingStartDate_DT" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PGPPubKey_VC" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="AcctVerifiedByApex_BT" Type="Boolean" Nullable="false" />
+          <Property Name="AcctVerifiedByClient_BT" Type="Boolean" Nullable="false" />
+          <Property Name="ServiceLevel_TI" Type="Byte" Nullable="false" />
+          <Property Name="SendUTMedicareERAOnly_BT" Type="Boolean" Nullable="false" />
+          <Property Name="HoldStatementsForReview_BT" Type="Boolean" Nullable="false" />
+          <Property Name="RequireSoftwareUpdate_BT" Type="Boolean" Nullable="false" />
+          <Property Name="ReportOnPreviousFailedClaims_BT" Type="Boolean" Nullable="false" />
+          <Property Name="OutputMedicareLegacy_BT" Type="Boolean" Nullable="false" />
+          <Property Name="SendApexReports_BT" Type="Boolean" Nullable="false" />
+          <Property Name="DocIsAlwaysBilled_BT" Type="Boolean" Nullable="false" />
+          <Property Name="DaysOldClaims_IN" Type="Int32" />
+          <Property Name="OldClaims_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="DentalERAAmount_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="NumberOfDaysFreeClaims_IN" Type="Int32" />
+          <Property Name="InnovationsMonthlyAmount_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="EligibilityBaseAmountMed_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="NumberOfEligibilityTransBlockMed_IN" Type="Int32" />
+          <Property Name="EligibilityAmountOverThresholdMed_SM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="IsSubscribedSales_BT" Type="Boolean" Nullable="false" />
+          <Property Name="SubscribedSales_DT" Type="DateTime" Precision="0" />
+          <Property Name="SubscribedSalesIP_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UnsubscribedSales_DT" Type="DateTime" Precision="0" />
+          <Property Name="IsTestAccount_BT" Type="Boolean" Nullable="false" />
+          <Property Name="PracticeGUID" Type="Guid" />
+          <Property Name="IsMigratable_BT" Type="Boolean" Nullable="false" />
+          <Property Name="StatementForm_ID" Type="Int32" />
+          <Property Name="UseClaimRemedi_BT" Type="Boolean" Nullable="false" />
+          <Property Name="NEAFacilityID_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsNEAClient_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsUseProviderFromClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsUsePayToProviderFromClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Use5010Tables_BT" Type="Boolean" />
+          <Property Name="WhiteLabel_ID" Type="Int64" />
+          <Property Name="ProviderSale_DT" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="ClaimDentalBase_T" Relationship="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Provider_T" FromRole="Provider_T" ToRole="ClaimDentalBase_T" />
+          <NavigationProperty Name="ClaimMedicalBase_T" Relationship="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T" FromRole="Provider_T" ToRole="ClaimMedicalBase_T" />
+          <NavigationProperty Name="SoftwareConversion_T" Relationship="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T" FromRole="Provider_T" ToRole="SoftwareConversion_T" />
+          <NavigationProperty Name="Statement_T" Relationship="ClaimStakerDEVModel.FK_Statement_Provider" FromRole="Provider_T" ToRole="Statement_T" />
+        </EntityType>
+        <EntityType Name="SoftwareConversion_T">
+          <Key>
+            <PropertyRef Name="SoftwareConversion_ID" />
+          </Key>
+          <Property Name="SoftwareConversion_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConversionName_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Provider_T" Relationship="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T" FromRole="SoftwareConversion_T" ToRole="Provider_T" />
+        </EntityType>
+        <EntityType Name="Statement_T">
+          <Key>
+            <PropertyRef Name="Claim_ID" />
+          </Key>
+          <Property Name="Claim_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_ID" Type="Int64" Nullable="false" />
+          <Property Name="LastUpdate_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Payer_ID" Type="Int32" Nullable="false" />
+          <Property Name="Provider_ID" Type="Int32" Nullable="false" />
+          <Property Name="BatchNum_VC" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="ClientID_VC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="VendorClaimID_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="IsDuplicateClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="ReportDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="LastProcessDate_DT" Type="DateTime" Precision="3" />
+          <Property Name="ClaimStatus_TI" Type="Byte" Nullable="false" />
+          <Property Name="IsProcessNow_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsDoNotProcess_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsNoCharge_BT" Type="Boolean" Nullable="false" />
+          <Property Name="IsNewDocClaim_BT" Type="Boolean" Nullable="false" />
+          <Property Name="Errors_CH" Type="String" Nullable="false" MaxLength="225" Unicode="false" FixedLength="true" />
+          <Property Name="NumberOfClaims_TI" Type="Byte" Nullable="false" />
+          <Property Name="OutputSub_ID" Type="Int32" Nullable="false" />
+          <Property Name="Note_VC" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="F01_RecipientAccountNumber_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="F02_RecipientLastName_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="F02_RecipientFirstName_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F02_RecipientMI_VC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="F03A_RecipientAddress1_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="F03B_RecipientAddress2_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="F04_RecipientCity_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F05_RecipientST_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="F06_RecipientZip_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="F51_PatientLastName_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="F51_PatientFirstName_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F51_PatientMI_VC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="F07_OfficeName_VC" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="F08A_OfficeAddress1_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="F08B_OfficeAddress2_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="F09_OfficeCity_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F10_OfficeST_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="F11_OfficeZip_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="F12_OfficePhone_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="F13_PatientAccountNumber_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F14_StatementDate_VC" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="F15_PageNumber_VC" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="F16_RemitToName_VC" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="F17_RemitToAddress1_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="F18_RemitToAddress2_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="F19_RemitToCity_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F20_RemitToST_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="F21_RemitToZip_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="F22_RemitToPhone_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="F23_RenderingProviderLastName_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="F23_RenderingProviderFirstName_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F23_RenderingProviderMI_VC" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="F24_RenderingProviderID_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="F25_RenderingProviderST_VC" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="F26_PriorStatementDate_VC" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="F27_PaymentDueDate_VC" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="F28_PriorBalance_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F29_Adjustments_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F30_BalanceDue_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F30B_AccountBalance_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F31_FinanceCharge_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F32_Credits_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F33_EstimatedInsurancePayment_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F34_PatientShare_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F35_CurrentBalance_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F36_PastDue30_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F37_PastDue60_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F38_PastDue90_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="F39_PastDue120_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="TopNote_VC" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="F40_Notes1_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F41_Notes2_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F42_Notes3_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F43_Notes4_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F44_Notes5_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F45_Notes6_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F46_Notes7_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F47_Notes8_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F48_Notes9_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F49_Notes10_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="F00_StatementTitle_VC" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="F50_PendingAtInsurance_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="ServiceDate_VC" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="UniqueNameOnClaim_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Vendor_ID" Type="Int32" />
+          <NavigationProperty Name="Provider_T" Relationship="ClaimStakerDEVModel.FK_Statement_Provider" FromRole="Statement_T" ToRole="Provider_T" />
+        </EntityType>
+        <Association Name="FK_Batch_T_Profession_T">
+          <End Role="Profession_T" Type="ClaimStakerDEVModel.Profession_T" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Batch_T" Type="ClaimStakerDEVModel.Batch_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profession_T">
+              <PropertyRef Name="Profession_ID" />
+            </Principal>
+            <Dependent Role="Batch_T">
+              <PropertyRef Name="Profession_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClaimDentalBase_T_Provider_T">
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Provider_T" Multiplicity="0..1" />
+          <End Role="ClaimDentalBase_T" Type="ClaimStakerDEVModel.ClaimDentalBase_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider_T">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="ClaimDentalBase_T">
+              <PropertyRef Name="Provider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClaimMedicalBase_T_Provider_T">
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Provider_T" Multiplicity="0..1" />
+          <End Role="ClaimMedicalBase_T" Type="ClaimStakerDEVModel.ClaimMedicalBase_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider_T">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="ClaimMedicalBase_T">
+              <PropertyRef Name="Provider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Provider_T_SoftwareConversion_T">
+          <End Role="SoftwareConversion_T" Type="ClaimStakerDEVModel.SoftwareConversion_T" Multiplicity="0..1" />
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Provider_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SoftwareConversion_T">
+              <PropertyRef Name="SoftwareConversion_ID" />
+            </Principal>
+            <Dependent Role="Provider_T">
+              <PropertyRef Name="SoftwareConversion_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Statement_Provider">
+          <End Role="Provider_T" Type="ClaimStakerDEVModel.Provider_T" Multiplicity="1" />
+          <End Role="Statement_T" Type="ClaimStakerDEVModel.Statement_T" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider_T">
+              <PropertyRef Name="Provider_ID" />
+            </Principal>
+            <Dependent Role="Statement_T">
+              <PropertyRef Name="Provider_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClaimStakerDEVModelStoreContainer" CdmEntityContainer="ClaimStakerDEVEntities">
+          <EntitySetMapping Name="Batch_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.Batch_T">
+              <MappingFragment StoreEntitySet="Batch_T">
+                <ScalarProperty Name="Batch_ID" ColumnName="Batch_ID" />
+                <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
+                <ScalarProperty Name="BatchStatus_ID" ColumnName="BatchStatus_ID" />
+                <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+                <ScalarProperty Name="BatchName_VC" ColumnName="BatchName_VC" />
+                <ScalarProperty Name="WhenUploaded_DT" ColumnName="WhenUploaded_DT" />
+                <ScalarProperty Name="NumFailed_IN" ColumnName="NumFailed_IN" />
+                <ScalarProperty Name="NumTotal_IN" ColumnName="NumTotal_IN" />
+                <ScalarProperty Name="UploadStatus_VC" ColumnName="UploadStatus_VC" />
+                <ScalarProperty Name="IsCheckedForAttachment_BT" ColumnName="IsCheckedForAttachment_BT" />
+                <ScalarProperty Name="IsFromWeb_BT" ColumnName="IsFromWeb_BT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Claim_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.Claim_T">
+              <MappingFragment StoreEntitySet="Claim_T">
+                <ScalarProperty Name="Claim_ID" ColumnName="Claim_ID" />
+                <ScalarProperty Name="apexPayerID" ColumnName="apexPayerID" />
+                <ScalarProperty Name="claimControlNumber" ColumnName="claimControlNumber" />
+                <ScalarProperty Name="claimStatus" ColumnName="claimStatus" />
+                <ScalarProperty Name="errorDesc" ColumnName="errorDesc" />
+                <ScalarProperty Name="patientFirstName" ColumnName="patientFirstName" />
+                <ScalarProperty Name="patientLastName" ColumnName="patientLastName" />
+                <ScalarProperty Name="patientMiddleInitial" ColumnName="patientMiddleInitial" />
+                <ScalarProperty Name="patientSuffix" ColumnName="patientSuffix" />
+                <ScalarProperty Name="patientID" ColumnName="patientID" />
+                <ScalarProperty Name="patientAddress" ColumnName="patientAddress" />
+                <ScalarProperty Name="patientCity" ColumnName="patientCity" />
+                <ScalarProperty Name="patientState" ColumnName="patientState" />
+                <ScalarProperty Name="patientZip" ColumnName="patientZip" />
+                <ScalarProperty Name="patientDOB" ColumnName="patientDOB" />
+                <ScalarProperty Name="patientSex" ColumnName="patientSex" />
+                <ScalarProperty Name="patientAccountNumber" ColumnName="patientAccountNumber" />
+                <ScalarProperty Name="patientRelationship" ColumnName="patientRelationship" />
+                <ScalarProperty Name="patientMaritalType" ColumnName="patientMaritalType" />
+                <ScalarProperty Name="patientStudentType" ColumnName="patientStudentType" />
+                <ScalarProperty Name="patientSignature" ColumnName="patientSignature" />
+                <ScalarProperty Name="patientSignatureDate" ColumnName="patientSignatureDate" />
+                <ScalarProperty Name="patientPhone" ColumnName="patientPhone" />
+                <ScalarProperty Name="subscriberFirstName" ColumnName="subscriberFirstName" />
+                <ScalarProperty Name="subscriberLastName" ColumnName="subscriberLastName" />
+                <ScalarProperty Name="subscriberMiddleInitial" ColumnName="subscriberMiddleInitial" />
+                <ScalarProperty Name="subscriberID" ColumnName="subscriberID" />
+                <ScalarProperty Name="subscriberAddress1" ColumnName="subscriberAddress1" />
+                <ScalarProperty Name="subscriberCity" ColumnName="subscriberCity" />
+                <ScalarProperty Name="subscriberState" ColumnName="subscriberState" />
+                <ScalarProperty Name="subscriberZip" ColumnName="subscriberZip" />
+                <ScalarProperty Name="subscriberDOB" ColumnName="subscriberDOB" />
+                <ScalarProperty Name="subscriberSex" ColumnName="subscriberSex" />
+                <ScalarProperty Name="subscriberPhone" ColumnName="subscriberPhone" />
+                <ScalarProperty Name="subscriberSignature" ColumnName="subscriberSignature" />
+                <ScalarProperty Name="subscriberSignatureDate" ColumnName="subscriberSignatureDate" />
+                <ScalarProperty Name="subscriberEmployerName" ColumnName="subscriberEmployerName" />
+                <ScalarProperty Name="subscriberPlanName" ColumnName="subscriberPlanName" />
+                <ScalarProperty Name="subscriberSuffix" ColumnName="subscriberSuffix" />
+                <ScalarProperty Name="otherSubscriberFirstName" ColumnName="otherSubscriberFirstName" />
+                <ScalarProperty Name="otherSubscriberLastName" ColumnName="otherSubscriberLastName" />
+                <ScalarProperty Name="otherSubscriberMiddleInitial" ColumnName="otherSubscriberMiddleInitial" />
+                <ScalarProperty Name="otherSubscriberID" ColumnName="otherSubscriberID" />
+                <ScalarProperty Name="otherSubscriberAddress1" ColumnName="otherSubscriberAddress1" />
+                <ScalarProperty Name="otherSubscriberCity" ColumnName="otherSubscriberCity" />
+                <ScalarProperty Name="otherSubscriberState" ColumnName="otherSubscriberState" />
+                <ScalarProperty Name="otherSubscriberZip" ColumnName="otherSubscriberZip" />
+                <ScalarProperty Name="otherSubscriberDOB" ColumnName="otherSubscriberDOB" />
+                <ScalarProperty Name="otherSubscriberGroupNumber" ColumnName="otherSubscriberGroupNumber" />
+                <ScalarProperty Name="otherSubscriberSex" ColumnName="otherSubscriberSex" />
+                <ScalarProperty Name="otherSubscriberPlanName" ColumnName="otherSubscriberPlanName" />
+                <ScalarProperty Name="otherSubscriberRelationship" ColumnName="otherSubscriberRelationship" />
+                <ScalarProperty Name="providerName" ColumnName="providerName" />
+                <ScalarProperty Name="serviceStartDate" ColumnName="serviceStartDate" />
+                <ScalarProperty Name="serviceEndDate" ColumnName="serviceEndDate" />
+                <ScalarProperty Name="clientID" ColumnName="clientID" />
+                <ScalarProperty Name="payerName" ColumnName="payerName" />
+                <ScalarProperty Name="payerAddress1" ColumnName="payerAddress1" />
+                <ScalarProperty Name="payerAddress2" ColumnName="payerAddress2" />
+                <ScalarProperty Name="payerCity" ColumnName="payerCity" />
+                <ScalarProperty Name="payerState" ColumnName="payerState" />
+                <ScalarProperty Name="payerZip" ColumnName="payerZip" />
+                <ScalarProperty Name="payerRecDate" ColumnName="payerRecDate" />
+                <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+                <ScalarProperty Name="provFirstName" ColumnName="provFirstName" />
+                <ScalarProperty Name="provLastName" ColumnName="provLastName" />
+                <ScalarProperty Name="provMiddleInitial" ColumnName="provMiddleInitial" />
+                <ScalarProperty Name="provAddress1" ColumnName="provAddress1" />
+                <ScalarProperty Name="provAddress2" ColumnName="provAddress2" />
+                <ScalarProperty Name="provCity" ColumnName="provCity" />
+                <ScalarProperty Name="provState" ColumnName="provState" />
+                <ScalarProperty Name="provZip" ColumnName="provZip" />
+                <ScalarProperty Name="provID" ColumnName="provID" />
+                <ScalarProperty Name="provPayerIssuedID" ColumnName="provPayerIssuedID" />
+                <ScalarProperty Name="provSignature" ColumnName="provSignature" />
+                <ScalarProperty Name="provSignatureDate" ColumnName="provSignatureDate" />
+                <ScalarProperty Name="provPhone" ColumnName="provPhone" />
+                <ScalarProperty Name="facilityName" ColumnName="facilityName" />
+                <ScalarProperty Name="facilityAddress1" ColumnName="facilityAddress1" />
+                <ScalarProperty Name="facilityAddress2" ColumnName="facilityAddress2" />
+                <ScalarProperty Name="facilityCity" ColumnName="facilityCity" />
+                <ScalarProperty Name="facilityState" ColumnName="facilityState" />
+                <ScalarProperty Name="facilityZip" ColumnName="facilityZip" />
+                <ScalarProperty Name="placeOfService" ColumnName="placeOfService" />
+                <ScalarProperty Name="lastVisit" ColumnName="lastVisit" />
+                <ScalarProperty Name="condRelatedToEmployment" ColumnName="condRelatedToEmployment" />
+                <ScalarProperty Name="condRelatedToAutoAccident" ColumnName="condRelatedToAutoAccident" />
+                <ScalarProperty Name="condRelatedToOtherAccident" ColumnName="condRelatedToOtherAccident" />
+                <ScalarProperty Name="accidentDate" ColumnName="accidentDate" />
+                <ScalarProperty Name="accidentState" ColumnName="accidentState" />
+                <ScalarProperty Name="isOtherPlan" ColumnName="isOtherPlan" />
+                <ScalarProperty Name="referProvFirstName" ColumnName="referProvFirstName" />
+                <ScalarProperty Name="referProvLastName" ColumnName="referProvLastName" />
+                <ScalarProperty Name="referProvMiddleInitial" ColumnName="referProvMiddleInitial" />
+                <ScalarProperty Name="referProvID" ColumnName="referProvID" />
+                <ScalarProperty Name="priorAuthorizationNumber" ColumnName="priorAuthorizationNumber" />
+                <ScalarProperty Name="remark1" ColumnName="remark1" />
+                <ScalarProperty Name="remark2" ColumnName="remark2" />
+                <ScalarProperty Name="remark3" ColumnName="remark3" />
+                <ScalarProperty Name="remark4" ColumnName="remark4" />
+                <ScalarProperty Name="remark5" ColumnName="remark5" />
+                <ScalarProperty Name="remark6" ColumnName="remark6" />
+                <ScalarProperty Name="provNPI" ColumnName="provNPI" />
+                <ScalarProperty Name="referProvNPI" ColumnName="referProvNPI" />
+                <ScalarProperty Name="facilityNPI" ColumnName="facilityNPI" />
+                <ScalarProperty Name="referProvIDQual" ColumnName="referProvIDQual" />
+                <ScalarProperty Name="primaryPayerPaidAmount" ColumnName="primaryPayerPaidAmount" />
+                <ScalarProperty Name="approvedAmount" ColumnName="approvedAmount" />
+                <ScalarProperty Name="allowedAmount" ColumnName="allowedAmount" />
+                <ScalarProperty Name="patientResponsibleAmount" ColumnName="patientResponsibleAmount" />
+                <ScalarProperty Name="patientPaidAmount" ColumnName="patientPaidAmount" />
+                <ScalarProperty Name="otherAdjustmentsAmount" ColumnName="otherAdjustmentsAmount" />
+                <ScalarProperty Name="discountAmount" ColumnName="discountAmount" />
+                <ScalarProperty Name="taxAmount" ColumnName="taxAmount" />
+                <ScalarProperty Name="totalClaimBeforeTaxes" ColumnName="totalClaimBeforeTaxes" />
+                <ScalarProperty Name="attachmentReportTypeCode1" ColumnName="attachmentReportTypeCode1" />
+                <ScalarProperty Name="attachmentReportTypeCode2" ColumnName="attachmentReportTypeCode2" />
+                <ScalarProperty Name="attachmentReportTypeCode3" ColumnName="attachmentReportTypeCode3" />
+                <ScalarProperty Name="attachmentTransmissionCode1" ColumnName="attachmentTransmissionCode1" />
+                <ScalarProperty Name="attachmentTransmissionCode2" ColumnName="attachmentTransmissionCode2" />
+                <ScalarProperty Name="attachmentTransmissionCode3" ColumnName="attachmentTransmissionCode3" />
+                <ScalarProperty Name="attachmentIDCodeQualifier1" ColumnName="attachmentIDCodeQualifier1" />
+                <ScalarProperty Name="attachmentIDCodeQualifier2" ColumnName="attachmentIDCodeQualifier2" />
+                <ScalarProperty Name="attachmentIDCodeQualifier3" ColumnName="attachmentIDCodeQualifier3" />
+                <ScalarProperty Name="attachmentControlNumber1" ColumnName="attachmentControlNumber1" />
+                <ScalarProperty Name="attachmentControlNumber2" ColumnName="attachmentControlNumber2" />
+                <ScalarProperty Name="attachmentControlNumber3" ColumnName="attachmentControlNumber3" />
+                <ScalarProperty Name="provTaxIDType" ColumnName="provTaxIDType" />
+                <ScalarProperty Name="provTaxID" ColumnName="provTaxID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClaimDentalBase_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.ClaimDentalBase_T">
+              <MappingFragment StoreEntitySet="ClaimDentalBase_T">
+                <ScalarProperty Name="ClaimDentalBase_ID" ColumnName="ClaimDentalBase_ID" />
+                <ScalarProperty Name="ClaimDentalBillingProvider_ID" ColumnName="ClaimDentalBillingProvider_ID" />
+                <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+                <ScalarProperty Name="ClaimDentalPayer_ID" ColumnName="ClaimDentalPayer_ID" />
+                <ScalarProperty Name="Payer_ID" ColumnName="Payer_ID" />
+                <ScalarProperty Name="OutputSub_ID" ColumnName="OutputSub_ID" />
+                <ScalarProperty Name="ClaimStatusType_ID" ColumnName="ClaimStatusType_ID" />
+                <ScalarProperty Name="BatchNumber_VC" ColumnName="BatchNumber_VC" />
+                <ScalarProperty Name="ReportDate_DT" ColumnName="ReportDate_DT" />
+                <ScalarProperty Name="NPI_VC" ColumnName="NPI_VC" />
+                <ScalarProperty Name="LastProcessDate_DT" ColumnName="LastProcessDate_DT" />
+                <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+                <ScalarProperty Name="LegacyClaim_ID" ColumnName="LegacyClaim_ID" />
+                <ScalarProperty Name="LastUpdateDate_DT" ColumnName="LastUpdateDate_DT" />
+                <ScalarProperty Name="IsNoCharge_BT" ColumnName="IsNoCharge_BT" />
+                <ScalarProperty Name="IsProcessNow_BT" ColumnName="IsProcessNow_BT" />
+                <ScalarProperty Name="InternalNotes_VC" ColumnName="InternalNotes_VC" />
+                <ScalarProperty Name="ApexPayerID_VC" ColumnName="ApexPayerID_VC" />
+                <ScalarProperty Name="ClaimVendorID_VC" ColumnName="ClaimVendorID_VC" />
+                <ScalarProperty Name="EventPhase_ID" ColumnName="EventPhase_ID" />
+                <ScalarProperty Name="EventType_ID" ColumnName="EventType_ID" />
+                <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClaimMedicalBase_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.ClaimMedicalBase_T">
+              <MappingFragment StoreEntitySet="ClaimMedicalBase_T">
+                <ScalarProperty Name="ClaimMedicalBase_ID" ColumnName="ClaimMedicalBase_ID" />
+                <ScalarProperty Name="ClaimMedicalBillingProvider_ID" ColumnName="ClaimMedicalBillingProvider_ID" />
+                <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+                <ScalarProperty Name="ClaimMedicalPayer_ID" ColumnName="ClaimMedicalPayer_ID" />
+                <ScalarProperty Name="Payer_ID" ColumnName="Payer_ID" />
+                <ScalarProperty Name="OutputSub_ID" ColumnName="OutputSub_ID" />
+                <ScalarProperty Name="ClaimStatusType_ID" ColumnName="ClaimStatusType_ID" />
+                <ScalarProperty Name="BatchNumber_VC" ColumnName="BatchNumber_VC" />
+                <ScalarProperty Name="ReportDate_DT" ColumnName="ReportDate_DT" />
+                <ScalarProperty Name="NPI_VC" ColumnName="NPI_VC" />
+                <ScalarProperty Name="LastProcessDate_DT" ColumnName="LastProcessDate_DT" />
+                <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+                <ScalarProperty Name="LegacyClaim_ID" ColumnName="LegacyClaim_ID" />
+                <ScalarProperty Name="LastUpdateDate_DT" ColumnName="LastUpdateDate_DT" />
+                <ScalarProperty Name="IsNoCharge_BT" ColumnName="IsNoCharge_BT" />
+                <ScalarProperty Name="IsProcessNow_BT" ColumnName="IsProcessNow_BT" />
+                <ScalarProperty Name="InternalNotes_VC" ColumnName="InternalNotes_VC" />
+                <ScalarProperty Name="ApexPayerID_VC" ColumnName="ApexPayerID_VC" />
+                <ScalarProperty Name="ClaimVendorID_VC" ColumnName="ClaimVendorID_VC" />
+                <ScalarProperty Name="EventPhase_ID" ColumnName="EventPhase_ID" />
+                <ScalarProperty Name="EventType_ID" ColumnName="EventType_ID" />
+                <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClaimReport_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.ClaimReport_T">
+              <MappingFragment StoreEntitySet="ClaimReport_T">
+                <ScalarProperty Name="ClaimReport_ID" ColumnName="ClaimReport_ID" />
+                <ScalarProperty Name="ClaimReportType_ID" ColumnName="ClaimReportType_ID" />
+                <ScalarProperty Name="ReportName_VC" ColumnName="ReportName_VC" />
+                <ScalarProperty Name="ReceivedDate_DT" ColumnName="ReceivedDate_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profession_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.Profession_T">
+              <MappingFragment StoreEntitySet="Profession_T">
+                <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
+                <ScalarProperty Name="Name_VC" ColumnName="Name_VC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provider_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.Provider_T">
+              <MappingFragment StoreEntitySet="Provider_T">
+                <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+                <ScalarProperty Name="WebUserSettings_ID" ColumnName="WebUserSettings_ID" />
+                <ScalarProperty Name="PaymentMethod_ID" ColumnName="PaymentMethod_ID" />
+                <ScalarProperty Name="LastUpdate_DT" ColumnName="LastUpdate_DT" />
+                <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+                <ScalarProperty Name="LastName_VC" ColumnName="LastName_VC" />
+                <ScalarProperty Name="FirstName_VC" ColumnName="FirstName_VC" />
+                <ScalarProperty Name="MI_VC" ColumnName="MI_VC" />
+                <ScalarProperty Name="FirstNameIsMI_BT" ColumnName="FirstNameIsMI_BT" />
+                <ScalarProperty Name="OrganizationName_VC" ColumnName="OrganizationName_VC" />
+                <ScalarProperty Name="UseOrganizationName_BT" ColumnName="UseOrganizationName_BT" />
+                <ScalarProperty Name="ContactName_VC" ColumnName="ContactName_VC" />
+                <ScalarProperty Name="UniqueNameOnClaim_VC" ColumnName="UniqueNameOnClaim_VC" />
+                <ScalarProperty Name="ProviderStartDate_DT" ColumnName="ProviderStartDate_DT" />
+                <ScalarProperty Name="SiteIsOnHold_BT" ColumnName="SiteIsOnHold_BT" />
+                <ScalarProperty Name="IsOnWeb_BT" ColumnName="IsOnWeb_BT" />
+                <ScalarProperty Name="ShowPaperClaims_BT" ColumnName="ShowPaperClaims_BT" />
+                <ScalarProperty Name="RejectPaperClaims_BT" ColumnName="RejectPaperClaims_BT" />
+                <ScalarProperty Name="BillDocIfNoClaims_BT" ColumnName="BillDocIfNoClaims_BT" />
+                <ScalarProperty Name="DocIsInactive_BT" ColumnName="DocIsInactive_BT" />
+                <ScalarProperty Name="DontSendAcceptanceReports_BT" ColumnName="DontSendAcceptanceReports_BT" />
+                <ScalarProperty Name="Address1_VC" ColumnName="Address1_VC" />
+                <ScalarProperty Name="Address2_VC" ColumnName="Address2_VC" />
+                <ScalarProperty Name="City_VC" ColumnName="City_VC" />
+                <ScalarProperty Name="ST_ID" ColumnName="ST_ID" />
+                <ScalarProperty Name="ST_VC" ColumnName="ST_VC" />
+                <ScalarProperty Name="Zip_VC" ColumnName="Zip_VC" />
+                <ScalarProperty Name="CountryCode_VC" ColumnName="CountryCode_VC" />
+                <ScalarProperty Name="IsPayToProviderPerson_BT" ColumnName="IsPayToProviderPerson_BT" />
+                <ScalarProperty Name="PayToAddressAddress1_VC" ColumnName="PayToAddressAddress1_VC" />
+                <ScalarProperty Name="PayToAddressAddress2_VC" ColumnName="PayToAddressAddress2_VC" />
+                <ScalarProperty Name="PayToAddressCity_VC" ColumnName="PayToAddressCity_VC" />
+                <ScalarProperty Name="PayToAddressST_VC" ColumnName="PayToAddressST_VC" />
+                <ScalarProperty Name="PayToAddressZip_VC" ColumnName="PayToAddressZip_VC" />
+                <ScalarProperty Name="PayToAddressCountryCode_VC" ColumnName="PayToAddressCountryCode_VC" />
+                <ScalarProperty Name="DeliveryPoint_VC" ColumnName="DeliveryPoint_VC" />
+                <ScalarProperty Name="CheckDigit_VC" ColumnName="CheckDigit_VC" />
+                <ScalarProperty Name="Phone_VC" ColumnName="Phone_VC" />
+                <ScalarProperty Name="Fax_VC" ColumnName="Fax_VC" />
+                <ScalarProperty Name="EmailAddress_VC" ColumnName="EmailAddress_VC" />
+                <ScalarProperty Name="NPI_VC" ColumnName="NPI_VC" />
+                <ScalarProperty Name="TaxID_VC" ColumnName="TaxID_VC" />
+                <ScalarProperty Name="IsTaxIDTypeEIN_BT" ColumnName="IsTaxIDTypeEIN_BT" />
+                <ScalarProperty Name="IsUseTaxIDonClaim_BT" ColumnName="IsUseTaxIDonClaim_BT" />
+                <ScalarProperty Name="IsUseNPIOnClaim_BT" ColumnName="IsUseNPIOnClaim_BT" />
+                <ScalarProperty Name="IsUseFacilityAddOnClaim_BT" ColumnName="IsUseFacilityAddOnClaim_BT" />
+                <ScalarProperty Name="License_VC" ColumnName="License_VC" />
+                <ScalarProperty Name="KeyFieldData_VC" ColumnName="KeyFieldData_VC" />
+                <ScalarProperty Name="NEICSiteCode_VC" ColumnName="NEICSiteCode_VC" />
+                <ScalarProperty Name="ProvTypeOrg_VC" ColumnName="ProvTypeOrg_VC" />
+                <ScalarProperty Name="PayerSpecificID_VC" ColumnName="PayerSpecificID_VC" />
+                <ScalarProperty Name="NetworkID_VC" ColumnName="NetworkID_VC" />
+                <ScalarProperty Name="ElectronicSubmitterID_VC" ColumnName="ElectronicSubmitterID_VC" />
+                <ScalarProperty Name="BCBSIndividual_VC" ColumnName="BCBSIndividual_VC" />
+                <ScalarProperty Name="BCBSGroup_VC" ColumnName="BCBSGroup_VC" />
+                <ScalarProperty Name="Medicaid_VC" ColumnName="Medicaid_VC" />
+                <ScalarProperty Name="MedicaidGroup_VC" ColumnName="MedicaidGroup_VC" />
+                <ScalarProperty Name="MamoCertNumber_VC" ColumnName="MamoCertNumber_VC" />
+                <ScalarProperty Name="WorkersComp_VC" ColumnName="WorkersComp_VC" />
+                <ScalarProperty Name="MedicareIndividual_VC" ColumnName="MedicareIndividual_VC" />
+                <ScalarProperty Name="MedicareGroup_VC" ColumnName="MedicareGroup_VC" />
+                <ScalarProperty Name="RailroadMedicare_VC" ColumnName="RailroadMedicare_VC" />
+                <ScalarProperty Name="RailroadMedicareGroup_VC" ColumnName="RailroadMedicareGroup_VC" />
+                <ScalarProperty Name="DMERC_VC" ColumnName="DMERC_VC" />
+                <ScalarProperty Name="Tricare_VC" ColumnName="Tricare_VC" />
+                <ScalarProperty Name="BlueShield_VC" ColumnName="BlueShield_VC" />
+                <ScalarProperty Name="BlueCross_VC" ColumnName="BlueCross_VC" />
+                <ScalarProperty Name="UPIN_VC" ColumnName="UPIN_VC" />
+                <ScalarProperty Name="DeltaDental_VC" ColumnName="DeltaDental_VC" />
+                <ScalarProperty Name="NEICSpecialtyCode_ID" ColumnName="NEICSpecialtyCode_ID" />
+                <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
+                <ScalarProperty Name="PaymentMethod_TI" ColumnName="PaymentMethod_TI" />
+                <ScalarProperty Name="CardCheckingAcctNum_VB" ColumnName="CardCheckingAcctNum_VB" />
+                <ScalarProperty Name="CheckingRoutingNum_VC" ColumnName="CheckingRoutingNum_VC" />
+                <ScalarProperty Name="CardExpiration_VC" ColumnName="CardExpiration_VC" />
+                <ScalarProperty Name="IsRenderingProvider_BT" ColumnName="IsRenderingProvider_BT" />
+                <ScalarProperty Name="RenderingProvTaxID_VC" ColumnName="RenderingProvTaxID_VC" />
+                <ScalarProperty Name="IsRenderingProvTaxIDTypeEIN_BT" ColumnName="IsRenderingProvTaxIDTypeEIN_BT" />
+                <ScalarProperty Name="RenderingProvNPI_VC" ColumnName="RenderingProvNPI_VC" />
+                <ScalarProperty Name="RenderingProvOrganization_VC" ColumnName="RenderingProvOrganization_VC" />
+                <ScalarProperty Name="RenderingProvUseOrganizationName_BT" ColumnName="RenderingProvUseOrganizationName_BT" />
+                <ScalarProperty Name="RenderingProvLastName_VC" ColumnName="RenderingProvLastName_VC" />
+                <ScalarProperty Name="RenderingProvFirstName_VC" ColumnName="RenderingProvFirstName_VC" />
+                <ScalarProperty Name="RenderingProvMI_VC" ColumnName="RenderingProvMI_VC" />
+                <ScalarProperty Name="RenderingProvNEICSpecialtyCode_ID" ColumnName="RenderingProvNEICSpecialtyCode_ID" />
+                <ScalarProperty Name="RenderingProvAddress_VC" ColumnName="RenderingProvAddress_VC" />
+                <ScalarProperty Name="RenderingProvAddress2_VC" ColumnName="RenderingProvAddress2_VC" />
+                <ScalarProperty Name="RenderingProvCity_VC" ColumnName="RenderingProvCity_VC" />
+                <ScalarProperty Name="RenderingProvST_ID" ColumnName="RenderingProvST_ID" />
+                <ScalarProperty Name="RenderingProvST_VC" ColumnName="RenderingProvST_VC" />
+                <ScalarProperty Name="RenderingProvZip_VC" ColumnName="RenderingProvZip_VC" />
+                <ScalarProperty Name="SoftwareMapName_ID" ColumnName="SoftwareMapName_ID" />
+                <ScalarProperty Name="BillMethod_TI" ColumnName="BillMethod_TI" />
+                <ScalarProperty Name="ClaimProductPurchased_ID" ColumnName="ClaimProductPurchased_ID" />
+                <ScalarProperty Name="BillPerVolume_BT" ColumnName="BillPerVolume_BT" />
+                <ScalarProperty Name="MonthlyFee_SM" ColumnName="MonthlyFee_SM" />
+                <ScalarProperty Name="MinimumFee_SM" ColumnName="MinimumFee_SM" />
+                <ScalarProperty Name="MonthlyClaimThreshold_IN" ColumnName="MonthlyClaimThreshold_IN" />
+                <ScalarProperty Name="ChargePerClaimOverThresholdOrElect_SM" ColumnName="ChargePerClaimOverThresholdOrElect_SM" />
+                <ScalarProperty Name="ChargePerClaimUnderThresholdOrPaper_SM" ColumnName="ChargePerClaimUnderThresholdOrPaper_SM" />
+                <ScalarProperty Name="ChargePerClaimPaper_SM" ColumnName="ChargePerClaimPaper_SM" />
+                <ScalarProperty Name="SoftwareName_VC" ColumnName="SoftwareName_VC" />
+                <ScalarProperty Name="SoftwareVersion_VC" ColumnName="SoftwareVersion_VC" />
+                <ScalarProperty Name="SoftwareConversion_ID" ColumnName="SoftwareConversion_ID" />
+                <ScalarProperty Name="LineItemMappingMin_VC" ColumnName="LineItemMappingMin_VC" />
+                <ScalarProperty Name="LineItemMappingMax_VC" ColumnName="LineItemMappingMax_VC" />
+                <ScalarProperty Name="StripString_VC" ColumnName="StripString_VC" />
+                <ScalarProperty Name="Qualifications_VC" ColumnName="Qualifications_VC" />
+                <ScalarProperty Name="SalesCode_VC" ColumnName="SalesCode_VC" />
+                <ScalarProperty Name="SalesRep1_ID" ColumnName="SalesRep1_ID" />
+                <ScalarProperty Name="CommissionElectronic1_SM" ColumnName="CommissionElectronic1_SM" />
+                <ScalarProperty Name="CommissionPaper1_SM" ColumnName="CommissionPaper1_SM" />
+                <ScalarProperty Name="SalesRep2_ID" ColumnName="SalesRep2_ID" />
+                <ScalarProperty Name="CommissionElectronic2_SM" ColumnName="CommissionElectronic2_SM" />
+                <ScalarProperty Name="CommissionPaper2_SM" ColumnName="CommissionPaper2_SM" />
+                <ScalarProperty Name="Vendor1_ID" ColumnName="Vendor1_ID" />
+                <ScalarProperty Name="Vendor2_ID" ColumnName="Vendor2_ID" />
+                <ScalarProperty Name="BillAllDocsAtThisSiteSeparately_BT" ColumnName="BillAllDocsAtThisSiteSeparately_BT" />
+                <ScalarProperty Name="BillClaimsOnAnotherProvider_ID" ColumnName="BillClaimsOnAnotherProvider_ID" />
+                <ScalarProperty Name="BillingName_VC" ColumnName="BillingName_VC" />
+                <ScalarProperty Name="BillingAddress_VC" ColumnName="BillingAddress_VC" />
+                <ScalarProperty Name="BillingAddress2_VC" ColumnName="BillingAddress2_VC" />
+                <ScalarProperty Name="BillingCity_VC" ColumnName="BillingCity_VC" />
+                <ScalarProperty Name="BillingST_ID" ColumnName="BillingST_ID" />
+                <ScalarProperty Name="BillingST_VC" ColumnName="BillingST_VC" />
+                <ScalarProperty Name="BillingZip_VC" ColumnName="BillingZip_VC" />
+                <ScalarProperty Name="Notes_VC" ColumnName="Notes_VC" />
+                <ScalarProperty Name="ReportIDNumbers_VC" ColumnName="ReportIDNumbers_VC" />
+                <ScalarProperty Name="RegistrationFee_SM" ColumnName="RegistrationFee_SM" />
+                <ScalarProperty Name="Adjustment_SM" ColumnName="Adjustment_SM" />
+                <ScalarProperty Name="AdjustmentDesc_VC" ColumnName="AdjustmentDesc_VC" />
+                <ScalarProperty Name="DepositAmount_SM" ColumnName="DepositAmount_SM" />
+                <ScalarProperty Name="PayerEnrollmentPending_VC" ColumnName="PayerEnrollmentPending_VC" />
+                <ScalarProperty Name="PayerEnrollment_VC" ColumnName="PayerEnrollment_VC" />
+                <ScalarProperty Name="ForceOutputFrom0_ID" ColumnName="ForceOutputFrom0_ID" />
+                <ScalarProperty Name="ForceOutputTo0_ID" ColumnName="ForceOutputTo0_ID" />
+                <ScalarProperty Name="ForceOutputFrom1_ID" ColumnName="ForceOutputFrom1_ID" />
+                <ScalarProperty Name="ForceOutputTo1_ID" ColumnName="ForceOutputTo1_ID" />
+                <ScalarProperty Name="KWApexMap_ID" ColumnName="KWApexMap_ID" />
+                <ScalarProperty Name="PEHP_VC" ColumnName="PEHP_VC" />
+                <ScalarProperty Name="CLIA_VC" ColumnName="CLIA_VC" />
+                <ScalarProperty Name="BCBSMedicaid_VC" ColumnName="BCBSMedicaid_VC" />
+                <ScalarProperty Name="Stat_MonthlyStatThreshold_IN" ColumnName="Stat_MonthlyStatThreshold_IN" />
+                <ScalarProperty Name="Stat_ChargePerStatOverThreshold_SM" ColumnName="Stat_ChargePerStatOverThreshold_SM" />
+                <ScalarProperty Name="Stat_ChargePerStatUnderThreshold_SM" ColumnName="Stat_ChargePerStatUnderThreshold_SM" />
+                <ScalarProperty Name="Stat_ChargePerStatSecondPage_SM" ColumnName="Stat_ChargePerStatSecondPage_SM" />
+                <ScalarProperty Name="Stat_MinimumFeeAmount_SM" ColumnName="Stat_MinimumFeeAmount_SM" />
+                <ScalarProperty Name="Stat_SoftwareMapName_ID" ColumnName="Stat_SoftwareMapName_ID" />
+                <ScalarProperty Name="Stat_SoftwareConversion_ID" ColumnName="Stat_SoftwareConversion_ID" />
+                <ScalarProperty Name="Stat_StripString_VC" ColumnName="Stat_StripString_VC" />
+                <ScalarProperty Name="Stat_KWApexMap_ID" ColumnName="Stat_KWApexMap_ID" />
+                <ScalarProperty Name="Stat_KeyFieldData_VC" ColumnName="Stat_KeyFieldData_VC" />
+                <ScalarProperty Name="Stat_ProductType_TI" ColumnName="Stat_ProductType_TI" />
+                <ScalarProperty Name="Stat_Backprinting_BT" ColumnName="Stat_Backprinting_BT" />
+                <ScalarProperty Name="Stat_CreditCardsAccepted_CH" ColumnName="Stat_CreditCardsAccepted_CH" />
+                <ScalarProperty Name="Stat_IndustryType_TI" ColumnName="Stat_IndustryType_TI" />
+                <ScalarProperty Name="Stat_IndustryCommercialType_VC" ColumnName="Stat_IndustryCommercialType_VC" />
+                <ScalarProperty Name="Stat_CustomLogo_BT" ColumnName="Stat_CustomLogo_BT" />
+                <ScalarProperty Name="Stat_IncludePaymentDueByDate_BT" ColumnName="Stat_IncludePaymentDueByDate_BT" />
+                <ScalarProperty Name="Stat_IncludePaymentDueByDateNumberOfDays_TI" ColumnName="Stat_IncludePaymentDueByDateNumberOfDays_TI" />
+                <ScalarProperty Name="Stat_PaySalesRep1_BT" ColumnName="Stat_PaySalesRep1_BT" />
+                <ScalarProperty Name="Stat_PaySalesRep2_BT" ColumnName="Stat_PaySalesRep2_BT" />
+                <ScalarProperty Name="Stat_PayVendor1_BT" ColumnName="Stat_PayVendor1_BT" />
+                <ScalarProperty Name="Stat_PayVendor2_BT" ColumnName="Stat_PayVendor2_BT" />
+                <ScalarProperty Name="Stat_StatementStartDate_DT" ColumnName="Stat_StatementStartDate_DT" />
+                <ScalarProperty Name="Stat_Note_VC" ColumnName="Stat_Note_VC" />
+                <ScalarProperty Name="Stat_Note1_VC" ColumnName="Stat_Note1_VC" />
+                <ScalarProperty Name="Stat_Note2_VC" ColumnName="Stat_Note2_VC" />
+                <ScalarProperty Name="Stat_Note3_VC" ColumnName="Stat_Note3_VC" />
+                <ScalarProperty Name="Stat_Note4_VC" ColumnName="Stat_Note4_VC" />
+                <ScalarProperty Name="Stat_Note5_VC" ColumnName="Stat_Note5_VC" />
+                <ScalarProperty Name="Stat_UniqueName_VC" ColumnName="Stat_UniqueName_VC" />
+                <ScalarProperty Name="Stat_RemitName_VC" ColumnName="Stat_RemitName_VC" />
+                <ScalarProperty Name="Stat_RemitAddress1_VC" ColumnName="Stat_RemitAddress1_VC" />
+                <ScalarProperty Name="Stat_RemitAddress2_VC" ColumnName="Stat_RemitAddress2_VC" />
+                <ScalarProperty Name="Stat_RemitCity_VC" ColumnName="Stat_RemitCity_VC" />
+                <ScalarProperty Name="Stat_RemitST_ID" ColumnName="Stat_RemitST_ID" />
+                <ScalarProperty Name="Stat_RemitST_VC" ColumnName="Stat_RemitST_VC" />
+                <ScalarProperty Name="Stat_RemitZip_VC" ColumnName="Stat_RemitZip_VC" />
+                <ScalarProperty Name="Stat_RemitDeliveryPoint_VC" ColumnName="Stat_RemitDeliveryPoint_VC" />
+                <ScalarProperty Name="Stat_RemitCheckDigit_VC" ColumnName="Stat_RemitCheckDigit_VC" />
+                <ScalarProperty Name="Stat_RemitPhone_VC" ColumnName="Stat_RemitPhone_VC" />
+                <ScalarProperty Name="Stat_RemitPhoneAlt_VC" ColumnName="Stat_RemitPhoneAlt_VC" />
+                <ScalarProperty Name="Stat_RemitPhoneExt_VC" ColumnName="Stat_RemitPhoneExt_VC" />
+                <ScalarProperty Name="Stat_RemitPhoneAltExt_VC" ColumnName="Stat_RemitPhoneAltExt_VC" />
+                <ScalarProperty Name="Stat_ShiftFirstLine_VC" ColumnName="Stat_ShiftFirstLine_VC" />
+                <ScalarProperty Name="Stat_ShiftSpaceLo_VC" ColumnName="Stat_ShiftSpaceLo_VC" />
+                <ScalarProperty Name="Stat_ShiftSpaceHi_VC" ColumnName="Stat_ShiftSpaceHi_VC" />
+                <ScalarProperty Name="Stat_UseUniqueSettings_IN" ColumnName="Stat_UseUniqueSettings_IN" />
+                <ScalarProperty Name="Stat_PaperColor_TI" ColumnName="Stat_PaperColor_TI" />
+                <ScalarProperty Name="Stat_PullOfficeInfoFromStatement_BT" ColumnName="Stat_PullOfficeInfoFromStatement_BT" />
+                <ScalarProperty Name="Stat_PullRemitToInfoFromStatement_BT" ColumnName="Stat_PullRemitToInfoFromStatement_BT" />
+                <ScalarProperty Name="Stat_ExcludeBalanceDue_BT" ColumnName="Stat_ExcludeBalanceDue_BT" />
+                <ScalarProperty Name="Stat_HasFloatingFooterHeader_BT" ColumnName="Stat_HasFloatingFooterHeader_BT" />
+                <ScalarProperty Name="Stat_FooterHeaderCorrectLineNumber_IN" ColumnName="Stat_FooterHeaderCorrectLineNumber_IN" />
+                <ScalarProperty Name="Stat_FooterHeaderString_VC" ColumnName="Stat_FooterHeaderString_VC" />
+                <ScalarProperty Name="Stat_ClaimStartString_VC" ColumnName="Stat_ClaimStartString_VC" />
+                <ScalarProperty Name="Stat_LineItemStartsWithRegex_VC" ColumnName="Stat_LineItemStartsWithRegex_VC" />
+                <ScalarProperty Name="Stat_LineItemStartsWithRegexPatternLength_IN" ColumnName="Stat_LineItemStartsWithRegexPatternLength_IN" />
+                <ScalarProperty Name="AcceptTermsDate_DT" ColumnName="AcceptTermsDate_DT" />
+                <ScalarProperty Name="DontSendHumanReadableEOBReports_BT" ColumnName="DontSendHumanReadableEOBReports_BT" />
+                <ScalarProperty Name="DontSendMachineReadableEOBReports_BT" ColumnName="DontSendMachineReadableEOBReports_BT" />
+                <ScalarProperty Name="RejectAllClaims_BT" ColumnName="RejectAllClaims_BT" />
+                <ScalarProperty Name="BillingStartDate_DT" ColumnName="BillingStartDate_DT" />
+                <ScalarProperty Name="PGPPubKey_VC" ColumnName="PGPPubKey_VC" />
+                <ScalarProperty Name="AcctVerifiedByApex_BT" ColumnName="AcctVerifiedByApex_BT" />
+                <ScalarProperty Name="AcctVerifiedByClient_BT" ColumnName="AcctVerifiedByClient_BT" />
+                <ScalarProperty Name="ServiceLevel_TI" ColumnName="ServiceLevel_TI" />
+                <ScalarProperty Name="SendUTMedicareERAOnly_BT" ColumnName="SendUTMedicareERAOnly_BT" />
+                <ScalarProperty Name="HoldStatementsForReview_BT" ColumnName="HoldStatementsForReview_BT" />
+                <ScalarProperty Name="RequireSoftwareUpdate_BT" ColumnName="RequireSoftwareUpdate_BT" />
+                <ScalarProperty Name="ReportOnPreviousFailedClaims_BT" ColumnName="ReportOnPreviousFailedClaims_BT" />
+                <ScalarProperty Name="OutputMedicareLegacy_BT" ColumnName="OutputMedicareLegacy_BT" />
+                <ScalarProperty Name="SendApexReports_BT" ColumnName="SendApexReports_BT" />
+                <ScalarProperty Name="DocIsAlwaysBilled_BT" ColumnName="DocIsAlwaysBilled_BT" />
+                <ScalarProperty Name="DaysOldClaims_IN" ColumnName="DaysOldClaims_IN" />
+                <ScalarProperty Name="OldClaims_SM" ColumnName="OldClaims_SM" />
+                <ScalarProperty Name="DentalERAAmount_VC" ColumnName="DentalERAAmount_VC" />
+                <ScalarProperty Name="NumberOfDaysFreeClaims_IN" ColumnName="NumberOfDaysFreeClaims_IN" />
+                <ScalarProperty Name="InnovationsMonthlyAmount_SM" ColumnName="InnovationsMonthlyAmount_SM" />
+                <ScalarProperty Name="EligibilityBaseAmountMed_VC" ColumnName="EligibilityBaseAmountMed_VC" />
+                <ScalarProperty Name="NumberOfEligibilityTransBlockMed_IN" ColumnName="NumberOfEligibilityTransBlockMed_IN" />
+                <ScalarProperty Name="EligibilityAmountOverThresholdMed_SM" ColumnName="EligibilityAmountOverThresholdMed_SM" />
+                <ScalarProperty Name="IsSubscribedSales_BT" ColumnName="IsSubscribedSales_BT" />
+                <ScalarProperty Name="SubscribedSales_DT" ColumnName="SubscribedSales_DT" />
+                <ScalarProperty Name="SubscribedSalesIP_VC" ColumnName="SubscribedSalesIP_VC" />
+                <ScalarProperty Name="UnsubscribedSales_DT" ColumnName="UnsubscribedSales_DT" />
+                <ScalarProperty Name="IsTestAccount_BT" ColumnName="IsTestAccount_BT" />
+                <ScalarProperty Name="PracticeGUID" ColumnName="PracticeGUID" />
+                <ScalarProperty Name="IsMigratable_BT" ColumnName="IsMigratable_BT" />
+                <ScalarProperty Name="StatementForm_ID" ColumnName="StatementForm_ID" />
+                <ScalarProperty Name="UseClaimRemedi_BT" ColumnName="UseClaimRemedi_BT" />
+                <ScalarProperty Name="NEAFacilityID_VC" ColumnName="NEAFacilityID_VC" />
+                <ScalarProperty Name="IsNEAClient_BT" ColumnName="IsNEAClient_BT" />
+                <ScalarProperty Name="IsUseProviderFromClaim_BT" ColumnName="IsUseProviderFromClaim_BT" />
+                <ScalarProperty Name="IsUsePayToProviderFromClaim_BT" ColumnName="IsUsePayToProviderFromClaim_BT" />
+                <ScalarProperty Name="Use5010Tables_BT" ColumnName="Use5010Tables_BT" />
+                <ScalarProperty Name="WhiteLabel_ID" ColumnName="WhiteLabel_ID" />
+                <ScalarProperty Name="ProviderSale_DT" ColumnName="ProviderSale_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SoftwareConversion_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.SoftwareConversion_T">
+              <MappingFragment StoreEntitySet="SoftwareConversion_T">
+                <ScalarProperty Name="SoftwareConversion_ID" ColumnName="SoftwareConversion_ID" />
+                <ScalarProperty Name="ConversionName_VC" ColumnName="ConversionName_VC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Statement_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.Statement_T">
+              <MappingFragment StoreEntitySet="Statement_T">
+                <ScalarProperty Name="Claim_ID" ColumnName="Claim_ID" />
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+                <ScalarProperty Name="LastUpdate_DT" ColumnName="LastUpdate_DT" />
+                <ScalarProperty Name="Payer_ID" ColumnName="Payer_ID" />
+                <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+                <ScalarProperty Name="BatchNum_VC" ColumnName="BatchNum_VC" />
+                <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+                <ScalarProperty Name="VendorClaimID_VC" ColumnName="VendorClaimID_VC" />
+                <ScalarProperty Name="IsDuplicateClaim_BT" ColumnName="IsDuplicateClaim_BT" />
+                <ScalarProperty Name="ReportDate_DT" ColumnName="ReportDate_DT" />
+                <ScalarProperty Name="LastProcessDate_DT" ColumnName="LastProcessDate_DT" />
+                <ScalarProperty Name="ClaimStatus_TI" ColumnName="ClaimStatus_TI" />
+                <ScalarProperty Name="IsProcessNow_BT" ColumnName="IsProcessNow_BT" />
+                <ScalarProperty Name="IsDoNotProcess_BT" ColumnName="IsDoNotProcess_BT" />
+                <ScalarProperty Name="IsNoCharge_BT" ColumnName="IsNoCharge_BT" />
+                <ScalarProperty Name="IsNewDocClaim_BT" ColumnName="IsNewDocClaim_BT" />
+                <ScalarProperty Name="Errors_CH" ColumnName="Errors_CH" />
+                <ScalarProperty Name="NumberOfClaims_TI" ColumnName="NumberOfClaims_TI" />
+                <ScalarProperty Name="OutputSub_ID" ColumnName="OutputSub_ID" />
+                <ScalarProperty Name="Note_VC" ColumnName="Note_VC" />
+                <ScalarProperty Name="F01_RecipientAccountNumber_VC" ColumnName="F01_RecipientAccountNumber_VC" />
+                <ScalarProperty Name="F02_RecipientLastName_VC" ColumnName="F02_RecipientLastName_VC" />
+                <ScalarProperty Name="F02_RecipientFirstName_VC" ColumnName="F02_RecipientFirstName_VC" />
+                <ScalarProperty Name="F02_RecipientMI_VC" ColumnName="F02_RecipientMI_VC" />
+                <ScalarProperty Name="F03A_RecipientAddress1_VC" ColumnName="F03A_RecipientAddress1_VC" />
+                <ScalarProperty Name="F03B_RecipientAddress2_VC" ColumnName="F03B_RecipientAddress2_VC" />
+                <ScalarProperty Name="F04_RecipientCity_VC" ColumnName="F04_RecipientCity_VC" />
+                <ScalarProperty Name="F05_RecipientST_VC" ColumnName="F05_RecipientST_VC" />
+                <ScalarProperty Name="F06_RecipientZip_VC" ColumnName="F06_RecipientZip_VC" />
+                <ScalarProperty Name="F51_PatientLastName_VC" ColumnName="F51_PatientLastName_VC" />
+                <ScalarProperty Name="F51_PatientFirstName_VC" ColumnName="F51_PatientFirstName_VC" />
+                <ScalarProperty Name="F51_PatientMI_VC" ColumnName="F51_PatientMI_VC" />
+                <ScalarProperty Name="F07_OfficeName_VC" ColumnName="F07_OfficeName_VC" />
+                <ScalarProperty Name="F08A_OfficeAddress1_VC" ColumnName="F08A_OfficeAddress1_VC" />
+                <ScalarProperty Name="F08B_OfficeAddress2_VC" ColumnName="F08B_OfficeAddress2_VC" />
+                <ScalarProperty Name="F09_OfficeCity_VC" ColumnName="F09_OfficeCity_VC" />
+                <ScalarProperty Name="F10_OfficeST_VC" ColumnName="F10_OfficeST_VC" />
+                <ScalarProperty Name="F11_OfficeZip_VC" ColumnName="F11_OfficeZip_VC" />
+                <ScalarProperty Name="F12_OfficePhone_VC" ColumnName="F12_OfficePhone_VC" />
+                <ScalarProperty Name="F13_PatientAccountNumber_VC" ColumnName="F13_PatientAccountNumber_VC" />
+                <ScalarProperty Name="F14_StatementDate_VC" ColumnName="F14_StatementDate_VC" />
+                <ScalarProperty Name="F15_PageNumber_VC" ColumnName="F15_PageNumber_VC" />
+                <ScalarProperty Name="F16_RemitToName_VC" ColumnName="F16_RemitToName_VC" />
+                <ScalarProperty Name="F17_RemitToAddress1_VC" ColumnName="F17_RemitToAddress1_VC" />
+                <ScalarProperty Name="F18_RemitToAddress2_VC" ColumnName="F18_RemitToAddress2_VC" />
+                <ScalarProperty Name="F19_RemitToCity_VC" ColumnName="F19_RemitToCity_VC" />
+                <ScalarProperty Name="F20_RemitToST_VC" ColumnName="F20_RemitToST_VC" />
+                <ScalarProperty Name="F21_RemitToZip_VC" ColumnName="F21_RemitToZip_VC" />
+                <ScalarProperty Name="F22_RemitToPhone_VC" ColumnName="F22_RemitToPhone_VC" />
+                <ScalarProperty Name="F23_RenderingProviderLastName_VC" ColumnName="F23_RenderingProviderLastName_VC" />
+                <ScalarProperty Name="F23_RenderingProviderFirstName_VC" ColumnName="F23_RenderingProviderFirstName_VC" />
+                <ScalarProperty Name="F23_RenderingProviderMI_VC" ColumnName="F23_RenderingProviderMI_VC" />
+                <ScalarProperty Name="F24_RenderingProviderID_VC" ColumnName="F24_RenderingProviderID_VC" />
+                <ScalarProperty Name="F25_RenderingProviderST_VC" ColumnName="F25_RenderingProviderST_VC" />
+                <ScalarProperty Name="F26_PriorStatementDate_VC" ColumnName="F26_PriorStatementDate_VC" />
+                <ScalarProperty Name="F27_PaymentDueDate_VC" ColumnName="F27_PaymentDueDate_VC" />
+                <ScalarProperty Name="F28_PriorBalance_VC" ColumnName="F28_PriorBalance_VC" />
+                <ScalarProperty Name="F29_Adjustments_VC" ColumnName="F29_Adjustments_VC" />
+                <ScalarProperty Name="F30_BalanceDue_VC" ColumnName="F30_BalanceDue_VC" />
+                <ScalarProperty Name="F30B_AccountBalance_VC" ColumnName="F30B_AccountBalance_VC" />
+                <ScalarProperty Name="F31_FinanceCharge_VC" ColumnName="F31_FinanceCharge_VC" />
+                <ScalarProperty Name="F32_Credits_VC" ColumnName="F32_Credits_VC" />
+                <ScalarProperty Name="F33_EstimatedInsurancePayment_VC" ColumnName="F33_EstimatedInsurancePayment_VC" />
+                <ScalarProperty Name="F34_PatientShare_VC" ColumnName="F34_PatientShare_VC" />
+                <ScalarProperty Name="F35_CurrentBalance_VC" ColumnName="F35_CurrentBalance_VC" />
+                <ScalarProperty Name="F36_PastDue30_VC" ColumnName="F36_PastDue30_VC" />
+                <ScalarProperty Name="F37_PastDue60_VC" ColumnName="F37_PastDue60_VC" />
+                <ScalarProperty Name="F38_PastDue90_VC" ColumnName="F38_PastDue90_VC" />
+                <ScalarProperty Name="F39_PastDue120_VC" ColumnName="F39_PastDue120_VC" />
+                <ScalarProperty Name="TopNote_VC" ColumnName="TopNote_VC" />
+                <ScalarProperty Name="F40_Notes1_VC" ColumnName="F40_Notes1_VC" />
+                <ScalarProperty Name="F41_Notes2_VC" ColumnName="F41_Notes2_VC" />
+                <ScalarProperty Name="F42_Notes3_VC" ColumnName="F42_Notes3_VC" />
+                <ScalarProperty Name="F43_Notes4_VC" ColumnName="F43_Notes4_VC" />
+                <ScalarProperty Name="F44_Notes5_VC" ColumnName="F44_Notes5_VC" />
+                <ScalarProperty Name="F45_Notes6_VC" ColumnName="F45_Notes6_VC" />
+                <ScalarProperty Name="F46_Notes7_VC" ColumnName="F46_Notes7_VC" />
+                <ScalarProperty Name="F47_Notes8_VC" ColumnName="F47_Notes8_VC" />
+                <ScalarProperty Name="F48_Notes9_VC" ColumnName="F48_Notes9_VC" />
+                <ScalarProperty Name="F49_Notes10_VC" ColumnName="F49_Notes10_VC" />
+                <ScalarProperty Name="F00_StatementTitle_VC" ColumnName="F00_StatementTitle_VC" />
+                <ScalarProperty Name="F50_PendingAtInsurance_VC" ColumnName="F50_PendingAtInsurance_VC" />
+                <ScalarProperty Name="ServiceDate_VC" ColumnName="ServiceDate_VC" />
+                <ScalarProperty Name="UniqueNameOnClaim_VC" ColumnName="UniqueNameOnClaim_VC" />
+                <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
