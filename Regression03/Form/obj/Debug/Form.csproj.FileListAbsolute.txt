@@ -3,3 +3,7 @@
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\obj\Debug\Form.dll
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\obj\Debug\Form.pdb
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Form\obj\Debug\Form.csprojResolveAssemblyReference.cache
+C:\Users\deverett.APEX\repository\Regression03\Form\bin\Debug\Form.dll
+C:\Users\deverett.APEX\repository\Regression03\Form\bin\Debug\Form.pdb
+C:\Users\deverett.APEX\repository\Regression03\Form\obj\Debug\Form.dll
+C:\Users\deverett.APEX\repository\Regression03\Form\obj\Debug\Form.pdb

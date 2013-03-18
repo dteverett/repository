@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81ea876cbd19440b9b4077ba8a70fae6" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="DevConnect.Acknowledgement_T" Width="1.5" PointX="25" PointY="296.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementAssignmentType_T" Width="1.5" PointX="29.75" PointY="357.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementClaimStatus_T" Width="1.5" PointX="32" PointY="350.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementClaimStatusInformation_T" Width="1.5" PointX="34.25" PointY="351.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementFunctionalGroup_T" Width="1.5" PointX="27.25" PointY="292.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementPatient_T" Width="1.5" PointX="25.75" PointY="351.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementPatientName_T" Width="1.5" PointX="23.5" PointY="355.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementProvider_T" Width="1.5" PointX="23.5" PointY="345.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementProviderName_T" Width="1.5" PointX="21.25" PointY="375.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementProviderSecondaryIdentifier_T" Width="1.5" PointX="35" PointY="348.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementProviderStatus_T" Width="1.5" PointX="34.25" PointY="340" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementProviderTrace_T" Width="1.5" PointX="21.25" PointY="388.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementReceiver_T" Width="1.5" PointX="21.25" PointY="280.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementReceiverName_T" Width="1.5" PointX="19" PointY="277.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementReceiverStatus_T" Width="1.5" PointX="35.25" PointY="286.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementReceiverTrace_T" Width="1.5" PointX="19" PointY="280" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementServiceLine_T" Width="1.5" PointX="37.25" PointY="351" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementServiceLineStatusInformation_T" Width="1.5" PointX="39.5" PointY="351.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementSource_T" Width="1.5" PointX="32.25" PointY="267.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementSourceName_T" Width="1.5" PointX="30" PointY="266.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementTransactionSet_T" Width="1.5" PointX="34.5" PointY="292.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AcknowledgementTransmissionReceipt_T" Width="1.5" PointX="30" PointY="269.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Activity" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AdjustmentGroupCode_T" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AdjustmentInvoicing_T" Width="1.5" PointX="18.5" PointY="327.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AdjustmentReasonCode_T" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AmbulanceTransportReasonCode_T" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010AK1_T" Width="1.5" PointX="30.25" PointY="305.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010AK2_T" Width="1.5" PointX="32.5" PointY="312.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010AK9_T" Width="1.5" PointX="30.25" PointY="261.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010AMT_T" Width="1.5" PointX="19" PointY="385.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010BHT_T" Width="1.5" PointX="32.25" PointY="286.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010CompositMedicalProcedureIdentifier_T" Width="1.5" PointX="32.75" PointY="356" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010CTX_T" Width="1.5" PointX="34.75" PointY="300.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010DTP_T" Width="1.5" PointX="29.75" PointY="359.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010GE_T" Width="1.5" PointX="22.75" PointY="293.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010GS_T" Width="1.5" PointX="22.75" PointY="296.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010HealthCareClaimStatus_T" Width="1.5" PointX="29.75" PointY="291.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010HL_T" Width="1.5" PointX="19" PointY="284.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010IEA_T" Width="1.5" PointX="22.75" PointY="300.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010IK3_T" Width="1.5" PointX="34.75" PointY="308.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010IK4_T" Width="1.5" PointX="37" PointY="301" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010IK5_T" Width="1.5" PointX="32.5" PointY="320.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010ISA_T" Width="1.5" PointX="22.75" PointY="303.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010NM1_T" Width="1.5" PointX="19" PointY="374.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010QTY_T" Width="1.5" PointX="19" PointY="388.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010REF_T" Width="1.5" PointX="29.75" PointY="307.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010SE_T" Width="1.5" PointX="32.25" PointY="295.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010ST_T" Width="1.5" PointX="32.25" PointY="308.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010STC_T" Width="1.5" PointX="32" PointY="290.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010SVC_T" Width="1.5" PointX="35" PointY="356" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010TA1_T" Width="1.5" PointX="29.75" PointY="324.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Ansi5010TRN_T" Width="1.5" PointX="19" PointY="392" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ANSIType_T" Width="1.5" PointX="22.25" PointY="337.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ApexPayer_T" Width="1.5" PointX="17.75" PointY="454.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ApexReportingSettings_T" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ApplicationLog_T" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ARCHIVE_DentalValidationFailures_T" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ARCHIVE_MedicalValidationFailures_T" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.AttachmentGroup_T" Width="1.5" PointX="15.5" PointY="316.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Batch" Width="1.5" PointX="17" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Batch_T" Width="1.5" PointX="6" PointY="333.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.BatchEventLogMessage_T" Width="1.5" PointX="11.25" PointY="336.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.BatchStatus_T" Width="1.5" PointX="3.75" PointY="338" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CachedClaim_T" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CertificationConditionCodeAppliesIndicator_T" Width="1.5" PointX="2.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CertificationConditionIndicator_T" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CityZip_T" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Claim" Width="1.5" PointX="19.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Claim_T" Width="1.5" PointX="21.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimAdjustmentLineItem_T" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDental_T" Width="1.5" PointX="23.5" PointY="431" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDental4010ExtraData_T" Width="1.5" PointX="22.75" PointY="419.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalAssistantSurgeon_T" Width="1.5" PointX="22.75" PointY="425.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalAssistantSurgeonSecondaryIdentification_T" Width="1.5" PointX="25" PointY="426.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBase_FunctionalGroup_T" Width="1.5" PointX="6.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBase_T" Width="1.5" PointX="20.5" PointY="444.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBase_TransactionSet_T" Width="1.5" PointX="31.75" PointY="454.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBase_Validation_T" Width="1.5" PointX="27.25" PointY="406" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBaseNeedsValidation_T" Width="1.5" PointX="22.75" PointY="417.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBillingProvider_T" Width="1.5" PointX="18.25" PointY="445.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalBillingProviderContact_T" Width="1.5" PointX="20.5" PointY="438.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalClaimInformation_T" Width="1.5" PointX="34.75" PointY="455.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalDataChanged_T" Width="1.5" PointX="25" PointY="546.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalDiagnosisCode_T" Width="1.5" PointX="37" PointY="481.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalErrors_T" Width="1.5" PointX="25.75" PointY="410.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalEventLogMessage_T" Width="1.5" PointX="31.75" PointY="457.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalFileInformation_T" Width="1.5" PointX="37" PointY="484.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalHistory_T" Width="1.5" PointX="25.75" PointY="452" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalLineItem_T" Width="1.5" PointX="25.75" PointY="455.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalLineItemNeedsValidation_T" Width="1.5" PointX="12" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalNeedsValidation_T" Width="1.5" PointX="9.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalNoteReference_T" Width="1.5" PointX="37" PointY="486.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayer_T" Width="1.5" PointX="22.75" PointY="466.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerAssistantSurgeon_T" Width="1.5" PointX="22.75" PointY="470.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerAssistantSurgeonSecondaryIdentification_T" Width="1.5" PointX="25" PointY="470.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerBillingProvider_T" Width="1.5" PointX="22.75" PointY="473.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerBillingProviderSecondaryIdentification_T" Width="1.5" PointX="25" PointY="473.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerReferringProvider_T" Width="1.5" PointX="22.75" PointY="476.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerReferringProviderSecondaryIdentification_T" Width="1.5" PointX="25" PointY="476.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerRenderingProvider_T" Width="1.5" PointX="22.75" PointY="479" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="25" PointY="479" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerSecondaryIdentification_T" Width="1.5" PointX="25" PointY="467.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerServiceFacilityLocation_T" Width="1.5" PointX="22.75" PointY="481.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="25" PointY="481.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerSupervisingProvider_T" Width="1.5" PointX="22.75" PointY="484.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherPayerSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="25" PointY="484.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherSubscriber_T" Width="1.5" PointX="37.75" PointY="451.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherSubscriberClaimLevelAdjustments_T" Width="1.5" PointX="40" PointY="454.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOtherSubscriberSecondaryIdentification_T" Width="1.5" PointX="40" PointY="451.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalOutputException_T" Width="1.5" PointX="22.75" PointY="487.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalPatient_T" Width="1.5" PointX="25.75" PointY="461.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalPayer_T" Width="1.5" PointX="18.25" PointY="441" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalPayerSecondaryIdentifierQualifier_T" Width="1.5" PointX="20.5" PointY="442" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalPayToAddress_T" Width="1.5" PointX="16" PointY="447" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalPayToPlan_T" Width="1.5" PointX="22.75" PointY="490.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalPricingRepricingInformation_T" Width="1.5" PointX="32.5" PointY="548.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalReferenceIdentification_T" Width="1.5" PointX="22.75" PointY="493.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalReferringProvider_T" Width="1.5" PointX="22.75" PointY="496.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalReferringProviderSecondaryIdentification_T" Width="1.5" PointX="25" PointY="497.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalRenderingProvider_T" Width="1.5" PointX="37.75" PointY="503.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="40" PointY="503.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalReport_T" Width="1.5" PointX="28.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalReportErrorMessage_T" Width="1.5" PointX="31" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceFacilityLocation_T" Width="1.5" PointX="22.75" PointY="500.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="25" PointY="501.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLine_T" Width="1.5" PointX="37.75" PointY="462.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineAdjudicationInfo_T" Width="1.5" PointX="40" PointY="461.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineAdjustment_T" Width="1.5" PointX="42.25" PointY="461.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineAssistantSurgeon_T" Width="1.5" PointX="40" PointY="467.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineAssistantSurgeonSecondaryIdentification_T" Width="1.5" PointX="42.25" PointY="468" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineFileInformation_T" Width="1.5" PointX="40" PointY="471.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLinePreDeterminationOfBenefits_T" Width="1.5" PointX="40" PointY="473.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLinePricingRepricingInformation_T" Width="1.5" PointX="35.5" PointY="497.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLinePriorAuthorizationSecondaryIdentification_T" Width="1.5" PointX="40" PointY="476.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineReferralNumberSecondaryIdentification_T" Width="1.5" PointX="40" PointY="479.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineRenderingProvider_T" Width="1.5" PointX="40" PointY="482.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="42.25" PointY="482.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineServiceFacilityLocation_T" Width="1.5" PointX="40" PointY="486" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineServiceFacilityLocationReferenceIdentification_T" Width="1.5" PointX="40" PointY="490" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineSupervisingProvider_T" Width="1.5" PointX="40" PointY="493.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalServiceLineSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="40" PointY="496.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalSubmit_T" Width="1.5" PointX="22.75" PointY="546.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalSubscriber_T" Width="1.5" PointX="22.75" PointY="552.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalSupervisingProvider_T" Width="1.5" PointX="22.75" PointY="549.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalSupplementalInformation_T" Width="1.5" PointX="37" PointY="489.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalToothInformation_T" Width="1.5" PointX="40" PointY="499.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalToothStatus_T" Width="1.5" PointX="37" PointY="492.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalValidationRun_T" Width="1.5" PointX="25" PointY="493.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimDentalWaitingValidation_T" Width="1.5" PointX="12" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimFilingIndicatorCode_T" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedical_T" Width="1.5" PointX="29.5" PointY="424.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedical4010ExtraData_T" Width="1.5" PointX="28.75" PointY="385.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalAmbulanceCertification_T" Width="1.5" PointX="37" PointY="431.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalAmbulanceDropoff_T" Width="1.5" PointX="32.5" PointY="429.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalAmbulancePickup_T" Width="1.5" PointX="32.5" PointY="426" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalAmbulanceTransportInformation_T" Width="1.5" PointX="32.5" PointY="467.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBase_FunctionalGroup_T" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBase_T" Width="1.5" PointX="26.5" PointY="438.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBase_TransactionSet_T" Width="1.5" PointX="31.75" PointY="440.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBase_Validation_T" Width="1.5" PointX="36.25" PointY="408.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBaseNeedsValidation_T" Width="1.5" PointX="28.75" PointY="395.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBillingProvider_T" Width="1.5" PointX="24.25" PointY="403.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalBillingProviderContact_T" Width="1.5" PointX="26.5" PointY="413.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalClaimInformation_T" Width="1.5" PointX="34.75" PointY="435.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalConditionInformation_T" Width="1.5" PointX="37" PointY="425.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalDataChange_T" Width="1.5" PointX="34" PointY="541.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalDiagnosisCode_T" Width="1.5" PointX="37" PointY="422.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalEPSDTReferral_T" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalErrors_T" Width="1.5" PointX="33.75" PointY="410.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalEventLogMessage_T" Width="1.5" PointX="31.75" PointY="447.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalFileInformation_T" Width="1.5" PointX="37" PointY="419.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalHistory_T" Width="1.5" PointX="31.75" PointY="443.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalLineItem_T" Width="1.5" PointX="11.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalLineItemNeedsValidation_T" Width="1.5" PointX="20.75" PointY="345.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalNeedsValidation_T" Width="1.5" PointX="18.5" PointY="331.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayer_T" Width="1.5" PointX="28.75" PointY="419.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerBillingProvider_T" Width="1.5" PointX="28.75" PointY="415.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerBillingProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="415.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerReferringProvider_T" Width="1.5" PointX="28.75" PointY="412.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerReferringProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="412.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerRenderingProvider_T" Width="1.5" PointX="28.75" PointY="409.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="409.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerSecondaryIdentification_T" Width="1.5" PointX="31" PointY="420.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerServiceFacilityLocation_T" Width="1.5" PointX="28.75" PointY="461.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="31" PointY="461" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerSupervisingProvider_T" Width="1.5" PointX="28.75" PointY="464" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherPayerSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="464" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherSubscriber_T" Width="1.5" PointX="37.75" PointY="440" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherSubscriberClaimLevelAdjustments_T" Width="1.5" PointX="40" PointY="443.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOtherSubscriberSecondaryIdentification_T" Width="1.5" PointX="40" PointY="440.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalOutputException_T" Width="1.5" PointX="28.75" PointY="467.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPatient_T" Width="1.5" PointX="31.75" PointY="433.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPatientConditionInformationVision_T" Width="1.5" PointX="37" PointY="474.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPayer_T" Width="1.5" PointX="24.25" PointY="398.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPayerSecondaryIdentifierQualifier_T" Width="1.5" PointX="26.5" PointY="399.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPayToAddress_T" Width="1.5" PointX="22" PointY="404.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPayToPlan_T" Width="1.5" PointX="28.75" PointY="470.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalPricingRepricingInformation_T" Width="1.5" PointX="32.5" PointY="376.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalReferenceIdentification_T" Width="1.5" PointX="31.75" PointY="451.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalReferringProvider_T" Width="1.5" PointX="28.75" PointY="473.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalReferringProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="474.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalRenderingProvider_T" Width="1.5" PointX="37.75" PointY="435.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="40" PointY="435.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalReport_T" Width="1.5" PointX="28.75" PointY="477.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalReportErrorMessage_T" Width="1.5" PointX="31" PointY="478.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceFacilityLocation_T" Width="1.5" PointX="28.75" PointY="480.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="31" PointY="482" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLine_T" Width="1.5" PointX="28.75" PointY="501.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineAdjudicationInfo_T" Width="1.5" PointX="31" PointY="486.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineAdjustment_T" Width="1.5" PointX="33.25" PointY="486" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineAmbulanceCertification_T" Width="1.5" PointX="31" PointY="492" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineFileInformation_T" Width="1.5" PointX="31" PointY="495.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineOrderingProvider_T" Width="1.5" PointX="31" PointY="498" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineOrderingProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="503.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLinePriorAuthorizationSecondaryIdentification_T" Width="1.5" PointX="31" PointY="506.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLinePurchasedServiceProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="509.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineReferralNumberSecondaryIdentification_T" Width="1.5" PointX="31" PointY="512.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineReferringProvider_T" Width="1.5" PointX="31" PointY="514.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineReferringProviderSecondaryIdentification_T" Width="1.5" PointX="33.25" PointY="515.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineRenderingProvider_T" Width="1.5" PointX="31" PointY="518.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="33.25" PointY="519.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineServiceFacilityLocation_T" Width="1.5" PointX="31" PointY="522.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineServiceFacilityLocationReferenceIdentification_T" Width="1.5" PointX="31" PointY="526.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineSupervisingProvider_T" Width="1.5" PointX="31" PointY="529.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="31" PointY="533.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineSupplementalInformation_T" Width="1.5" PointX="31" PointY="536.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineSupportingDocumentation_T" Width="1.5" PointX="31" PointY="539" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalServiceLineTestResult_T" Width="1.5" PointX="31" PointY="542.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalSpinalManipulationServiceInformation_T" Width="1.5" PointX="5.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalSubmit_T" Width="1.5" PointX="28.75" PointY="541.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalSubscriber_T" Width="1.5" PointX="28.75" PointY="547.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalSupervisingProvider_T" Width="1.5" PointX="28.75" PointY="544.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalSupplementalInformation_T" Width="1.5" PointX="37" PointY="478.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalValidationRun_T" Width="1.5" PointX="34" PointY="492.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimMedicalWaitingValidation_T" Width="1.5" PointX="20.75" PointY="356.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimProductPurchased_T" Width="1.5" PointX="14" PointY="336.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimRemarkCode_T" Width="1.5" PointX="16.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimReport_T" Width="1.5" PointX="19.5" PointY="306.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimReportHistory_T" Width="1.5" PointX="21.75" PointY="313.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimReportMessage_T" Width="1.5" PointX="24" PointY="284.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimReportType_T" Width="1.5" PointX="17.25" PointY="307" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimSource_T" Width="1.5" PointX="18.5" PointY="309.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimStatusCategoryCode_T" Width="1.5" PointX="18.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimStatusCode_T" Width="1.5" PointX="13.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimStatusCode_T__OLD" Width="1.5" PointX="28.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimStatusType_T" Width="1.5" PointX="24.25" PointY="414.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimSupplementalInformation_T" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimToClaimMedicalMap_T" Width="1.5" PointX="28.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClaimVolume_T" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Client_T" Width="1.5" PointX="24.25" PointY="505.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientCache_T" Width="1.5" PointX="5.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientCall_T" Width="1.5" PointX="26.5" PointY="275.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientInbox" Width="1.5" PointX="20.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientMatch_T" Width="1.5" PointX="28.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientMatchEntity_T" Width="1.5" PointX="31" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientProprietaryReports_T" Width="1.5" PointX="27.25" PointY="289.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientReports_T" Width="1.5" PointX="25" PointY="288.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientReportType" Width="1.5" PointX="28.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ClientSurvey_T" Width="1.5" PointX="24.25" PointY="270.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CodeCategory_T" Width="1.5" PointX="2.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CodeListQualifierCode_T" Width="1.5" PointX="15.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CodeLog_T" Width="1.5" PointX="26" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.CodeLogType_T" Width="1.5" PointX="23.75" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ConcatReportPayer_T" Width="1.5" PointX="26.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ConcatReportProvider_T" Width="1.5" PointX="29" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ConditionCode_T" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ConnexLog_T" Width="1.5" PointX="17.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataElementErrCode_T" Width="1.5" PointX="34" PointY="187.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataElementErrCode5010_T" Width="1.5" PointX="30.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataElementNote_T" Width="1.5" PointX="36.25" PointY="191.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataElementNote5010_T" Width="1.5" PointX="30.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataField_T" Width="1.5" PointX="31.75" PointY="545.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataFieldNew_T" Width="1.5" PointX="30.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataSegmentErrCode_T" Width="1.5" PointX="31.75" PointY="187.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataSegmentErrCode5010_T" Width="1.5" PointX="30.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataSegmentNote_T" Width="1.5" PointX="34" PointY="191.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DataSegmentNote5010_T" Width="1.5" PointX="31.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DateTimePeriodFormatQualifier_T" Width="1.5" PointX="32.5" PointY="470.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DateTimeQualifier_T" Width="1.5" PointX="32.5" PointY="423" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DefaultPricing_T" Width="1.5" PointX="22" PointY="505.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DelayReasonCode_T" Width="1.5" PointX="31.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Dent5010ClaimSection_T" Width="1.5" PointX="26.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Dent5010ClaimSectionsConfig_T" Width="1.5" PointX="29" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DiagnosisCode_T" Width="1.5" PointX="31.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Doctor" Width="1.5" PointX="14.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DownloadCost" Width="1.5" PointX="31.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.DownloadKey" Width="1.5" PointX="22.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.dtproperty" Width="1.5" PointX="0.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Edits_T" Width="1.5" PointX="3" PointY="328.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EditsConfig_T" Width="1.5" PointX="5.25" PointY="328" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityBase_T" Width="1.5" PointX="21.5" PointY="341" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityDependent_T" Width="1.5" PointX="26" PointY="314.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityDependentDiagnosisCode_T" Width="1.5" PointX="28.25" PointY="312.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityDependentInquiry_T" Width="1.5" PointX="28.25" PointY="315.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityDependentInquiryServiceTypeCode_T" Width="1.5" PointX="30.5" PointY="317" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityDependentRef_T" Width="1.5" PointX="28.25" PointY="321.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityReceiver_T" Width="1.5" PointX="19.25" PointY="317.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityReceiverContact_T" Width="1.5" PointX="21.5" PointY="318.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilityReceiverRef_T" Width="1.5" PointX="21.5" PointY="321.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilitySource_T" Width="1.5" PointX="19.25" PointY="313.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilitySubscriber_T" Width="1.5" PointX="23.75" PointY="320" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilitySubscriberDiagnosisCode_T" Width="1.5" PointX="26" PointY="324" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilitySubscriberInquiry_T" Width="1.5" PointX="26" PointY="326.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilitySubscriberInquiryServiceTypeCode_T" Width="1.5" PointX="28.25" PointY="328.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EligibilitySubscriberRef_T" Width="1.5" PointX="26" PointY="332.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EmployeeType_T" Width="1.5" PointX="22" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Enrollment_T" Width="1.5" PointX="24.5" PointY="341.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EnrollmentStatus_T" Width="1.5" PointX="22.25" PointY="328.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EntityIdentifierCode_T" Width="1.5" PointX="2.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EntityType_T" Width="1.5" PointX="16.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EQCode_T" Width="1.5" PointX="10.25" PointY="317.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ERAInfo_T" Width="1.5" PointX="4.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ErrorLog_T" Width="1.5" PointX="6.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ErrorMessageInternal_T" Width="1.5" PointX="32.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EventLogMessage_T" Width="1.5" PointX="29.5" PointY="401.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EventPhase_T" Width="1.5" PointX="24.25" PointY="396.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.EventType_T" Width="1.5" PointX="24.25" PointY="392.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ExceptionCode_T" Width="1.5" PointX="32.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.FeatureFeedback_T" Width="1.5" PointX="24.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.FTPInformation_T" Width="1.5" PointX="26.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.FunctionalGroup_T" Width="1.5" PointX="27.25" PointY="379" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.FunctionalGroupEligibility_T" Width="1.5" PointX="23.5" PointY="350.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.FunctionalGroupErrCode_T" Width="1.5" PointX="25" PointY="379.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.GenderCode_T" Width="1.5" PointX="32.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Implementation_T" Width="1.5" PointX="25" PointY="305.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationDataElementNote_T" Width="1.5" PointX="39.25" PointY="305" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationElementContext_T" Width="1.5" PointX="41.5" PointY="305" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationErrorIdentification_T" Width="1.5" PointX="37" PointY="304.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationFunctionalGroup_T" Width="1.5" PointX="27.25" PointY="304.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationResponse_T" Width="1.5" PointX="34.75" PointY="304.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationSegementContext_T" Width="1.5" PointX="39.25" PointY="302" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImplementationTransactionSet_T" Width="1.5" PointX="32.5" PointY="304.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ImportHistory_T" Width="1.5" PointX="31.75" PointY="398.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.IndividualRelationshipCode_T" Width="1.5" PointX="29.5" PointY="405.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.InsuranceTypeCode_T" Width="1.5" PointX="28.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Interchange_T" Width="1.5" PointX="32" PointY="299.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.InterchangeControl_T" Width="1.5" PointX="25" PointY="381.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.InterchangeNoteDefinition_T" Width="1.5" PointX="32.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.InvoiceSettings_T" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.junk" Width="1.5" PointX="33.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.LegacyIDNumber_T" Width="1.5" PointX="11" PointY="315" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.License" Width="1.5" PointX="33.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Log_T" Width="1.5" PointX="33.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.LoopProfessional_T" Width="1.5" PointX="35.5" PointY="467.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Mapping_T" Width="1.5" PointX="9" PointY="339.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.MasterMap_T" Width="1.5" PointX="6.75" PointY="338.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Med5010ClaimSection_T" Width="1.5" PointX="26.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Med5010ClaimSectionsConfig_T" Width="1.5" PointX="29" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.MedicareSection4081Indicator_T" Width="1.5" PointX="33.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Modifier_T" Width="1.5" PointX="13.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NameFormat_T" Width="1.5" PointX="6.75" PointY="342.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NDC_T" Width="1.5" PointX="33.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NeedsValidation_T" Width="1.5" PointX="19.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NeedsValidationTest_T" Width="1.5" PointX="30.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NewsItem" Width="1.5" PointX="32.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NoteReferenceCode_T" Width="1.5" PointX="32.5" PointY="373.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.NPC_T" Width="1.5" PointX="15.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OperationsMetric999Information_T" Width="1.5" PointX="3" PointY="333.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OperationsMetricInformation_T" Width="1.5" PointX="34.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Output_PayerReportType_T" Width="1.5" PointX="10.25" PointY="326.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Output_T" Width="1.5" PointX="8" PointY="323.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OutputDistributionType_T" Width="1.5" PointX="5.75" PointY="321.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OutputSub_T" Width="1.5" PointX="13.25" PointY="324.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OutputSubEligibility_T" Width="1.5" PointX="10.25" PointY="320.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OutputSubEligibilityEQCode_T" Width="1.5" PointX="12.5" PointY="317.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OutputSubEligibilityEQCode_TEMP" Width="1.5" PointX="21.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.OutputSubEligibilityRequirement_T" Width="1.5" PointX="12.5" PointY="345.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Page" Width="1.5" PointX="34.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Payer_Backup_T" Width="1.5" PointX="34.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Payer_T" Width="1.5" PointX="15.5" PointY="580.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerEdits_T" Width="1.5" PointX="17.75" PointY="457.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerID_T" Width="1.5" PointX="8" PointY="319.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerID_test_T" Width="1.5" PointX="34.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerKeyWord_T" Width="1.5" PointX="15.5" PointY="587" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReport_T" Width="1.5" PointX="11.25" PointY="332.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportAssignmentStatus_T" Width="1.5" PointX="22.75" PointY="309.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportClient_T" Width="1.5" PointX="13.5" PointY="332.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportEntity_T" Width="1.5" PointX="20.75" PointY="331.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportError_T" Width="1.5" PointX="25" PointY="293.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportParseStatus_T" Width="1.5" PointX="20.5" PointY="289.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportRaw_T" Width="1.5" PointX="22.75" PointY="288.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerReportType_T" Width="1.5" PointX="8" PointY="316.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PayerResponsibilitySequenceNumberCode_T" Width="1.5" PointX="22" PointY="399.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PaymentMethod_T" Width="1.5" PointX="14" PointY="338.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PdNicknames_T" Width="1.5" PointX="34.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PolicyComplianceCode_T" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Practice_T" Width="1.5" PointX="14" PointY="342.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PreviewToggleActivity_T" Width="1.5" PointX="35.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.PricingMethodology_T" Width="1.5" PointX="35.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ProcedureCode_T" Width="1.5" PointX="6.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.procedureTest" Width="1.5" PointX="35.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Profession_T" Width="1.5" PointX="0.75" PointY="331.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Provider_T" Width="1.5" PointX="16.25" PointY="319.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Provider_ZBAK_T" Width="1.5" PointX="0.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ProviderAcceptAssignmentCode_T" Width="1.5" PointX="35.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ProviderBilling_T" Width="1.5" PointX="3" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ProviderLog_T" Width="1.5" PointX="2.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ProviderPayment_T" Width="1.5" PointX="0.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RejectReasonCode_T" Width="1.5" PointX="35.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ReleaseOfInformationCode_T" Width="1.5" PointX="11.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceAdjustment_T" Width="1.5" PointX="31.75" PointY="366.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceAdvice_T" Width="1.5" PointX="27.25" PointY="296.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceAmt_T" Width="1.5" PointX="34.75" PointY="376.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceAssignmentType_T" Width="1.5" PointX="29.5" PointY="374" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_ClaimDentalBase_T" Width="1.5" PointX="34" PointY="384" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_ClaimMedicalBase_T" Width="1.5" PointX="34" PointY="414.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_OtherClaimId_Ref_T" Width="1.5" PointX="34" PointY="388.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_RemittanceAdjustment_T" Width="1.5" PointX="34" PointY="391.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_RemittanceAmt_T" Width="1.5" PointX="37" PointY="388.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_RemittancePer_T" Width="1.5" PointX="37" PointY="385.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_RemittanceQty_T" Width="1.5" PointX="37" PointY="391.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_RenderingProviderID_Ref_T" Width="1.5" PointX="34" PointY="394.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceClaim_T" Width="1.5" PointX="31.75" PointY="380.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceDtm_T" Width="1.5" PointX="17.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceHeader_T" Width="1.5" PointX="29.5" PointY="295.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceLq_T" Width="1.5" PointX="36.25" PointY="404.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceNm1_T" Width="1.5" PointX="29.5" PointY="368.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePatient_T" Width="1.5" PointX="36.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePayee_RemittanceRef_T" Width="1.5" PointX="34" PointY="345.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePayee_T" Width="1.5" PointX="29.5" PointY="286.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePayer_RemittancePer_T" Width="1.5" PointX="39.25" PointY="359.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePayer_RemittanceRef_T" Width="1.5" PointX="39.25" PointY="370.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePayer_T" Width="1.5" PointX="37" PointY="337.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePer_T" Width="1.5" PointX="34.75" PointY="379.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittancePlb_T" Width="1.5" PointX="29.5" PointY="279.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceQty_T" Width="1.5" PointX="34.75" PointY="373.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceRef_T" Width="1.5" PointX="31.75" PointY="402.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceRenderingProvider_T" Width="1.5" PointX="36.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceReport_T" Width="1.5" PointX="25" PointY="300.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_HealthcarePolicyID_Ref_T" Width="1.5" PointX="36.25" PointY="401.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_RemittanceAdjustment_T" Width="1.5" PointX="39.25" PointY="404.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_RemittanceAmt_T" Width="1.5" PointX="39.25" PointY="401.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_RemittanceQty_T" Width="1.5" PointX="39.25" PointY="407.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_RenderingProvider_Ref_T" Width="1.5" PointX="36.25" PointY="398.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_ServiceId_Ref_T" Width="1.5" PointX="42.25" PointY="404.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceServiceLine_T" Width="1.5" PointX="34" PointY="401.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceStatusCode_T" Width="1.5" PointX="23.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceSubscriber_T" Width="1.5" PointX="25.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RemittanceSummary_T" Width="1.5" PointX="29.5" PointY="273.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ReportCreatingSeries_T" Width="1.5" PointX="36.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ReportData_T" Width="1.5" PointX="26" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ReportSortLog_T" Width="1.5" PointX="26" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ReportSortLogType_T" Width="1.5" PointX="23.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ReportType_T" Width="1.5" PointX="23.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Result" Width="1.5" PointX="27.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RunnerConfig_T" Width="1.5" PointX="23.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.RunnerLog_T" Width="1.5" PointX="26" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SalesCode_T" Width="1.5" PointX="24.25" PointY="363.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SalesCodeType_T" Width="1.5" PointX="22" PointY="358.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SalesRep_T" Width="1.5" PointX="24.25" PointY="274.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SearchLog_T" Width="1.5" PointX="31.75" PointY="337.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Series_T" Width="1.5" PointX="29.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Service_T" Width="1.5" PointX="26.5" PointY="345.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ServiceAuthorizationExceptionCode_T" Width="1.5" PointX="36.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ServiceLine_T" Width="1.5" PointX="24" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ServiceType_T" Width="1.5" PointX="24.25" PointY="359" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SetupStatus_T" Width="1.5" PointX="24.25" PointY="366.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Software_T" Width="1.5" PointX="3" PointY="346.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SoftwareConversion_T" Width="1.5" PointX="14" PointY="353.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SoftwareMapName_T" Width="1.5" PointX="9" PointY="333.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SortingSeries_T" Width="1.5" PointX="31.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SpecialProgramCode_T" Width="1.5" PointX="36.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.SpecialtyCode_T" Width="1.5" PointX="3" PointY="355.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.StandardEdits_T" Width="1.5" PointX="3" PointY="358.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.State_T" Width="1.5" PointX="22" PointY="516.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Statement_T" Width="1.5" PointX="29.5" PointY="335.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.StatementForm_T" Width="1.5" PointX="14" PointY="355.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.StatementLineItem_T" Width="1.5" PointX="31.75" PointY="343" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.StatementLineItemNeedsValidation_T" Width="1.5" PointX="7" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.StatementNeedsValidation_T" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.StatementWaitingValidation_T" Width="1.5" PointX="7" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Submitter_T" Width="1.5" PointX="24.25" PointY="518" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.sysdiagram" Width="1.5" PointX="36.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TA1_T" Width="1.5" PointX="22.75" PointY="382.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TEMPREPORTSSTRACE" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TempTrace_2_1_2011" Width="1.5" PointX="37.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TempTrace02042011" Width="1.5" PointX="37.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TermCode_T" Width="1.5" PointX="13.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TermsAndConditionsLog_T" Width="1.5" PointX="37.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Tracker_T" Width="1.5" PointX="19.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TrackerReportType_T" Width="1.5" PointX="33.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TrackerSettings_T" Width="1.5" PointX="38.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TransactionSet_T" Width="1.5" PointX="29.5" PointY="380.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TransactionSetErrCode_T" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.TransactionSetResponse_T" Width="1.5" PointX="31.75" PointY="190.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.UnknownProvider_T" Width="1.5" PointX="38.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Validation_T" Width="1.5" PointX="3" PointY="323.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ValidationForm_T" Width="1.5" PointX="0.75" PointY="323.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ValidationOutput_T" Width="1.5" PointX="13.25" PointY="320.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ValidationOutputSub_T" Width="1.5" PointX="18.5" PointY="323.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ValidationSubLineLevelLoops_T" Width="1.5" PointX="0.75" PointY="326.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ValidationUIField_T" Width="1.5" PointX="3" PointY="320.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.ValidationUIMapping_T" Width="1.5" PointX="5.25" PointY="324.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.VENDOR_ACTIVITY_LOG" Width="1.5" PointX="38.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.Vendor_T" Width="1.5" PointX="24.25" PointY="507.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.VendorClientPermissions_T" Width="1.5" PointX="26.5" PointY="511.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.VendorServices_T" Width="1.5" PointX="26.5" PointY="514.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebDownloads_T" Width="1.5" PointX="19" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebDownloadType_T" Width="1.5" PointX="16.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebFlashMenu_T" Width="1.5" PointX="38.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebMessages_T" Width="1.5" PointX="38.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebSections_T" Width="1.5" PointX="16.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebSectionsDynamicContent_T" Width="1.5" PointX="19" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebSpeedMetricsLog_T" Width="1.5" PointX="38.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WebUserSettings_T" Width="1.5" PointX="19" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.WhiteLabel_T" Width="1.5" PointX="14" PointY="362.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DevConnect.YesNoConditionOrResponseCode_T" Width="1.5" PointX="38.75" PointY="38.75" IsExpanded="true" />
+        <AssociationConnector Association="DevConnect.FK_Acknowledgement_T_Ansi5010IEA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Acknowledgement_T_Ansi5010ISA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Acknowledgement_T_PayerReportAssignmentStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Acknowledgement_T_PayerReportRaw_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementFunctionalGroup_T_Acknowledgement_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_AcknowledgementAssignmentType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_AcknowledgementPatient_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_Ansi5010DTP_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_Ansi5010REF_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_Ansi5010REF_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_Ansi5010REF_T2" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_Ansi5010TRN_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatus_T_ClientReports_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatusInformation_T_AcknowledgementClaimStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLine_T_AcknowledgementClaimStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementClaimStatusInformation_T_Ansi5010STC_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementFunctionalGroup_T_Ansi5010GE_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementFunctionalGroup_T_Ansi5010GS_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransactionSet_T_AcknowledgementFunctionalGroup_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementPatient_T_AcknowledgementPatientName_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementPatient_T_AcknowledgementProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementPatient_T_Ansi5010HL_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementPatientName_T_Ansi5010NM1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProvider_T_AcknowledgementProviderName_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProvider_T_AcknowledgementProviderTrace_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProvider_T_AcknowledgementReceiver_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProvider_T_Ansi5010HL_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProvider_T_ClientReports_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProvider_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderName_T_Ansi5010NM1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderSecondaryIdentifier_T_AcknowledgementProviderTrace_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderSecondaryIdentifier_T_Ansi5010REF_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderStatus_T_AcknowledgementProviderTrace_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderStatus_T_Ansi5010STC_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderTrace_T_Ansi5010AMT_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderTrace_T_Ansi5010AMT_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderTrace_T_Ansi5010QTY_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderTrace_T_Ansi5010QTY_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementProviderTrace_T_Ansi5010TRN_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiver_T_AcknowledgementReceiverName_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiver_T_AcknowledgementReceiverTrace_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiver_T_Ansi5010HL_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementSource_T_AcknowledgementReceiver_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverName_T_Ansi5010NM1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverStatus_T_AcknowledgementReceiverApplication_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverStatus_T_Ansi5010STC_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverApplication_T_Ansi5010AMT_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverApplication_T_Ansi5010AMT_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverApplication_T_Ansi5010QTY_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverApplication_T_Ansi5010QTY_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementReceiverApplication_T_Ansi5010TRN_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLine_T_Ansi5010DTP_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLine_T_Ansi5010REF_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLine_T_Ansi5010REF_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLine_T_Ansi5010SVC_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLineStatusInformation_T_AcknowledgementServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementServiceLineStatusInformation_T_Ansi5010STC_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementSource_T_AcknowledgementSourceName_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementSource_T_AcknowledgementTransmissionReceipt_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementSource_T_Ansi5010HL_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransactionSet_T_AcknowledgementSource_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementSourceName_T_Ansi5010NM1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransactionSet_T_Ansi5010BHT_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransactionSet_T_Ansi5010SE_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransactionSet_T_Ansi5010ST_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransmissionReceipt_T_Ansi5010DTP_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransmissionReceipt_T_Ansi5010DTP_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_AcknowledgementTransmissionReceipt_T_Ansi5010TRN_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Adjustment_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationTransactionSet_T_Ansi5010AK1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationResponse_T_Ansi5010AK2_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationTransactionSet_T_Ansi5010AK9_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Ansi5010SVC_T_Ansi5010CompositMedicalProcedureIdentifier_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Ansi5010SVC_T_Ansi5010CompositMedicalProcedureIdentifier_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationElementContext_T_Ansi5010CTX_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationErrorIdentification_T_Ansi5010CTX_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationSegementContext_T_Ansi5010CTX_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationFunctionalGroup_T_Ansi5010GE_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceReport_T_Ansi5010GE_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationFunctionalGroup_T_Ansi5010GS_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceReport_T_Ansi5010GS_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Ansi5010STC_T_Ansi5010HealthCareClaimStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Ansi5010STC_T_Ansi5010HealthCareClaimStatus_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Ansi5010STC_T_Ansi5010HealthCareClaimStatus_T2" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Implementation_T_Ansi5010IEA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Interchange_T_Ansi5010IEA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceReport_T_Ansi5010IEA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationErrorIdentification_T_Ansi5010IK3_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationDataElementNote_T_Ansi5010IK4_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationResponse_T_Ansi5010IK5_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Implementation_T_Ansi5010ISA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Interchange_T_Ansi5010ISA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceReport_T_Ansi5010ISA_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationTransactionSet_T_Ansi5010SE_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationTransactionSet_T_Ansi5010ST_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Interchange_T_Ansi5010TA1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Enrollment_T_ANSIType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ApexPayer_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ApexPayer_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ApexNEAPayer_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Batch_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Claim_Batch" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Batch_T_BatchStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Batch_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_BatchEventLogMessage_T_Batch_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_BatchEventLogMessage_T_EventLogMessage_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalEPSDTReferral_T_CertificationConditionCodeAppliesIndicator_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ServiceLine_T_Claim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDental_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDental_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalError_T_ClaimDental_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalHistory_T_ClaimDental_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalLineItem_T_ClaimDental_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImportHistory_T_ClaimDental_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_ClaimDental_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDental4010ExtraData_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalAssistantSurgeon_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalAssistantSurgeonSecondaryIdentification_T_ClaimDentalAssistantSurgeon_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimDent__Claim__4EA74281" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_ClaimDentalBillingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_ClaimDentalPayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_ClaimStatusType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_EventPhase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_EventType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_TransactionSet_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBaseNeedsValidation_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalInformation_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayer_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerAssistantSurgeon_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerBillingProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerReferringProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerRenderingProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerServiceFacilityLocation_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerSupervisingProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherSubscriber_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOutputException_T_ClaimDentalBase_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalPatient_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalPayToPlan_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalReferenceIdentification_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalReferringProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceFacilityLocation_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLine_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalSubmit_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalSubscriber_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalSupervisingProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalValidationRun_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_TransactionSet_T_TransactionSet_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_Validation_T_ClaimDentalValidationRun_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBase_Validation_T_Validation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBillingProvider_T_ClaimDentalPayToAddress_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalBillingProviderContact_T_ClaimDentalBillingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalDiagnosisCode_T_ClaimDentalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalFileInformation_T_ClaimDentalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalInformation_T_ClaimDentalPricingRepricingInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalNoteReference_T_ClaimDentalClaimInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalSupplementalInformation_T_ClaimDentalClaimInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalToothStatus_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalDataChanged_T_ClaimDentalSubmit_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalDataChanged_T_DataField_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalErrors_T_PayerEdits_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalErrors_T_StandardEdits_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalEventLogMessage_T_EventLogMessage_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalLineItemNeedsValidation_T_ClaimDentalNeedsValidation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalWaitingValidation_T_ClaimDentalNeedsValidation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerReferenceIdentification_ClaimDentalOtherPayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerAssistantSurgeonSecondaryIdentification_T_ClaimDentalOtherPayerAssistantSurgeon_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerBillingProviderReferenceIdentification_T_ClaimDentalOtherPayerBillingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerReferringProviderReferenceIdentification_T_ClaimDentalOtherPayerReferringProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerRenderingProviderReferenceIdentification_T_ClaimDentalOtherPayerRenderingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerServiceFacilityLocationSecondaryIdentification_T_ClaimDentalOtherPayerServiceFacilityLocation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherPayerSupervisingProviderReferenceIdentification_T_ClaimDentalOtherPayerSupervisingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherSubscriber_T_IndividualRelationshipCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherSubscriberClaimLevelAdjustments_T_ClaimDentalOtherSubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalOtherSubscriberReferenceIdentification_T_ClaimDentalOtherSubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalPatient_T_IndividualRelationshipCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimDent__Claim__38174C36" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalPayer_T_PayerResponsibilitySequenceNumberCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalReferringProviderReferenceIdentification_T_ClaimDentalReferringProviderReferenceIdentification_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalRenderingProvider_T_ClaimDentalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalRenderingProviderReferenceIdentification_T_ClaimDentalRenderingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_CDR_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceFacilityLocationReferenceIdentification_T_ClaimDentalServiceFacilityLocationReferenceIdentification_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimDent__Claim__3CDC0153" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLine_T_ClaimDentalServiceLinePricingRepricingInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineAdjudicationInfo_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineAssistantSurgeon_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineFileInformation_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLinePreDeterminationOfBenefits_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLinePriorAuthorizationReferenceIdentification_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineReferralNumberReferenceIdentification_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineServiceFacilityLocation_T_ClaimDentalServiceLineServiceFacilityLocation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineServiceFacilityLocationReferenceIdentification_T_ClaimDentalServiceLine_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineSupervisingProvider_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineSupervisingProviderSecondaryIdentifierReferenceIdentification_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalToothInformation_T_ClaimDentalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalServiceLineAdjustment_T_ClaimDentalServiceLineAdjudicationInfo_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimDent__Claim__7D616613" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimDent__Claim__031A3F69" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimDentalValidationRun_T_ClaimDentalSubmit_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedical_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedical_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedical_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalError_T_ClaimMedical_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalHistory_T_ClaimMedical_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImportHistory_T_ClaimMedical_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedical4010ExtraData_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalAmbulanceCertification_T_ClaimMedicalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_ClaimMedicalAmbulanceDropoff_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_ClaimMedicalAmbulancePickup_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_ClaimMedicalAmbulanceTransportInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimMedi__Claim__4F9B66BA" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_ClaimMedicalBillingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_ClaimMedicalPayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_ClaimStatusType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_EventPhase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_EventType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_TransactionSet_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBaseNeedsValidation_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayer_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerBillingProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerReferringProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerRenderingProvider_T_ClaimMedicalOtherPayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerServiceFacilityLocation_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerSupervisingProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherSubscriber_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOutputException_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalPatient_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalPayToPlanProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalReferenceIdentification_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalReferringProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalRenderingProvider_T_ClaimMedicalBase_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceFacilityLocation_T_ClaimMedicalServiceFacilityLocation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLine_T_ClaimMedicalBase_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalSubmit_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalSubscriber_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalSupervisingProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalValidationRun_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_CMB_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_ClaimMedicalBase_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_TransactionSet_T_TransactionSet_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_Validation_T_ClaimMedicalValidationRun_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBase_Validation_T_Validation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBillingProvider_T_ClaimMedicalPayToAddress_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalBillingProviderContact_T_ClaimMedicalBillingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalConditionInformation_T_ClaimMedicalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalDiagnosisCode_T_ClaimMedicalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalFileInformation_T_ClaimMedicalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_ClaimMedicalPricingRepricingInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_DateTimePeriodFormatQualifier_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_DateTimeQualifier_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalInformation_T_NoteReferenceCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalPatientConditionInformationVision_T_ClaimMedicalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalSupplementalInformation_T_ClaimMedicalClaimInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalDataChange_T_ClaimMedicalSubmit_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalDataChange_T_DataField_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalEPSDTReferral_T_CodeCategory_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalEPSDTReferral_T_ConditionCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalEPSDTReferral_T_ConditionCode_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalEPSDTReferral_T_ConditionCode_T2" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalErrors_T_PayerEdits_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalErrors_T_StandardEdits_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalEventLogMessage_T_EventLogMessage_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalLineItemNeedsValidation_T_ClaimMedicalNeedsValidation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalNeedsValidation_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalWaitingValidation_T_ClaimMedicalNeedsValidation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerReferenceIdentification_ClaimMedicalOtherPayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerBillingProviderReferenceIdentification_T_ClaimMedicalOtherPayerBillingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerReferringProviderReferenceIdentification_T_ClaimMedicalOtherPayerReferringProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerRenderingProviderReferenceIdentification_T_ClaimMedicalOtherPayerRenderingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerServiceFacilityLocationSecondaryIdentification_T_ClaimMedicalOtherPayerServiceFacilityLocation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherPayerSupervisingProviderReferenceIdentification_T_ClaimMedicalOtherPayerSupervisingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherSubscriber_T_IndividualRelationshipCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherSubscriberClaimLevelAdjustments_T_ClaimMedicalOtherSubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalOtherSubscriberReferenceIdentification_T_ClaimMedicalOtherSubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalPatient_T_IndividualRelationshipCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimMedi__Claim__38174C36" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalPayer_T_PayerResponsibilitySequenceNumberCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ReferenceIndentification_T_Loop_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalReferringProviderReferenceIdentification_T_ClaimMedicalReferringProviderReferenceIdentification_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalRenderingProvider_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalRenderingProviderReferenceIdentification_T_ClaimMedicalRenderingProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_CMR_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceFacilityLocationReferenceIdentification_T_ClaimMedicalServiceFacilityLocationReferenceIdentification_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimMedi__Claim__3CDC0153" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineAdjudicationInfo_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineAmbulanceCertification_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineFileInformation_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineOrderingProvider_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineOrderingProviderSecondaryIdentifierReferenceIdentification_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLinePriorAuthorizationReferenceIdentification_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLinePurchasedServiceProviderSecondaryIden_ClaimMedicalServiceLinePurchasedServiceProviderSecondaryIden" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineReferralNumberReferenceIdentification_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineReferringProvider_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineServiceFacilityLocation_T_ClaimMedicalServiceLineServiceFacilityLocation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineServiceFacilityLocationReferenceIdentification_T_ClaimMedicalServiceLine_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineSupervisingProvider_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineSupervisingProviderSecondaryIdentifierReferenceIdentification_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineSupplementalInformation_T_ClaimMedicalServiceLine_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineSupportingDocumentation_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineTestResult_T_ClaimMedicalServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLineAdjustment_T_ClaimMedicalServiceLineAdjudicationInfo_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalServiceLinereferringProviderSecondaryIdentification_T_ClaimMedicalServiceLineReferringProvider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ClaimMedi__Claim__4E716D00" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimMedicalValidationRun_T_ClaimMedicalSubmit_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_ClaimProductPurchased_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimReport_T_ClaimReportType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimReportHistory_T_ClaimReport_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimReportHistory_T_ClaimSource_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimReportMessage_T_ClaimReportHistory_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportEntity_T_ClaimSource_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClaimSupplementalInformation_T_ClaimSupplementalInformation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_VendorClientPermissions_T_Client_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClientCall_T_ClientSurvey_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClientCall_T_SalesRep_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClientMatchEntity_T_ClientMatch_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClientProprietaryReports_T_ClientReports_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ClientReports_T_PayerReportRaw_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceAdvice_T_ClientReports_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_CodeLog_T_CodeLogType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ConcatRep__Conca__71067C26" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_DataElementNote_T_DataElementErrCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_DataElementNote_T_DataSegmentNote_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_DataSegmentNote_T_DataSegmentErrCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_DataSegmentNote_T_TransactionSetResponse_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Vendor_T_DefaultPricing_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Dent5010ClaimSectionsConfig_T_Dent5010ClaimSection_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Edits_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EditsConfig_T_StandardEdits_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityBase_T_EligibilityReceiver_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityBase_T_EligibilitySource_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityBase_T_FunctionalGroupEligibility_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityBase_T_OutputSubEligibility_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilitySubscriber_T_EligibilityBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityDependent_T_EligibilitySubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityDependentDiagnosisCode_T_EligibilityDependent_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityDependentInquiry_T_EligibilityDependent_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityDependentRef_T_EligibilityDependent_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityDependentInquiryServiceTypeCode_T_EligibilityDependentInquiry_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityReceiverContact_T_EligibilityReceiver_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilityReceiverRef_T_EligibilityReceiver_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilitySubscriberDiagnosisCode_T_EligibilitySubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilitySubscriberInquiry_T_EligibilitySubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilitySubscriberRef_T_EligibilitySubscriber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_EligibilitySubscriberInquiryServiceTypeCode_T_EligibilitySubscriberInquiry_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SalesRep_T_EmployeeType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Enrollment_T_EnrollmentStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Enrollment_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_WebUserSettings_T_EntityType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSubEligibilityEQCode_T_EQCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SearchLog_T_SearchLog_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_FunctionalGroup_T_FunctionalGroupErrCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_FunctionalGroup_T_InterchangeControl_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSet_T_FunctionalGroup_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_FunctionalGroupEligibility_T_PayerID_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_FunctionalGroupEligibility_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Implementation_T_PayerReportAssignmentStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Implementation_T_PayerReportRaw_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationFunctionalGroup_T_Implementation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationDataElementNote_T_ImplementationErrorIdentification_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationElementContext_T_ImplementationDataElementNote_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationErrorIdentification_T_ImplementationResponse_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationSegementContext_T_ImplementationErrorIdentification_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationTransactionSet_T_ImplementationFunctionalGroup_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImplementationResponse_T_ImplementationTransactionSet_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ImportHistory_T_Statement_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Interchange_T_PayerReportAssignmentStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Interchange_T_PayerReportRaw_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_InterchangeControl_T_InterchangeControl_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_InterchangeControl_T_TA1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSub_T_LegacyIDNumber_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Mapping_T_MasterMap_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Mapping_T_MasterMap_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_MasterMap_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_MasterMap_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Med5010ClaimSectionsConfig_T_Med5010ClaimSection_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_NameFormat_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_NameFormat_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_NameFormat_T2" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_NameFormat_T3" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OperationsMetric999Information_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Output_PayerReportType_T_Output_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Output_PayerReportType_T_PayerReportType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Output_T_OutputDistributionType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Output_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSub_T_Output_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSubEligibility_T_Output_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReport_T_Output_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ValidationOutput_T_Output_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSub_T_PayerID_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Payer_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerKeyWord_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ValidationOutputSub_T_OutputSub_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSubEligibility_T_PayerID_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSubEligibilityEQCode_T_OutputSubEligibility_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_OutputSubEligibilityRequirement_T_OutputSubEligibility_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerEdits_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReport_T_PayerReportType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportClient_T_PayerReport_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportEntity_T_PayerReport_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceReport_T_PayerReportAssignmentStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportEntity_T_PayerReportClient_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportError_T_PayerReportError_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportRaw_T_PayerReportParseStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_PayerReportRaw_T_PayerReportType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceReport_T_PayerReportRaw_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_PaymentMethod_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_Practice_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Software_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SoftwareMapName_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SpecialtyCode_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_StandardEdits_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Validation_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_ProviderSpecialtyCode" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_RenderingProviderSpecialtyCode" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_SoftwareConversion_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_SoftwareMapName_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_SoftwareMapName_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_StatementForm_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Provider_T_WhiteLabel_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Service_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Statement_Provider" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ProviderBilling_T_ProviderPayment_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittanceAdjustment_T_RemittanceAdjustment_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RemittanceAdjustment_T_RemittanceAdjustment_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceAdvice_T_RemittanceReport_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceHeader_T_RemittanceAdvice_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayee_T_RemittanceAdvice_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_T_RemittanceAdvice_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePlb_T_RemittanceAdvice_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceSummary_T_RemittanceAdvice_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittanceAmt_T_RemittanceAmt_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RemittanceAmt_T_RemittanceAmt_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceAssignmentType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_ClaimDentalBase_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_ClaimMedicalBase_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_OtherClaimId_Ref_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_OtherClaimId_Ref_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittanceAdjustment_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittanceAmt_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittancePer_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittancePer_T_RemittancePer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittanceQty_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RemittanceQty_T_RemittanceQty_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RenderingProviderID_Ref_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_RenderingProviderID_Ref_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceHeader_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T2" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T3" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T4" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T5" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceClaim_T_RemittanceNm1_T6" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_T_RemittanceClaim_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceLq_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayee_RemittanceRef_T_RemittancePayee_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayee_RemittanceRef_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_RemittancePer_T_RemittancePayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_RemittancePer_T_RemittancePer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_RemittanceRef_T_RemittancePayer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_RemittanceRef_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_T_RemittancePer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittancePayer_T_RemittancePer_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RemittanceQty_T_RemittanceQty_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_HealthcarePolicyID_Ref_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RenderingProvider_Ref_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_ServiceId_Ref_T_RemittanceRef_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_HealthcarePolicyID_Ref_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RemittanceAdjustment_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RemittanceAmt_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RemittanceQty_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_RenderingProvider_Ref_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RemittanceServiceLine_ServiceId_Ref_T_RemittanceServiceLine_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ReportData_T_ReportType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__ReportSor__Repor__42809767" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_RunnerLog_T_RunnerConfig_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SalesCode_T_SalesCodeType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Services_T_SalesCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SalesCodeType_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_SalesRep_T_State_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Service_T_SalesRep_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Service_T_ServiceType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Service_T_SetupStatus_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Submitter_T_State_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Vendor_T_State_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Statement_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_StatementLineItem_T_Statement_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_StatementLineItemNeedsValidation_T_StatementNeedsValidation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_StatementWaitingValidation_T_StatementNeedsValidation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSetResponse_T_TransactionSet_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSetResponse_T_TransactionSetErrCode_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSetResponse_T_TransactionSetErrCode_T1" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSetResponse_T_TransactionSetErrCode_T2" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSetResponse_T_TransactionSetErrCode_T3" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_TransactionSetResponse_T_TransactionSetErrCode_T4" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Validation_T_ValidationForm_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_Validation_ValidationSubLineLevelLoops" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ValidationOutput_T_Validation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ValidationOutputSub_T_Validation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ValidationUIMapping_T_Validation_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_ValidationUIMapping_T_ValidationUIField_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK__Vendor_T__WhiteL__6006D8AD" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_VendorClientPermissions_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_VendorServices_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_WebDownloads_T_WebDownloadType_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.FK_WebSectionsDynamicContent_T_WebSections_T" ManuallyRouted="false" />
+        <AssociationConnector Association="DevConnect.PayerEditsConfig_T" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
