@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ApplicationExe
 {
-    public static class ClaimStakerPlus : IApplications
+    public class ClaimStakerPlus : IApplications
     {
         private bool _Status;
         private string _LoginName;
@@ -53,6 +54,25 @@ namespace ApplicationExe
         {
             get { return _name_PasswordRequired; }
             set { _name_PasswordRequired = value; }
+        }
+
+        public void Execute()
+        {
+            int exitCode;
+            ClaimStakerPlus instance = new ClaimStakerPlus();
+            string ExeName = instance.path + @"\" + instance.exe;
+
+
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.Arguments = null;
+            start.FileName = ExeName;
+
+            using (Process proc = Process.Start(start))
+            {
+                proc.WaitForExit();
+
+                exitCode = proc.ExitCode;
+            }
         }
     }
 }

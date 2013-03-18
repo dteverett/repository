@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationExe\ApplicationExe.csproj">
+      <Project>{f40601f4-05cb-4dde-9564-e593f900c6d8}</Project>
+      <Name>ApplicationExe</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Form\Form.csproj">
       <Project>{b26f1d5d-7836-4b3a-863e-bf61eb3758ba}</Project>
       <Name>Form</Name>

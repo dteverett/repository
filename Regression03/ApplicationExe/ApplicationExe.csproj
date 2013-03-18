@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimStakerClassic.cs" />
     <Compile Include="ClaimStakerPlus.cs" />
     <Compile Include="Execute.cs" />
     <Compile Include="IApplications.cs" />

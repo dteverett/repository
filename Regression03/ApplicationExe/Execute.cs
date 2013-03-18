@@ -7,19 +7,44 @@ using System.Diagnostics;
 
 namespace ApplicationExe
 {
-    public static class Execute
+    public class Execute
     {
-
-        public static void ExecuteClaimStakerPlus()
+        public Execute()
         {
+
+        }
+
+        private void ExecuteClaimStakerPlus()
+        {
+            int exitCode;
             ClaimStakerPlus instance = new ClaimStakerPlus();
-            instance.
-            string ExeName;
+            string ExeName = instance.path + @"\" + instance.exe;
             
 
             ProcessStartInfo start = new ProcessStartInfo();
             start.Arguments = null;
-            //start.FileName = ExeName;
+            start.FileName = ExeName;
+
+            using (Process proc = Process.Start(start))
+            {
+                proc.WaitForExit();
+
+                exitCode = proc.ExitCode;
+            }
+
+           
+        }
+        private void ExecuteClaimStakerClassic()
+        {
+
+        }
+
+
+
+        public void ExecuteAll()
+        {
+            ExecuteClaimStakerPlus();
+
         }
 
     }

@@ -8,6 +8,8 @@ namespace ApplicationExe
 {
     interface IApplications
     {
+        
+
         String path { get; }
         String exe { get; }
         String name { get; }
@@ -15,5 +17,8 @@ namespace ApplicationExe
         String loginName { get; set; }
         String loginPassword { get; set; }
         bool name_PasswordRequired { get; set; }
+
+        void Execute();
+
     }
 }
