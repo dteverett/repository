@@ -8,16 +8,16 @@ using Microsoft.Win32;
 
 namespace Logger
 {
-    public static class Log
+    public class Log
     {
         private static String log = null;
         private static int counter = 1;
+        
 
         public static void AddLog(String message)
         {
             
-            log += (counter.ToString() + ". " + message + "\n");
-            counter++;
+           
         }
 
         public static void DisplayLog()

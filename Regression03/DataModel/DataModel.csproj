@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataModel</RootNamespace>
     <AssemblyName>DataModel</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,22 +46,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DataModel.Designer.cs">
+    <Compile Include="Datamodel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataModel.edmx</DependentUpon>
+      <DependentUpon>Datamodel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DataModel.edmx">
+    <EntityDeploy Include="Datamodel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Datamodel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataModel.edmx.diagram">
-      <DependentUpon>DataModel.edmx</DependentUpon>
+    <None Include="Datamodel.edmx.diagram">
+      <DependentUpon>Datamodel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClaimStakerDEVModelStoreContainer" CdmEntityContainer="LogConnectionEntity">
+    <EntitySetMapping Name="Log_T">
+      <EntityTypeMapping TypeName="ClaimStakerDEVModel.Log_T">
+        <MappingFragment StoreEntitySet="Log_T">
+          <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
+          <ScalarProperty Name="LogDate_DT" ColumnName="LogDate_DT" />
+          <ScalarProperty Name="User_VC" ColumnName="User_VC" />
+          <ScalarProperty Name="RecordChanged_VC" ColumnName="RecordChanged_VC" />
+          <ScalarProperty Name="FieldName_VC" ColumnName="FieldName_VC" />
+          <ScalarProperty Name="OldValue_VC" ColumnName="OldValue_VC" />
+          <ScalarProperty Name="NewValue_VC" ColumnName="NewValue_VC" />
+          <ScalarProperty Name="FormName_VC" ColumnName="FormName_VC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

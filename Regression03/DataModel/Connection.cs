@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataModel
 {
-    class Connection
+    public class Connection
     {
-        public SQLDEVConnect _repository;
+        public LogConnectionEntity _connection;
 
         public Connection()
         {
-            _repository = new SQLDEVConnect();
+            _connection = new LogConnectionEntity();
         }
     }
 }

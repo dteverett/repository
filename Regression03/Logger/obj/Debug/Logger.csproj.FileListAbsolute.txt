@@ -3,6 +3,7 @@
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Logger\obj\Debug\Logger.dll
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Logger\obj\Debug\Logger.pdb
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\Users\deverett.APEX\repository\Regression03\Logger\bin\Debug\Logger.dll.config
 C:\Users\deverett.APEX\repository\Regression03\Logger\bin\Debug\Logger.dll
 C:\Users\deverett.APEX\repository\Regression03\Logger\bin\Debug\Logger.pdb
 C:\Users\deverett.APEX\repository\Regression03\Logger\obj\Debug\Logger.dll

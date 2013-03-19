@@ -13,7 +13,7 @@ namespace DataModel
             String result = "";
             Connection connect = new Connection();
 
-            var Log = connect._repository.ApplicationLog_T.Where(x => x.Logger_VC == "INFO").ToArray();
+            var Log = connect._connection.claimmedicalbase_T.Where(x => x.claimmedicalbase_ID == 15148).ToArray();
 
             foreach (var log in Log)
             {

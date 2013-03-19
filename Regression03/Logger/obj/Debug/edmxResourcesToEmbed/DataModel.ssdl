@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClaimStakerDEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ClaimStakerDEVModelStoreContainer">
+    <EntitySet Name="Log_T" EntityType="ClaimStakerDEVModel.Store.Log_T" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Log_T">
+    <Key>
+      <PropertyRef Name="Log_ID" />
+    </Key>
+    <Property Name="Log_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LogDate_DT" Type="datetime" Nullable="false" />
+    <Property Name="User_VC" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RecordChanged_VC" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FieldName_VC" Type="varchar" Nullable="false" MaxLength="75" />
+    <Property Name="OldValue_VC" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="NewValue_VC" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="FormName_VC" Type="varchar" Nullable="false" MaxLength="75" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="LogConnectionEntity" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Claim_T" EntityType="DataModel.Claim_T" />
+    <EntitySet Name="ClaimDentalBase_T" EntityType="DataModel.ClaimDentalBase_T" />
+    <EntitySet Name="ClaimMedicalBase_T" EntityType="DataModel.ClaimMedicalBase_T" />
+    <EntitySet Name="Log_T" EntityType="DataModel.Log_T" />
+    <EntitySet Name="PayerReport_T" EntityType="DataModel.PayerReport_T" />
+    <EntitySet Name="SoftwareConversion_T" EntityType="DataModel.SoftwareConversion_T" />
+    <EntitySet Name="Validation_T" EntityType="DataModel.Validation_T" />
+    <EntitySet Name="Vendor_T" EntityType="DataModel.Vendor_T" />
+    <EntitySet Name="WebUserSettings_T" EntityType="DataModel.WebUserSettings_T" />
+    <EntitySet Name="WhiteLabel_T" EntityType="DataModel.WhiteLabel_T" />
+    <AssociationSet Name="FK_ClaimDentalBase_T_Vendor_T" Association="DataModel.FK_ClaimDentalBase_T_Vendor_T">
+      <End Role="Vendor_T" EntitySet="Vendor_T" />
+      <End Role="ClaimDentalBase_T" EntitySet="ClaimDentalBase_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClaimMedicalBase_T_Vendor_T" Association="DataModel.FK_ClaimMedicalBase_T_Vendor_T">
+      <End Role="Vendor_T" EntitySet="Vendor_T" />
+      <End Role="ClaimMedicalBase_T" EntitySet="ClaimMedicalBase_T" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vendor_T__WhiteL__6006D8AD" Association="DataModel.FK__Vendor_T__WhiteL__6006D8AD">
+      <End Role="WhiteLabel_T" EntitySet="WhiteLabel_T" />
+      <End Role="Vendor_T" EntitySet="Vendor_T" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Claim_T">
+    <Key>
+      <PropertyRef Name="Claim_ID" />
+    </Key>
+    <Property Name="Claim_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="apexPayerID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="claimControlNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="claimStatus" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="errorDesc" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="patientFirstName" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+    <Property Name="patientLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="patientMiddleInitial" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="patientSuffix" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="patientID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="patientAddress" Type="String" MaxLength="55" Unicode="false" FixedLength="false" />
+    <Property Name="patientCity" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="patientState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="patientZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="patientDOB" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="patientSex" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="patientAccountNumber" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="patientRelationship" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="patientMaritalType" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="patientStudentType" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="patientSignature" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="patientSignatureDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="patientPhone" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberFirstName" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberMiddleInitial" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberID" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberDOB" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberSex" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberPhone" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberSignature" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberSignatureDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberEmployerName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberPlanName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="subscriberSuffix" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberFirstName" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberMiddleInitial" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberID" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberCity" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberDOB" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberGroupNumber" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberSex" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberPlanName" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="otherSubscriberRelationship" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="providerName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="serviceStartDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="serviceEndDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="clientID" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="payerName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="payerAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="payerAddress2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="payerCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="payerState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="payerZip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="payerRecDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="totalAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="provFirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="provLastName" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="provMiddleInitial" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="provAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="provAddress2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="provCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="provState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="provZip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="provID" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="provPayerIssuedID" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="provSignature" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="provSignatureDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="provPhone" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="facilityName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="facilityAddress1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="facilityAddress2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="facilityCity" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="facilityState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="facilityZip" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="placeOfService" Type="String" MaxLength="24" Unicode="false" FixedLength="false" />
+    <Property Name="lastVisit" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="condRelatedToEmployment" Type="Boolean" />
+    <Property Name="condRelatedToAutoAccident" Type="Boolean" />
+    <Property Name="condRelatedToOtherAccident" Type="Boolean" />
+    <Property Name="accidentDate" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="accidentState" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="isOtherPlan" Type="Boolean" />
+    <Property Name="referProvFirstName" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="referProvLastName" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="referProvMiddleInitial" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="referProvID" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="priorAuthorizationNumber" Type="String" MaxLength="48" Unicode="false" FixedLength="false" />
+    <Property Name="remark1" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="remark2" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="remark3" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="remark4" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="remark5" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="remark6" Type="String" MaxLength="96" Unicode="false" FixedLength="false" />
+    <Property Name="provNPI" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="referProvNPI" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="facilityNPI" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="referProvIDQual" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="primaryPayerPaidAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="approvedAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="allowedAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="patientResponsibleAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="patientPaidAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="otherAdjustmentsAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="discountAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="taxAmount" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="totalClaimBeforeTaxes" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentReportTypeCode1" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentReportTypeCode2" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentReportTypeCode3" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentTransmissionCode1" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentTransmissionCode2" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentTransmissionCode3" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentIDCodeQualifier1" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentIDCodeQualifier2" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentIDCodeQualifier3" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentControlNumber1" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentControlNumber2" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="attachmentControlNumber3" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <Property Name="provTaxIDType" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="provTaxID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ClaimDentalBase_T">
+    <Key>
+      <PropertyRef Name="ClaimDentalBase_ID" />
+    </Key>
+    <Property Name="ClaimDentalBase_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimDentalBillingProvider_ID" Type="Int32" />
+    <Property Name="Provider_ID" Type="Int32" />
+    <Property Name="ClaimDentalPayer_ID" Type="Int64" />
+    <Property Name="Payer_ID" Type="Int32" />
+    <Property Name="OutputSub_ID" Type="Int32" />
+    <Property Name="ClaimStatusType_ID" Type="Int32" Nullable="false" />
+    <Property Name="BatchNumber_VC" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="ReportDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="NPI_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="LastProcessDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="ClientID_VC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="LegacyClaim_ID" Type="Int64" />
+    <Property Name="LastUpdateDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsNoCharge_BT" Type="Boolean" Nullable="false" />
+    <Property Name="IsProcessNow_BT" Type="Boolean" Nullable="false" />
+    <Property Name="InternalNotes_VC" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ApexPayerID_VC" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="ClaimVendorID_VC" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EventPhase_ID" Type="Int32" />
+    <Property Name="EventType_ID" Type="Int64" />
+    <Property Name="Vendor_ID" Type="Int32" />
+    <NavigationProperty Name="Vendor_T" Relationship="DataModel.FK_ClaimDentalBase_T_Vendor_T" FromRole="ClaimDentalBase_T" ToRole="Vendor_T" />
+  </EntityType>
+  <EntityType Name="ClaimMedicalBase_T">
+    <Key>
+      <PropertyRef Name="ClaimMedicalBase_ID" />
+    </Key>
+    <Property Name="ClaimMedicalBase_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimMedicalBillingProvider_ID" Type="Int32" />
+    <Property Name="Provider_ID" Type="Int32" />
+    <Property Name="ClaimMedicalPayer_ID" Type="Int64" />
+    <Property Name="Payer_ID" Type="Int32" />
+    <Property Name="OutputSub_ID" Type="Int32" />
+    <Property Name="ClaimStatusType_ID" Type="Int32" Nullable="false" />
+    <Property Name="BatchNumber_VC" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="ReportDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="NPI_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="LastProcessDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="ClientID_VC" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="LegacyClaim_ID" Type="Int64" />
+    <Property Name="LastUpdateDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsNoCharge_BT" Type="Boolean" Nullable="false" />
+    <Property Name="IsProcessNow_BT" Type="Boolean" Nullable="false" />
+    <Property Name="InternalNotes_VC" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ApexPayerID_VC" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="ClaimVendorID_VC" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EventPhase_ID" Type="Int32" />
+    <Property Name="EventType_ID" Type="Int64" />
+    <Property Name="Vendor_ID" Type="Int32" />
+    <NavigationProperty Name="Vendor_T" Relationship="DataModel.FK_ClaimMedicalBase_T_Vendor_T" FromRole="ClaimMedicalBase_T" ToRole="Vendor_T" />
+  </EntityType>
+  <EntityType Name="Log_T">
+    <Key>
+      <PropertyRef Name="Log_ID" />
+    </Key>
+    <Property Name="Log_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LogDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="User_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="RecordChanged_VC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FieldName_VC" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="OldValue_VC" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="NewValue_VC" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="FormName_VC" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PayerReport_T">
+    <Key>
+      <PropertyRef Name="PayerReport_ID" />
+    </Key>
+    <Property Name="PayerReport_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PayerReportType_ID" Type="Int32" Nullable="false" />
+    <Property Name="Output_ID" Type="Int32" />
+    <Property Name="FileDate_DT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name_VC" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="TextContents_VC" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SoftwareConversion_T">
+    <Key>
+      <PropertyRef Name="SoftwareConversion_ID" />
+    </Key>
+    <Property Name="SoftwareConversion_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ConversionName_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Validation_T">
+    <Key>
+      <PropertyRef Name="Validation_ID" />
+    </Key>
+    <Property Name="Validation_ID" Type="Int32" Nullable="false" />
+    <Property Name="Profession_ID" Type="Int32" />
+    <Property Name="ValidationForm_ID" Type="Int32" Nullable="false" />
+    <Property Name="Name_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ErrorMessage_VC" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="IsLineItemValidation_BT" Type="Boolean" Nullable="false" />
+    <Property Name="ValidationSubLineLevelLoops_TI" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Vendor_T">
+    <Key>
+      <PropertyRef Name="Vendor_ID" />
+    </Key>
+    <Property Name="Vendor_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DefaultPricing_ID" Type="Int32" Nullable="false" />
+    <Property Name="LastUpdate_DT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ContactName_VC" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyName_VC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Email_VC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="SoftwareName_VC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Address1_VC" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Address2_VC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="City_VC" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ST_ID" Type="Int32" Nullable="false" />
+    <Property Name="Zip_VC" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="Phone_VC" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Fax_VC" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TaxID_VC" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="RebateElectronic_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="RebatePaper_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="RebateStatement_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="FlatRateMax_DC" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="FlatRateAmount_SM" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="PayFlatRate_BT" Type="Boolean" Nullable="false" />
+    <Property Name="PayOneTimeOnly_BT" Type="Boolean" Nullable="false" />
+    <Property Name="PayFirstYearOnly_BT" Type="Boolean" Nullable="false" />
+    <Property Name="Inactive_BT" Type="Boolean" Nullable="false" />
+    <Property Name="PayRebateOnlyIfAddingClients_BT" Type="Boolean" Nullable="false" />
+    <Property Name="StartDate_DT" Type="DateTime" Precision="0" />
+    <Property Name="DisplayName_VC" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ShowOnline_BT" Type="Boolean" Nullable="false" />
+    <Property Name="SpecialCode_VC" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="IsChampion_BT" Type="Boolean" Nullable="false" />
+    <Property Name="IsPSPP_BT" Type="Boolean" Nullable="false" />
+    <Property Name="WhiteLabel_ID" Type="Int64" />
+    <NavigationProperty Name="ClaimDentalBase_T" Relationship="DataModel.FK_ClaimDentalBase_T_Vendor_T" FromRole="Vendor_T" ToRole="ClaimDentalBase_T" />
+    <NavigationProperty Name="ClaimMedicalBase_T" Relationship="DataModel.FK_ClaimMedicalBase_T_Vendor_T" FromRole="Vendor_T" ToRole="ClaimMedicalBase_T" />
+    <NavigationProperty Name="WhiteLabel_T" Relationship="DataModel.FK__Vendor_T__WhiteL__6006D8AD" FromRole="Vendor_T" ToRole="WhiteLabel_T" />
+  </EntityType>
+  <EntityType Name="WebUserSettings_T">
+    <Key>
+      <PropertyRef Name="WebUserSettings_ID" />
+    </Key>
+    <Property Name="WebUserSettings_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="EntityType_ID" Type="Int32" Nullable="false" />
+    <Property Name="AdvUpload_BT" Type="Boolean" Nullable="false" />
+    <Property Name="UserName_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password_VC" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ClaimFile_VC" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="StatementFile_VC" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="InitiatedWebTestDrive_BT" Type="Boolean" Nullable="false" />
+    <Property Name="TestDriveStart_DT" Type="DateTime" Precision="3" />
+    <Property Name="ClientID_VC" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="WebDisplayName_VC" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ResetPassword_BT" Type="Boolean" Nullable="false" />
+    <Property Name="InitialLaunch_BT" Type="Boolean" Nullable="false" />
+    <Property Name="AgreedTandC_BT" Type="Boolean" Nullable="false" />
+    <Property Name="RegistrationNumberProviders_IN" Type="Int32" Nullable="false" />
+    <Property Name="ShowIEDisableAddOnsWarning_BT" Type="Boolean" Nullable="false" />
+    <Property Name="OneTouchConfigXML_VC" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="PreviewEnabled_BT" Type="Boolean" Nullable="false" />
+    <Property Name="PreviewLocked_BT" Type="Boolean" Nullable="false" />
+    <Property Name="PreviewLocked_DT" Type="DateTime" Precision="3" />
+    <Property Name="PreviewLive_DT" Type="DateTime" Precision="3" />
+    <Property Name="LastLogin_DT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NoticeRead_DT" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="WhiteLabel_T">
+    <Key>
+      <PropertyRef Name="WhiteLabel_ID" />
+    </Key>
+    <Property Name="WhiteLabel_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Title_VC" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="URL_VC" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="LogoImagePath_VC" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Username_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password_VC" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedDate_DT" Type="DateTime" Precision="3" />
+    <Property Name="AccessToCodeReports_BT" Type="Boolean" Nullable="false" />
+    <Property Name="PrimaryBackgroundColor_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="PrimaryTextColor_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="SecondaryBackgroundColor_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="SecondaryTextColor_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="IconColor_VC" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive_BT" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Vendor_T" Relationship="DataModel.FK__Vendor_T__WhiteL__6006D8AD" FromRole="WhiteLabel_T" ToRole="Vendor_T" />
+  </EntityType>
+  <Association Name="FK_ClaimDentalBase_T_Vendor_T">
+    <End Role="Vendor_T" Type="DataModel.Vendor_T" Multiplicity="0..1" />
+    <End Role="ClaimDentalBase_T" Type="DataModel.ClaimDentalBase_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor_T">
+        <PropertyRef Name="Vendor_ID" />
+      </Principal>
+      <Dependent Role="ClaimDentalBase_T">
+        <PropertyRef Name="Vendor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClaimMedicalBase_T_Vendor_T">
+    <End Role="Vendor_T" Type="DataModel.Vendor_T" Multiplicity="0..1" />
+    <End Role="ClaimMedicalBase_T" Type="DataModel.ClaimMedicalBase_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor_T">
+        <PropertyRef Name="Vendor_ID" />
+      </Principal>
+      <Dependent Role="ClaimMedicalBase_T">
+        <PropertyRef Name="Vendor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vendor_T__WhiteL__6006D8AD">
+    <End Role="WhiteLabel_T" Type="DataModel.WhiteLabel_T" Multiplicity="0..1" />
+    <End Role="Vendor_T" Type="DataModel.Vendor_T" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WhiteLabel_T">
+        <PropertyRef Name="WhiteLabel_ID" />
+      </Principal>
+      <Dependent Role="Vendor_T">
+        <PropertyRef Name="WhiteLabel_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

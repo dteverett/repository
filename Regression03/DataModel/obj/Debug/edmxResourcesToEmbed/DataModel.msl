@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="LogConnectionEntity">
+    <EntitySetMapping Name="Claim_T">
+      <EntityTypeMapping TypeName="DataModel.Claim_T">
+        <MappingFragment StoreEntitySet="Claim_T">
+          <ScalarProperty Name="Claim_ID" ColumnName="Claim_ID" />
+          <ScalarProperty Name="apexPayerID" ColumnName="apexPayerID" />
+          <ScalarProperty Name="claimControlNumber" ColumnName="claimControlNumber" />
+          <ScalarProperty Name="claimStatus" ColumnName="claimStatus" />
+          <ScalarProperty Name="errorDesc" ColumnName="errorDesc" />
+          <ScalarProperty Name="patientFirstName" ColumnName="patientFirstName" />
+          <ScalarProperty Name="patientLastName" ColumnName="patientLastName" />
+          <ScalarProperty Name="patientMiddleInitial" ColumnName="patientMiddleInitial" />
+          <ScalarProperty Name="patientSuffix" ColumnName="patientSuffix" />
+          <ScalarProperty Name="patientID" ColumnName="patientID" />
+          <ScalarProperty Name="patientAddress" ColumnName="patientAddress" />
+          <ScalarProperty Name="patientCity" ColumnName="patientCity" />
+          <ScalarProperty Name="patientState" ColumnName="patientState" />
+          <ScalarProperty Name="patientZip" ColumnName="patientZip" />
+          <ScalarProperty Name="patientDOB" ColumnName="patientDOB" />
+          <ScalarProperty Name="patientSex" ColumnName="patientSex" />
+          <ScalarProperty Name="patientAccountNumber" ColumnName="patientAccountNumber" />
+          <ScalarProperty Name="patientRelationship" ColumnName="patientRelationship" />
+          <ScalarProperty Name="patientMaritalType" ColumnName="patientMaritalType" />
+          <ScalarProperty Name="patientStudentType" ColumnName="patientStudentType" />
+          <ScalarProperty Name="patientSignature" ColumnName="patientSignature" />
+          <ScalarProperty Name="patientSignatureDate" ColumnName="patientSignatureDate" />
+          <ScalarProperty Name="patientPhone" ColumnName="patientPhone" />
+          <ScalarProperty Name="subscriberFirstName" ColumnName="subscriberFirstName" />
+          <ScalarProperty Name="subscriberLastName" ColumnName="subscriberLastName" />
+          <ScalarProperty Name="subscriberMiddleInitial" ColumnName="subscriberMiddleInitial" />
+          <ScalarProperty Name="subscriberID" ColumnName="subscriberID" />
+          <ScalarProperty Name="subscriberAddress1" ColumnName="subscriberAddress1" />
+          <ScalarProperty Name="subscriberCity" ColumnName="subscriberCity" />
+          <ScalarProperty Name="subscriberState" ColumnName="subscriberState" />
+          <ScalarProperty Name="subscriberZip" ColumnName="subscriberZip" />
+          <ScalarProperty Name="subscriberDOB" ColumnName="subscriberDOB" />
+          <ScalarProperty Name="subscriberSex" ColumnName="subscriberSex" />
+          <ScalarProperty Name="subscriberPhone" ColumnName="subscriberPhone" />
+          <ScalarProperty Name="subscriberSignature" ColumnName="subscriberSignature" />
+          <ScalarProperty Name="subscriberSignatureDate" ColumnName="subscriberSignatureDate" />
+          <ScalarProperty Name="subscriberEmployerName" ColumnName="subscriberEmployerName" />
+          <ScalarProperty Name="subscriberPlanName" ColumnName="subscriberPlanName" />
+          <ScalarProperty Name="subscriberSuffix" ColumnName="subscriberSuffix" />
+          <ScalarProperty Name="otherSubscriberFirstName" ColumnName="otherSubscriberFirstName" />
+          <ScalarProperty Name="otherSubscriberLastName" ColumnName="otherSubscriberLastName" />
+          <ScalarProperty Name="otherSubscriberMiddleInitial" ColumnName="otherSubscriberMiddleInitial" />
+          <ScalarProperty Name="otherSubscriberID" ColumnName="otherSubscriberID" />
+          <ScalarProperty Name="otherSubscriberAddress1" ColumnName="otherSubscriberAddress1" />
+          <ScalarProperty Name="otherSubscriberCity" ColumnName="otherSubscriberCity" />
+          <ScalarProperty Name="otherSubscriberState" ColumnName="otherSubscriberState" />
+          <ScalarProperty Name="otherSubscriberZip" ColumnName="otherSubscriberZip" />
+          <ScalarProperty Name="otherSubscriberDOB" ColumnName="otherSubscriberDOB" />
+          <ScalarProperty Name="otherSubscriberGroupNumber" ColumnName="otherSubscriberGroupNumber" />
+          <ScalarProperty Name="otherSubscriberSex" ColumnName="otherSubscriberSex" />
+          <ScalarProperty Name="otherSubscriberPlanName" ColumnName="otherSubscriberPlanName" />
+          <ScalarProperty Name="otherSubscriberRelationship" ColumnName="otherSubscriberRelationship" />
+          <ScalarProperty Name="providerName" ColumnName="providerName" />
+          <ScalarProperty Name="serviceStartDate" ColumnName="serviceStartDate" />
+          <ScalarProperty Name="serviceEndDate" ColumnName="serviceEndDate" />
+          <ScalarProperty Name="clientID" ColumnName="clientID" />
+          <ScalarProperty Name="payerName" ColumnName="payerName" />
+          <ScalarProperty Name="payerAddress1" ColumnName="payerAddress1" />
+          <ScalarProperty Name="payerAddress2" ColumnName="payerAddress2" />
+          <ScalarProperty Name="payerCity" ColumnName="payerCity" />
+          <ScalarProperty Name="payerState" ColumnName="payerState" />
+          <ScalarProperty Name="payerZip" ColumnName="payerZip" />
+          <ScalarProperty Name="payerRecDate" ColumnName="payerRecDate" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="provFirstName" ColumnName="provFirstName" />
+          <ScalarProperty Name="provLastName" ColumnName="provLastName" />
+          <ScalarProperty Name="provMiddleInitial" ColumnName="provMiddleInitial" />
+          <ScalarProperty Name="provAddress1" ColumnName="provAddress1" />
+          <ScalarProperty Name="provAddress2" ColumnName="provAddress2" />
+          <ScalarProperty Name="provCity" ColumnName="provCity" />
+          <ScalarProperty Name="provState" ColumnName="provState" />
+          <ScalarProperty Name="provZip" ColumnName="provZip" />
+          <ScalarProperty Name="provID" ColumnName="provID" />
+          <ScalarProperty Name="provPayerIssuedID" ColumnName="provPayerIssuedID" />
+          <ScalarProperty Name="provSignature" ColumnName="provSignature" />
+          <ScalarProperty Name="provSignatureDate" ColumnName="provSignatureDate" />
+          <ScalarProperty Name="provPhone" ColumnName="provPhone" />
+          <ScalarProperty Name="facilityName" ColumnName="facilityName" />
+          <ScalarProperty Name="facilityAddress1" ColumnName="facilityAddress1" />
+          <ScalarProperty Name="facilityAddress2" ColumnName="facilityAddress2" />
+          <ScalarProperty Name="facilityCity" ColumnName="facilityCity" />
+          <ScalarProperty Name="facilityState" ColumnName="facilityState" />
+          <ScalarProperty Name="facilityZip" ColumnName="facilityZip" />
+          <ScalarProperty Name="placeOfService" ColumnName="placeOfService" />
+          <ScalarProperty Name="lastVisit" ColumnName="lastVisit" />
+          <ScalarProperty Name="condRelatedToEmployment" ColumnName="condRelatedToEmployment" />
+          <ScalarProperty Name="condRelatedToAutoAccident" ColumnName="condRelatedToAutoAccident" />
+          <ScalarProperty Name="condRelatedToOtherAccident" ColumnName="condRelatedToOtherAccident" />
+          <ScalarProperty Name="accidentDate" ColumnName="accidentDate" />
+          <ScalarProperty Name="accidentState" ColumnName="accidentState" />
+          <ScalarProperty Name="isOtherPlan" ColumnName="isOtherPlan" />
+          <ScalarProperty Name="referProvFirstName" ColumnName="referProvFirstName" />
+          <ScalarProperty Name="referProvLastName" ColumnName="referProvLastName" />
+          <ScalarProperty Name="referProvMiddleInitial" ColumnName="referProvMiddleInitial" />
+          <ScalarProperty Name="referProvID" ColumnName="referProvID" />
+          <ScalarProperty Name="priorAuthorizationNumber" ColumnName="priorAuthorizationNumber" />
+          <ScalarProperty Name="remark1" ColumnName="remark1" />
+          <ScalarProperty Name="remark2" ColumnName="remark2" />
+          <ScalarProperty Name="remark3" ColumnName="remark3" />
+          <ScalarProperty Name="remark4" ColumnName="remark4" />
+          <ScalarProperty Name="remark5" ColumnName="remark5" />
+          <ScalarProperty Name="remark6" ColumnName="remark6" />
+          <ScalarProperty Name="provNPI" ColumnName="provNPI" />
+          <ScalarProperty Name="referProvNPI" ColumnName="referProvNPI" />
+          <ScalarProperty Name="facilityNPI" ColumnName="facilityNPI" />
+          <ScalarProperty Name="referProvIDQual" ColumnName="referProvIDQual" />
+          <ScalarProperty Name="primaryPayerPaidAmount" ColumnName="primaryPayerPaidAmount" />
+          <ScalarProperty Name="approvedAmount" ColumnName="approvedAmount" />
+          <ScalarProperty Name="allowedAmount" ColumnName="allowedAmount" />
+          <ScalarProperty Name="patientResponsibleAmount" ColumnName="patientResponsibleAmount" />
+          <ScalarProperty Name="patientPaidAmount" ColumnName="patientPaidAmount" />
+          <ScalarProperty Name="otherAdjustmentsAmount" ColumnName="otherAdjustmentsAmount" />
+          <ScalarProperty Name="discountAmount" ColumnName="discountAmount" />
+          <ScalarProperty Name="taxAmount" ColumnName="taxAmount" />
+          <ScalarProperty Name="totalClaimBeforeTaxes" ColumnName="totalClaimBeforeTaxes" />
+          <ScalarProperty Name="attachmentReportTypeCode1" ColumnName="attachmentReportTypeCode1" />
+          <ScalarProperty Name="attachmentReportTypeCode2" ColumnName="attachmentReportTypeCode2" />
+          <ScalarProperty Name="attachmentReportTypeCode3" ColumnName="attachmentReportTypeCode3" />
+          <ScalarProperty Name="attachmentTransmissionCode1" ColumnName="attachmentTransmissionCode1" />
+          <ScalarProperty Name="attachmentTransmissionCode2" ColumnName="attachmentTransmissionCode2" />
+          <ScalarProperty Name="attachmentTransmissionCode3" ColumnName="attachmentTransmissionCode3" />
+          <ScalarProperty Name="attachmentIDCodeQualifier1" ColumnName="attachmentIDCodeQualifier1" />
+          <ScalarProperty Name="attachmentIDCodeQualifier2" ColumnName="attachmentIDCodeQualifier2" />
+          <ScalarProperty Name="attachmentIDCodeQualifier3" ColumnName="attachmentIDCodeQualifier3" />
+          <ScalarProperty Name="attachmentControlNumber1" ColumnName="attachmentControlNumber1" />
+          <ScalarProperty Name="attachmentControlNumber2" ColumnName="attachmentControlNumber2" />
+          <ScalarProperty Name="attachmentControlNumber3" ColumnName="attachmentControlNumber3" />
+          <ScalarProperty Name="provTaxIDType" ColumnName="provTaxIDType" />
+          <ScalarProperty Name="provTaxID" ColumnName="provTaxID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClaimDentalBase_T">
+      <EntityTypeMapping TypeName="DataModel.ClaimDentalBase_T">
+        <MappingFragment StoreEntitySet="ClaimDentalBase_T">
+          <ScalarProperty Name="ClaimDentalBase_ID" ColumnName="ClaimDentalBase_ID" />
+          <ScalarProperty Name="ClaimDentalBillingProvider_ID" ColumnName="ClaimDentalBillingProvider_ID" />
+          <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+          <ScalarProperty Name="ClaimDentalPayer_ID" ColumnName="ClaimDentalPayer_ID" />
+          <ScalarProperty Name="Payer_ID" ColumnName="Payer_ID" />
+          <ScalarProperty Name="OutputSub_ID" ColumnName="OutputSub_ID" />
+          <ScalarProperty Name="ClaimStatusType_ID" ColumnName="ClaimStatusType_ID" />
+          <ScalarProperty Name="BatchNumber_VC" ColumnName="BatchNumber_VC" />
+          <ScalarProperty Name="ReportDate_DT" ColumnName="ReportDate_DT" />
+          <ScalarProperty Name="NPI_VC" ColumnName="NPI_VC" />
+          <ScalarProperty Name="LastProcessDate_DT" ColumnName="LastProcessDate_DT" />
+          <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+          <ScalarProperty Name="LegacyClaim_ID" ColumnName="LegacyClaim_ID" />
+          <ScalarProperty Name="LastUpdateDate_DT" ColumnName="LastUpdateDate_DT" />
+          <ScalarProperty Name="IsNoCharge_BT" ColumnName="IsNoCharge_BT" />
+          <ScalarProperty Name="IsProcessNow_BT" ColumnName="IsProcessNow_BT" />
+          <ScalarProperty Name="InternalNotes_VC" ColumnName="InternalNotes_VC" />
+          <ScalarProperty Name="ApexPayerID_VC" ColumnName="ApexPayerID_VC" />
+          <ScalarProperty Name="ClaimVendorID_VC" ColumnName="ClaimVendorID_VC" />
+          <ScalarProperty Name="EventPhase_ID" ColumnName="EventPhase_ID" />
+          <ScalarProperty Name="EventType_ID" ColumnName="EventType_ID" />
+          <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClaimMedicalBase_T">
+      <EntityTypeMapping TypeName="DataModel.ClaimMedicalBase_T">
+        <MappingFragment StoreEntitySet="ClaimMedicalBase_T">
+          <ScalarProperty Name="ClaimMedicalBase_ID" ColumnName="ClaimMedicalBase_ID" />
+          <ScalarProperty Name="ClaimMedicalBillingProvider_ID" ColumnName="ClaimMedicalBillingProvider_ID" />
+          <ScalarProperty Name="Provider_ID" ColumnName="Provider_ID" />
+          <ScalarProperty Name="ClaimMedicalPayer_ID" ColumnName="ClaimMedicalPayer_ID" />
+          <ScalarProperty Name="Payer_ID" ColumnName="Payer_ID" />
+          <ScalarProperty Name="OutputSub_ID" ColumnName="OutputSub_ID" />
+          <ScalarProperty Name="ClaimStatusType_ID" ColumnName="ClaimStatusType_ID" />
+          <ScalarProperty Name="BatchNumber_VC" ColumnName="BatchNumber_VC" />
+          <ScalarProperty Name="ReportDate_DT" ColumnName="ReportDate_DT" />
+          <ScalarProperty Name="NPI_VC" ColumnName="NPI_VC" />
+          <ScalarProperty Name="LastProcessDate_DT" ColumnName="LastProcessDate_DT" />
+          <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+          <ScalarProperty Name="LegacyClaim_ID" ColumnName="LegacyClaim_ID" />
+          <ScalarProperty Name="LastUpdateDate_DT" ColumnName="LastUpdateDate_DT" />
+          <ScalarProperty Name="IsNoCharge_BT" ColumnName="IsNoCharge_BT" />
+          <ScalarProperty Name="IsProcessNow_BT" ColumnName="IsProcessNow_BT" />
+          <ScalarProperty Name="InternalNotes_VC" ColumnName="InternalNotes_VC" />
+          <ScalarProperty Name="ApexPayerID_VC" ColumnName="ApexPayerID_VC" />
+          <ScalarProperty Name="ClaimVendorID_VC" ColumnName="ClaimVendorID_VC" />
+          <ScalarProperty Name="EventPhase_ID" ColumnName="EventPhase_ID" />
+          <ScalarProperty Name="EventType_ID" ColumnName="EventType_ID" />
+          <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log_T">
+      <EntityTypeMapping TypeName="DataModel.Log_T">
+        <MappingFragment StoreEntitySet="Log_T">
+          <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
+          <ScalarProperty Name="LogDate_DT" ColumnName="LogDate_DT" />
+          <ScalarProperty Name="User_VC" ColumnName="User_VC" />
+          <ScalarProperty Name="RecordChanged_VC" ColumnName="RecordChanged_VC" />
+          <ScalarProperty Name="FieldName_VC" ColumnName="FieldName_VC" />
+          <ScalarProperty Name="OldValue_VC" ColumnName="OldValue_VC" />
+          <ScalarProperty Name="NewValue_VC" ColumnName="NewValue_VC" />
+          <ScalarProperty Name="FormName_VC" ColumnName="FormName_VC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayerReport_T">
+      <EntityTypeMapping TypeName="DataModel.PayerReport_T">
+        <MappingFragment StoreEntitySet="PayerReport_T">
+          <ScalarProperty Name="PayerReport_ID" ColumnName="PayerReport_ID" />
+          <ScalarProperty Name="PayerReportType_ID" ColumnName="PayerReportType_ID" />
+          <ScalarProperty Name="Output_ID" ColumnName="Output_ID" />
+          <ScalarProperty Name="FileDate_DT" ColumnName="FileDate_DT" />
+          <ScalarProperty Name="Name_VC" ColumnName="Name_VC" />
+          <ScalarProperty Name="TextContents_VC" ColumnName="TextContents_VC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoftwareConversion_T">
+      <EntityTypeMapping TypeName="DataModel.SoftwareConversion_T">
+        <MappingFragment StoreEntitySet="SoftwareConversion_T">
+          <ScalarProperty Name="SoftwareConversion_ID" ColumnName="SoftwareConversion_ID" />
+          <ScalarProperty Name="ConversionName_VC" ColumnName="ConversionName_VC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Validation_T">
+      <EntityTypeMapping TypeName="DataModel.Validation_T">
+        <MappingFragment StoreEntitySet="Validation_T">
+          <ScalarProperty Name="Validation_ID" ColumnName="Validation_ID" />
+          <ScalarProperty Name="Profession_ID" ColumnName="Profession_ID" />
+          <ScalarProperty Name="ValidationForm_ID" ColumnName="ValidationForm_ID" />
+          <ScalarProperty Name="Name_VC" ColumnName="Name_VC" />
+          <ScalarProperty Name="ErrorMessage_VC" ColumnName="ErrorMessage_VC" />
+          <ScalarProperty Name="IsLineItemValidation_BT" ColumnName="IsLineItemValidation_BT" />
+          <ScalarProperty Name="ValidationSubLineLevelLoops_TI" ColumnName="ValidationSubLineLevelLoops_TI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendor_T">
+      <EntityTypeMapping TypeName="DataModel.Vendor_T">
+        <MappingFragment StoreEntitySet="Vendor_T">
+          <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+          <ScalarProperty Name="DefaultPricing_ID" ColumnName="DefaultPricing_ID" />
+          <ScalarProperty Name="LastUpdate_DT" ColumnName="LastUpdate_DT" />
+          <ScalarProperty Name="ContactName_VC" ColumnName="ContactName_VC" />
+          <ScalarProperty Name="CompanyName_VC" ColumnName="CompanyName_VC" />
+          <ScalarProperty Name="Email_VC" ColumnName="Email_VC" />
+          <ScalarProperty Name="SoftwareName_VC" ColumnName="SoftwareName_VC" />
+          <ScalarProperty Name="Address1_VC" ColumnName="Address1_VC" />
+          <ScalarProperty Name="Address2_VC" ColumnName="Address2_VC" />
+          <ScalarProperty Name="City_VC" ColumnName="City_VC" />
+          <ScalarProperty Name="ST_ID" ColumnName="ST_ID" />
+          <ScalarProperty Name="Zip_VC" ColumnName="Zip_VC" />
+          <ScalarProperty Name="Phone_VC" ColumnName="Phone_VC" />
+          <ScalarProperty Name="Fax_VC" ColumnName="Fax_VC" />
+          <ScalarProperty Name="TaxID_VC" ColumnName="TaxID_VC" />
+          <ScalarProperty Name="RebateElectronic_SM" ColumnName="RebateElectronic_SM" />
+          <ScalarProperty Name="RebatePaper_SM" ColumnName="RebatePaper_SM" />
+          <ScalarProperty Name="RebateStatement_SM" ColumnName="RebateStatement_SM" />
+          <ScalarProperty Name="FlatRateMax_DC" ColumnName="FlatRateMax_DC" />
+          <ScalarProperty Name="FlatRateAmount_SM" ColumnName="FlatRateAmount_SM" />
+          <ScalarProperty Name="PayFlatRate_BT" ColumnName="PayFlatRate_BT" />
+          <ScalarProperty Name="PayOneTimeOnly_BT" ColumnName="PayOneTimeOnly_BT" />
+          <ScalarProperty Name="PayFirstYearOnly_BT" ColumnName="PayFirstYearOnly_BT" />
+          <ScalarProperty Name="Inactive_BT" ColumnName="Inactive_BT" />
+          <ScalarProperty Name="PayRebateOnlyIfAddingClients_BT" ColumnName="PayRebateOnlyIfAddingClients_BT" />
+          <ScalarProperty Name="StartDate_DT" ColumnName="StartDate_DT" />
+          <ScalarProperty Name="DisplayName_VC" ColumnName="DisplayName_VC" />
+          <ScalarProperty Name="ShowOnline_BT" ColumnName="ShowOnline_BT" />
+          <ScalarProperty Name="SpecialCode_VC" ColumnName="SpecialCode_VC" />
+          <ScalarProperty Name="IsChampion_BT" ColumnName="IsChampion_BT" />
+          <ScalarProperty Name="IsPSPP_BT" ColumnName="IsPSPP_BT" />
+          <ScalarProperty Name="WhiteLabel_ID" ColumnName="WhiteLabel_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebUserSettings_T">
+      <EntityTypeMapping TypeName="DataModel.WebUserSettings_T">
+        <MappingFragment StoreEntitySet="WebUserSettings_T">
+          <ScalarProperty Name="WebUserSettings_ID" ColumnName="WebUserSettings_ID" />
+          <ScalarProperty Name="EntityType_ID" ColumnName="EntityType_ID" />
+          <ScalarProperty Name="AdvUpload_BT" ColumnName="AdvUpload_BT" />
+          <ScalarProperty Name="UserName_VC" ColumnName="UserName_VC" />
+          <ScalarProperty Name="Password_VC" ColumnName="Password_VC" />
+          <ScalarProperty Name="ClaimFile_VC" ColumnName="ClaimFile_VC" />
+          <ScalarProperty Name="StatementFile_VC" ColumnName="StatementFile_VC" />
+          <ScalarProperty Name="InitiatedWebTestDrive_BT" ColumnName="InitiatedWebTestDrive_BT" />
+          <ScalarProperty Name="TestDriveStart_DT" ColumnName="TestDriveStart_DT" />
+          <ScalarProperty Name="ClientID_VC" ColumnName="ClientID_VC" />
+          <ScalarProperty Name="WebDisplayName_VC" ColumnName="WebDisplayName_VC" />
+          <ScalarProperty Name="ResetPassword_BT" ColumnName="ResetPassword_BT" />
+          <ScalarProperty Name="InitialLaunch_BT" ColumnName="InitialLaunch_BT" />
+          <ScalarProperty Name="AgreedTandC_BT" ColumnName="AgreedTandC_BT" />
+          <ScalarProperty Name="RegistrationNumberProviders_IN" ColumnName="RegistrationNumberProviders_IN" />
+          <ScalarProperty Name="ShowIEDisableAddOnsWarning_BT" ColumnName="ShowIEDisableAddOnsWarning_BT" />
+          <ScalarProperty Name="OneTouchConfigXML_VC" ColumnName="OneTouchConfigXML_VC" />
+          <ScalarProperty Name="PreviewEnabled_BT" ColumnName="PreviewEnabled_BT" />
+          <ScalarProperty Name="PreviewLocked_BT" ColumnName="PreviewLocked_BT" />
+          <ScalarProperty Name="PreviewLocked_DT" ColumnName="PreviewLocked_DT" />
+          <ScalarProperty Name="PreviewLive_DT" ColumnName="PreviewLive_DT" />
+          <ScalarProperty Name="LastLogin_DT" ColumnName="LastLogin_DT" />
+          <ScalarProperty Name="NoticeRead_DT" ColumnName="NoticeRead_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhiteLabel_T">
+      <EntityTypeMapping TypeName="DataModel.WhiteLabel_T">
+        <MappingFragment StoreEntitySet="WhiteLabel_T">
+          <ScalarProperty Name="WhiteLabel_ID" ColumnName="WhiteLabel_ID" />
+          <ScalarProperty Name="Title_VC" ColumnName="Title_VC" />
+          <ScalarProperty Name="URL_VC" ColumnName="URL_VC" />
+          <ScalarProperty Name="LogoImagePath_VC" ColumnName="LogoImagePath_VC" />
+          <ScalarProperty Name="Username_VC" ColumnName="Username_VC" />
+          <ScalarProperty Name="Password_VC" ColumnName="Password_VC" />
+          <ScalarProperty Name="CreatedDate_DT" ColumnName="CreatedDate_DT" />
+          <ScalarProperty Name="AccessToCodeReports_BT" ColumnName="AccessToCodeReports_BT" />
+          <ScalarProperty Name="PrimaryBackgroundColor_VC" ColumnName="PrimaryBackgroundColor_VC" />
+          <ScalarProperty Name="PrimaryTextColor_VC" ColumnName="PrimaryTextColor_VC" />
+          <ScalarProperty Name="SecondaryBackgroundColor_VC" ColumnName="SecondaryBackgroundColor_VC" />
+          <ScalarProperty Name="SecondaryTextColor_VC" ColumnName="SecondaryTextColor_VC" />
+          <ScalarProperty Name="IconColor_VC" ColumnName="IconColor_VC" />
+          <ScalarProperty Name="IsActive_BT" ColumnName="IsActive_BT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

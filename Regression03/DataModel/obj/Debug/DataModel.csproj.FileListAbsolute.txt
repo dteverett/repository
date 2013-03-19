@@ -3,3 +3,4 @@ C:\Users\deverett.APEX\repository\Regression03\DataModel\bin\Debug\DataModel.exe
 C:\Users\deverett.APEX\repository\Regression03\DataModel\bin\Debug\DataModel.pdb
 C:\Users\deverett.APEX\repository\Regression03\DataModel\obj\Debug\DataModel.exe
 C:\Users\deverett.APEX\repository\Regression03\DataModel\obj\Debug\DataModel.pdb
+C:\Users\deverett.APEX\repository\Regression03\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
