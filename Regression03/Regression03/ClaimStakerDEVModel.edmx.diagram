@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fba123dc538c458fb3ae96a9119157fc" Name="Diagram1" ZoomLevel="12">
+      <Diagram DiagramId="fba123dc538c458fb3ae96a9119157fc" Name="Diagram1" ZoomLevel="10">
         <EntityTypeShape EntityType="ClaimStakerDEVModel.Batch_T" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ClaimStakerDEVModel.Claim_T" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_T" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
@@ -19,6 +19,1022 @@
         <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T" ManuallyRouted="false" />
         <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T" ManuallyRouted="false" />
         <AssociationConnector Association="ClaimStakerDEVModel.FK_Statement_Provider" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Acknowledgement_T" Width="1.5" PointX="0.784089306734544" PointY="23.142030279683894" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementAssignmentType_T" Width="1.5" PointX="6.1249382095993212" PointY="2.8171067101960565" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementClaimStatus_T" Width="1.5" PointX="10.215712844494597" PointY="2.5808454614974772" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementClaimStatusInformation_T" Width="1.5" PointX="9.8316086222564838" PointY="5.0666938447704046" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementFunctionalGroup_T" Width="1.5" PointX="2.9586788448312689" PointY="3.6946329640665243" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementPatient_T" Width="1.5" PointX="8.7435433048492044" PointY="25.043850135544247" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementPatientName_T" Width="1.5" PointX="7.7841665427126756" PointY="4.0132597852560039" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementProvider_T" Width="1.5" PointX="0.70299408617568859" PointY="19.048541033197445" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementProviderName_T" Width="1.5" PointX="6.43915649803316" PointY="9.6342069551507983" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementProviderSecondaryIdentifier_T" Width="1.5" PointX="10.840156439151688" PointY="9.9370680795689434" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementProviderStatus_T" Width="1.5" PointX="4.8093375362499327" PointY="2.350921110413466" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementProviderTrace_T" Width="1.5" PointX="7.7303725107248749" PointY="4.6780439637033471" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementReceiver_T" Width="1.5" PointX="0.35600209252722659" PointY="2.9844089462349235" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementReceiverName_T" Width="1.5" PointX="8.308493685120947" PointY="2.9363258643710641" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementReceiverStatus_T" Width="1.5" PointX="10.927317888907769" PointY="8.6434474478678069" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementReceiverTrace_T" Width="1.5" PointX="5.380435379864851" PointY="30.636112346610108" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementServiceLine_T" Width="1.5" PointX="8.62258922337675" PointY="21.99978945683678" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementServiceLineStatusInformation_T" Width="1.5" PointX="1.1647140780299503" PointY="2.921353728939478" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementSource_T" Width="1.5" PointX="1.4243862374799263" PointY="9.0431014490514539" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementSourceName_T" Width="1.5" PointX="11.506322879114338" PointY="14.364287770522893" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementTransactionSet_T" Width="1.5" PointX="9.6361013844777368" PointY="29.774286894953942" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AcknowledgementTransmissionReceipt_T" Width="1.5" PointX="0.61697523510874031" PointY="12.512697881326405" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Activity" Width="1.5" PointX="2.028305753147372" PointY="7.4821468179496691" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AdjustmentGroupCode_T" Width="1.5" PointX="3.4367048458367142" PointY="9.1812235457735252" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AdjustmentInvoicing_T" Width="1.5" PointX="7.86776937724453" PointY="3.5806950496419776" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AdjustmentReasonCode_T" Width="1.5" PointX="7.9552462156653618" PointY="12.282724743840623" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AmbulanceTransportReasonCode_T" Width="1.5" PointX="11.642780262810542" PointY="26.173819539218126" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010AK1_T" Width="1.5" PointX="0.92018790585928967" PointY="31.739983707545317" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010AK2_T" Width="1.5" PointX="0.947888844156586" PointY="11.655124595228175" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010AK9_T" Width="1.5" PointX="0.70041292379629472" PointY="24.257491972417334" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010AMT_T" Width="1.5" PointX="4.659323362940607" PointY="23.281297128312893" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010BHT_T" Width="1.5" PointX="2.9726923028811312" PointY="31.246362805015576" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010CompositMedicalProcedureIdentifier_T" Width="1.5" PointX="8.0050519816600954" PointY="24.680003132987768" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010CTX_T" Width="1.5" PointX="0.76885457745234231" PointY="30.757987990397023" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010DTP_T" Width="1.5" PointX="0.34025834144105127" PointY="30.953297167529026" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010GE_T" Width="1.5" PointX="5.7188166499691162" PointY="8.1279825457036416" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010GS_T" Width="1.5" PointX="4.10650472906721" PointY="14.542796067214942" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010HealthCareClaimStatus_T" Width="1.5" PointX="6.0902991453606168" PointY="15.050613201712544" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010HL_T" Width="1.5" PointX="0.26462018129630954" PointY="8.1016288139399268" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010IEA_T" Width="1.5" PointX="11.725960733241383" PointY="25.467192095456269" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010IK3_T" Width="1.5" PointX="9.6824485090013823" PointY="12.974759614548999" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010IK4_T" Width="1.5" PointX="5.23335282189462" PointY="25.558819320778746" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010IK5_T" Width="1.5" PointX="7.2860465772850658" PointY="2.0651029357989796" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010ISA_T" Width="1.5" PointX="11.84576186716825" PointY="28.819751723119872" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010NM1_T" Width="1.5" PointX="7.3297331404545023" PointY="3.3659205005345494" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010QTY_T" Width="1.5" PointX="0.1476188041957183" PointY="24.143238704718296" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010REF_T" Width="1.5" PointX="2.6907501195980004" PointY="6.4260357052209018" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010SE_T" Width="1.5" PointX="0.72728455100547729" PointY="2.4149732302944051" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010ST_T" Width="1.5" PointX="8.1926652827265976" PointY="2.3989044886077311" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010STC_T" Width="1.5" PointX="8.6872097238373058" PointY="12.728812208738557" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010SVC_T" Width="1.5" PointX="2.0369504792787834" PointY="10.406558265167549" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010TA1_T" Width="1.5" PointX="3.1027004882240208" PointY="22.027421171789719" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Ansi5010TRN_T" Width="1.5" PointX="7.623943993646626" PointY="13.086007362737323" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ANSIType_T" Width="1.5" PointX="0.49951704987302287" PointY="16.5046179669465" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ApexPayer_T" Width="1.5" PointX="3.7248831818461805" PointY="19.403221213912229" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ApexReportingSettings_T" Width="1.5" PointX="11.637873709033185" PointY="26.426074770477634" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ApplicationLog_T" Width="1.5" PointX="4.6447109899691821" PointY="8.4005757013338513" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ARCHIVE_DentalValidationFailures_T" Width="1.5" PointX="11.414110980655119" PointY="31.450102686625954" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ARCHIVE_MedicalValidationFailures_T" Width="1.5" PointX="3.4971336012227154" PointY="14.368360153570938" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.AttachmentGroup_T" Width="1.5" PointX="4.4313394745957755" PointY="19.281702348627942" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Batch" Width="1.5" PointX="9.4092393077021654" PointY="5.230527150086373" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.BatchEventLogMessage_T" Width="1.5" PointX="4.20451235594438" PointY="29.541435076641587" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.BatchStatus_T" Width="1.5" PointX="11.459867633627667" PointY="23.106939028532683" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CachedClaim_T" Width="1.5" PointX="0.35724333504086514" PointY="4.5246435722916587" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CertificationConditionCodeAppliesIndicator_T" Width="1.5" PointX="4.7262639742001262" PointY="13.825824490667239" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CertificationConditionIndicator_T" Width="1.5" PointX="9.4513146679156073" PointY="30.306749328182427" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CityZip_T" Width="1.5" PointX="6.3509010813901678" PointY="18.540416413238464" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Claim" Width="1.5" PointX="7.5132465565173172" PointY="15.413304425502803" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimAdjustmentLineItem_T" Width="1.5" PointX="1.7628343672318545" PointY="23.9281863532626" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDental_T" Width="1.5" PointX="1.9606132516454036" PointY="6.3434501766895179" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDental4010ExtraData_T" Width="1.5" PointX="0.27489655105159461" PointY="15.08408034550216" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalAssistantSurgeon_T" Width="1.5" PointX="7.0825237143237718" PointY="0.14273382729978013" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalAssistantSurgeonSecondaryIdentification_T" Width="1.5" PointX="1.6243464786672717" PointY="5.96757537404428" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_FunctionalGroup_T" Width="1.5" PointX="4.4090035243001786" PointY="30.774757950927484" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_TransactionSet_T" Width="1.5" PointX="2.9956524088027203" PointY="2.4893227827219864" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_Validation_T" Width="1.5" PointX="9.4084813601376869" PointY="7.478747267033321" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBaseNeedsValidation_T" Width="1.5" PointX="8.4682497086321238" PointY="3.8841902482715391" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBillingProvider_T" Width="1.5" PointX="7.3640652705747929" PointY="0.20134079465705007" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBillingProviderContact_T" Width="1.5" PointX="11.697946993493451" PointY="10.732432891955801" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalClaimInformation_T" Width="1.5" PointX="8.8004153057934786" PointY="29.22357828785832" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalDataChanged_T" Width="1.5" PointX="4.550009425985631" PointY="28.807401894036403" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalDiagnosisCode_T" Width="1.5" PointX="1.4629677634048126" PointY="28.107197327589244" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalErrors_T" Width="1.5" PointX="9.82489328730148" PointY="0.727580562572731" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalEventLogMessage_T" Width="1.5" PointX="3.5588769575389456" PointY="25.845479560012688" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalFileInformation_T" Width="1.5" PointX="7.6369693314828764" PointY="15.02432485624418" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalHistory_T" Width="1.5" PointX="10.030954140252879" PointY="17.397503249997975" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalLineItem_T" Width="1.5" PointX="3.427521805943698" PointY="5.4734550888992173" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalLineItemNeedsValidation_T" Width="1.5" PointX="6.955741829683884" PointY="10.007224475036946" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalNeedsValidation_T" Width="1.5" PointX="6.8789239669586175" PointY="11.069299121885234" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalNoteReference_T" Width="1.5" PointX="9.4536916750733244" PointY="24.592071648962829" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayer_T" Width="1.5" PointX="4.2560986113995778" PointY="2.1778909425148232" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerAssistantSurgeon_T" Width="1.5" PointX="10.701088930806652" PointY="10.114047815145016" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerAssistantSurgeonSecondaryIdentification_T" Width="1.5" PointX="7.776202823862528" PointY="17.724758514074964" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerBillingProvider_T" Width="1.5" PointX="2.8967812894362872" PointY="13.051545968768906" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerBillingProviderSecondaryIdentification_T" Width="1.5" PointX="11.588590884389632" PointY="19.833983356055796" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerReferringProvider_T" Width="1.5" PointX="6.0820421660701012" PointY="25.968458753995812" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerReferringProviderSecondaryIdentification_T" Width="1.5" PointX="0.17265457667999651" PointY="8.0047237165294227" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerRenderingProvider_T" Width="1.5" PointX="9.8287843902729382" PointY="3.9256555754345168" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="4.1935623661584982" PointY="22.77953257727415" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerSecondaryIdentification_T" Width="1.5" PointX="2.2286318979359381" PointY="3.6040100472066596" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerServiceFacilityLocation_T" Width="1.5" PointX="10.678963807727659" PointY="17.911863171454456" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="3.90356490011493" PointY="24.964081567229741" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerSupervisingProvider_T" Width="1.5" PointX="2.902541903267867" PointY="7.6917803770358582" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherPayerSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="11.377008419193798" PointY="17.108544134119779" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherSubscriber_T" Width="1.5" PointX="6.5008295134179441" PointY="9.630282913162505" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherSubscriberClaimLevelAdjustments_T" Width="1.5" PointX="5.1965788310377761" PointY="20.1252261940973" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOtherSubscriberSecondaryIdentification_T" Width="1.5" PointX="6.5709706594101025" PointY="30.875702499819781" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalOutputException_T" Width="1.5" PointX="6.7027432465472927" PointY="9.9554675267801933" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalPatient_T" Width="1.5" PointX="0.10168677945699858" PointY="25.787199553934485" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalPayer_T" Width="1.5" PointX="2.763996173983438" PointY="8.4749569187289833" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalPayerSecondaryIdentifierQualifier_T" Width="1.5" PointX="9.3760614215284868" PointY="28.438792584668281" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalPayToAddress_T" Width="1.5" PointX="10.103463950615128" PointY="0.53126819456520868" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalPayToPlan_T" Width="1.5" PointX="11.552079655021466" PointY="0.78075228667853036" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalPricingRepricingInformation_T" Width="1.5" PointX="6.3514091420692429" PointY="1.1353344326537729" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalReferenceIdentification_T" Width="1.5" PointX="4.2237612680642682" PointY="14.622989303722507" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalReferringProvider_T" Width="1.5" PointX="11.559146811980357" PointY="27.56426466794883" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalReferringProviderSecondaryIdentification_T" Width="1.5" PointX="1.9223552727710245" PointY="21.605834419655537" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalRenderingProvider_T" Width="1.5" PointX="10.543063060633402" PointY="25.437733125611086" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="8.91314420332813" PointY="3.5721555815879982" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalReport_T" Width="1.5" PointX="0.89022602741151391" PointY="13.04476048659755" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalReportErrorMessage_T" Width="1.5" PointX="7.2697760235843134" PointY="22.616205971043652" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceFacilityLocation_T" Width="1.5" PointX="10.393500224870397" PointY="21.272626111876512" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="2.2411649274831476" PointY="28.093552915422968" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLine_T" Width="1.5" PointX="3.1672013733383273" PointY="1.5847097046602097" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineAdjudicationInfo_T" Width="1.5" PointX="8.2990281471512422" PointY="16.254624180614307" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineAdjustment_T" Width="1.5" PointX="1.3704340613309451" PointY="17.395633422488174" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineAssistantSurgeon_T" Width="1.5" PointX="5.7783285424943678" PointY="29.468061475766852" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineAssistantSurgeonSecondaryIdentification_T" Width="1.5" PointX="3.9754423461740105" PointY="0.038444235938808059" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineFileInformation_T" Width="1.5" PointX="8.6134847386802935" PointY="9.87823820574127" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLinePreDeterminationOfBenefits_T" Width="1.5" PointX="9.8094509326896873" PointY="6.9593594553691149" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLinePricingRepricingInformation_T" Width="1.5" PointX="8.5330084993192035" PointY="29.203354685196352" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLinePriorAuthorizationSecondaryIdentification_T" Width="1.5" PointX="2.1919427822306483" PointY="2.712556065392008" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineReferralNumberSecondaryIdentification_T" Width="1.5" PointX="4.0522092804555827" PointY="18.293278881485239" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineRenderingProvider_T" Width="1.5" PointX="5.6246045500154631" PointY="27.916754005438069" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="1.035325376799016" PointY="24.436248865181696" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineServiceFacilityLocation_T" Width="1.5" PointX="6.8201561192144435" PointY="28.699009163630667" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineServiceFacilityLocationReferenceIdentification_T" Width="1.5" PointX="8.7799738053139169" PointY="26.325895977358286" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineSupervisingProvider_T" Width="1.5" PointX="7.9083328209390551" PointY="2.3866244863656463" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalServiceLineSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="0.27104699438020913" PointY="5.66994442309716" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalSubmit_T" Width="1.5" PointX="9.9580606454788061" PointY="2.7119928313009409" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalSubscriber_T" Width="1.5" PointX="9.125580734166121" PointY="15.352381340857773" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalSupervisingProvider_T" Width="1.5" PointX="4.1267222650939237" PointY="27.008739200890407" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalSupplementalInformation_T" Width="1.5" PointX="4.1131869275649944" PointY="13.428758076126108" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalToothInformation_T" Width="1.5" PointX="4.5582707079864431" PointY="7.6582192516225476" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalToothStatus_T" Width="1.5" PointX="4.1267455611968158" PointY="28.076390592416931" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalValidationRun_T" Width="1.5" PointX="0.92566518342386228" PointY="13.890146336467074" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalWaitingValidation_T" Width="1.5" PointX="3.5301074104058126" PointY="27.414576617728255" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimFilingIndicatorCode_T" Width="1.5" PointX="8.3587766831548773" PointY="22.182714711028485" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedical_T" Width="1.5" PointX="6.2891344569107215" PointY="25.003444534262382" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedical4010ExtraData_T" Width="1.5" PointX="3.9250255114981094" PointY="19.683160925136487" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalAmbulanceCertification_T" Width="1.5" PointX="4.9104777932681509" PointY="12.529116323464139" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalAmbulanceDropoff_T" Width="1.5" PointX="11.558940762448563" PointY="29.694492860554949" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalAmbulancePickup_T" Width="1.5" PointX="11.275327948515923" PointY="6.9554816665851895" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalAmbulanceTransportInformation_T" Width="1.5" PointX="9.7433887281191485" PointY="21.082980135960028" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBase_FunctionalGroup_T" Width="1.5" PointX="3.142190232473514" PointY="8.2145551034317137" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBase_TransactionSet_T" Width="1.5" PointX="11.743369594096844" PointY="17.299348213383624" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBase_Validation_T" Width="1.5" PointX="5.7462786816741707" PointY="23.44654298920489" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBaseNeedsValidation_T" Width="1.5" PointX="5.4841790615972963" PointY="7.4023079906601028" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBillingProvider_T" Width="1.5" PointX="6.8245357418547083" PointY="10.836441551724654" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBillingProviderContact_T" Width="1.5" PointX="8.9040215969570085" PointY="29.377133338422112" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalClaimInformation_T" Width="1.5" PointX="2.3017088725705204" PointY="7.3407262150853532" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalConditionInformation_T" Width="1.5" PointX="6.3420371908424595" PointY="6.6844770790471122" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalDataChange_T" Width="1.5" PointX="8.2379281410192746" PointY="4.2969366481047757" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalDiagnosisCode_T" Width="1.5" PointX="7.232021025955687" PointY="27.998686863108858" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalEPSDTReferral_T" Width="1.5" PointX="1.5134343083544795" PointY="30.906172811475663" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalErrors_T" Width="1.5" PointX="6.6058497254763964" PointY="7.7193474507515072" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalEventLogMessage_T" Width="1.5" PointX="10.201203647163325" PointY="6.871667462806994" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalFileInformation_T" Width="1.5" PointX="8.1065195184697032" PointY="11.805765634312186" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalHistory_T" Width="1.5" PointX="6.198202240373103" PointY="13.310099846362183" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalLineItem_T" Width="1.5" PointX="10.852949251817982" PointY="4.0130168069214642" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalLineItemNeedsValidation_T" Width="1.5" PointX="7.292395550428143" PointY="23.072408418670488" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalNeedsValidation_T" Width="1.5" PointX="11.729641986884941" PointY="2.7900997264264618" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayer_T" Width="1.5" PointX="10.785276878059504" PointY="17.169092275746674" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerBillingProvider_T" Width="1.5" PointX="11.462526194500981" PointY="17.967076771877277" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerBillingProviderSecondaryIdentification_T" Width="1.5" PointX="4.7962871700508" PointY="14.887763164419571" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerReferringProvider_T" Width="1.5" PointX="1.493982274780973" PointY="5.9345836667039356" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerReferringProviderSecondaryIdentification_T" Width="1.5" PointX="0.4722701033913857" PointY="13.08960135890618" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerRenderingProvider_T" Width="1.5" PointX="5.079476474355662" PointY="5.7538812336297154" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="10.356381430456594" PointY="24.139364954149055" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerSecondaryIdentification_T" Width="1.5" PointX="2.8975066816888315" PointY="25.770604547937683" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerServiceFacilityLocation_T" Width="1.5" PointX="7.3762845990137587" PointY="29.983683078542203" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="6.3926832426305324" PointY="9.47300114178704" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerSupervisingProvider_T" Width="1.5" PointX="8.4746084383104971" PointY="23.59630480017341" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherPayerSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="8.2860519328555338" PointY="8.4517423549907953" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherSubscriber_T" Width="1.5" PointX="0.68593410248213171" PointY="2.8187118632806056" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherSubscriberClaimLevelAdjustments_T" Width="1.5" PointX="8.5776632561244366" PointY="4.88866213191704" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOtherSubscriberSecondaryIdentification_T" Width="1.5" PointX="5.210716330078764" PointY="19.731040784963891" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalOutputException_T" Width="1.5" PointX="3.7240294514801491" PointY="15.065481908184236" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPatient_T" Width="1.5" PointX="3.023130343772066" PointY="14.12199944915343" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPatientConditionInformationVision_T" Width="1.5" PointX="3.7214020265831627" PointY="4.7987161003047207" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPayer_T" Width="1.5" PointX="2.1488250485383089" PointY="1.3183126306712221" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPayerSecondaryIdentifierQualifier_T" Width="1.5" PointX="5.7032204036150222" PointY="21.148061657859042" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPayToAddress_T" Width="1.5" PointX="10.0958325295224" PointY="11.681015601233121" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPayToPlan_T" Width="1.5" PointX="2.4224851906404297" PointY="14.113608366862689" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalPricingRepricingInformation_T" Width="1.5" PointX="9.49739882419696" PointY="15.863504148956157" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalReferenceIdentification_T" Width="1.5" PointX="6.0707806824104775" PointY="24.389174353512551" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalReferringProvider_T" Width="1.5" PointX="2.0937807606969869" PointY="3.1705934569102681" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalReferringProviderSecondaryIdentification_T" Width="1.5" PointX="6.12859670358179" PointY="21.462705055932844" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalRenderingProvider_T" Width="1.5" PointX="2.2594699143709009" PointY="21.806044156572803" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="4.571678959099426" PointY="5.164433541318604" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalReport_T" Width="1.5" PointX="10.152357670549471" PointY="22.114994163678492" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalReportErrorMessage_T" Width="1.5" PointX="6.0517196869718468" PointY="9.97138725685486" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceFacilityLocation_T" Width="1.5" PointX="9.005247930532903" PointY="31.095290600832222" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceFacilityLocationSecondaryIdentification_T" Width="1.5" PointX="9.0147525449352113" PointY="13.528346157413138" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLine_T" Width="1.5" PointX="1.1845710581096687" PointY="30.479788690097532" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineAdjudicationInfo_T" Width="1.5" PointX="11.134575118839077" PointY="13.495017698730816" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineAdjustment_T" Width="1.5" PointX="5.3308598312227335" PointY="2.9279683841988295" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineAmbulanceCertification_T" Width="1.5" PointX="7.5151516569383219" PointY="18.351779633365467" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineFileInformation_T" Width="1.5" PointX="5.5406607508383043" PointY="27.899093655822377" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineOrderingProvider_T" Width="1.5" PointX="5.45654289864774" PointY="10.917940234261538" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineOrderingProviderSecondaryIdentification_T" Width="1.5" PointX="6.4261291094245987" PointY="7.9825301207520676" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLinePriorAuthorizationSecondaryIdentification_T" Width="1.5" PointX="5.6720045589245878" PointY="17.96565345766286" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLinePurchasedServiceProviderSecondaryIdentification_T" Width="1.5" PointX="6.98623626631975" PointY="30.484594329485947" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineReferralNumberSecondaryIdentification_T" Width="1.5" PointX="11.739467538771903" PointY="10.724650089966437" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineReferringProvider_T" Width="1.5" PointX="1.2705435907796694" PointY="20.468040148014222" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineReferringProviderSecondaryIdentification_T" Width="1.5" PointX="3.3900858011981874" PointY="18.255636760152708" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineRenderingProvider_T" Width="1.5" PointX="0.72407083433311015" PointY="4.7593051962364958" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineRenderingProviderSecondaryIdentification_T" Width="1.5" PointX="3.6471608670648004" PointY="15.615205965757001" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineServiceFacilityLocation_T" Width="1.5" PointX="6.4426475495298625" PointY="5.2372004861185326" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineServiceFacilityLocationReferenceIdentification_T" Width="1.5" PointX="10.925275191164237" PointY="27.826929477894179" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineSupervisingProvider_T" Width="1.5" PointX="7.3656283055272089" PointY="24.931614350961343" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineSupervisingProviderSecondaryIdentification_T" Width="1.5" PointX="4.10803207946384" PointY="26.846608174427697" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineSupplementalInformation_T" Width="1.5" PointX="6.814238937019482" PointY="2.6937307876971226" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineSupportingDocumentation_T" Width="1.5" PointX="3.8150805513444732" PointY="2.6554469776598024" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalServiceLineTestResult_T" Width="1.5" PointX="5.6738208894030286" PointY="29.991144909519303" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalSpinalManipulationServiceInformation_T" Width="1.5" PointX="2.5078536451365121" PointY="10.126159449166693" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalSubmit_T" Width="1.5" PointX="2.7207236600670606" PointY="1.2732036566702667" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalSubscriber_T" Width="1.5" PointX="7.5105334685698777" PointY="19.090423667379852" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalSupervisingProvider_T" Width="1.5" PointX="2.6211182524548464" PointY="30.172265707595397" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalSupplementalInformation_T" Width="1.5" PointX="8.7530339550008218" PointY="25.529400151935128" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalValidationRun_T" Width="1.5" PointX="11.921266436540181" PointY="13.314690029860795" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalWaitingValidation_T" Width="1.5" PointX="3.8025862182502568" PointY="14.690816006944894" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimProductPurchased_T" Width="1.5" PointX="8.0398349575883863" PointY="11.4365635567515" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimRemarkCode_T" Width="1.5" PointX="4.3365608026909461" PointY="9.45632102035746" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimReportHistory_T" Width="1.5" PointX="9.4508272770097612" PointY="4.4251984527451906" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimReportMessage_T" Width="1.5" PointX="0.43926981298218937" PointY="9.5378948494502787" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimReportType_T" Width="1.5" PointX="11.536884929769155" PointY="18.723851585166461" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimSource_T" Width="1.5" PointX="8.728599282320868" PointY="24.204729940837588" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimStatusCategoryCode_T" Width="1.5" PointX="10.885416715818186" PointY="20.278737316037873" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimStatusCode_T" Width="1.5" PointX="11.922881109604091" PointY="15.936232589155544" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimStatusCode_T__OLD" Width="1.5" PointX="7.6166423222127566" PointY="28.649799792398607" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimStatusType_T" Width="1.5" PointX="10.347922894334385" PointY="5.3969713325598141" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimSupplementalInformation_T" Width="1.5" PointX="5.1676614103688214" PointY="30.914069354028474" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimToClaimMedicalMap_T" Width="1.5" PointX="4.1251401249902049" PointY="0.65765190155136022" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimVolume_T" Width="1.5" PointX="6.2742059800188086" PointY="22.635338644792949" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Client_T" Width="1.5" PointX="3.2345839847040287" PointY="19.008127757817565" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientCache_T" Width="1.5" PointX="5.2109162272936267" PointY="3.6046670245028412" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientCall_T" Width="1.5" PointX="10.513832117670138" PointY="6.3269854515450943" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientInbox" Width="1.5" PointX="5.5467691633602465" PointY="28.263936204958679" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientMatch_T" Width="1.5" PointX="2.0276431078219987" PointY="6.734740275300453" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientMatchEntity_T" Width="1.5" PointX="8.6735882426954749" PointY="0.71722711656113491" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientProprietaryReports_T" Width="1.5" PointX="3.544965339612665" PointY="10.704990585662886" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientReports_T" Width="1.5" PointX="10.807409528087549" PointY="29.149714870913751" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientReportType" Width="1.5" PointX="4.2604248636683568" PointY="20.531411508345702" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientSurvey_T" Width="1.5" PointX="3.7488520889304824" PointY="27.823359308682083" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CodeCategory_T" Width="1.5" PointX="8.2734921594492583" PointY="18.710911357175053" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CodeListQualifierCode_T" Width="1.5" PointX="11.391718530744182" PointY="7.4051912908466493" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CodeLog_T" Width="1.5" PointX="1.9568827347629156" PointY="3.1402440383752084" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.CodeLogType_T" Width="1.5" PointX="6.6450858668634138" PointY="4.7432585827742049" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ConcatReportPayer_T" Width="1.5" PointX="0.34139459223551427" PointY="22.525490532873892" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ConcatReportProvider_T" Width="1.5" PointX="0.16357120879160764" PointY="10.906510238957829" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ConditionCode_T" Width="1.5" PointX="9.27191440261524" PointY="2.5668674272330794" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ConnexLog_T" Width="1.5" PointX="10.424865435075418" PointY="14.163258410134938" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataElementErrCode_T" Width="1.5" PointX="10.365794341250227" PointY="27.160359454881569" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataElementErrCode5010_T" Width="1.5" PointX="8.5076122267672858" PointY="16.949279301310554" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataElementNote_T" Width="1.5" PointX="3.53000456445385" PointY="0.76384170388981776" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataElementNote5010_T" Width="1.5" PointX="5.5768833856922031" PointY="25.059609350310456" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataField_T" Width="1.5" PointX="9.3024989782378533" PointY="19.593819076006216" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataFieldNew_T" Width="1.5" PointX="7.1987095825368108" PointY="16.889470465895474" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataSegmentErrCode_T" Width="1.5" PointX="3.2164547216223811" PointY="16.630715556736437" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataSegmentErrCode5010_T" Width="1.5" PointX="7.33235114409232" PointY="22.468962158294843" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataSegmentNote_T" Width="1.5" PointX="8.4977673741512785" PointY="20.90785663803474" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DataSegmentNote5010_T" Width="1.5" PointX="0.21475983234809704" PointY="21.914645935369023" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DateTimePeriodFormatQualifier_T" Width="1.5" PointX="7.7363293784374036" PointY="6.4905853152696906" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DateTimeQualifier_T" Width="1.5" PointX="11.39486739942565" PointY="24.89664160874516" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DefaultPricing_T" Width="1.5" PointX="7.7275336774659973" PointY="10.048125852853119" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DelayReasonCode_T" Width="1.5" PointX="10.257581484623991" PointY="14.881557754651437" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Dent5010ClaimSection_T" Width="1.5" PointX="2.3619563944460618" PointY="12.223058408230104" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Dent5010ClaimSectionsConfig_T" Width="1.5" PointX="2.9970457660951864" PointY="6.8863734784006949" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DiagnosisCode_T" Width="1.5" PointX="5.5895060345481644" PointY="14.656500331431861" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Doctor" Width="1.5" PointX="0.56534873534243024" PointY="16.200773514900717" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DownloadCost" Width="1.5" PointX="11.191667088862353" PointY="25.047659602504066" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.DownloadKey" Width="1.5" PointX="6.9037551763019316" PointY="21.29880405464154" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.dtproperties" Width="1.5" PointX="1.4397083732484413" PointY="5.3183067316740313" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Edits_T" Width="1.5" PointX="5.4744477558296394" PointY="17.624534883361559" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EditsConfig_T" Width="1.5" PointX="5.9788819318538913" PointY="0.83075851240696319" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityBase_T" Width="1.5" PointX="10.562267246917946" PointY="16.279670022558268" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityDependent_T" Width="1.5" PointX="1.1147078057353888" PointY="9.9672277318161111" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityDependentDiagnosisCode_T" Width="1.5" PointX="7.5921739654579081" PointY="3.8172484356058987" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityDependentInquiry_T" Width="1.5" PointX="0.74781545286430762" PointY="5.8849952248320889" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityDependentInquiryServiceTypeCode_T" Width="1.5" PointX="9.5748925253631985" PointY="21.151532928064249" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityDependentRef_T" Width="1.5" PointX="10.790267396154938" PointY="29.790324329300933" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityReceiver_T" Width="1.5" PointX="10.628446060525461" PointY="31.365219652357148" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityReceiverContact_T" Width="1.5" PointX="2.0288591543346919" PointY="31.990131273861103" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilityReceiverRef_T" Width="1.5" PointX="7.03539711192036" PointY="12.583605533737506" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilitySource_T" Width="1.5" PointX="4.3506363874071443" PointY="12.310185408364136" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilitySubscriber_T" Width="1.5" PointX="0.744045390162638" PointY="25.920712259561157" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilitySubscriberDiagnosisCode_T" Width="1.5" PointX="5.6711695984337336" PointY="3.3521628693454728" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilitySubscriberInquiry_T" Width="1.5" PointX="9.2341937204982134" PointY="29.613053395232676" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilitySubscriberInquiryServiceTypeCode_T" Width="1.5" PointX="0.9366910629610955" PointY="11.273888831620052" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EligibilitySubscriberRef_T" Width="1.5" PointX="6.7782838525149431" PointY="15.311904944159046" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EmployeeType_T" Width="1.5" PointX="8.9595217373964946" PointY="12.761778181773508" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Enrollment_T" Width="1.5" PointX="3.3573586714255432" PointY="19.775997960835696" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EnrollmentStatus_T" Width="1.5" PointX="5.2057799479019735" PointY="11.073880603105705" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EntityIdentifierCode_T" Width="1.5" PointX="4.4658763522589009" PointY="28.331322653373388" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EntityType_T" Width="1.5" PointX="8.991472937628382" PointY="4.1748736073145984" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EQCode_T" Width="1.5" PointX="1.834574601535953" PointY="9.0203542006296828" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ERAInfo_T" Width="1.5" PointX="7.92129509892375" PointY="12.356063699515566" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ErrorLog_T" Width="1.5" PointX="7.2850226719328308" PointY="0.054121240998674762" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ErrorMessageInternal_T" Width="1.5" PointX="10.764426290413564" PointY="19.044794151114669" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EventLogMessage_T" Width="1.5" PointX="5.9581923661558847" PointY="3.8490910548014057" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EventPhase_T" Width="1.5" PointX="6.9589679124574033" PointY="2.0149218151415336" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.EventType_T" Width="1.5" PointX="2.2585641938534398" PointY="3.6334997432462406" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ExceptionCode_T" Width="1.5" PointX="11.567489051989973" PointY="2.245333732220034" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.FeatureFeedback_T" Width="1.5" PointX="0.43370666002561642" PointY="31.620391279282231" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.FTPInformation_T" Width="1.5" PointX="6.5035166789328294" PointY="22.632743845988411" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.FunctionalGroup_T" Width="1.5" PointX="0.4947771003911165" PointY="22.720285709351433" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.FunctionalGroupEligibility_T" Width="1.5" PointX="7.42858935679709" PointY="10.221141790142815" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.FunctionalGroupErrCode_T" Width="1.5" PointX="10.9723031106276" PointY="16.012268207972994" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.GenderCode_T" Width="1.5" PointX="7.8140129520623063" PointY="8.5665248672322019" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Implementation_T" Width="1.5" PointX="6.5561774217319568" PointY="26.33641047512014" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationDataElementNote_T" Width="1.5" PointX="7.5304228754390143" PointY="22.429736311747568" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationElementContext_T" Width="1.5" PointX="7.7273791375231831" PointY="7.42682342577112" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationErrorIdentification_T" Width="1.5" PointX="2.7817449266005982" PointY="24.96376683980402" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationFunctionalGroup_T" Width="1.5" PointX="1.7989719984116834" PointY="2.7670552296410573" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationResponse_T" Width="1.5" PointX="5.9720384040717214" PointY="24.570395346996559" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationSegementContext_T" Width="1.5" PointX="0.34046873279869028" PointY="15.453048683448252" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImplementationTransactionSet_T" Width="1.5" PointX="10.269515945701635" PointY="14.226332551905109" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ImportHistory_T" Width="1.5" PointX="10.78299644160224" PointY="21.877136151249118" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.IndividualRelationshipCode_T" Width="1.5" PointX="2.5271026243116257" PointY="5.3194567138885409" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.InsuranceTypeCode_T" Width="1.5" PointX="7.8485101833234125" PointY="11.636746128851895" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Interchange_T" Width="1.5" PointX="3.7189985661390228" PointY="12.288612326741504" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.InterchangeControl_T" Width="1.5" PointX="4.1207293160821914" PointY="1.3445173210206056" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.InterchangeNoteDefinition_T" Width="1.5" PointX="1.0708005023518579" PointY="14.171913228077774" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.InvoiceSettings_T" Width="1.5" PointX="7.9540434684390409" PointY="10.902311806987186" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.junk" Width="1.5" PointX="5.6612207766907385" PointY="3.4144589171812214" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.LegacyIDNumber_T" Width="1.5" PointX="4.2062825133121962" PointY="20.138611907203966" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.License" Width="1.5" PointX="0.58562038493604418" PointY="21.552102501295554" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Log_T" Width="1.5" PointX="5.9129862701115137" PointY="28.127511454805504" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.LoopProfessional_T" Width="1.5" PointX="5.0282165431548922" PointY="30.59601442450472" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Mapping_T" Width="1.5" PointX="10.580817477116742" PointY="5.8828706321692419" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.MasterMap_T" Width="1.5" PointX="11.04302815117083" PointY="30.389495863760587" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Med5010ClaimSection_T" Width="1.5" PointX="5.8856083256591152" PointY="24.772315796824319" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Med5010ClaimSectionsConfig_T" Width="1.5" PointX="8.146810209446965" PointY="17.866356917594725" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.MedicareSection4081Indicator_T" Width="1.5" PointX="10.250591195305153" PointY="5.5832390662204654" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Modifier_T" Width="1.5" PointX="5.0499317297013153" PointY="7.3823388104244785" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NameFormat_T" Width="1.5" PointX="3.4774979536782471" PointY="15.517911158277611" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NDC_T" Width="1.5" PointX="7.3639366418886629" PointY="5.8463936624333233" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NeedsValidation_T" Width="1.5" PointX="6.1571553620310295" PointY="7.7925153410958661" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NeedsValidationTest_T" Width="1.5" PointX="4.2904218008231467" PointY="19.261827045707882" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NewsItem" Width="1.5" PointX="1.7142582823123123" PointY="25.246073242857154" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NoteReferenceCode_T" Width="1.5" PointX="1.4073690964874668" PointY="25.894946855443969" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.NPC_T" Width="1.5" PointX="7.3764249344246569" PointY="12.510976827010037" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OperationsMetric999Information_T" Width="1.5" PointX="5.0076157418115139" PointY="12.769304713592542" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OperationsMetricInformation_T" Width="1.5" PointX="5.2092728713570509" PointY="5.8332733539088037" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Output_PayerReportType_T" Width="1.5" PointX="11.421888436852901" PointY="0.627145722800468" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Output_T" Width="1.5" PointX="3.1757095135635276" PointY="8.1429259069929483" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OutputDistributionType_T" Width="1.5" PointX="3.4139787905914609" PointY="15.04648985669319" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OutputSub_T" Width="1.5" PointX="5.3207516471486311" PointY="11.527833645943474" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OutputSubEligibility_T" Width="1.5" PointX="10.722621296868949" PointY="18.21629571272819" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OutputSubEligibilityEQCode_T" Width="1.5" PointX="4.3573837859357631" PointY="16.989111088676896" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OutputSubEligibilityEQCode_TEMP" Width="1.5" PointX="7.0638762652240121" PointY="15.627543516283643" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.OutputSubEligibilityRequirement_T" Width="1.5" PointX="11.038435197918879" PointY="7.7142499274174918" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Page" Width="1.5" PointX="9.8029241402647109" PointY="27.698842210554911" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Payer_Backup_T" Width="1.5" PointX="0.18804282331282402" PointY="27.715260697396129" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Payer_T" Width="1.5" PointX="1.9248830759548039" PointY="7.97544804586817" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerEdits_T" Width="1.5" PointX="6.2573949947289167" PointY="26.146750402705162" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerID_T" Width="1.5" PointX="9.7592471268769572" PointY="2.969440029454157" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerID_test_T" Width="1.5" PointX="0.79870739057599915" PointY="3.5531282143449077" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerKeyWord_T" Width="1.5" PointX="4.0196360144855623" PointY="3.1839787080809376" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReport_T" Width="1.5" PointX="4.2820026819976063" PointY="8.9555225115993622" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportAssignmentStatus_T" Width="1.5" PointX="1.490610972740972" PointY="21.50163650023827" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportClient_T" Width="1.5" PointX="2.6718262129797723" PointY="12.839338889736375" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportEntity_T" Width="1.5" PointX="11.592667540345651" PointY="1.1304019694823781" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportError_T" Width="1.5" PointX="2.4052378937626431" PointY="4.5906745216765792" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportParseStatus_T" Width="1.5" PointX="8.8716459762638653" PointY="4.8912473194726029" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportRaw_T" Width="1.5" PointX="4.1995719560420017" PointY="25.224829089466869" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerReportType_T" Width="1.5" PointX="2.8658013562046931" PointY="19.582244330822604" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PayerResponsibilitySequenceNumberCode_T" Width="1.5" PointX="2.403401200847421" PointY="20.12544074101627" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PaymentMethod_T" Width="1.5" PointX="10.672169872872612" PointY="11.956216564381595" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PdNicknames_T" Width="1.5" PointX="6.8886921698640524" PointY="17.654799767609127" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PolicyComplianceCode_T" Width="1.5" PointX="4.6004464442843789" PointY="18.176133626222672" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Practice_T" Width="1.5" PointX="0.26259443176099773" PointY="22.482921119072902" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PreviewToggleActivity_T" Width="1.5" PointX="5.977784651321258" PointY="14.321808300130911" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.PricingMethodology_T" Width="1.5" PointX="5.2943500882453982" PointY="6.134503412123073" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ProcedureCode_T" Width="1.5" PointX="4.8437263056839477" PointY="10.63554284471811" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.procedureTest" Width="1.5" PointX="0.30330160274324081" PointY="25.409678083569592" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Provider_ZBAK_T" Width="1.5" PointX="2.5491082102754659" PointY="2.6641675842293386" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ProviderAcceptAssignmentCode_T" Width="1.5" PointX="4.8803056855128641" PointY="29.335366873692426" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ProviderBilling_T" Width="1.5" PointX="3.1885026056265939" PointY="16.596488304713969" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ProviderLog_T" Width="1.5" PointX="3.3001761824359073" PointY="25.010729071223516" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ProviderPayment_T" Width="1.5" PointX="7.9818279351954473" PointY="27.910773007157619" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RejectReasonCode_T" Width="1.5" PointX="1.5215767852596831" PointY="0.24177421640687352" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ReleaseOfInformationCode_T" Width="1.5" PointX="10.791221061158563" PointY="23.461557563143575" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceAdjustment_T" Width="1.5" PointX="6.9392300448097437" PointY="6.4424146741826158" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceAdvice_T" Width="1.5" PointX="10.710138810197888" PointY="14.004445633853061" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceAmt_T" Width="1.5" PointX="2.66025320750673" PointY="30.762812807579902" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceAssignmentType_T" Width="1.5" PointX="6.3052998456662985" PointY="25.763874051051154" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_ClaimDentalBase_T" Width="1.5" PointX="10.757874497565382" PointY="17.798828967753252" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_ClaimMedicalBase_T" Width="1.5" PointX="7.8005192558283536" PointY="16.641948782206491" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_OtherClaimId_Ref_T" Width="1.5" PointX="10.836967432329882" PointY="16.591971807457494" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_RemittanceAdjustment_T" Width="1.5" PointX="7.1295506503104935" PointY="0.27946430457730975" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_RemittanceAmt_T" Width="1.5" PointX="8.87777663994477" PointY="13.022179758652197" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_RemittancePer_T" Width="1.5" PointX="1.5309161420589854" PointY="17.789180465875742" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_RemittanceQty_T" Width="1.5" PointX="6.91020269827461" PointY="4.9779693656498427" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_RenderingProviderID_Ref_T" Width="1.5" PointX="2.4630359385456124" PointY="9.0737029952340311" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceClaim_T" Width="1.5" PointX="4.3585376722545073" PointY="11.86263135627966" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceDtm_T" Width="1.5" PointX="1.1834050292071909" PointY="25.359116715080624" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceHeader_T" Width="1.5" PointX="10.638721977657974" PointY="16.357084177600726" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceLq_T" Width="1.5" PointX="5.2944733245738194" PointY="0.45847760162245371" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceNm1_T" Width="1.5" PointX="9.6398743584937758" PointY="24.479201507046447" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePatient_T" Width="1.5" PointX="10.431448067739348" PointY="7.6758522278051133" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePayee_RemittanceRef_T" Width="1.5" PointX="3.5902999693482651" PointY="30.912157847970796" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePayee_T" Width="1.5" PointX="1.3280753592625612" PointY="2.0459914664020724" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePayer_RemittancePer_T" Width="1.5" PointX="3.2233294356722988" PointY="13.033747843016753" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePayer_RemittanceRef_T" Width="1.5" PointX="2.2411883465206195" PointY="27.215319526947717" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePayer_T" Width="1.5" PointX="3.2002433218063056" PointY="23.860724832797761" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePer_T" Width="1.5" PointX="7.3867156819378561" PointY="24.208498012371592" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittancePlb_T" Width="1.5" PointX="2.2494727513983253" PointY="21.005410189277217" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceQty_T" Width="1.5" PointX="1.5887632377393373" PointY="23.035358335373623" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceRef_T" Width="1.5" PointX="10.559749189093592" PointY="10.98740903054709" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceRenderingProvider_T" Width="1.5" PointX="1.8878813879042311" PointY="13.526644087176139" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceReport_T" Width="1.5" PointX="11.952869564272868" PointY="19.486667165293667" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_HealthcarePolicyID_Ref_T" Width="1.5" PointX="0.89312944044039089" PointY="27.23137719707162" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_RemittanceAdjustment_T" Width="1.5" PointX="10.352649773635273" PointY="23.455016206696172" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_RemittanceAmt_T" Width="1.5" PointX="11.022730791486209" PointY="12.330581149240295" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_RemittanceQty_T" Width="1.5" PointX="1.3800875383336504" PointY="20.342907080586492" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_RenderingProvider_Ref_T" Width="1.5" PointX="8.6008564348336574" PointY="4.4193783124999042" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_ServiceId_Ref_T" Width="1.5" PointX="7.7905413600572118" PointY="11.336282839689536" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceServiceLine_T" Width="1.5" PointX="8.5144991448682266" PointY="24.76191319188192" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceStatusCode_T" Width="1.5" PointX="3.5552420502320126" PointY="2.0364515790885553" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceSubscriber_T" Width="1.5" PointX="3.4476132390311047" PointY="5.393459352382207" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RemittanceSummary_T" Width="1.5" PointX="11.625550165598071" PointY="11.352776309173915" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ReportCreatingSeries_T" Width="1.5" PointX="0.20239530140645584" PointY="19.762042293214257" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ReportData_T" Width="1.5" PointX="9.0617710766670161" PointY="10.947248732180917" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ReportSortLog_T" Width="1.5" PointX="7.2601960167569084" PointY="7.3645150844773815" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ReportSortLogType_T" Width="1.5" PointX="4.5451433288609344" PointY="23.083237196823227" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ReportType_T" Width="1.5" PointX="1.6121799115148279" PointY="14.718922592102979" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Results" Width="1.5" PointX="7.2918191772381871" PointY="14.290550760128792" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RunnerConfig_T" Width="1.5" PointX="2.9255750211540494" PointY="22.087466086301703" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.RunnerLog_T" Width="1.5" PointX="10.698929752548658" PointY="8.31015709429521" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SalesCode_T" Width="1.5" PointX="2.4145970262655041" PointY="17.140528955096624" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SalesCodeType_T" Width="1.5" PointX="5.8649246496450731" PointY="25.645921108148023" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SalesRep_T" Width="1.5" PointX="8.8256572842717436" PointY="20.191075110896993" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SearchLog_T" Width="1.5" PointX="0.346915377465503" PointY="15.278530172667713" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Series_T" Width="1.5" PointX="1.2876453945821362" PointY="26.66231116403933" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Service_T" Width="1.5" PointX="11.36252967611073" PointY="11.474788775422978" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ServiceAuthorizationExceptionCode_T" Width="1.5" PointX="5.0830173255330964" PointY="26.12287959182769" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ServiceLine_T" Width="1.5" PointX="0.67266514742405392" PointY="31.64089101536241" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ServiceType_T" Width="1.5" PointX="5.4469413670929807" PointY="20.521542528887068" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SetupStatus_T" Width="1.5" PointX="7.10510488557867" PointY="14.619636214626784" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Software_T" Width="1.5" PointX="1.1499953722348415" PointY="16.659817330846479" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SoftwareMapName_T" Width="1.5" PointX="1.5354350607541554" PointY="22.029433692819175" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SortingSeries_T" Width="1.5" PointX="0.07882460210417612" PointY="12.596996238733174" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SpecialProgramCode_T" Width="1.5" PointX="6.0164102437051064" PointY="8.21669456745344" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SpecialtyCode_T" Width="1.5" PointX="6.3654476899492778" PointY="6.4842262000237714" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.StandardEdits_T" Width="1.5" PointX="1.3255310437295265" PointY="0.61786496668023294" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.State_T" Width="1.5" PointX="10.586787694407061" PointY="1.1704883729901576" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.StatementForm_T" Width="1.5" PointX="10.349072315892704" PointY="24.053106348986322" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.StatementLineItem_T" Width="1.5" PointX="8.1576226074982543" PointY="5.3555460001134989" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.StatementLineItemNeedsValidation_T" Width="1.5" PointX="7.4316338316684742" PointY="12.348645692853557" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.StatementNeedsValidation_T" Width="1.5" PointX="7.063850482489844" PointY="8.88619269844433" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.StatementWaitingValidation_T" Width="1.5" PointX="2.8175728799857072" PointY="24.698211547312425" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Submitter_T" Width="1.5" PointX="3.3991634805682871" PointY="0.6455934348728477" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.sysdiagrams" Width="1.5" PointX="3.5731966232756136" PointY="10.176266838878517" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TA1_T" Width="1.5" PointX="4.8469308246145637" PointY="19.803960123939422" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TEMPREPORTSSTRACE" Width="1.5" PointX="11.912015167955316" PointY="19.279990860857065" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TempTrace_2_1_2011" Width="1.5" PointX="1.1776948967844692" PointY="13.910843125502971" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TempTrace02042011" Width="1.5" PointX="1.9663135381258623" PointY="21.7791080725282" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TermCode_T" Width="1.5" PointX="4.8922632974070792" PointY="25.610365372901022" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TermsAndConditionsLog_T" Width="1.5" PointX="9.5383958134513325" PointY="10.938089852658143" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Test" Width="1.5" PointX="1.5552429228812654" PointY="24.7084131057879" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Tests" Width="1.5" PointX="11.364001124801114" PointY="28.949494852195258" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Tracker_T" Width="1.5" PointX="8.6728356427852233" PointY="29.682214169615047" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TrackerReportType_T" Width="1.5" PointX="5.7162580963765546" PointY="12.384224495098099" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TrackerSettings_T" Width="1.5" PointX="11.447007531042679" PointY="9.7406673774778234" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TransactionSet_T" Width="1.5" PointX="3.7077115232626494" PointY="9.1696309788011163" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TransactionSetErrCode_T" Width="1.5" PointX="0.26394461666417524" PointY="6.5983006686895624" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.TransactionSetResponse_T" Width="1.5" PointX="10.418513097995199" PointY="26.180461627515246" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.UnknownProvider_T" Width="1.5" PointX="3.4298586190817222" PointY="11.396281948031989" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Validation_T" Width="1.5" PointX="4.8618741542389028" PointY="31.564605504071622" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ValidationForm_T" Width="1.5" PointX="1.1506769662493266" PointY="5.8674938110017658" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ValidationOutput_T" Width="1.5" PointX="10.234329638180476" PointY="29.170567049258654" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ValidationOutputSub_T" Width="1.5" PointX="2.5195696570535979" PointY="16.25475858908834" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ValidationSubLineLevelLoops_T" Width="1.5" PointX="11.054004465720619" PointY="14.320590726249195" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ValidationUIField_T" Width="1.5" PointX="10.472619601745446" PointY="5.8184181031856772" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ValidationUIMapping_T" Width="1.5" PointX="4.1276515834627912" PointY="28.14329491376099" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.VENDOR_ACTIVITY_LOG" Width="1.5" PointX="4.4699339365912287" PointY="8.8796003651244568" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Vendor_T" Width="1.5" PointX="3.0754992119388187" PointY="26.128521514185017" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.VendorClientPermissions_T" Width="1.5" PointX="3.9683211371155092" PointY="10.564032827766628" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.VendorServices_T" Width="1.5" PointX="0.58899368745693637" PointY="11.382221778567052" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebDownloads_T" Width="1.5" PointX="6.5258394417007635" PointY="29.144299833636872" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebDownloadType_T" Width="1.5" PointX="4.3690925335367643" PointY="3.1844814881610133" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebFlashMenu_T" Width="1.5" PointX="3.7187735232146331" PointY="22.59574280241306" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebMessages_T" Width="1.5" PointX="6.9660519561572247" PointY="28.542219056069023" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebSections_T" Width="1.5" PointX="6.7980530740684149" PointY="11.063041140820385" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebSectionsDynamicContent_T" Width="1.5" PointX="4.7373069081163539" PointY="1.6497535117202222" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebSpeedMetricsLog_T" Width="1.5" PointX="4.7420128605989795" PointY="25.871116665131932" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebUserSettings_T" Width="1.5" PointX="2.9511067284974768" PointY="30.279820650014944" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WhiteLabel_T" Width="1.5" PointX="11.031325276489987" PointY="1.1334359502109865" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.YesNoConditionOrResponseCode_T" Width="1.5" PointX="8.3364909125196238" PointY="6.8728031250055892" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Acknowledgement_T_Ansi5010IEA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Acknowledgement_T_Ansi5010ISA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Acknowledgement_T_PayerReportAssignmentStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Acknowledgement_T_PayerReportRaw_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementFunctionalGroup_T_Acknowledgement_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_AcknowledgementAssignmentType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_AcknowledgementPatient_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_Ansi5010DTP_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_Ansi5010REF_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_Ansi5010REF_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_Ansi5010REF_T2" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_Ansi5010TRN_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatus_T_ClientReports_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatusInformation_T_AcknowledgementClaimStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLine_T_AcknowledgementClaimStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementClaimStatusInformation_T_Ansi5010STC_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementFunctionalGroup_T_Ansi5010GE_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementFunctionalGroup_T_Ansi5010GS_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransactionSet_T_AcknowledgementFunctionalGroup_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementPatient_T_AcknowledgementPatientName_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementPatient_T_AcknowledgementProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementPatient_T_Ansi5010HL_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementPatientName_T_Ansi5010NM1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProvider_T_AcknowledgementProviderName_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProvider_T_AcknowledgementProviderTrace_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProvider_T_AcknowledgementReceiver_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProvider_T_Ansi5010HL_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProvider_T_ClientReports_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProvider_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderName_T_Ansi5010NM1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderSecondaryIdentifier_T_AcknowledgementProviderTrace_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderSecondaryIdentifier_T_Ansi5010REF_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderStatus_T_AcknowledgementProviderTrace_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderStatus_T_Ansi5010STC_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderTrace_T_Ansi5010AMT_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderTrace_T_Ansi5010AMT_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderTrace_T_Ansi5010QTY_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderTrace_T_Ansi5010QTY_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementProviderTrace_T_Ansi5010TRN_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiver_T_AcknowledgementReceiverName_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiver_T_AcknowledgementReceiverTrace_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiver_T_Ansi5010HL_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementSource_T_AcknowledgementReceiver_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverName_T_Ansi5010NM1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverStatus_T_AcknowledgementReceiverApplication_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverStatus_T_Ansi5010STC_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverApplication_T_Ansi5010AMT_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverApplication_T_Ansi5010AMT_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverApplication_T_Ansi5010QTY_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverApplication_T_Ansi5010QTY_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementReceiverApplication_T_Ansi5010TRN_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLine_T_Ansi5010DTP_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLine_T_Ansi5010REF_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLine_T_Ansi5010REF_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLine_T_Ansi5010SVC_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLineStatusInformation_T_AcknowledgementServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementServiceLineStatusInformation_T_Ansi5010STC_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementSource_T_AcknowledgementSourceName_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementSource_T_AcknowledgementTransmissionReceipt_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementSource_T_Ansi5010HL_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransactionSet_T_AcknowledgementSource_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementSourceName_T_Ansi5010NM1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransactionSet_T_Ansi5010BHT_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransactionSet_T_Ansi5010SE_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransactionSet_T_Ansi5010ST_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransmissionReceipt_T_Ansi5010DTP_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransmissionReceipt_T_Ansi5010DTP_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_AcknowledgementTransmissionReceipt_T_Ansi5010TRN_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Adjustment_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationTransactionSet_T_Ansi5010AK1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationResponse_T_Ansi5010AK2_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationTransactionSet_T_Ansi5010AK9_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Ansi5010SVC_T_Ansi5010CompositMedicalProcedureIdentifier_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Ansi5010SVC_T_Ansi5010CompositMedicalProcedureIdentifier_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationElementContext_T_Ansi5010CTX_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationErrorIdentification_T_Ansi5010CTX_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationSegementContext_T_Ansi5010CTX_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationFunctionalGroup_T_Ansi5010GE_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceReport_T_Ansi5010GE_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationFunctionalGroup_T_Ansi5010GS_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceReport_T_Ansi5010GS_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Ansi5010STC_T_Ansi5010HealthCareClaimStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Ansi5010STC_T_Ansi5010HealthCareClaimStatus_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Ansi5010STC_T_Ansi5010HealthCareClaimStatus_T2" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Implementation_T_Ansi5010IEA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Interchange_T_Ansi5010IEA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceReport_T_Ansi5010IEA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationErrorIdentification_T_Ansi5010IK3_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationDataElementNote_T_Ansi5010IK4_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationResponse_T_Ansi5010IK5_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Implementation_T_Ansi5010ISA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Interchange_T_Ansi5010ISA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceReport_T_Ansi5010ISA_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationTransactionSet_T_Ansi5010SE_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationTransactionSet_T_Ansi5010ST_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Interchange_T_Ansi5010TA1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Enrollment_T_ANSIType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ApexPayer_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ApexPayer_T_Payer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ApexNEAPayer_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Batch_Doctor" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Claim_Batch" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Batch_T_BatchStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_BatchEventLogMessage_T_Batch_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_BatchEventLogMessage_T_EventLogMessage_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalEPSDTReferral_T_CertificationConditionCodeAppliesIndicator_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ServiceLine_T_Claim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDental_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDental_T_Payer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalError_T_ClaimDental_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalHistory_T_ClaimDental_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalLineItem_T_ClaimDental_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImportHistory_T_ClaimDental_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_ClaimDental_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDental4010ExtraData_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalAssistantSurgeon_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalAssistantSurgeonSecondaryIdentification_T_ClaimDentalAssistantSurgeon_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimDent__Claim__4EA74281" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_ClaimDentalBillingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_ClaimDentalPayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_ClaimStatusType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_EventPhase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_EventType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Payer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Vendor_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_TransactionSet_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBaseNeedsValidation_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalInformation_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayer_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerAssistantSurgeon_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerBillingProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerReferringProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerRenderingProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerServiceFacilityLocation_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerSupervisingProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherSubscriber_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOutputException_T_ClaimDentalBase_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalPatient_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalPayToPlan_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalReferenceIdentification_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalReferringProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceFacilityLocation_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLine_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalSubmit_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalSubscriber_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalSupervisingProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalValidationRun_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_TransactionSet_T_TransactionSet_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_Validation_T_ClaimDentalValidationRun_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_Validation_T_Validation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBillingProvider_T_ClaimDentalPayToAddress_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBillingProviderContact_T_ClaimDentalBillingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalDiagnosisCode_T_ClaimDentalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalFileInformation_T_ClaimDentalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalInformation_T_ClaimDentalPricingRepricingInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalNoteReference_T_ClaimDentalClaimInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalSupplementalInformation_T_ClaimDentalClaimInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalToothStatus_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalDataChanged_T_ClaimDentalSubmit_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalDataChanged_T_DataField_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalErrors_T_PayerEdits_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalErrors_T_StandardEdits_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalEventLogMessage_T_EventLogMessage_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalLineItemNeedsValidation_T_ClaimDentalNeedsValidation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalWaitingValidation_T_ClaimDentalNeedsValidation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerReferenceIdentification_ClaimDentalOtherPayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerAssistantSurgeonSecondaryIdentification_T_ClaimDentalOtherPayerAssistantSurgeon_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerBillingProviderReferenceIdentification_T_ClaimDentalOtherPayerBillingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerReferringProviderReferenceIdentification_T_ClaimDentalOtherPayerReferringProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerRenderingProviderReferenceIdentification_T_ClaimDentalOtherPayerRenderingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerServiceFacilityLocationSecondaryIdentification_T_ClaimDentalOtherPayerServiceFacilityLocation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherPayerSupervisingProviderReferenceIdentification_T_ClaimDentalOtherPayerSupervisingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherSubscriber_T_IndividualRelationshipCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherSubscriberClaimLevelAdjustments_T_ClaimDentalOtherSubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalOtherSubscriberReferenceIdentification_T_ClaimDentalOtherSubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalPatient_T_IndividualRelationshipCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimDent__Claim__38174C36" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalPayer_T_PayerResponsibilitySequenceNumberCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalReferringProviderReferenceIdentification_T_ClaimDentalReferringProviderReferenceIdentification_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalRenderingProvider_T_ClaimDentalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalRenderingProviderReferenceIdentification_T_ClaimDentalRenderingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_CDR_ID" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceFacilityLocationReferenceIdentification_T_ClaimDentalServiceFacilityLocationReferenceIdentification_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimDent__Claim__3CDC0153" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLine_T_ClaimDentalServiceLinePricingRepricingInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineAdjudicationInfo_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineAssistantSurgeon_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineFileInformation_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLinePreDeterminationOfBenefits_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLinePriorAuthorizationReferenceIdentification_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineReferralNumberReferenceIdentification_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineServiceFacilityLocation_T_ClaimDentalServiceLineServiceFacilityLocation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineServiceFacilityLocationReferenceIdentification_T_ClaimDentalServiceLine_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineSupervisingProvider_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineSupervisingProviderSecondaryIdentifierReferenceIdentification_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalToothInformation_T_ClaimDentalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalServiceLineAdjustment_T_ClaimDentalServiceLineAdjudicationInfo_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimDent__Claim__7D616613" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimDent__Claim__031A3F69" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalValidationRun_T_ClaimDentalSubmit_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedical_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedical_T_Payer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedical_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalError_T_ClaimMedical_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalHistory_T_ClaimMedical_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImportHistory_T_ClaimMedical_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedical4010ExtraData_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalAmbulanceCertification_T_ClaimMedicalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_ClaimMedicalAmbulanceDropoff_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_ClaimMedicalAmbulancePickup_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_ClaimMedicalAmbulanceTransportInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimMedi__Claim__4F9B66BA" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_ClaimMedicalBillingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_ClaimMedicalPayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_ClaimStatusType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_EventPhase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_EventType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Payer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Vendor_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_TransactionSet_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBaseNeedsValidation_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayer_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerBillingProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerReferringProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerRenderingProvider_T_ClaimMedicalOtherPayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerServiceFacilityLocation_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerSupervisingProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherSubscriber_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOutputException_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalPatient_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalPayToPlanProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalReferenceIdentification_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalReferringProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalRenderingProvider_T_ClaimMedicalBase_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceFacilityLocation_T_ClaimMedicalServiceFacilityLocation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLine_T_ClaimMedicalBase_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalSubmit_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalSubscriber_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalSupervisingProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalValidationRun_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_CMB_ID" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_ClaimMedicalBase_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_TransactionSet_T_TransactionSet_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_Validation_T_ClaimMedicalValidationRun_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_Validation_T_Validation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBillingProvider_T_ClaimMedicalPayToAddress_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBillingProviderContact_T_ClaimMedicalBillingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalConditionInformation_T_ClaimMedicalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalDiagnosisCode_T_ClaimMedicalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalFileInformation_T_ClaimMedicalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_ClaimMedicalPricingRepricingInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_DateTimePeriodFormatQualifier_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_DateTimeQualifier_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_NoteReferenceCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalPatientConditionInformationVision_T_ClaimMedicalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalSupplementalInformation_T_ClaimMedicalClaimInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalDataChange_T_ClaimMedicalSubmit_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalDataChange_T_DataField_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalEPSDTReferral_T_CodeCategory_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalEPSDTReferral_T_ConditionCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalEPSDTReferral_T_ConditionCode_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalEPSDTReferral_T_ConditionCode_T2" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalErrors_T_PayerEdits_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalErrors_T_StandardEdits_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalEventLogMessage_T_EventLogMessage_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalLineItemNeedsValidation_T_ClaimMedicalNeedsValidation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalNeedsValidation_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalWaitingValidation_T_ClaimMedicalNeedsValidation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerReferenceIdentification_ClaimMedicalOtherPayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerBillingProviderReferenceIdentification_T_ClaimMedicalOtherPayerBillingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerReferringProviderReferenceIdentification_T_ClaimMedicalOtherPayerReferringProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerRenderingProviderReferenceIdentification_T_ClaimMedicalOtherPayerRenderingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerServiceFacilityLocationSecondaryIdentification_T_ClaimMedicalOtherPayerServiceFacilityLocation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherPayerSupervisingProviderReferenceIdentification_T_ClaimMedicalOtherPayerSupervisingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherSubscriber_T_IndividualRelationshipCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherSubscriberClaimLevelAdjustments_T_ClaimMedicalOtherSubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalOtherSubscriberReferenceIdentification_T_ClaimMedicalOtherSubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalPatient_T_IndividualRelationshipCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimMedi__Claim__38174C36" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalPayer_T_PayerResponsibilitySequenceNumberCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ReferenceIndentification_T_Loop_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalReferringProviderReferenceIdentification_T_ClaimMedicalReferringProviderReferenceIdentification_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalRenderingProvider_T_ClaimMedicalBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalRenderingProviderReferenceIdentification_T_ClaimMedicalRenderingProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_CMR_ID" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceFacilityLocationReferenceIdentification_T_ClaimMedicalServiceFacilityLocationReferenceIdentification_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimMedi__Claim__3CDC0153" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineAdjudicationInfo_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineAmbulanceCertification_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineFileInformation_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineOrderingProvider_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineOrderingProviderSecondaryIdentifierReferenceIdentification_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLinePriorAuthorizationReferenceIdentification_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLinePurchasedServiceProviderSecondaryIden_ClaimMedicalServiceLinePurchasedServiceProviderSecondaryIden" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineReferralNumberReferenceIdentification_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineReferringProvider_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineServiceFacilityLocation_T_ClaimMedicalServiceLineServiceFacilityLocation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineServiceFacilityLocationReferenceIdentification_T_ClaimMedicalServiceLine_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineSupervisingProvider_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineSupervisingProviderSecondaryIdentifierReferenceIdentification_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineSupplementalInformation_T_ClaimMedicalServiceLine_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineSupportingDocumentation_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineTestResult_T_ClaimMedicalServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLineAdjustment_T_ClaimMedicalServiceLineAdjudicationInfo_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalServiceLinereferringProviderSecondaryIdentification_T_ClaimMedicalServiceLineReferringProvider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ClaimMedi__Claim__4E716D00" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalValidationRun_T_ClaimMedicalSubmit_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_ClaimProductPurchased_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimReport_T_ClaimReportType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimReportHistory_T_ClaimReport_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimReportHistory_T_ClaimSource_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimReportMessage_T_ClaimReportHistory_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportEntity_T_ClaimSource_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimSupplementalInformation_T_ClaimSupplementalInformation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_VendorClientPermissions_T_Client_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClientCall_T_ClientSurvey_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClientCall_T_SalesRep_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClientMatchEntity_T_ClientMatch_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClientProprietaryReports_T_ClientReports_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClientReports_T_PayerReportRaw_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceAdvice_T_ClientReports_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_CodeLog_T_CodeLogType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ConcatRep__Conca__71067C26" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_DataElementNote_T_DataElementErrCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_DataElementNote_T_DataSegmentNote_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_DataSegmentNote_T_DataSegmentErrCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_DataSegmentNote_T_TransactionSetResponse_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Vendor_T_DefaultPricing_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Dent5010ClaimSectionsConfig_T_Dent5010ClaimSection_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Edits_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EditsConfig_T_StandardEdits_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityBase_T_EligibilityReceiver_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityBase_T_EligibilitySource_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityBase_T_FunctionalGroupEligibility_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityBase_T_OutputSubEligibility_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityBase_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilitySubscriber_T_EligibilityBase_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityDependent_T_EligibilitySubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityDependentDiagnosisCode_T_EligibilityDependent_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityDependentInquiry_T_EligibilityDependent_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityDependentRef_T_EligibilityDependent_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityDependentInquiryServiceTypeCode_T_EligibilityDependentInquiry_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityReceiverContact_T_EligibilityReceiver_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilityReceiverRef_T_EligibilityReceiver_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilitySubscriberDiagnosisCode_T_EligibilitySubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilitySubscriberInquiry_T_EligibilitySubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilitySubscriberRef_T_EligibilitySubscriber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_EligibilitySubscriberInquiryServiceTypeCode_T_EligibilitySubscriberInquiry_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SalesRep_T_EmployeeType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Enrollment_T_EnrollmentStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Enrollment_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_WebUserSettings_T_EntityType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSubEligibilityEQCode_T_EQCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SearchLog_T_SearchLog_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_FunctionalGroup_T_FunctionalGroupErrCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_FunctionalGroup_T_InterchangeControl_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSet_T_FunctionalGroup_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_FunctionalGroupEligibility_T_PayerID_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_FunctionalGroupEligibility_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Implementation_T_PayerReportAssignmentStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Implementation_T_PayerReportRaw_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationFunctionalGroup_T_Implementation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationDataElementNote_T_ImplementationErrorIdentification_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationElementContext_T_ImplementationDataElementNote_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationErrorIdentification_T_ImplementationResponse_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationSegementContext_T_ImplementationErrorIdentification_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationTransactionSet_T_ImplementationFunctionalGroup_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImplementationResponse_T_ImplementationTransactionSet_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ImportHistory_T_Statement_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Interchange_T_PayerReportAssignmentStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Interchange_T_PayerReportRaw_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_InterchangeControl_T_InterchangeControl_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_InterchangeControl_T_TA1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSub_T_LegacyIDNumber_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Mapping_T_MasterMap_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Mapping_T_MasterMap_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_MasterMap_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_MasterMap_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Med5010ClaimSectionsConfig_T_Med5010ClaimSection_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_NameFormat_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_NameFormat_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_NameFormat_T2" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_NameFormat_T3" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OperationsMetric999Information_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Output_PayerReportType_T_Output_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Output_PayerReportType_T_PayerReportType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Output_T_OutputDistributionType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Output_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSub_T_Output_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSubEligibility_T_Output_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReport_T_Output_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ValidationOutput_T_Output_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSub_T_PayerID_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Payer_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerKeyWord_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ValidationOutputSub_T_OutputSub_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSubEligibility_T_PayerID_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSubEligibilityEQCode_T_OutputSubEligibility_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_OutputSubEligibilityRequirement_T_OutputSubEligibility_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerEdits_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReport_T_PayerReportType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportClient_T_PayerReport_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportEntity_T_PayerReport_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceReport_T_PayerReportAssignmentStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportEntity_T_PayerReportClient_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportError_T_PayerReportError_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportRaw_T_PayerReportParseStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_PayerReportRaw_T_PayerReportType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceReport_T_PayerReportRaw_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_PaymentMethod_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_Practice_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Software_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SoftwareMapName_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SpecialtyCode_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_StandardEdits_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Validation_T_Profession_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_ProviderSpecialtyCode" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_RenderingProviderSpecialtyCode" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareMapName_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareMapName_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_StatementForm_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_WhiteLabel_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Service_T_Provider_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ProviderBilling_T_ProviderPayment_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittanceAdjustment_T_RemittanceAdjustment_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RemittanceAdjustment_T_RemittanceAdjustment_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceAdvice_T_RemittanceReport_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceHeader_T_RemittanceAdvice_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayee_T_RemittanceAdvice_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_T_RemittanceAdvice_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePlb_T_RemittanceAdvice_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceSummary_T_RemittanceAdvice_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittanceAmt_T_RemittanceAmt_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RemittanceAmt_T_RemittanceAmt_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceAssignmentType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_ClaimDentalBase_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_ClaimMedicalBase_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_OtherClaimId_Ref_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_OtherClaimId_Ref_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittanceAdjustment_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittanceAmt_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittancePer_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittancePer_T_RemittancePer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittanceQty_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RemittanceQty_T_RemittanceQty_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RenderingProviderID_Ref_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_RenderingProviderID_Ref_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceHeader_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T2" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T3" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T4" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T5" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceClaim_T_RemittanceNm1_T6" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_T_RemittanceClaim_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceLq_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayee_RemittanceRef_T_RemittancePayee_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayee_RemittanceRef_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_RemittancePer_T_RemittancePayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_RemittancePer_T_RemittancePer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_RemittanceRef_T_RemittancePayer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_RemittanceRef_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_T_RemittancePer_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittancePayer_T_RemittancePer_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RemittanceQty_T_RemittanceQty_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_HealthcarePolicyID_Ref_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RenderingProvider_Ref_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_ServiceId_Ref_T_RemittanceRef_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_HealthcarePolicyID_Ref_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RemittanceAdjustment_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RemittanceAmt_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RemittanceQty_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_RenderingProvider_Ref_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RemittanceServiceLine_ServiceId_Ref_T_RemittanceServiceLine_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ReportData_T_ReportType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__ReportSor__Repor__42809767" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_RunnerLog_T_RunnerConfig_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SalesCode_T_SalesCodeType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Services_T_SalesCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SalesCodeType_T_Vendor_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_SalesRep_T_State_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Service_T_SalesRep_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Service_T_ServiceType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Service_T_SetupStatus_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Submitter_T_State_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Vendor_T_State_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Statement_T_Vendor_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_StatementLineItem_T_Statement_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_StatementLineItemNeedsValidation_T_StatementNeedsValidation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_StatementWaitingValidation_T_StatementNeedsValidation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSetResponse_T_TransactionSet_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSetResponse_T_TransactionSetErrCode_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSetResponse_T_TransactionSetErrCode_T1" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSetResponse_T_TransactionSetErrCode_T2" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSetResponse_T_TransactionSetErrCode_T3" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_TransactionSetResponse_T_TransactionSetErrCode_T4" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Validation_T_ValidationForm_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Validation_ValidationSubLineLevelLoops" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ValidationOutput_T_Validation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ValidationOutputSub_T_Validation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ValidationUIMapping_T_Validation_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ValidationUIMapping_T_ValidationUIField_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__Vendor_T__WhiteL__6006D8AD" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_VendorClientPermissions_T_Vendor_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_VendorServices_T_Vendor_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_WebDownloads_T_WebDownloadType_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_WebSectionsDynamicContent_T_WebSections_T" />
+        <AssociationConnector Association="ClaimStakerDEVModel.PayerEditsConfig_T" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

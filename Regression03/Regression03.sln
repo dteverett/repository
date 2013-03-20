@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form", "Form\Form.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationExe", "ApplicationExe\ApplicationExe.csproj", "{F40601F4-05CB-4DDE-9564-E593F900C6D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{319EA5BD-7372-46D7-9F53-BFF5F022A6FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{F40601F4-05CB-4DDE-9564-E593F900C6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F40601F4-05CB-4DDE-9564-E593F900C6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F40601F4-05CB-4DDE-9564-E593F900C6D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319EA5BD-7372-46D7-9F53-BFF5F022A6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319EA5BD-7372-46D7-9F53-BFF5F022A6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319EA5BD-7372-46D7-9F53-BFF5F022A6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319EA5BD-7372-46D7-9F53-BFF5F022A6FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

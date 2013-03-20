@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
+using DataModel;
 
 namespace Logger
 {
@@ -12,11 +13,11 @@ namespace Logger
     {
         private static String log = null;
         private static int counter = 1;
-        
+        private static Connection connection = new Connection();
 
         public static void AddLog(String message)
         {
-            
+            connection._connection.Tests.Where(x => x.DateCreated_DT != null).ToArray();
            
         }
 

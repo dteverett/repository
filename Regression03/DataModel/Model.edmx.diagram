@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c0830efe2890457390a9523bb2fcf136" Name="Diagram1" ZoomLevel="90">
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ApplicationLog_T" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Batch_T" Width="1.5" PointX="8" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_T" Width="1.5" PointX="5.25" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBase_T" Width="1.5" PointX="8.25" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Client_T" Width="1.5" PointX="7.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Log_T" Width="1.5" PointX="7.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Payer_T" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Profession_T" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Provider_T" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SoftwareConversion_T" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Statement_T" Width="1.5" PointX="11.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Vendor_T" Width="1.5" PointX="3" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebUserSettings_T" Width="1.5" PointX="9.75" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Batch_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Statement_Provider" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Statement_T_Vendor_T" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Test" Width="1.5" PointX="8.2716187929136762" PointY="15.462471000599894" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
