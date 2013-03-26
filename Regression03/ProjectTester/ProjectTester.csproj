@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClaimStakerDEVDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="ConsoleTest.cs" />
     <Compile Include="DataClasses1.designer.cs">

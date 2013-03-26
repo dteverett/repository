@@ -9,11 +9,6 @@ using Logger;
 using Regression03;
 using Form;
 using System.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
@@ -47,32 +42,35 @@ namespace ProjectTester
             //{
             //    writer.Write(returned.File);
             //}
-            Connection connection = new Connection();
+            //Connection connection = new Connection();
 
-            var tester = connection._repository.Tests.Where(x => x.Message_VC != null);
+            //var tester = connection._repository.Tests.Where(x => x.Message_VC != null);
 
-            foreach (var test in tester)
-            {
-                Console.WriteLine(test.Message_VC);
-            }
+            //foreach (var test in tester)
+            //{
+            //    Console.WriteLine(test.Message_VC);
+            //}
 
-            Test inserter = new Test();
-            inserter.Message_VC = "DataModel contact";
-            inserter.DateCreated_DT = System.DateTime.Now;
+            //Test inserter = new Test();
+            //inserter.Message_VC = "DataModel contact";
+            //inserter.DateCreated_DT = System.DateTime.Now;
 
-            connection._repository.Tests.AddObject(inserter);
-            connection._repository.SaveChanges();
+            //connection._repository.Tests.AddObject(inserter);
+            //connection._repository.SaveChanges();
 
 
 
-            var reader = connection._repository.Tests.Where(x => x.Message_VC != null);
+            //var reader = connection._repository.Tests.Where(x => x.Message_VC != null);
 
-            foreach (var read in reader)
-            {
-                Console.WriteLine(read.Message_VC);
-            }
+            //foreach (var read in reader)
+            //{
+            //    Console.WriteLine(read.Message_VC);
+            //}
 
-            Console.Read();
+            //Console.Read();
+
+            Class1 c1 = new Class1();
+            c1.Written("Testing");
         }
     }
 }
