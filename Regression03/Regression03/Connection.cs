@@ -7,14 +7,11 @@ namespace Regression03
 {
     public class Connection
     {
-        public ClaimStakerDEVEntities _repository;
+        public ClaimStakerEntities _repository;
 
         public Connection()
         {
-            _repository = new ClaimStakerDEVEntities();
+            _repository = new ClaimStakerEntities();
         }
-
-
-
     }
 }

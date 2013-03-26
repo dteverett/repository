@@ -55,6 +55,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -69,17 +71,27 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClaimStakerDEVModel.Designer.cs">
+    <Compile Include="4010Dental01.cs" />
+    <Compile Include="ClaimStakerDEVDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ClaimStakerDEVModel.edmx</DependentUpon>
+      <DependentUpon>ClaimStakerDEVDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="4010Dental01.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="DataModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DentalPDU.cs" />
+    <Compile Include="EntityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ExlusionOfNM1_87.cs" />
     <Compile Include="EfcWCentury.cs" />
     <Compile Include="ProviderAssignment.cs" />
-    <Compile Include="Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,12 +110,28 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="ClaimStakerDEVModel.edmx">
+    <None Include="ClaimStakerDEVDataSet.xsc">
+      <DependentUpon>ClaimStakerDEVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClaimStakerDEVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClaimStakerDEVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClaimStakerDEVDataSet.xss">
+      <DependentUpon>ClaimStakerDEVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EntityModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ClaimStakerDEVModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>EntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ClaimStakerDEVModel.edmx.diagram">
-      <DependentUpon>ClaimStakerDEVModel.edmx</DependentUpon>
+    <None Include="EntityModel.edmx.diagram">
+      <DependentUpon>EntityModel.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,7 +140,7 @@
     <None Include="UIMap.uitest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Form\Form.csproj">
+    <ProjectReference Include="..\..\Regression\Form\Form.csproj">
       <Project>{b26f1d5d-7836-4b3a-863e-bf61eb3758ba}</Project>
       <Name>Form</Name>
     </ProjectReference>
@@ -120,6 +148,14 @@
       <Project>{32d993d1-d4a2-4ed2-966c-6e4fbb9e8107}</Project>
       <Name>Logger</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataModel.dbml.layout">
+      <DependentUpon>DataModel.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -20,9 +20,7 @@ C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\Regression
 C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\Regression03.pdb
 C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\Form.dll
 C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\Logger.dll
-C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\DataModel.dll
 C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\Form.pdb
 C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\Logger.pdb
-C:\Users\deverett.APEX\repository\Regression03\Regression03\bin\Debug\DataModel.pdb
 C:\Users\deverett.APEX\repository\Regression03\Regression03\obj\Debug\Regression03.dll
 C:\Users\deverett.APEX\repository\Regression03\Regression03\obj\Debug\Regression03.pdb

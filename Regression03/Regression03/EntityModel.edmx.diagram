@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="776411cdedc54112869144d451b3de57" Name="Diagram1">
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimDentalBase_T" Width="1.5" PointX="8.25" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedical_T" Width="1.5" PointX="14.25" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalBase_T" Width="1.5" PointX="11.25" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClaimMedicalClaimInformation_T" Width="1.5" PointX="13.5" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.ClientProprietaryReports_T" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Doctor" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Payer_T" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Profession_T" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Provider_T" Width="1.5" PointX="6" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Software_T" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.SoftwareConversion_T" Width="1.5" PointX="3.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Vendor_T" Width="1.5" PointX="3" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WebUserSettings_T" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.WhiteLabel_T" Width="1.5" PointX="0.75" PointY="35.5" IsExpanded="true" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimDentalBase_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedical_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedical_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Payer_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Provider_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalBase_T_Vendor_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_ClaimMedicalInformation_T_ClaimMedicalBase_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Software_T_Profession_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_SoftwareConversion_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK_Provider_T_WhiteLabel_T" ManuallyRouted="false" />
+        <AssociationConnector Association="ClaimStakerDEVModel.FK__Vendor_T__WhiteL__6006D8AD" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ClaimStakerDEVModel.Test" Width="1.5" PointX="10.469827153938741" PointY="30.631598024923168" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

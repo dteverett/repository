@@ -27,7 +27,6 @@ C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\ProjectTe
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Form.dll
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Logger.dll
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Regression03.dll
-C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\DataModel.dll
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft.VisualStudio.TestTools.UITesting.dll
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft.VisualStudio.QualityTools.CodedUITestFramework.dll
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Execute.dll
@@ -36,7 +35,6 @@ C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Form.pdb
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Logger.pdb
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Regression03.pdb
-C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\DataModel.pdb
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft.VisualStudio.TestTools.UITesting.xml
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft.VisualStudio.QualityTools.CodedUITestFramework.xml
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Extension.xml

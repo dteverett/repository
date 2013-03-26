@@ -46,7 +46,7 @@ namespace Regression03
 
         private const string clientBatch = "0000000000ZZD";  //Client ID goes HERE
 
-        Connection connection = new Connection();
+        //Connection connection = new Connection();
 
         [TestMethod]
         public void CodedUITestMethod1()

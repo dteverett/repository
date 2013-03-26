@@ -50,12 +50,6 @@
   <ItemGroup>
     <None Include="App.Config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataModel\DataModel.csproj">
-      <Project>{319ea5bd-7372-46d7-9f53-bff5f022a6fc}</Project>
-      <Name>DataModel</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

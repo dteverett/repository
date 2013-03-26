@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
-using DataModel;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
@@ -26,7 +25,7 @@ namespace ProjectTester
         //[STAThread]
         static void Main(string[] args)
         {
-            DataModel.Connection connection = new DataModel.Connection();
+            
             //var medical = new Medical();
             //var dental = new Dental();
             ////dental.File =
@@ -48,10 +47,30 @@ namespace ProjectTester
             //{
             //    writer.Write(returned.File);
             //}
+            Connection connection = new Connection();
 
-            var results = connection._connection.ClaimMedicalBase_T.FirstOrDefault(x => x.BatchNumber_VC == "0607111524ALR");
+            var tester = connection._repository.Tests.Where(x => x.Message_VC != null);
 
-            Console.WriteLine(results.ClaimMedicalBase_ID.ToString());
+            foreach (var test in tester)
+            {
+                Console.WriteLine(test.Message_VC);
+            }
+
+            Test inserter = new Test();
+            inserter.Message_VC = "DataModel contact";
+            inserter.DateCreated_DT = System.DateTime.Now;
+
+            connection._repository.Tests.AddObject(inserter);
+            connection._repository.SaveChanges();
+
+
+
+            var reader = connection._repository.Tests.Where(x => x.Message_VC != null);
+
+            foreach (var read in reader)
+            {
+                Console.WriteLine(read.Message_VC);
+            }
 
             Console.Read();
         }
