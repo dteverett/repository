@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using System.Windows.Forms;
@@ -12,58 +13,59 @@ using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-using System.Linq;
 
 
 namespace Regression03
 {
     /// <summary>
-    /// Summary description for CodedUITest2
+    /// Testing AAL batch, client that uses regular 4010 specs to send claims
     /// </summary>
     [CodedUITest]
-    public class EfcWCentury
+    public class DentalPDU
     {
-        public EfcWCentury()
+        public DentalPDU()
         {
         }
+
+        SenderAPI log = new SenderAPI();
+
         private const string batchPaths = @"\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\batches\";
 
-         private const string hardCopies =
+        private const string hardCopies =
             @"\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\hardCopies\";
 
-        private const string import4010 = batchPaths + "Import4010DentalMZA.bat";
+        private const string import4010 = batchPaths + "Import4010DentalPDU.bat";    //Batch File name here
 
         private const string outputFileLocation = @"\\apexdata\F_Drive_Test\Claimstaker\Output\output.txt";
 
         private const string autoDeleteFile = batchPaths + "deleteClaimAuto.bat";
 
-        private const string HardCopy = hardCopies + "MZAClaimHardCopy.txt";
+        private const string HardCopy = hardCopies + "hardCopyPDU.txt";        //Specific import batch file name goes here
 
         private const string startAutoWatcher = batchPaths + "StartAutoImportApexWatcher.bat";
 
-        private const string changeFileName = batchPaths + "changeFileNameOnOutput.bat";
+        private const string changeFileName = (batchPaths + "changeFileNameOnOutput.bat");
 
-        private const string clientBatch = "0000000000MZA";
-
+        private const string clientBatch = "0000000000PDU";                           //Client ID goes HERE
 
         Connection connection = new Connection();
-        /// <summary>
-        /// Test an EC&F with Century input dental batch
-        /// </summary>
+
         [TestMethod]
-        public void CodedUITestMethod()
+        public void CodedUITestMethod1()
         {
-            
-            //Delete claims w/ same batch number to allow for auto-import
+            long TestID = log.RegisterTest();
+
+            string hardCopy;
+            string claimContents;
+
             var deleteBatch = connection._repository.ClaimDentalBase_T.Where(x => x.BatchNumber_VC == clientBatch);
             foreach (var claim in deleteBatch)
             {
                 connection._repository.ClaimDentalBase_T.DeleteObject(claim);
             }
             connection._repository.SaveChanges();
-            Batch.File(autoDeleteFile);
 
-            //start apexWatcher and AutoImport batch file
+            Batch.File(autoDeleteFile);
             Batch.File(startAutoWatcher);
             this.UIMap.ActivateValidatorsApexWatcher();
             Batch.File(import4010);
@@ -73,35 +75,34 @@ namespace Regression03
             //Allow autoImport time to import entire batch
             Playback.Wait(15000);
             this.UIMap.WaitAutoImportComplete();
-            var dentalBatch = connection._repository.ClaimDentalBase_T.Where(x => x.BatchNumber_VC == clientBatch).ToArray();
 
+            var dentalBatch = connection._repository.ClaimDentalBase_T.Where(x => x.BatchNumber_VC == clientBatch).ToArray();
             foreach (var claim in dentalBatch)
             {
                 if (claim.ClaimStatusType_ID == 6 || claim.ClaimStatusType_ID == 2 || claim.ClaimStatusType_ID == 9)
-                  claim.ClaimStatusType_ID = 1;
+                    claim.ClaimStatusType_ID = 1;
                 if (claim.ClaimStatusType_ID == 10)
-                    Log.AddLog("Claim " + claim.ClaimDentalBase_ID + " has an Output Exception");
+                    log.Error("Claim " + claim.ClaimDentalBase_ID + " has an Output Exception", TestID);
                 if (claim.ClaimStatusType_ID == 3)
                 {
-                    Log.AddLog("Claim " + claim.ClaimDentalBase_ID + " failed on import");
+                    log.Error("Claim " + claim.ClaimDentalBase_ID + " failed on import", TestID);
                 }
             }
             connection._repository.SaveChanges();
-            var MZAClaim =
-                connection._repository.ClaimDentalBase_T.FirstOrDefault(
-                    x => x.BatchNumber_VC == clientBatch && x.Payer_ID == 67946);
 
-            if (MZAClaim.OutputSub_ID != 3728)
-                Log.AddLog("Claim " + MZAClaim.ClaimDentalBase_ID + " has an incorrect OutputSub_ID value");
+            //Find specific claim here   //Find specific claim here         //Find specific claim    
 
+            var dentalClaim =
+                connection._repository.ClaimDentalBase_T.FirstOrDefault(   ////Single out specific Claim
+                    x => x.BatchNumber_VC == clientBatch && x.OutputSub_ID == 41);  //here
 
-            long claimID = MZAClaim.ClaimDentalBase_ID;
+            long claimID = dentalClaim.ClaimDentalBase_ID;
+
             this.UIMap.OutputDentalClaimNM187(claimID);
-
-            
-            //change file name in claimstaker\output\ to static value
+            //playback wait warning area
             Batch.File(changeFileName);
-            string claimContents;
+
+            //playback wait warning area        ////////
             Playback.Wait(5000);
             using (TextReader reader = new StreamReader(outputFileLocation))//read static value file
             {
@@ -120,30 +121,24 @@ namespace Regression03
             }
             catch (Exception ex)
             {
-                Log.AddLog(ex.Message);
+                log.Fatal(ex.Message, TestID);
             }
-            string hardCopy;
+
             using (TextReader reader = new StreamReader(HardCopy))
             {
                 hardCopy = reader.ReadToEnd();
             }
             if (!hardCopy.Equals(dental01.File))
             {
-                Log.AddLog("Output Files in ECF_w_Century are not matching up");
+                log.Error("Output Files in " + clientBatch + " are not matching up", TestID);
             }
-            foreach (var claim in dentalBatch)
-            {
-                if (claim.Provider_ID != 11748 && claim.Provider_ID != 14571 && claim.Provider_ID != 11724)
-                {
-                    Log.AddLog("Claim " + claim.ClaimDentalBase_ID + " from client MZA using EF&C with Century software is not assigned to a valid provider");
-                }
-            }
+
+            //Add special case logic here  //Add special case logic here //Add special case logic here //add special case logic here
 
             this.UIMap.CloseClaimStakerPlus();
             this.UIMap.SelectAutoImportClose();
             this.UIMap.FinishCloseAutoImport();
             this.UIMap.CloseApexWatcher();
-            
             Batch.File(autoDeleteFile);
             Playback.Wait(1000);
         }
@@ -155,7 +150,7 @@ namespace Regression03
         ////Use TestInitialize to run code before running each test 
         //[TestInitialize()]
         //public void MyTestInitialize()
-        //{        
+        //{
         //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
         //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
         //}

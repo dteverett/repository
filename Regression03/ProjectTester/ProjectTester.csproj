@@ -114,6 +114,10 @@
       <Project>{200ea4e7-1767-4c6f-9b19-d54c17d70e29}</Project>
       <Name>Regression03</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebTester\WebTester.csproj">
+      <Project>{4e740913-4f4c-46cb-ba46-61bbb43e1951}</Project>
+      <Name>WebTester</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

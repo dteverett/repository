@@ -8,3 +8,4 @@ C:\Users\deverett.APEX\repository\Regression03\Logger\bin\Debug\Logger.dll
 C:\Users\deverett.APEX\repository\Regression03\Logger\bin\Debug\Logger.pdb
 C:\Users\deverett.APEX\repository\Regression03\Logger\obj\Debug\Logger.dll
 C:\Users\deverett.APEX\repository\Regression03\Logger\obj\Debug\Logger.pdb
+C:\Users\deverett.APEX\repository\Regression03\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache

@@ -4,11 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ClaimStakerDEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="ClaimStakerDEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ClaimStakerDEVModelStoreContainer">
-          <EntitySet Name="Tests" EntityType="ClaimStakerDEVModel.Store.Tests" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TestErrorLog" EntityType="ClaimStakerDEVModel.Store.TestErrorLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TestLogs_T" EntityType="ClaimStakerDEVModel.Store.TestLogs_T" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_TestErrorLog_TestErrorLog" Association="ClaimStakerDEVModel.Store.FK_TestErrorLog_TestErrorLog">
+            <End Role="TestLogs_T" EntitySet="TestLogs_T" />
+            <End Role="TestErrorLog" EntitySet="TestErrorLog" />
+          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Tests">
+        <EntityType Name="TestErrorLog">
           <Key>
             <PropertyRef Name="LogID" />
           </Key>
@@ -17,38 +22,103 @@
           <Property Name="Message_VC" Type="varchar(max)" />
           <Property Name="ExceptionThrower_VC" Type="varchar(max)" />
           <Property Name="LogLevel_VC" Type="varchar" MaxLength="50" />
+          <Property Name="TestLog_ID" Type="bigint" />
         </EntityType>
+        <EntityType Name="TestLogs_T">
+          <Key>
+            <PropertyRef Name="TestLog_ID" />
+          </Key>
+          <Property Name="TestLog_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TestExecuted_VC" Type="varchar(max)" />
+          <Property Name="DateExecuted_DT" Type="datetime" />
+          <Property Name="Notes_VC" Type="varchar(max)" />
+          <Property Name="PassFail" Type="bit" />
+        </EntityType>
+        <Association Name="FK_TestErrorLog_TestErrorLog">
+          <End Role="TestLogs_T" Type="ClaimStakerDEVModel.Store.TestLogs_T" Multiplicity="0..1" />
+          <End Role="TestErrorLog" Type="ClaimStakerDEVModel.Store.TestErrorLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestLogs_T">
+              <PropertyRef Name="TestLog_ID" />
+            </Principal>
+            <Dependent Role="TestErrorLog">
+              <PropertyRef Name="TestLog_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ClaimStakerDEVModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="ClaimStakerDEVEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-          <EntitySet Name="Tests" EntityType="ClaimStakerDEVModel.Test" />
+          <EntitySet Name="TestErrorLogs" EntityType="ClaimStakerDEVModel.TestErrorLog" />
+          <EntitySet Name="TestLogs_T" EntityType="ClaimStakerDEVModel.TestLogs_T" />
+          <AssociationSet Name="FK_TestErrorLog_TestErrorLog" Association="ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog">
+            <End Role="TestLogs_T" EntitySet="TestLogs_T" />
+            <End Role="TestErrorLog" EntitySet="TestErrorLogs" />
+          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Test">
+        <EntityType Name="TestErrorLog">
           <Key>
             <PropertyRef Name="LogID" />
           </Key>
-          <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
-          <Property Name="DateCreated_DT" Type="DateTime" Precision="0" />
-          <Property Name="Message_VC" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="ExceptionThrower_VC" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="LogID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="DateTime" Name="DateCreated_DT" Precision="0" />
+          <Property Type="String" Name="Message_VC" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ExceptionThrower_VC" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="LogLevel_VC" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="TestLog_ID" />
+          <NavigationProperty Name="TestLogs_T" Relationship="ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog" FromRole="TestErrorLog" ToRole="TestLogs_T" />
         </EntityType>
+        <EntityType Name="TestLogs_T">
+          <Key>
+            <PropertyRef Name="TestLog_ID" />
+          </Key>
+          <Property Type="Int64" Name="TestLog_ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="TestExecuted_VC" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DateExecuted_DT" Precision="3" />
+          <Property Type="String" Name="Notes_VC" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="PassFail" />
+          <NavigationProperty Name="TestErrorLogs" Relationship="ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog" FromRole="TestLogs_T" ToRole="TestErrorLog" />
+        </EntityType>
+        <Association Name="FK_TestErrorLog_TestErrorLog">
+          <End Type="ClaimStakerDEVModel.TestLogs_T" Role="TestLogs_T" Multiplicity="0..1" />
+          <End Type="ClaimStakerDEVModel.TestErrorLog" Role="TestErrorLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestLogs_T">
+              <PropertyRef Name="TestLog_ID" />
+            </Principal>
+            <Dependent Role="TestErrorLog">
+              <PropertyRef Name="TestLog_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ClaimStakerDEVModelStoreContainer" CdmEntityContainer="ClaimStakerDEVEntities">
-          <EntitySetMapping Name="Tests">
-            <EntityTypeMapping TypeName="ClaimStakerDEVModel.Test">
-              <MappingFragment StoreEntitySet="Tests">
+        <EntitySetMapping Name="TestErrorLogs">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.TestErrorLog">
+              <MappingFragment StoreEntitySet="TestErrorLog">
+                <ScalarProperty Name="TestLog_ID" ColumnName="TestLog_ID" />
                 <ScalarProperty Name="LogLevel_VC" ColumnName="LogLevel_VC" />
-                <ScalarProperty Name="LogID" ColumnName="LogID" />
-                <ScalarProperty Name="DateCreated_DT" ColumnName="DateCreated_DT" />
-                <ScalarProperty Name="Message_VC" ColumnName="Message_VC" />
                 <ScalarProperty Name="ExceptionThrower_VC" ColumnName="ExceptionThrower_VC" />
+                <ScalarProperty Name="Message_VC" ColumnName="Message_VC" />
+                <ScalarProperty Name="DateCreated_DT" ColumnName="DateCreated_DT" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestLogs_T">
+            <EntityTypeMapping TypeName="ClaimStakerDEVModel.TestLogs_T">
+              <MappingFragment StoreEntitySet="TestLogs_T">
+                <ScalarProperty Name="PassFail" ColumnName="PassFail" />
+                <ScalarProperty Name="Notes_VC" ColumnName="Notes_VC" />
+                <ScalarProperty Name="DateExecuted_DT" ColumnName="DateExecuted_DT" />
+                <ScalarProperty Name="TestExecuted_VC" ColumnName="TestExecuted_VC" />
+                <ScalarProperty Name="TestLog_ID" ColumnName="TestLog_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -41,3 +41,12 @@ C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Common.xml
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\obj\Debug\ProjectTester.exe
 C:\Users\deverett.APEX\repository\Regression03\ProjectTester\obj\Debug\ProjectTester.pdb
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebTester.dll
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebDriver.dll
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebDriver.Support.dll
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\nunit.framework.dll
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebTester.pdb
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebDriver.pdb
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebDriver.xml
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebDriver.Support.pdb
+C:\Users\deverett.APEX\repository\Regression03\ProjectTester\bin\Debug\WebDriver.Support.xml

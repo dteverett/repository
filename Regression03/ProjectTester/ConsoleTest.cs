@@ -11,6 +11,7 @@ using Form;
 using System.Windows;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using WebTester;
 
 
 namespace ProjectTester
@@ -69,8 +70,15 @@ namespace ProjectTester
 
             //Console.Read();
 
-            Class1 c1 = new Class1();
-            c1.Written("Testing");
+            //Class1 c1 = new Class1();
+            //c1.Written("Testing");
+            string code = "APXXZ3092";
+
+            for(int i = 0; i < 1; i++)
+            {
+                RegiSalesCode regi = new RegiSalesCode();
+                regi.TheSalesCodeTest(code);
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Regression03
     [CodedUITest]
     public class ProviderAssignment
     {
+        SenderAPI log = new SenderAPI();
         private const string import5010 =
             @"\\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\Regression03\Import5010RIY.bat";
 
@@ -53,6 +54,7 @@ namespace Regression03
         [TestMethod]
         public void CodedUITestMethod1()
         {
+            long TestID = log.RegisterTest();
             Batch.File(autoDeleteFile);
 
             var deleteBatch = connection._repository.ClaimMedicalBase_T.Where(x => x.BatchNumber_VC == clientBatch);
@@ -78,7 +80,7 @@ namespace Regression03
 
             if (resultRIY.Count() != 11)
             {
-                Log.AddLog("Error: Count of .RIY did not return as 11.");
+                log.Error("Error: Count of .RIY did not return as 11.", TestID);
             }
             this.UIMap.LogInClaimStakerPlus();
 

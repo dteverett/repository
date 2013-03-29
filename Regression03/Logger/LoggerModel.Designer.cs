@@ -17,6 +17,12 @@ using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
+#region EDM Relationship Metadata
+
+[assembly: EdmRelationshipAttribute("ClaimStakerDEVModel", "FK_TestErrorLog_TestErrorLog", "TestLogs_T", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Logger.TestLogs_T), "TestErrorLog", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Logger.TestErrorLog), true)]
+
+#endregion
+
 namespace Logger
 {
     #region Contexts
@@ -68,29 +74,53 @@ namespace Logger
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Test> Tests
+        public ObjectSet<TestErrorLog> TestErrorLogs
         {
             get
             {
-                if ((_Tests == null))
+                if ((_TestErrorLogs == null))
                 {
-                    _Tests = base.CreateObjectSet<Test>("Tests");
+                    _TestErrorLogs = base.CreateObjectSet<TestErrorLog>("TestErrorLogs");
                 }
-                return _Tests;
+                return _TestErrorLogs;
             }
         }
-        private ObjectSet<Test> _Tests;
+        private ObjectSet<TestErrorLog> _TestErrorLogs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<TestLogs_T> TestLogs_T
+        {
+            get
+            {
+                if ((_TestLogs_T == null))
+                {
+                    _TestLogs_T = base.CreateObjectSet<TestLogs_T>("TestLogs_T");
+                }
+                return _TestLogs_T;
+            }
+        }
+        private ObjectSet<TestLogs_T> _TestLogs_T;
 
         #endregion
 
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Tests EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the TestErrorLogs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToTests(Test test)
+        public void AddToTestErrorLogs(TestErrorLog testErrorLog)
         {
-            base.AddObject("Tests", test);
+            base.AddObject("TestErrorLogs", testErrorLog);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the TestLogs_T EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTestLogs_T(TestLogs_T testLogs_T)
+        {
+            base.AddObject("TestLogs_T", testLogs_T);
         }
 
         #endregion
@@ -104,22 +134,22 @@ namespace Logger
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="ClaimStakerDEVModel", Name="Test")]
+    [EdmEntityTypeAttribute(NamespaceName="ClaimStakerDEVModel", Name="TestErrorLog")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Test : EntityObject
+    public partial class TestErrorLog : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new Test object.
+        /// Create a new TestErrorLog object.
         /// </summary>
         /// <param name="logID">Initial value of the LogID property.</param>
-        public static Test CreateTest(global::System.Int32 logID)
+        public static TestErrorLog CreateTestErrorLog(global::System.Int32 logID)
         {
-            Test test = new Test();
-            test.LogID = logID;
-            return test;
+            TestErrorLog testErrorLog = new TestErrorLog();
+            testErrorLog.LogID = logID;
+            return testErrorLog;
         }
 
         #endregion
@@ -248,10 +278,255 @@ namespace Logger
         private global::System.String _LogLevel_VC;
         partial void OnLogLevel_VCChanging(global::System.String value);
         partial void OnLogLevel_VCChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> TestLog_ID
+        {
+            get
+            {
+                return _TestLog_ID;
+            }
+            set
+            {
+                OnTestLog_IDChanging(value);
+                ReportPropertyChanging("TestLog_ID");
+                _TestLog_ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TestLog_ID");
+                OnTestLog_IDChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _TestLog_ID;
+        partial void OnTestLog_IDChanging(Nullable<global::System.Int64> value);
+        partial void OnTestLog_IDChanged();
 
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ClaimStakerDEVModel", "FK_TestErrorLog_TestErrorLog", "TestLogs_T")]
+        public TestLogs_T TestLogs_T
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TestLogs_T>("ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog", "TestLogs_T").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TestLogs_T>("ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog", "TestLogs_T").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TestLogs_T> TestLogs_TReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TestLogs_T>("ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog", "TestLogs_T");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TestLogs_T>("ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog", "TestLogs_T", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ClaimStakerDEVModel", Name="TestLogs_T")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class TestLogs_T : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new TestLogs_T object.
+        /// </summary>
+        /// <param name="testLog_ID">Initial value of the TestLog_ID property.</param>
+        public static TestLogs_T CreateTestLogs_T(global::System.Int64 testLog_ID)
+        {
+            TestLogs_T testLogs_T = new TestLogs_T();
+            testLogs_T.TestLog_ID = testLog_ID;
+            return testLogs_T;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 TestLog_ID
+        {
+            get
+            {
+                return _TestLog_ID;
+            }
+            set
+            {
+                if (_TestLog_ID != value)
+                {
+                    OnTestLog_IDChanging(value);
+                    ReportPropertyChanging("TestLog_ID");
+                    _TestLog_ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("TestLog_ID");
+                    OnTestLog_IDChanged();
+                }
+            }
+        }
+        private global::System.Int64 _TestLog_ID;
+        partial void OnTestLog_IDChanging(global::System.Int64 value);
+        partial void OnTestLog_IDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String TestExecuted_VC
+        {
+            get
+            {
+                return _TestExecuted_VC;
+            }
+            set
+            {
+                OnTestExecuted_VCChanging(value);
+                ReportPropertyChanging("TestExecuted_VC");
+                _TestExecuted_VC = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("TestExecuted_VC");
+                OnTestExecuted_VCChanged();
+            }
+        }
+        private global::System.String _TestExecuted_VC;
+        partial void OnTestExecuted_VCChanging(global::System.String value);
+        partial void OnTestExecuted_VCChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> DateExecuted_DT
+        {
+            get
+            {
+                return _DateExecuted_DT;
+            }
+            set
+            {
+                OnDateExecuted_DTChanging(value);
+                ReportPropertyChanging("DateExecuted_DT");
+                _DateExecuted_DT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DateExecuted_DT");
+                OnDateExecuted_DTChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _DateExecuted_DT;
+        partial void OnDateExecuted_DTChanging(Nullable<global::System.DateTime> value);
+        partial void OnDateExecuted_DTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Notes_VC
+        {
+            get
+            {
+                return _Notes_VC;
+            }
+            set
+            {
+                OnNotes_VCChanging(value);
+                ReportPropertyChanging("Notes_VC");
+                _Notes_VC = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Notes_VC");
+                OnNotes_VCChanged();
+            }
+        }
+        private global::System.String _Notes_VC;
+        partial void OnNotes_VCChanging(global::System.String value);
+        partial void OnNotes_VCChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> PassFail
+        {
+            get
+            {
+                return _PassFail;
+            }
+            set
+            {
+                OnPassFailChanging(value);
+                ReportPropertyChanging("PassFail");
+                _PassFail = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PassFail");
+                OnPassFailChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _PassFail;
+        partial void OnPassFailChanging(Nullable<global::System.Boolean> value);
+        partial void OnPassFailChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ClaimStakerDEVModel", "FK_TestErrorLog_TestErrorLog", "TestErrorLog")]
+        public EntityCollection<TestErrorLog> TestErrorLogs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TestErrorLog>("ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog", "TestErrorLog");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TestErrorLog>("ClaimStakerDEVModel.FK_TestErrorLog_TestErrorLog", "TestErrorLog", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
 
     #endregion

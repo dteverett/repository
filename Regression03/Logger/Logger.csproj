@@ -49,15 +49,17 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="ILogging.cs" />
+    <Compile Include="ISender.cs" />
     <Compile Include="Level.cs" />
-    <Compile Include="Log.cs" />
+    <Compile Include="RecieverAPI.cs" />
     <Compile Include="LoggerModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoggerModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Logging.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SenderAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
