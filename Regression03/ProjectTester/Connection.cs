@@ -8,11 +8,11 @@ namespace ProjectTester
 {
     public class Connection
     {
-        public ClaimStakerDEVEntities _repository;
+        public ClaimStakerDEVDataSet _repository;
 
         public Connection()
         {
-            _repository = new ClaimStakerDEVEntities();
+            _repository = new ClaimStakerDEVDataSet();
         }
     }
 }

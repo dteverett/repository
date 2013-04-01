@@ -5,13 +5,23 @@ using System.Text;
 
 namespace Logger
 {
-    class Connection
+    class Connection : IDisposable
     {
-        public ClaimStakerDEVEntities _repository;
+        public DataClassDataContext _repository;
+        //public ClaimStakerEntities _repository;
 
         public Connection()
         {
-            _repository = new ClaimStakerDEVEntities();
+          //  _repository = new ClaimStakerEntities();
+            _repository = new DataClassDataContext();
+        }
+
+        public void Dispose()
+        {
+            if (_repository != null)
+            {
+                _repository.Dispose();
+            }
         }
     }
 }

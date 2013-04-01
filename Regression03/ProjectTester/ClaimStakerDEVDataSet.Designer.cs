@@ -24,7 +24,11 @@ namespace ProjectTester {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ClaimStakerDEVDataSet : global::System.Data.DataSet {
         
-        private TestsDataTable tableTests;
+        private TestLogs_TDataTable tableTestLogs_T;
+        
+        private TestErrorLogDataTable tableTestErrorLog;
+        
+        private global::System.Data.DataRelation relationFK_TestErrorLog_TestErrorLog;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +58,11 @@ namespace ProjectTester {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Tests"] != null)) {
-                    base.Tables.Add(new TestsDataTable(ds.Tables["Tests"]));
+                if ((ds.Tables["TestLogs_T"] != null)) {
+                    base.Tables.Add(new TestLogs_TDataTable(ds.Tables["TestLogs_T"]));
+                }
+                if ((ds.Tables["TestErrorLog"] != null)) {
+                    base.Tables.Add(new TestErrorLogDataTable(ds.Tables["TestErrorLog"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +86,19 @@ namespace ProjectTester {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TestsDataTable Tests {
+        public TestLogs_TDataTable TestLogs_T {
             get {
-                return this.tableTests;
+                return this.tableTestLogs_T;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TestErrorLogDataTable TestErrorLog {
+            get {
+                return this.tableTestErrorLog;
             }
         }
         
@@ -152,8 +169,11 @@ namespace ProjectTester {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Tests"] != null)) {
-                    base.Tables.Add(new TestsDataTable(ds.Tables["Tests"]));
+                if ((ds.Tables["TestLogs_T"] != null)) {
+                    base.Tables.Add(new TestLogs_TDataTable(ds.Tables["TestLogs_T"]));
+                }
+                if ((ds.Tables["TestErrorLog"] != null)) {
+                    base.Tables.Add(new TestErrorLogDataTable(ds.Tables["TestErrorLog"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,12 +208,19 @@ namespace ProjectTester {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTests = ((TestsDataTable)(base.Tables["Tests"]));
+            this.tableTestLogs_T = ((TestLogs_TDataTable)(base.Tables["TestLogs_T"]));
             if ((initTable == true)) {
-                if ((this.tableTests != null)) {
-                    this.tableTests.InitVars();
+                if ((this.tableTestLogs_T != null)) {
+                    this.tableTestLogs_T.InitVars();
                 }
             }
+            this.tableTestErrorLog = ((TestErrorLogDataTable)(base.Tables["TestErrorLog"]));
+            if ((initTable == true)) {
+                if ((this.tableTestErrorLog != null)) {
+                    this.tableTestErrorLog.InitVars();
+                }
+            }
+            this.relationFK_TestErrorLog_TestErrorLog = this.Relations["FK_TestErrorLog_TestErrorLog"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -204,13 +231,25 @@ namespace ProjectTester {
             this.Namespace = "http://tempuri.org/ClaimStakerDEVDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTests = new TestsDataTable();
-            base.Tables.Add(this.tableTests);
+            this.tableTestLogs_T = new TestLogs_TDataTable();
+            base.Tables.Add(this.tableTestLogs_T);
+            this.tableTestErrorLog = new TestErrorLogDataTable();
+            base.Tables.Add(this.tableTestErrorLog);
+            this.relationFK_TestErrorLog_TestErrorLog = new global::System.Data.DataRelation("FK_TestErrorLog_TestErrorLog", new global::System.Data.DataColumn[] {
+                        this.tableTestLogs_T.TestLog_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTestErrorLog.TestLog_IDColumn}, false);
+            this.Relations.Add(this.relationFK_TestErrorLog_TestErrorLog);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTests() {
+        private bool ShouldSerializeTestLogs_T() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTestErrorLog() {
             return false;
         }
         
@@ -270,27 +309,32 @@ namespace ProjectTester {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TestsRowChangeEventHandler(object sender, TestsRowChangeEvent e);
+        public delegate void TestLogs_TRowChangeEventHandler(object sender, TestLogs_TRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TestErrorLogRowChangeEventHandler(object sender, TestErrorLogRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TestsDataTable : global::System.Data.TypedTableBase<TestsRow> {
+        public partial class TestLogs_TDataTable : global::System.Data.TypedTableBase<TestLogs_TRow> {
             
-            private global::System.Data.DataColumn columnLogID;
+            private global::System.Data.DataColumn columnTestLog_ID;
             
-            private global::System.Data.DataColumn columnDateCreated_DT;
+            private global::System.Data.DataColumn columnTestExecuted_VC;
             
-            private global::System.Data.DataColumn columnMessage_VC;
+            private global::System.Data.DataColumn columnDateExecuted_DT;
             
-            private global::System.Data.DataColumn columnExceptionThrower_VC;
+            private global::System.Data.DataColumn columnNotes_VC;
+            
+            private global::System.Data.DataColumn columnPassFail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsDataTable() {
-                this.TableName = "Tests";
+            public TestLogs_TDataTable() {
+                this.TableName = "TestLogs_T";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +342,7 @@ namespace ProjectTester {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TestsDataTable(global::System.Data.DataTable table) {
+            internal TestLogs_TDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +359,329 @@ namespace ProjectTester {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TestsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TestLogs_TDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TestLog_IDColumn {
+                get {
+                    return this.columnTestLog_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TestExecuted_VCColumn {
+                get {
+                    return this.columnTestExecuted_VC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateExecuted_DTColumn {
+                get {
+                    return this.columnDateExecuted_DT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Notes_VCColumn {
+                get {
+                    return this.columnNotes_VC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PassFailColumn {
+                get {
+                    return this.columnPassFail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestLogs_TRow this[int index] {
+                get {
+                    return ((TestLogs_TRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TestLogs_TRowChangeEventHandler TestLogs_TRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TestLogs_TRowChangeEventHandler TestLogs_TRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TestLogs_TRowChangeEventHandler TestLogs_TRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TestLogs_TRowChangeEventHandler TestLogs_TRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTestLogs_TRow(TestLogs_TRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestLogs_TRow AddTestLogs_TRow(string TestExecuted_VC, System.DateTime DateExecuted_DT, string Notes_VC, bool PassFail) {
+                TestLogs_TRow rowTestLogs_TRow = ((TestLogs_TRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        TestExecuted_VC,
+                        DateExecuted_DT,
+                        Notes_VC,
+                        PassFail};
+                rowTestLogs_TRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTestLogs_TRow);
+                return rowTestLogs_TRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestLogs_TRow FindByTestLog_ID(long TestLog_ID) {
+                return ((TestLogs_TRow)(this.Rows.Find(new object[] {
+                            TestLog_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TestLogs_TDataTable cln = ((TestLogs_TDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TestLogs_TDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTestLog_ID = base.Columns["TestLog_ID"];
+                this.columnTestExecuted_VC = base.Columns["TestExecuted_VC"];
+                this.columnDateExecuted_DT = base.Columns["DateExecuted_DT"];
+                this.columnNotes_VC = base.Columns["Notes_VC"];
+                this.columnPassFail = base.Columns["PassFail"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTestLog_ID = new global::System.Data.DataColumn("TestLog_ID", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestLog_ID);
+                this.columnTestExecuted_VC = new global::System.Data.DataColumn("TestExecuted_VC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestExecuted_VC);
+                this.columnDateExecuted_DT = new global::System.Data.DataColumn("DateExecuted_DT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateExecuted_DT);
+                this.columnNotes_VC = new global::System.Data.DataColumn("Notes_VC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNotes_VC);
+                this.columnPassFail = new global::System.Data.DataColumn("PassFail", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPassFail);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTestLog_ID}, true));
+                this.columnTestLog_ID.AutoIncrement = true;
+                this.columnTestLog_ID.AutoIncrementSeed = -1;
+                this.columnTestLog_ID.AutoIncrementStep = -1;
+                this.columnTestLog_ID.AllowDBNull = false;
+                this.columnTestLog_ID.ReadOnly = true;
+                this.columnTestLog_ID.Unique = true;
+                this.columnTestExecuted_VC.MaxLength = 2147483647;
+                this.columnNotes_VC.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestLogs_TRow NewTestLogs_TRow() {
+                return ((TestLogs_TRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TestLogs_TRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TestLogs_TRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TestLogs_TRowChanged != null)) {
+                    this.TestLogs_TRowChanged(this, new TestLogs_TRowChangeEvent(((TestLogs_TRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TestLogs_TRowChanging != null)) {
+                    this.TestLogs_TRowChanging(this, new TestLogs_TRowChangeEvent(((TestLogs_TRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TestLogs_TRowDeleted != null)) {
+                    this.TestLogs_TRowDeleted(this, new TestLogs_TRowChangeEvent(((TestLogs_TRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TestLogs_TRowDeleting != null)) {
+                    this.TestLogs_TRowDeleting(this, new TestLogs_TRowChangeEvent(((TestLogs_TRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTestLogs_TRow(TestLogs_TRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ClaimStakerDEVDataSet ds = new ClaimStakerDEVDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TestLogs_TDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TestErrorLogDataTable : global::System.Data.TypedTableBase<TestErrorLogRow> {
+            
+            private global::System.Data.DataColumn columnLogID;
+            
+            private global::System.Data.DataColumn columnDateCreated_DT;
+            
+            private global::System.Data.DataColumn columnMessage_VC;
+            
+            private global::System.Data.DataColumn columnExceptionThrower_VC;
+            
+            private global::System.Data.DataColumn columnLogLevel_VC;
+            
+            private global::System.Data.DataColumn columnTestLog_ID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestErrorLogDataTable() {
+                this.TableName = "TestErrorLog";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TestErrorLogDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TestErrorLogDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -354,6 +720,22 @@ namespace ProjectTester {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LogLevel_VCColumn {
+                get {
+                    return this.columnLogLevel_VC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TestLog_IDColumn {
+                get {
+                    return this.columnTestLog_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -363,55 +745,60 @@ namespace ProjectTester {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsRow this[int index] {
+            public TestErrorLogRow this[int index] {
                 get {
-                    return ((TestsRow)(this.Rows[index]));
+                    return ((TestErrorLogRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestsRowChangeEventHandler TestsRowChanging;
+            public event TestErrorLogRowChangeEventHandler TestErrorLogRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestsRowChangeEventHandler TestsRowChanged;
+            public event TestErrorLogRowChangeEventHandler TestErrorLogRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestsRowChangeEventHandler TestsRowDeleting;
+            public event TestErrorLogRowChangeEventHandler TestErrorLogRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TestsRowChangeEventHandler TestsRowDeleted;
+            public event TestErrorLogRowChangeEventHandler TestErrorLogRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTestsRow(TestsRow row) {
+            public void AddTestErrorLogRow(TestErrorLogRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsRow AddTestsRow(System.DateTime DateCreated_DT, string Message_VC, string ExceptionThrower_VC) {
-                TestsRow rowTestsRow = ((TestsRow)(this.NewRow()));
+            public TestErrorLogRow AddTestErrorLogRow(System.DateTime DateCreated_DT, string Message_VC, string ExceptionThrower_VC, string LogLevel_VC, TestLogs_TRow parentTestLogs_TRowByFK_TestErrorLog_TestErrorLog) {
+                TestErrorLogRow rowTestErrorLogRow = ((TestErrorLogRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         DateCreated_DT,
                         Message_VC,
-                        ExceptionThrower_VC};
-                rowTestsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTestsRow);
-                return rowTestsRow;
+                        ExceptionThrower_VC,
+                        LogLevel_VC,
+                        null};
+                if ((parentTestLogs_TRowByFK_TestErrorLog_TestErrorLog != null)) {
+                    columnValuesArray[5] = parentTestLogs_TRowByFK_TestErrorLog_TestErrorLog[0];
+                }
+                rowTestErrorLogRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTestErrorLogRow);
+                return rowTestErrorLogRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsRow FindByLogID(int LogID) {
-                return ((TestsRow)(this.Rows.Find(new object[] {
+            public TestErrorLogRow FindByLogID(int LogID) {
+                return ((TestErrorLogRow)(this.Rows.Find(new object[] {
                             LogID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TestsDataTable cln = ((TestsDataTable)(base.Clone()));
+                TestErrorLogDataTable cln = ((TestErrorLogDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,7 +806,7 @@ namespace ProjectTester {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TestsDataTable();
+                return new TestErrorLogDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -429,6 +816,8 @@ namespace ProjectTester {
                 this.columnDateCreated_DT = base.Columns["DateCreated_DT"];
                 this.columnMessage_VC = base.Columns["Message_VC"];
                 this.columnExceptionThrower_VC = base.Columns["ExceptionThrower_VC"];
+                this.columnLogLevel_VC = base.Columns["LogLevel_VC"];
+                this.columnTestLog_ID = base.Columns["TestLog_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -442,6 +831,10 @@ namespace ProjectTester {
                 base.Columns.Add(this.columnMessage_VC);
                 this.columnExceptionThrower_VC = new global::System.Data.DataColumn("ExceptionThrower_VC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExceptionThrower_VC);
+                this.columnLogLevel_VC = new global::System.Data.DataColumn("LogLevel_VC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLogLevel_VC);
+                this.columnTestLog_ID = new global::System.Data.DataColumn("TestLog_ID", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestLog_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnLogID}, true));
                 this.columnLogID.AutoIncrement = true;
@@ -452,32 +845,33 @@ namespace ProjectTester {
                 this.columnLogID.Unique = true;
                 this.columnMessage_VC.MaxLength = 2147483647;
                 this.columnExceptionThrower_VC.MaxLength = 2147483647;
+                this.columnLogLevel_VC.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsRow NewTestsRow() {
-                return ((TestsRow)(this.NewRow()));
+            public TestErrorLogRow NewTestErrorLogRow() {
+                return ((TestErrorLogRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TestsRow(builder);
+                return new TestErrorLogRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TestsRow);
+                return typeof(TestErrorLogRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TestsRowChanged != null)) {
-                    this.TestsRowChanged(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
+                if ((this.TestErrorLogRowChanged != null)) {
+                    this.TestErrorLogRowChanged(this, new TestErrorLogRowChangeEvent(((TestErrorLogRow)(e.Row)), e.Action));
                 }
             }
             
@@ -485,8 +879,8 @@ namespace ProjectTester {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TestsRowChanging != null)) {
-                    this.TestsRowChanging(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
+                if ((this.TestErrorLogRowChanging != null)) {
+                    this.TestErrorLogRowChanging(this, new TestErrorLogRowChangeEvent(((TestErrorLogRow)(e.Row)), e.Action));
                 }
             }
             
@@ -494,8 +888,8 @@ namespace ProjectTester {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TestsRowDeleted != null)) {
-                    this.TestsRowDeleted(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
+                if ((this.TestErrorLogRowDeleted != null)) {
+                    this.TestErrorLogRowDeleted(this, new TestErrorLogRowChangeEvent(((TestErrorLogRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,14 +897,14 @@ namespace ProjectTester {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TestsRowDeleting != null)) {
-                    this.TestsRowDeleting(this, new TestsRowChangeEvent(((TestsRow)(e.Row)), e.Action));
+                if ((this.TestErrorLogRowDeleting != null)) {
+                    this.TestErrorLogRowDeleting(this, new TestErrorLogRowChangeEvent(((TestErrorLogRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTestsRow(TestsRow row) {
+            public void RemoveTestErrorLogRow(TestErrorLogRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -537,7 +931,7 @@ namespace ProjectTester {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TestsDataTable";
+                attribute2.FixedValue = "TestErrorLogDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -581,25 +975,174 @@ namespace ProjectTester {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TestsRow : global::System.Data.DataRow {
+        public partial class TestLogs_TRow : global::System.Data.DataRow {
             
-            private TestsDataTable tableTests;
+            private TestLogs_TDataTable tableTestLogs_T;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TestsRow(global::System.Data.DataRowBuilder rb) : 
+            internal TestLogs_TRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTests = ((TestsDataTable)(this.Table));
+                this.tableTestLogs_T = ((TestLogs_TDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long TestLog_ID {
+                get {
+                    return ((long)(this[this.tableTestLogs_T.TestLog_IDColumn]));
+                }
+                set {
+                    this[this.tableTestLogs_T.TestLog_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TestExecuted_VC {
+                get {
+                    try {
+                        return ((string)(this[this.tableTestLogs_T.TestExecuted_VCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TestExecuted_VC\' in table \'TestLogs_T\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTestLogs_T.TestExecuted_VCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DateExecuted_DT {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableTestLogs_T.DateExecuted_DTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateExecuted_DT\' in table \'TestLogs_T\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTestLogs_T.DateExecuted_DTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Notes_VC {
+                get {
+                    try {
+                        return ((string)(this[this.tableTestLogs_T.Notes_VCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Notes_VC\' in table \'TestLogs_T\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTestLogs_T.Notes_VCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool PassFail {
+                get {
+                    try {
+                        return ((bool)(this[this.tableTestLogs_T.PassFailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PassFail\' in table \'TestLogs_T\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTestLogs_T.PassFailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTestExecuted_VCNull() {
+                return this.IsNull(this.tableTestLogs_T.TestExecuted_VCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTestExecuted_VCNull() {
+                this[this.tableTestLogs_T.TestExecuted_VCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateExecuted_DTNull() {
+                return this.IsNull(this.tableTestLogs_T.DateExecuted_DTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateExecuted_DTNull() {
+                this[this.tableTestLogs_T.DateExecuted_DTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNotes_VCNull() {
+                return this.IsNull(this.tableTestLogs_T.Notes_VCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNotes_VCNull() {
+                this[this.tableTestLogs_T.Notes_VCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPassFailNull() {
+                return this.IsNull(this.tableTestLogs_T.PassFailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPassFailNull() {
+                this[this.tableTestLogs_T.PassFailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestErrorLogRow[] GetTestErrorLogRows() {
+                if ((this.Table.ChildRelations["FK_TestErrorLog_TestErrorLog"] == null)) {
+                    return new TestErrorLogRow[0];
+                }
+                else {
+                    return ((TestErrorLogRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TestErrorLog_TestErrorLog"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TestErrorLogRow : global::System.Data.DataRow {
+            
+            private TestErrorLogDataTable tableTestErrorLog;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TestErrorLogRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTestErrorLog = ((TestErrorLogDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int LogID {
                 get {
-                    return ((int)(this[this.tableTests.LogIDColumn]));
+                    return ((int)(this[this.tableTestErrorLog.LogIDColumn]));
                 }
                 set {
-                    this[this.tableTests.LogIDColumn] = value;
+                    this[this.tableTestErrorLog.LogIDColumn] = value;
                 }
             }
             
@@ -608,14 +1151,14 @@ namespace ProjectTester {
             public System.DateTime DateCreated_DT {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTests.DateCreated_DTColumn]));
+                        return ((global::System.DateTime)(this[this.tableTestErrorLog.DateCreated_DTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateCreated_DT\' in table \'Tests\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateCreated_DT\' in table \'TestErrorLog\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTests.DateCreated_DTColumn] = value;
+                    this[this.tableTestErrorLog.DateCreated_DTColumn] = value;
                 }
             }
             
@@ -624,14 +1167,14 @@ namespace ProjectTester {
             public string Message_VC {
                 get {
                     try {
-                        return ((string)(this[this.tableTests.Message_VCColumn]));
+                        return ((string)(this[this.tableTestErrorLog.Message_VCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Message_VC\' in table \'Tests\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Message_VC\' in table \'TestErrorLog\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTests.Message_VCColumn] = value;
+                    this[this.tableTestErrorLog.Message_VCColumn] = value;
                 }
             }
             
@@ -640,51 +1183,118 @@ namespace ProjectTester {
             public string ExceptionThrower_VC {
                 get {
                     try {
-                        return ((string)(this[this.tableTests.ExceptionThrower_VCColumn]));
+                        return ((string)(this[this.tableTestErrorLog.ExceptionThrower_VCColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ExceptionThrower_VC\' in table \'Tests\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExceptionThrower_VC\' in table \'TestErrorLog\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTests.ExceptionThrower_VCColumn] = value;
+                    this[this.tableTestErrorLog.ExceptionThrower_VCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LogLevel_VC {
+                get {
+                    try {
+                        return ((string)(this[this.tableTestErrorLog.LogLevel_VCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LogLevel_VC\' in table \'TestErrorLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTestErrorLog.LogLevel_VCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long TestLog_ID {
+                get {
+                    try {
+                        return ((long)(this[this.tableTestErrorLog.TestLog_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TestLog_ID\' in table \'TestErrorLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTestErrorLog.TestLog_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestLogs_TRow TestLogs_TRow {
+                get {
+                    return ((TestLogs_TRow)(this.GetParentRow(this.Table.ParentRelations["FK_TestErrorLog_TestErrorLog"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TestErrorLog_TestErrorLog"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDateCreated_DTNull() {
-                return this.IsNull(this.tableTests.DateCreated_DTColumn);
+                return this.IsNull(this.tableTestErrorLog.DateCreated_DTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDateCreated_DTNull() {
-                this[this.tableTests.DateCreated_DTColumn] = global::System.Convert.DBNull;
+                this[this.tableTestErrorLog.DateCreated_DTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMessage_VCNull() {
-                return this.IsNull(this.tableTests.Message_VCColumn);
+                return this.IsNull(this.tableTestErrorLog.Message_VCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMessage_VCNull() {
-                this[this.tableTests.Message_VCColumn] = global::System.Convert.DBNull;
+                this[this.tableTestErrorLog.Message_VCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsExceptionThrower_VCNull() {
-                return this.IsNull(this.tableTests.ExceptionThrower_VCColumn);
+                return this.IsNull(this.tableTestErrorLog.ExceptionThrower_VCColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetExceptionThrower_VCNull() {
-                this[this.tableTests.ExceptionThrower_VCColumn] = global::System.Convert.DBNull;
+                this[this.tableTestErrorLog.ExceptionThrower_VCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLogLevel_VCNull() {
+                return this.IsNull(this.tableTestErrorLog.LogLevel_VCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLogLevel_VCNull() {
+                this[this.tableTestErrorLog.LogLevel_VCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTestLog_IDNull() {
+                return this.IsNull(this.tableTestErrorLog.TestLog_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTestLog_IDNull() {
+                this[this.tableTestErrorLog.TestLog_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +1302,56 @@ namespace ProjectTester {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TestsRowChangeEvent : global::System.EventArgs {
+        public class TestLogs_TRowChangeEvent : global::System.EventArgs {
             
-            private TestsRow eventRow;
+            private TestLogs_TRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsRowChangeEvent(TestsRow row, global::System.Data.DataRowAction action) {
+            public TestLogs_TRowChangeEvent(TestLogs_TRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestsRow Row {
+            public TestLogs_TRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TestErrorLogRowChangeEvent : global::System.EventArgs {
+            
+            private TestErrorLogRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestErrorLogRowChangeEvent(TestErrorLogRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TestErrorLogRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -735,7 +1379,7 @@ namespace ProjectTester.ClaimStakerDEVDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TestsTableAdapter : global::System.ComponentModel.Component {
+    public partial class TestLogs_TTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -749,7 +1393,7 @@ namespace ProjectTester.ClaimStakerDEVDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public TestsTableAdapter() {
+        public TestLogs_TTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -846,50 +1490,53 @@ namespace ProjectTester.ClaimStakerDEVDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Tests";
-            tableMapping.ColumnMappings.Add("LogID", "LogID");
-            tableMapping.ColumnMappings.Add("DateCreated_DT", "DateCreated_DT");
-            tableMapping.ColumnMappings.Add("Message_VC", "Message_VC");
-            tableMapping.ColumnMappings.Add("ExceptionThrower_VC", "ExceptionThrower_VC");
+            tableMapping.DataSetTable = "TestLogs_T";
+            tableMapping.ColumnMappings.Add("TestLog_ID", "TestLog_ID");
+            tableMapping.ColumnMappings.Add("TestExecuted_VC", "TestExecuted_VC");
+            tableMapping.ColumnMappings.Add("DateExecuted_DT", "DateExecuted_DT");
+            tableMapping.ColumnMappings.Add("Notes_VC", "Notes_VC");
+            tableMapping.ColumnMappings.Add("PassFail", "PassFail");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Tests] WHERE (([LogID] = @Original_LogID) AND ((@IsNull_DateCr" +
-                "eated_DT = 1 AND [DateCreated_DT] IS NULL) OR ([DateCreated_DT] = @Original_Date" +
-                "Created_DT)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TestLogs_T] WHERE (([TestLog_ID] = @Original_TestLog_ID) AND ((@IsNull_DateExecuted_DT = 1 AND [DateExecuted_DT] IS NULL) OR ([DateExecuted_DT] = @Original_DateExecuted_DT)) AND ((@IsNull_PassFail = 1 AND [PassFail] IS NULL) OR ([PassFail] = @Original_PassFail)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LogID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateCreated_DT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestLog_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateExecuted_DT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateExecuted_DT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateExecuted_DT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateExecuted_DT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PassFail", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassFail", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PassFail", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassFail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Tests] ([DateCreated_DT], [Message_VC], [ExceptionThrower_VC])" +
-                " VALUES (@DateCreated_DT, @Message_VC, @ExceptionThrower_VC);\r\nSELECT LogID, Dat" +
-                "eCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (LogID = SCOPE_IDE" +
-                "NTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TestLogs_T] ([TestExecuted_VC], [DateExecuted_DT], [Notes_VC], [PassFail]) VALUES (@TestExecuted_VC, @DateExecuted_DT, @Notes_VC, @PassFail);
+SELECT TestLog_ID, TestExecuted_VC, DateExecuted_DT, Notes_VC, PassFail FROM TestLogs_T WHERE (TestLog_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExceptionThrower_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExceptionThrower_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestExecuted_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestExecuted_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateExecuted_DT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateExecuted_DT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassFail", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassFail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tests] SET [DateCreated_DT] = @DateCreated_DT, [Message_VC] = @Message_VC, [ExceptionThrower_VC] = @ExceptionThrower_VC WHERE (([LogID] = @Original_LogID) AND ((@IsNull_DateCreated_DT = 1 AND [DateCreated_DT] IS NULL) OR ([DateCreated_DT] = @Original_DateCreated_DT)));
-SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (LogID = @LogID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TestLogs_T] SET [TestExecuted_VC] = @TestExecuted_VC, [DateExecuted_DT] = @DateExecuted_DT, [Notes_VC] = @Notes_VC, [PassFail] = @PassFail WHERE (([TestLog_ID] = @Original_TestLog_ID) AND ((@IsNull_DateExecuted_DT = 1 AND [DateExecuted_DT] IS NULL) OR ([DateExecuted_DT] = @Original_DateExecuted_DT)) AND ((@IsNull_PassFail = 1 AND [PassFail] IS NULL) OR ([PassFail] = @Original_PassFail)));
+SELECT TestLog_ID, TestExecuted_VC, DateExecuted_DT, Notes_VC, PassFail FROM TestLogs_T WHERE (TestLog_ID = @TestLog_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExceptionThrower_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExceptionThrower_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LogID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateCreated_DT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LogID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LogID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestExecuted_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestExecuted_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateExecuted_DT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateExecuted_DT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PassFail", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassFail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestLog_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateExecuted_DT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateExecuted_DT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateExecuted_DT", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateExecuted_DT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PassFail", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassFail", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PassFail", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PassFail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestLog_ID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ProjectTester.Properties.Settings.Default.ClaimStakerDEVConnectionString;
+            this._connection.ConnectionString = global::ProjectTester.Properties.Settings.Default.ClaimStakerDEVConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -898,7 +1545,8 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM dbo.Tests";
+            this._commandCollection[0].CommandText = "SELECT TestLog_ID, TestExecuted_VC, DateExecuted_DT, Notes_VC, PassFail FROM dbo." +
+                "TestLogs_T";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -906,7 +1554,7 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ClaimStakerDEVDataSet.TestsDataTable dataTable) {
+        public virtual int Fill(ClaimStakerDEVDataSet.TestLogs_TDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -919,9 +1567,9 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ClaimStakerDEVDataSet.TestsDataTable GetData() {
+        public virtual ClaimStakerDEVDataSet.TestLogs_TDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ClaimStakerDEVDataSet.TestsDataTable dataTable = new ClaimStakerDEVDataSet.TestsDataTable();
+            ClaimStakerDEVDataSet.TestLogs_TDataTable dataTable = new ClaimStakerDEVDataSet.TestLogs_TDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -929,7 +1577,7 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ClaimStakerDEVDataSet.TestsDataTable dataTable) {
+        public virtual int Update(ClaimStakerDEVDataSet.TestLogs_TDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -937,7 +1585,7 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ClaimStakerDEVDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Tests");
+            return this.Adapter.Update(dataSet, "TestLogs_T");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -959,15 +1607,23 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_LogID, global::System.Nullable<global::System.DateTime> Original_DateCreated_DT) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_LogID));
-            if ((Original_DateCreated_DT.HasValue == true)) {
+        public virtual int Delete(long Original_TestLog_ID, global::System.Nullable<global::System.DateTime> Original_DateExecuted_DT, global::System.Nullable<bool> Original_PassFail) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_TestLog_ID));
+            if ((Original_DateExecuted_DT.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateCreated_DT.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateExecuted_DT.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PassFail.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_PassFail.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -989,24 +1645,30 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> DateCreated_DT, string Message_VC, string ExceptionThrower_VC) {
-            if ((DateCreated_DT.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(DateCreated_DT.Value));
-            }
-            else {
+        public virtual int Insert(string TestExecuted_VC, global::System.Nullable<global::System.DateTime> DateExecuted_DT, string Notes_VC, global::System.Nullable<bool> PassFail) {
+            if ((TestExecuted_VC == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Message_VC == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(TestExecuted_VC));
+            }
+            if ((DateExecuted_DT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(DateExecuted_DT.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Message_VC));
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ExceptionThrower_VC == null)) {
+            if ((Notes_VC == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ExceptionThrower_VC));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Notes_VC));
+            }
+            if ((PassFail.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(PassFail.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1028,35 +1690,49 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> DateCreated_DT, string Message_VC, string ExceptionThrower_VC, int Original_LogID, global::System.Nullable<global::System.DateTime> Original_DateCreated_DT, int LogID) {
-            if ((DateCreated_DT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(DateCreated_DT.Value));
-            }
-            else {
+        public virtual int Update(string TestExecuted_VC, global::System.Nullable<global::System.DateTime> DateExecuted_DT, string Notes_VC, global::System.Nullable<bool> PassFail, long Original_TestLog_ID, global::System.Nullable<global::System.DateTime> Original_DateExecuted_DT, global::System.Nullable<bool> Original_PassFail, long TestLog_ID) {
+            if ((TestExecuted_VC == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Message_VC == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(TestExecuted_VC));
+            }
+            if ((DateExecuted_DT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(DateExecuted_DT.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Message_VC));
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((ExceptionThrower_VC == null)) {
+            if ((Notes_VC == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ExceptionThrower_VC));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Notes_VC));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_LogID));
-            if ((Original_DateCreated_DT.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_DateCreated_DT.Value));
+            if ((PassFail.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(PassFail.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(LogID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(Original_TestLog_ID));
+            if ((Original_DateExecuted_DT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_DateExecuted_DT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PassFail.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(Original_PassFail.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((long)(TestLog_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1077,8 +1753,431 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> DateCreated_DT, string Message_VC, string ExceptionThrower_VC, int Original_LogID, global::System.Nullable<global::System.DateTime> Original_DateCreated_DT) {
-            return this.Update(DateCreated_DT, Message_VC, ExceptionThrower_VC, Original_LogID, Original_DateCreated_DT, Original_LogID);
+        public virtual int Update(string TestExecuted_VC, global::System.Nullable<global::System.DateTime> DateExecuted_DT, string Notes_VC, global::System.Nullable<bool> PassFail, long Original_TestLog_ID, global::System.Nullable<global::System.DateTime> Original_DateExecuted_DT, global::System.Nullable<bool> Original_PassFail) {
+            return this.Update(TestExecuted_VC, DateExecuted_DT, Notes_VC, PassFail, Original_TestLog_ID, Original_DateExecuted_DT, Original_PassFail, Original_TestLog_ID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class TestErrorLogTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public TestErrorLogTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "TestErrorLog";
+            tableMapping.ColumnMappings.Add("LogID", "LogID");
+            tableMapping.ColumnMappings.Add("DateCreated_DT", "DateCreated_DT");
+            tableMapping.ColumnMappings.Add("Message_VC", "Message_VC");
+            tableMapping.ColumnMappings.Add("ExceptionThrower_VC", "ExceptionThrower_VC");
+            tableMapping.ColumnMappings.Add("LogLevel_VC", "LogLevel_VC");
+            tableMapping.ColumnMappings.Add("TestLog_ID", "TestLog_ID");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TestErrorLog] WHERE (([LogID] = @Original_LogID) AND ((@IsNull_DateCreated_DT = 1 AND [DateCreated_DT] IS NULL) OR ([DateCreated_DT] = @Original_DateCreated_DT)) AND ((@IsNull_LogLevel_VC = 1 AND [LogLevel_VC] IS NULL) OR ([LogLevel_VC] = @Original_LogLevel_VC)) AND ((@IsNull_TestLog_ID = 1 AND [TestLog_ID] IS NULL) OR ([TestLog_ID] = @Original_TestLog_ID)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LogID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateCreated_DT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LogLevel_VC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogLevel_VC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LogLevel_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogLevel_VC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TestLog_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestLog_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TestErrorLog] ([DateCreated_DT], [Message_VC], [ExceptionThrower_VC], [LogLevel_VC], [TestLog_ID]) VALUES (@DateCreated_DT, @Message_VC, @ExceptionThrower_VC, @LogLevel_VC, @TestLog_ID);
+SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC, LogLevel_VC, TestLog_ID FROM TestErrorLog WHERE (LogID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExceptionThrower_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExceptionThrower_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LogLevel_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogLevel_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestLog_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TestErrorLog] SET [DateCreated_DT] = @DateCreated_DT, [Message_VC] = @Message_VC, [ExceptionThrower_VC] = @ExceptionThrower_VC, [LogLevel_VC] = @LogLevel_VC, [TestLog_ID] = @TestLog_ID WHERE (([LogID] = @Original_LogID) AND ((@IsNull_DateCreated_DT = 1 AND [DateCreated_DT] IS NULL) OR ([DateCreated_DT] = @Original_DateCreated_DT)) AND ((@IsNull_LogLevel_VC = 1 AND [LogLevel_VC] IS NULL) OR ([LogLevel_VC] = @Original_LogLevel_VC)) AND ((@IsNull_TestLog_ID = 1 AND [TestLog_ID] IS NULL) OR ([TestLog_ID] = @Original_TestLog_ID)));
+SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC, LogLevel_VC, TestLog_ID FROM TestErrorLog WHERE (LogID = @LogID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExceptionThrower_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExceptionThrower_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LogLevel_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogLevel_VC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestLog_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LogID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateCreated_DT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateCreated_DT", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateCreated_DT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LogLevel_VC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogLevel_VC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LogLevel_VC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogLevel_VC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TestLog_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestLog_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestLog_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LogID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LogID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ProjectTester.Properties.Settings.Default.ClaimStakerDEVConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC, LogLevel_VC, TestL" +
+                "og_ID FROM dbo.TestErrorLog";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ClaimStakerDEVDataSet.TestErrorLogDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ClaimStakerDEVDataSet.TestErrorLogDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ClaimStakerDEVDataSet.TestErrorLogDataTable dataTable = new ClaimStakerDEVDataSet.TestErrorLogDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ClaimStakerDEVDataSet.TestErrorLogDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ClaimStakerDEVDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "TestErrorLog");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_LogID, global::System.Nullable<global::System.DateTime> Original_DateCreated_DT, string Original_LogLevel_VC, global::System.Nullable<long> Original_TestLog_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_LogID));
+            if ((Original_DateCreated_DT.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateCreated_DT.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_LogLevel_VC == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_LogLevel_VC));
+            }
+            if ((Original_TestLog_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((long)(Original_TestLog_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> DateCreated_DT, string Message_VC, string ExceptionThrower_VC, string LogLevel_VC, global::System.Nullable<long> TestLog_ID) {
+            if ((DateCreated_DT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(DateCreated_DT.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Message_VC == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Message_VC));
+            }
+            if ((ExceptionThrower_VC == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ExceptionThrower_VC));
+            }
+            if ((LogLevel_VC == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(LogLevel_VC));
+            }
+            if ((TestLog_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((long)(TestLog_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<global::System.DateTime> DateCreated_DT, string Message_VC, string ExceptionThrower_VC, string LogLevel_VC, global::System.Nullable<long> TestLog_ID, int Original_LogID, global::System.Nullable<global::System.DateTime> Original_DateCreated_DT, string Original_LogLevel_VC, global::System.Nullable<long> Original_TestLog_ID, int LogID) {
+            if ((DateCreated_DT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(DateCreated_DT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Message_VC == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Message_VC));
+            }
+            if ((ExceptionThrower_VC == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ExceptionThrower_VC));
+            }
+            if ((LogLevel_VC == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(LogLevel_VC));
+            }
+            if ((TestLog_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(TestLog_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_LogID));
+            if ((Original_DateCreated_DT.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DateCreated_DT.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_LogLevel_VC == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_LogLevel_VC));
+            }
+            if ((Original_TestLog_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_TestLog_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(LogID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<global::System.DateTime> DateCreated_DT, string Message_VC, string ExceptionThrower_VC, string LogLevel_VC, global::System.Nullable<long> TestLog_ID, int Original_LogID, global::System.Nullable<global::System.DateTime> Original_DateCreated_DT, string Original_LogLevel_VC, global::System.Nullable<long> Original_TestLog_ID) {
+            return this.Update(DateCreated_DT, Message_VC, ExceptionThrower_VC, LogLevel_VC, TestLog_ID, Original_LogID, Original_DateCreated_DT, Original_LogLevel_VC, Original_TestLog_ID, Original_LogID);
         }
     }
     
@@ -1094,7 +2193,9 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         
         private UpdateOrderOption _updateOrder;
         
-        private TestsTableAdapter _testsTableAdapter;
+        private TestLogs_TTableAdapter _testLogs_TTableAdapter;
+        
+        private TestErrorLogTableAdapter _testErrorLogTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1116,12 +2217,26 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TestsTableAdapter TestsTableAdapter {
+        public TestLogs_TTableAdapter TestLogs_TTableAdapter {
             get {
-                return this._testsTableAdapter;
+                return this._testLogs_TTableAdapter;
             }
             set {
-                this._testsTableAdapter = value;
+                this._testLogs_TTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public TestErrorLogTableAdapter TestErrorLogTableAdapter {
+            get {
+                return this._testErrorLogTableAdapter;
+            }
+            set {
+                this._testErrorLogTableAdapter = value;
             }
         }
         
@@ -1144,9 +2259,13 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._testsTableAdapter != null) 
-                            && (this._testsTableAdapter.Connection != null))) {
-                    return this._testsTableAdapter.Connection;
+                if (((this._testLogs_TTableAdapter != null) 
+                            && (this._testLogs_TTableAdapter.Connection != null))) {
+                    return this._testLogs_TTableAdapter.Connection;
+                }
+                if (((this._testErrorLogTableAdapter != null) 
+                            && (this._testErrorLogTableAdapter.Connection != null))) {
+                    return this._testErrorLogTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1161,7 +2280,10 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._testsTableAdapter != null)) {
+                if ((this._testLogs_TTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._testErrorLogTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1175,12 +2297,21 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(ClaimStakerDEVDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._testsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tests.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._testLogs_TTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TestLogs_T.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._testsTableAdapter.Update(updatedRows));
+                    result = (result + this._testLogs_TTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._testErrorLogTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TestErrorLog.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._testErrorLogTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1194,11 +2325,19 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(ClaimStakerDEVDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._testsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tests.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._testLogs_TTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TestLogs_T.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._testsTableAdapter.Update(addedRows));
+                    result = (result + this._testLogs_TTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._testErrorLogTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TestErrorLog.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._testErrorLogTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1212,11 +2351,19 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(ClaimStakerDEVDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._testsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tests.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._testErrorLogTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TestErrorLog.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._testsTableAdapter.Update(deletedRows));
+                    result = (result + this._testErrorLogTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._testLogs_TTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TestLogs_T.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._testLogs_TTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1259,8 +2406,13 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._testsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._testsTableAdapter.Connection) == false))) {
+            if (((this._testLogs_TTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._testLogs_TTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._testErrorLogTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._testErrorLogTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1296,13 +2448,22 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._testsTableAdapter != null)) {
-                    revertConnections.Add(this._testsTableAdapter, this._testsTableAdapter.Connection);
-                    this._testsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._testsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._testsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._testsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._testsTableAdapter.Adapter);
+                if ((this._testLogs_TTableAdapter != null)) {
+                    revertConnections.Add(this._testLogs_TTableAdapter, this._testLogs_TTableAdapter.Connection);
+                    this._testLogs_TTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._testLogs_TTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._testLogs_TTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._testLogs_TTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._testLogs_TTableAdapter.Adapter);
+                    }
+                }
+                if ((this._testErrorLogTableAdapter != null)) {
+                    revertConnections.Add(this._testErrorLogTableAdapter, this._testErrorLogTableAdapter.Connection);
+                    this._testErrorLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._testErrorLogTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._testErrorLogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._testErrorLogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._testErrorLogTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1363,9 +2524,13 @@ SELECT LogID, DateCreated_DT, Message_VC, ExceptionThrower_VC FROM Tests WHERE (
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._testsTableAdapter != null)) {
-                    this._testsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testsTableAdapter]));
-                    this._testsTableAdapter.Transaction = null;
+                if ((this._testLogs_TTableAdapter != null)) {
+                    this._testLogs_TTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testLogs_TTableAdapter]));
+                    this._testLogs_TTableAdapter.Transaction = null;
+                }
+                if ((this._testErrorLogTableAdapter != null)) {
+                    this._testErrorLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._testErrorLogTableAdapter]));
+                    this._testErrorLogTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

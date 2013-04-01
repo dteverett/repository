@@ -16,6 +16,7 @@ namespace Logger
 
         Log log = new Log();
 
+        
 
 
         public void AddLog(string message)
@@ -55,6 +56,16 @@ namespace Logger
         {
             long returnValue = log.Register(Rlog);
             return returnValue;
+        }
+
+        internal void PassFailTest(bool result, long TestID)
+        {
+            log.PassFailTest(result, TestID);
+        }
+
+        internal void PassFailTest(bool result, long TestID, string message)
+        {
+            log.PassFailTest(result, TestID, message);
         }
     }
 }

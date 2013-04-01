@@ -1,5 +1,6 @@
 \\apexdata\user\deverett\Documents\Visual Studio 2012\Projects\Regression03\ApplicationExe\obj\Debug\ApplicationExe.csprojResolveAssemblyReference.cache
 C:\Users\deverett.APEX\repository\Regression03\ApplicationExe\bin\Debug\ApplicationExe.dll
 C:\Users\deverett.APEX\repository\Regression03\ApplicationExe\bin\Debug\ApplicationExe.pdb
+C:\Users\deverett.APEX\repository\Regression03\ApplicationExe\obj\Debug\ApplicationExe.csprojResolveAssemblyReference.cache
 C:\Users\deverett.APEX\repository\Regression03\ApplicationExe\obj\Debug\ApplicationExe.dll
 C:\Users\deverett.APEX\repository\Regression03\ApplicationExe\obj\Debug\ApplicationExe.pdb

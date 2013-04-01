@@ -6,6 +6,8 @@ using System.Runtime.CompilerServices;
 using System.Data.Objects;
 using System.Diagnostics;
 
+using System.Data.Linq;
+
 namespace Logger
 {
     public class Log 
@@ -36,12 +38,15 @@ namespace Logger
             
             try
             {
-                connection._repository.TestErrorLogs.AddObject(cast);
-                connection._repository.SaveChanges();
+                connection._repository.TestErrorLogs.InsertOnSubmit(cast);
+                connection._repository.SubmitChanges();
+                //connection._repository.TestErrorLogs.AddObject(cast);
+                //connection._repository.SaveChanges();
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
+                Console.Read();
             }
 
         }
@@ -56,12 +61,16 @@ namespace Logger
         {
             try
             {
-                connection._repository.TestLogs_T.AddObject(RLog);
-                connection._repository.SaveChanges();
+                
+                connection._repository.TestLogs_Ts.InsertOnSubmit(RLog);
+                connection._repository.SubmitChanges();
+                //connection._repository.TestLogs_T.AddObject(RLog);
+                //connection._repository.SaveChanges();
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
+                Console.Read();
             }
 
             long returnValue = ReturnID();
@@ -70,9 +79,31 @@ namespace Logger
 
         private long ReturnID()
         {
-            var RLog = connection._repository.TestLogs_T.OrderByDescending(x => x.DateExecuted_DT).FirstOrDefault();
+            
+            var RLog = connection._repository.TestLogs_Ts.OrderByDescending(x => x.DateExecuted_DT).FirstOrDefault();
             long returnValue = RLog.TestLog_ID;
             return returnValue;
+        }
+
+        internal void PassFailTest(bool result, long TestID)
+        {
+            using (Connection connect = new Connection())
+            {
+                TestLogs_T tLog = connect._repository.TestLogs_Ts.Where(x => x.TestLog_ID == TestID).FirstOrDefault();
+                tLog.PassFail = result;
+                connect._repository.SubmitChanges();
+            }
+        }
+
+        internal void PassFailTest(bool result, long TestID, string message)
+        {
+            using (Connection connect = new Connection())
+            {
+                TestLogs_T tLog = connect._repository.TestLogs_Ts.Where(x => x.TestLog_ID == TestID).FirstOrDefault();
+                tLog.PassFail = result;
+                tLog.Notes_VC = message;
+                connect._repository.SubmitChanges();
+            }
         }
     }
 }

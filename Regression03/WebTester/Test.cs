@@ -12,7 +12,7 @@ namespace WebTester
 {
     public class Test
     {
-        static private StringBuilder verificationErrors;
+        
         static private bool acceptNextAlert = true;
 
         static IWebDriver Driver = new FirefoxDriver();
@@ -144,7 +144,7 @@ namespace WebTester
             }
             catch (AssertionException e)
             {
-                verificationErrors.Append(e.Message);
+               
             }
             Driver.FindElement(By.Id("main-logo")).Click();
         }

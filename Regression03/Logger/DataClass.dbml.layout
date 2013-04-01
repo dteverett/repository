@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClass">
+  <DataContextMoniker Name="/DataClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="341be916-aaa0-42ae-aa5a-8ae50d406882" absoluteBounds="4.25, 4.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassDataContext/TestErrorLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab6c8d5e-8254-436b-b665-5e642eac0674" absoluteBounds="4.265, 4.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="adeb4b7f-859f-4264-80a1-8ccb27c18558" absoluteBounds="2.875, 1.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClassDataContext/TestLogs_T" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a3bc6fa-5b73-49fc-91f4-2689f50a0e4b" absoluteBounds="2.89, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5625 : 3.02089680989583); (4.5625 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassDataContext/TestLogs_T/TestLogs_T_TestErrorLog" />
+      <nodes>
+        <classShapeMoniker Id="adeb4b7f-859f-4264-80a1-8ccb27c18558" />
+        <classShapeMoniker Id="341be916-aaa0-42ae-aa5a-8ae50d406882" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

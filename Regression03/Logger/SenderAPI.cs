@@ -200,5 +200,15 @@ namespace Logger
             long returnValue = reciever.RegisterTest(log);
             return returnValue;
         }
+
+        public void PassFailTest(bool result, long testID)
+        {
+            reciever.PassFailTest(result, testID);
+        }
+
+        public void PassFailTest(bool result, long testID, string message)
+        {
+            reciever.PassFailTest(result, testID, message);
+        }
     }
 }

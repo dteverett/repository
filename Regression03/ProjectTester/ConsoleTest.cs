@@ -12,6 +12,8 @@ using System.Windows;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using WebTester;
+using System.Data.Linq;
+using DataVerification;
 
 
 namespace ProjectTester
@@ -72,13 +74,49 @@ namespace ProjectTester
 
             //Class1 c1 = new Class1();
             //c1.Written("Testing");
-            string code = "APXXZ3092";
 
-            for(int i = 0; i < 1; i++)
+            //string code = "APXXZ3092";
+
+            string code2 = "MMM1615";
+
+            //for(int i = 0; i < 3; i++)
+            //{
+            //    RegiSalesCodeDental regi = new RegiSalesCodeDental();
+            //    regi.TheSalescode3Test(code2);
+            //}
+
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    RegiSalesCodeDental regiDental = new RegiSalesCodeDental();
+            //    regiDental.TheSalescode3Test(code2);
+            //}
+
+            //RegiSalesCodeDental regiDental = new RegiSalesCodeDental();
+            //regiDental.TheSalescode3Test(code2);
+
+            RegiSalesMultiple regi = new RegiSalesMultiple();
+            
+
+            for (int i = 0; i < 3; i++)
             {
-                RegiSalesCode regi = new RegiSalesCode();
-                regi.TheSalesCodeTest(code);
+                regi.MultipleProvidersTest(code2);
             }
+
+            RegiSalesCodeDental dental = new RegiSalesCodeDental();
+            dental.TheSalescode3Test(code2);
+
+
+            //Connection connection = new Connection();
+            //var testsl = new TestLogs_Ts();
+            //testsl.TestExecuted_VC = "ConsoleTest";
+            //testsl.DateExecuted_DT = System.DateTime.Now;
+            //testsl.Notes_VC = "InsertOnSubmit test";
+            //testsl.PassFail = true;
+
+            
+            
+
+            
         }
     }
 }

@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ClaimStaker" Class="DataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=APEXSQL;Initial Catalog=ClaimStaker;Persist Security Info=True;User ID=QAUser" SettingsObjectName="DataVerification.Properties.Settings" SettingsPropertyName="ClaimStakerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Batch_T" Member="Batch_Ts">
+    <Type Name="Batch_T">
+      <Column Name="Batch_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Profession_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatchStatus_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="BatchName_VC" Type="System.String" DbType="Char(14) NOT NULL" CanBeNull="false" />
+      <Column Name="WhenUploaded_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NumFailed_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumTotal_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UploadStatus_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsCheckedForAttachment_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsFromWeb_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Doctor" Member="Doctors">
+    <Type Name="Doctor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="IsBillingService_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="company" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="contact" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="account" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="claimFile" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="statementFile" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="profession" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NEICSpecialtyCode_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="specialty" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="paymentOption" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="providers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="routingNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="bankAccount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nameOnCard" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cardNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cardType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="expiration" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="billingAddress" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="advUpload" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="address1" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="address2" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="st" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="zip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="taxId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="isTaxIdTypeEIN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="isSsn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="license" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="bcbs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="bcbsGroup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="medicare" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="medicareGroup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="medicaid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="medicaidGroup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="multipleBilling" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="multipleProviders" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="numberProviders" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vendor" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="vendorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="railroadMedicare" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="railroadMedicareGroup" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dme" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="unitedConcordia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="softwareName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="softwareVersion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="couponCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="initiatedWebTestDrive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="needToResetPassword" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="npi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="serviceLevel" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="billMethod" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="billPerVolume" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chargePerClaimOverThresholdOrElect" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="chargePerClaimUnderThresholdOrPaper" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="ChargePerClaimPaper_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="OldClaims_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="renderingProvTaxId" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="isRenderingProvTaxIdTypeEIN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="renderingProvNpi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="renderingProvLastName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="renderingProvFirstName" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="renderingProvMI" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="renderingProvOrganization" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="renderingProvSpecialty" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="renderingProvNEICSpecialtyCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="renderingProvAddress" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="renderingProvAddress2" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="renderingProvCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="renderingProvSt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="renderingProvZip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="salesRepId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaimSetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StatementSetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EligibilitySetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CheckSetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DaysOldClaims_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DentalERAAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MonthlyClaimThreshold_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MinimumFee_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="NumberOfDaysFreeClaims_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InnovationsMonthlyAmount_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="services" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="acceptTermsDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EligibilityBaseAmountMed_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NumberOfEligibilityTransBlockMed_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EligibilityAmountOverThresholdMed_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="BillingName_VC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="BillingAddress_VC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="BillingCity_VC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="BillingST_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="BillingZip_VC" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="ChampionsCode_VC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="IsSubscribedSales_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SubscribedSales_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SubscribedSalesIP_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnsubscribedSales_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NEAFacilityID_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsNEAClient_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="stat_RemitName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="stat_RemitAddress1" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="stat_RemitAddress2" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="stat_RemitCity" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="stat_RemitSt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="stat_RemitZip" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="stat_RemitPhone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="stat_RemitPhoneExt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="stat_RemitPhoneAlt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="stat_RemitPhoneAltExt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="stat_IndustryType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="stat_IndustryCommercialType" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="stat_CreditCardsAccepted" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Stat_ChargePerStatOverThreshold_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_ChargePerStatUnderThreshold_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_ChargePerStatSecondPage_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_MinimumFeeAmount_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="BillingAddress2_VC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="DeliveryPoint_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CheckDigit_VC" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PerClaimRateOverBlockThreshold_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Provider_T" Member="Provider_Ts">
+    <Type Name="Provider_T">
+      <Column Name="Provider_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WebUserSettings_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentMethod_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MI_VC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstNameIsMI_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationName_VC" Type="System.String" DbType="VarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="UseOrganizationName_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ContactName_VC" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="UniqueNameOnClaim_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ProviderStartDate_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SiteIsOnHold_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsOnWeb_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ShowPaperClaims_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RejectPaperClaims_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BillDocIfNoClaims_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DocIsInactive_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DontSendAcceptanceReports_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Address1_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="Address2_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="City_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ST_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ST_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Zip_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="IsPayToProviderPerson_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PayToAddressAddress1_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="PayToAddressAddress2_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="PayToAddressCity_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PayToAddressST_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PayToAddressZip_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="PayToAddressCountryCode_VC" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryPoint_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckDigit_VC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Fax_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EmailAddress_VC" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NPI_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TaxID_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTaxIDTypeEIN_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsUseTaxIDonClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsUseNPIOnClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsUseFacilityAddOnClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="License_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="KeyFieldData_VC" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NEICSiteCode_VC" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="ProvTypeOrg_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PayerSpecificID_VC" Type="System.String" DbType="VarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="NetworkID_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ElectronicSubmitterID_VC" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BCBSIndividual_VC" Type="System.String" DbType="VarChar(125) NOT NULL" CanBeNull="false" />
+      <Column Name="BCBSGroup_VC" Type="System.String" DbType="VarChar(125) NOT NULL" CanBeNull="false" />
+      <Column Name="Medicaid_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicaidGroup_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MamoCertNumber_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkersComp_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicareIndividual_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MedicareGroup_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RailroadMedicare_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="RailroadMedicareGroup_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DMERC_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Tricare_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="BlueShield_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BlueCross_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UPIN_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="DeltaDental_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="NEICSpecialtyCode_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Profession_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentMethod_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CardCheckingAcctNum_VB" Type="System.Data.Linq.Binary" DbType="VarBinary(32) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CheckingRoutingNum_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="CardExpiration_VC" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRenderingProvider_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvTaxID_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="IsRenderingProvTaxIDTypeEIN_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvNPI_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvOrganization_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvUseOrganizationName_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvLastName_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvFirstName_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvMI_VC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvNEICSpecialtyCode_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RenderingProvAddress_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvAddress2_VC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="RenderingProvCity_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="RenderingProvST_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RenderingProvST_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="RenderingProvZip_VC" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="SoftwareMapName_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BillMethod_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ClaimProductPurchased_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BillPerVolume_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyFee_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="MinimumFee_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="MonthlyClaimThreshold_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChargePerClaimOverThresholdOrElect_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="ChargePerClaimUnderThresholdOrPaper_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="ChargePerClaimPaper_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SoftwareName_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoftwareVersion_VC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SoftwareConversion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LineItemMappingMin_VC" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="LineItemMappingMax_VC" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="StripString_VC" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Qualifications_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesCode_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SalesRep1_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CommissionElectronic1_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="CommissionPaper1_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="SalesRep2_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CommissionElectronic2_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="CommissionPaper2_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Vendor1_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vendor2_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BillAllDocsAtThisSiteSeparately_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BillClaimsOnAnotherProvider_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BillingName_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="BillingAddress_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="BillingAddress2_VC" Type="System.String" DbType="VarChar(55) NOT NULL" CanBeNull="false" />
+      <Column Name="BillingCity_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BillingST_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BillingST_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="BillingZip_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="Notes_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportIDNumbers_VC" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="RegistrationFee_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Adjustment_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="AdjustmentDesc_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DepositAmount_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="PayerEnrollmentPending_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PayerEnrollment_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ForceOutputFrom0_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForceOutputTo0_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForceOutputFrom1_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ForceOutputTo1_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KWApexMap_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PEHP_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIA_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BCBSMedicaid_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_MonthlyStatThreshold_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stat_ChargePerStatOverThreshold_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Stat_ChargePerStatUnderThreshold_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Stat_ChargePerStatSecondPage_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Stat_MinimumFeeAmount_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Stat_SoftwareMapName_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stat_SoftwareConversion_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stat_StripString_VC" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Stat_KWApexMap_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stat_KeyFieldData_VC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Stat_ProductType_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_Backprinting_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_CreditCardsAccepted_CH" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Stat_IndustryType_TI" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Stat_IndustryCommercialType_VC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Stat_CustomLogo_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_IncludePaymentDueByDate_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_IncludePaymentDueByDateNumberOfDays_TI" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Stat_PaySalesRep1_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_PaySalesRep2_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_PayVendor1_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_PayVendor2_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_StatementStartDate_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Stat_Note_VC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Stat_Note1_VC" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Stat_Note2_VC" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Stat_Note3_VC" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Stat_Note4_VC" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Stat_Note5_VC" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Stat_UniqueName_VC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Stat_RemitName_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stat_RemitAddress1_VC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="Stat_RemitAddress2_VC" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+      <Column Name="Stat_RemitCity_VC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Stat_RemitST_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stat_RemitST_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Stat_RemitZip_VC" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Stat_RemitDeliveryPoint_VC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Stat_RemitCheckDigit_VC" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Stat_RemitPhone_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Stat_RemitPhoneAlt_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Stat_RemitPhoneExt_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Stat_RemitPhoneAltExt_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Stat_ShiftFirstLine_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stat_ShiftSpaceLo_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stat_ShiftSpaceHi_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Stat_UseUniqueSettings_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_PaperColor_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_PullOfficeInfoFromStatement_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_PullRemitToInfoFromStatement_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_ExcludeBalanceDue_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_HasFloatingFooterHeader_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stat_FooterHeaderCorrectLineNumber_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stat_FooterHeaderString_VC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Stat_ClaimStartString_VC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Stat_LineItemStartsWithRegex_VC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Stat_LineItemStartsWithRegexPatternLength_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AcceptTermsDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DontSendHumanReadableEOBReports_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DontSendMachineReadableEOBReports_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RejectAllClaims_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BillingStartDate_DT" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PGPPubKey_VC" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="AcctVerifiedByApex_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AcctVerifiedByClient_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceLevel_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SendUTMedicareERAOnly_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HoldStatementsForReview_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RequireSoftwareUpdate_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReportOnPreviousFailedClaims_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OutputMedicareLegacy_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SendApexReports_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DocIsAlwaysBilled_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DaysOldClaims_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OldClaims_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="DentalERAAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NumberOfDaysFreeClaims_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InnovationsMonthlyAmount_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="EligibilityBaseAmountMed_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NumberOfEligibilityTransBlockMed_IN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EligibilityAmountOverThresholdMed_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="IsSubscribedSales_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SubscribedSales_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SubscribedSalesIP_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnsubscribedSales_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IsTestAccount_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PracticeGUID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsMigratable_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StatementForm_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UseClaimRemedi_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NEAFacilityID_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsNEAClient_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsUseProviderFromClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsUsePayToProviderFromClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Use5010Tables_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WhiteLabel_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ProviderSale_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Quit_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PerClaimRateOverBlockThreshold_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
+      <Column Name="Stat_ExcludeRemitToAddress_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalesCodeType_T" Member="SalesCodeType_Ts">
+    <Type Name="SalesCodeType_T">
+      <Column Name="SalesCodeType_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SpecialCode_VC" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="LastUpdate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Notes_VC" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Description_VC" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClaimSetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StatementSetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SpecPricingFlatRateLevel1_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingFlatRateLevel2_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingFlatRateLevel3_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingBlockRateLevel1_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingBlockRateLevel2_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingBlockRateLevel3_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingNumClaimsPerBlockLevel1_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingNumClaimsPerBlockLevel2_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingNumClaimsPerBlockLevel3_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingPerClaimRateLevel1_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingPerClaimRateLevel2_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingPerClaimRateLevel3_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingMinimumPerClaimAmountLevel1_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingMinimumPerClaimAmountLevel2_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingMinimumPerClaimAmountLevel3_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="SpecPricingInnovationsMonthlyAmount_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="OldClaims_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="PaperClaims_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="StatementFirstPageAmount_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="StatementAdditionalPageAmount_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="DaysOldClaims_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DentalERAAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NumberOfDaysFreeClaims_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatementSetupAmountWithClaims_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EligibilitySetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EligibilitySetupAmountWithClaims_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CheckSetupAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CheckSetupAmountWithClaims_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="AllowPerClaimBillingType_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowBlockRateBillingType_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowFlatRateBillingType_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowServiceLevel1_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowServiceLevel2_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowServiceLevel3_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpirationDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AllowedSalesReps_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Vendor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsAnnualAgreement_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PerClaimRateOverBlockThreshold_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="EligibilityBaseAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="SalesCodeType_T_SalesCode_T" Member="SalesCode_Ts" ThisKey="SalesCodeType_ID" OtherKey="SalesCodeType_ID" Type="SalesCode_T" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalesCode_T" Member="SalesCode_Ts">
+    <Type Name="SalesCode_T">
+      <Column Name="SalesCode_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastUpdate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Code_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesCodeType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SalesCodeType_T_SalesCode_T" Member="SalesCodeType_T" ThisKey="SalesCodeType_ID" OtherKey="SalesCodeType_ID" Type="SalesCodeType_T" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

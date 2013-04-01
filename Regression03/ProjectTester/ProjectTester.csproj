@@ -35,6 +35,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -105,6 +106,10 @@
     <ProjectReference Include="..\..\Regression\Form\Form.csproj">
       <Project>{b26f1d5d-7836-4b3a-863e-bf61eb3758ba}</Project>
       <Name>Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataVerification\DataVerification.csproj">
+      <Project>{7458d595-a9e0-423a-a187-9bee7103276c}</Project>
+      <Name>DataVerification</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logger\Logger.csproj">
       <Project>{32d993d1-d4a2-4ed2-966c-6e4fbb9e8107}</Project>

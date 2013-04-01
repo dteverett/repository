@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9d018cb260814a7cb9f027206a0c8343" Name="Diagram1" ZoomLevel="56">
+      <Diagram DiagramId="9d018cb260814a7cb9f027206a0c8343" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="ClaimStakerDEVModel.Doctor" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ClaimStakerDEVModel.Provider_T" Width="1.5" PointX="3" PointY="22.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ClaimStakerDEVModel.SalesCode_T" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />

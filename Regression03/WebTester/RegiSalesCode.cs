@@ -24,18 +24,20 @@ namespace WebTester
 
         public void TheSalesCodeTest(string salesCode)
         {
-            string companyName = "TestTester";
+             
 
             SenderAPI logger = new SenderAPI();
-            long TestID = logger.RegisterTest();
+            //long TestID = logger.RegisterTest();
+            long TestID = 2;
 
             var time = System.DateTime.Now;
             string full = Convert.ToString(time);
             string partial = full.Substring(15, 2);
             RandomStringGenerator random = new RandomStringGenerator();
+            RandomStringGenerator random2 = new RandomStringGenerator();
             
             string name = random.GetRandom() + partial;
-            string longName = random.GetLongRandom() + partial;
+            string longName = random2.GetLongRandom() + partial;
 
              driver = new FirefoxDriver();
             baseURL = "https://legacy.apexedi.com/";
@@ -89,6 +91,9 @@ namespace WebTester
                 driver.FindElement(By.Id("password")).SendKeys("Password1");
                 driver.FindElement(By.Id("confirmPassword")).Clear();
                 driver.FindElement(By.Id("confirmPassword")).SendKeys("Password1");
+
+                //logger.Info("Test Connection", TestID);
+
             }
             catch (Exception ex)
             {
@@ -180,12 +185,20 @@ namespace WebTester
             {
                 logger.Error(ex.Message, TestID);
             }
+
+
+            
+            
+
+            
+
+
+
         }
 
         public void TheSalesCodeTest()
         {
             string salesCode = "APXXZ3092";
-            string companyName = "TestTester";
             SenderAPI logger = new SenderAPI();
 
             long TestExecutionCode = logger.RegisterTest();
