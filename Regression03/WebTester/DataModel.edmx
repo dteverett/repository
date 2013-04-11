@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ClaimStakerDEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ClaimStakerDEVModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ClaimStakerDEVModelStoreContainer">
-          <EntitySet Name="Doctor" EntityType="ClaimStakerDEVModel.Store.Doctor" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Provider_T" EntityType="ClaimStakerDEVModel.Store.Provider_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SalesCode_T" EntityType="ClaimStakerDEVModel.Store.SalesCode_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SalesCodeType_T" EntityType="ClaimStakerDEVModel.Store.SalesCodeType_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SalesRep_T" EntityType="ClaimStakerDEVModel.Store.SalesRep_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Service_T" EntityType="ClaimStakerDEVModel.Store.Service_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServiceLine_T" EntityType="ClaimStakerDEVModel.Store.ServiceLine_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServiceType_T" EntityType="ClaimStakerDEVModel.Store.ServiceType_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SetupStatus_T" EntityType="ClaimStakerDEVModel.Store.SetupStatus_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Software_T" EntityType="ClaimStakerDEVModel.Store.Software_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="SoftwareConversion_T" EntityType="ClaimStakerDEVModel.Store.SoftwareConversion_T" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Statement_T" EntityType="ClaimStakerDEVModel.Store.Statement_T" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Doctor" EntityType="ClaimStakerDEVModel.Store.Doctor" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Provider_T" EntityType="ClaimStakerDEVModel.Store.Provider_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SalesCode_T" EntityType="ClaimStakerDEVModel.Store.SalesCode_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SalesCodeType_T" EntityType="ClaimStakerDEVModel.Store.SalesCodeType_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SalesRep_T" EntityType="ClaimStakerDEVModel.Store.SalesRep_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Service_T" EntityType="ClaimStakerDEVModel.Store.Service_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ServiceLine_T" EntityType="ClaimStakerDEVModel.Store.ServiceLine_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ServiceType_T" EntityType="ClaimStakerDEVModel.Store.ServiceType_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SetupStatus_T" EntityType="ClaimStakerDEVModel.Store.SetupStatus_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Software_T" EntityType="ClaimStakerDEVModel.Store.Software_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SoftwareConversion_T" EntityType="ClaimStakerDEVModel.Store.SoftwareConversion_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Statement_T" EntityType="ClaimStakerDEVModel.Store.Statement_T" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
           <AssociationSet Name="FK_Provider_T_SoftwareConversion_T" Association="ClaimStakerDEVModel.Store.FK_Provider_T_SoftwareConversion_T">
             <End Role="SoftwareConversion_T" EntitySet="SoftwareConversion_T" />
             <End Role="Provider_T" EntitySet="Provider_T" />
@@ -841,7 +841,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ClaimStakerDEVModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ClaimStakerDEVModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityContainer Name="ClaimStakerDEVEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="Doctors" EntityType="ClaimStakerDEVModel.Doctor" />
           <EntitySet Name="Provider_T" EntityType="ClaimStakerDEVModel.Provider_T" />
@@ -1694,7 +1694,7 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ClaimStakerDEVModelStoreContainer" CdmEntityContainer="ClaimStakerDEVEntities">
           <EntitySetMapping Name="Doctors">
             <EntityTypeMapping TypeName="ClaimStakerDEVModel.Doctor">
@@ -2391,7 +2391,7 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
@@ -2405,6 +2405,6 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams />
   </Designer>
 </edmx:Edmx>

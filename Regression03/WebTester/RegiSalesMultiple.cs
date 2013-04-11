@@ -59,6 +59,87 @@ namespace WebTester
 
         }
 
+        public void MultipleProvidersTest(string salesCode, bool test)
+        {
+            driver = new FirefoxDriver();
+            baseURL = "https://legacy.apexedi.com/";
+            verificationErrors = new StringBuilder();
+            Random random = new Random();
+            RandomStringGenerator rString = new RandomStringGenerator();
+            string comName = rString.GetLongRandom();
+
+
+            driver.Navigate().GoToUrl(baseURL + "/index.jsp");
+            driver.FindElement(By.Id("gettingStarted"), 10).Click();
+            driver.FindElement(By.Id("company"), 10).Clear();
+            driver.FindElement(By.Id("company")).SendKeys(comName);
+
+            if (test)
+            {
+                TheMedicalMultipleTest(salesCode);
+            }
+            else
+                TheDentalMultipleTest(salesCode);
+
+             try
+            {
+                driver.Quit();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if unable to close the browser
+            }
+            Assert.AreEqual("", verificationErrors.ToString());
+        }
+
+        public void MultipleProvidersTest(string[] salesCode, bool test)
+        {
+
+            for (int i = 0; i < salesCode.Length; i++)
+            {
+
+                
+
+                driver = new FirefoxDriver();
+                baseURL = "https://legacy.apexedi.com/";
+                verificationErrors = new StringBuilder();
+                Random random = new Random();
+                RandomStringGenerator rString = new RandomStringGenerator();
+                string comName = rString.GetLongRandom();
+
+
+                driver.Navigate().GoToUrl(baseURL + "/index.jsp");
+                driver.FindElement(By.Id("gettingStarted"), 10).Click();
+                driver.FindElement(By.Id("company"), 10).Clear();
+                driver.FindElement(By.Id("company")).SendKeys(comName);
+
+
+                if (test)
+                {
+                    TheMedicalMultipleTest(salesCode[i]);
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                    Console.WriteLine(salesCode.Length);
+                    Console.WriteLine(salesCode[i]);
+                    TheDentalMultipleTest(salesCode[i]);
+                }
+                try
+                {
+                    driver.Quit();
+                }
+                catch (Exception)
+                {
+                    // Ignore errors if unable to close the browser
+                }
+
+            }
+            Assert.AreEqual("", verificationErrors.ToString());
+
+
+        }
+
 
         private void TheMedicalMultipleTest(string salesCode)
         {
@@ -112,7 +193,7 @@ namespace WebTester
                 driver.FindElement(By.Id("softwareVersion")).Clear();
                 driver.FindElement(By.Id("softwareVersion")).SendKeys("3.4");
                 driver.FindElement(By.Id("salesCode")).Clear();
-                driver.FindElement(By.Id("salesCode")).SendKeys("MMM1615");
+                driver.FindElement(By.Id("salesCode")).SendKeys(salesCode);
                 driver.FindElement(By.Id("numberProviders")).Clear();
                 driver.FindElement(By.Id("numberProviders")).SendKeys("3");
                 driver.FindElement(By.Id("provFirstName0")).Clear();
@@ -249,7 +330,7 @@ namespace WebTester
                 driver.FindElement(By.Id("softwareVersion")).Clear();
                 driver.FindElement(By.Id("softwareVersion")).SendKeys("2.3.2");
                 driver.FindElement(By.Id("salesCode")).Clear();
-                driver.FindElement(By.Id("salesCode")).SendKeys("MMM1615");
+                driver.FindElement(By.Id("salesCode")).SendKeys(salesCode);
                 driver.FindElement(By.Id("numberProviders")).Clear();
                 driver.FindElement(By.Id("numberProviders")).SendKeys("3");
                 driver.FindElement(By.Id("provFirstName0")).Clear();

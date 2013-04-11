@@ -311,7 +311,7 @@ namespace Regression03
             WinClient uIClaimStakerAUTOIMPORClient = this.UIClaimStakerAUTOIMPORWindow.UIItemWindow1.UIClaimStakerAUTOIMPORClient;
             #endregion
 
-           
+
             // Verify that the 'ControlType' property of 'ClaimStaker ==>> AUTO-IMPORT VERSION <<==' client equals 'Client'
             Assert.AreEqual(this.AssertAutoImportIsAutoImportingExpectedValues.UIClaimStakerAUTOIMPORClientControlType, uIClaimStakerAUTOIMPORClient.ControlType.ToString());
         }
@@ -340,7 +340,54 @@ namespace Regression03
             #endregion
 
             autoImportInActionCancelButton.WaitForControlNotExist(100000);
+        }
+
+        /// <summary>
+        /// CreteOutput - Use 'CreteOutputParams' to pass parameters into this method.
+        /// </summary>
+        public void CreateOutput(long ClaimID)
+        {
+            #region Variable Declarations
+            WinMenuItem uICreateMenuItem = this.UIClaimStakerPlusWindow.UIClaimStakerMainMenuBar.UIOutputMenuItem.UICreateMenuItem;
+            WinRadioButton uIClaimIDRadioButton = this.UIClaimStakerPlusWindow.UICreateOutputWindow.UIClaimIDWindow.UIClaimIDRadioButton;
+            WinRadioButton uITestRadioButton = this.UIClaimStakerPlusWindow.UICreateOutputWindow.UITestWindow.UITestRadioButton;
+            WinEdit uITxtClaimIDEdit = this.UIClaimStakerPlusWindow.UICreateOutputWindow.UITxtClaimIDWindow.UITxtClaimIDEdit;
+            WinButton uICreateButton = this.UIClaimStakerPlusWindow.UICreateOutputWindow.UICreateWindow.UICreateButton;
+            WinButton uIOKProblemConnectingButton = this.UIOKWindow.UIOKProblemConnectingButton;
+            #endregion
+
+            // Click 'Output' -> 'Create' menu item
+            Mouse.Click(uICreateMenuItem, new Point(58, 9));
+
+            // Select 'Claim ID:' radio button
+            uIClaimIDRadioButton.Selected = this.CreteOutputParams.UIClaimIDRadioButtonSelected;
+
+            // Select 'Test' radio button
+            uITestRadioButton.Selected = this.CreteOutputParams.UITestRadioButtonSelected;
+
+            // Type '6861271' in 'txtClaimID' text box
+            uITxtClaimIDEdit.Text = this.CreteOutputParams.UITxtClaimIDEditText;
+
+            // Click 'Create' button
+            Mouse.Click(uICreateButton, new Point(49, 15));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKProblemConnectingButton, new Point(58, 6));
+        }
+
+        public virtual CreteOutputParams CreteOutputParams
+        {
+            get
+            {
+                if ((this.mCreteOutputParams == null))
+                {
+                    this.mCreteOutputParams = new CreteOutputParams();
+                }
+                return this.mCreteOutputParams;
             }
+        }
+
+        private CreteOutputParams mCreteOutputParams;
     }
     /// <summary>
     /// Parameters to be passed into 'ClickClaimStakerPlus'
@@ -426,6 +473,35 @@ namespace Regression03
         /// Verify that the 'ControlType' property of 'ClaimStaker ==>> AUTO-IMPORT VERSION <<==' client equals 'Client'
         /// </summary>
         public string UIClaimStakerAUTOIMPORClientControlType = "Client";
+        #endregion
+    }
+    /// <summary>
+    /// Parameters to be passed into 'CreteOutput'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
+    public class CreteOutputParams
+    {
+
+        #region Fields
+        /// <summary>
+        /// Select 'Claim ID:' radio button
+        /// </summary>
+        public bool UIClaimIDRadioButtonSelected = true;
+
+        /// <summary>
+        /// Select 'Test' radio button
+        /// </summary>
+        public bool UITestRadioButtonSelected = true;
+
+        /// <summary>
+        /// Type '6861271' in 'txtClaimID' text box
+        /// </summary>
+        private string uiText;
+        public string UITxtClaimIDEditText
+        {
+            get { return uiText; }
+            set { uiText = value; }
+        }
         #endregion
 }
 }

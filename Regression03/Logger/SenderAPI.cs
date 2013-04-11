@@ -8,10 +8,16 @@ namespace Logger
 {
     public class SenderAPI : ILogging, ISender
     {
-        int caller = 1;
+        int caller { get; set; }
 
         public SenderAPI()
         {
+            caller = 1;
+        }
+
+        public SenderAPI(int stkTrace)
+        {
+            caller = stkTrace;
         }
 
         RecieverAPI reciever = new RecieverAPI();
@@ -199,6 +205,23 @@ namespace Logger
 
             long returnValue = reciever.RegisterTest(log);
             return returnValue;
+        }
+
+        public long RegisterTest(long parentTestID)
+        {
+            StackTrace trace = new StackTrace();
+            StackFrame frame = trace.GetFrame(caller);
+            string callerName = frame.GetMethod().Name;
+
+            TestLogs_T log = new TestLogs_T();
+            log.TestExecuted_VC = callerName;
+            log.DateExecuted_DT = System.DateTime.Now;
+            log.ParentTest_ID = parentTestID;
+            log.PassFail = false;
+
+            long returnValue = reciever.RegisterTest(log);
+            return returnValue;
+
         }
 
         public void PassFailTest(bool result, long testID)

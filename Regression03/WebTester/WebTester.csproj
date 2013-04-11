@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebTester</RootNamespace>
     <AssemblyName>WebTester</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,19 +58,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CASSegment.cs" />
+    <Compile Include="CasSegmentMultiple.cs" />
+    <Compile Include="clients.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Medical5010.cs" />
     <Compile Include="RandomStringGenerator.cs" />
     <Compile Include="RegiSalesCode.cs" />
     <Compile Include="RegiSalesCodeDental.cs" />
     <Compile Include="RegiSalesMultiple.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestResults.cs" />
     <Compile Include="WebDriverExtensions.cs" />
+    <Compile Include="IWebForms.cs" />
+    <Compile Include="WebForms.cs" />
+    <Compile Include="WebLayer.cs" />
     <Compile Include="WebTest.cs" />
   </ItemGroup>
   <ItemGroup>

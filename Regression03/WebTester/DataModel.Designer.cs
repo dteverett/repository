@@ -447,7 +447,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -466,7 +466,7 @@ namespace WebTester
                 {
                     OnidChanging(value);
                     ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value, "id");
+                    _id = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("id");
                     OnidChanged();
                 }
@@ -491,7 +491,7 @@ namespace WebTester
             {
                 OnnameChanging(value);
                 ReportPropertyChanging("name");
-                _name = StructuralObject.SetValidValue(value, false, "name");
+                _name = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("name");
                 OnnameChanged();
             }
@@ -515,7 +515,7 @@ namespace WebTester
             {
                 OnIsBillingService_BTChanging(value);
                 ReportPropertyChanging("IsBillingService_BT");
-                _IsBillingService_BT = StructuralObject.SetValidValue(value, "IsBillingService_BT");
+                _IsBillingService_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsBillingService_BT");
                 OnIsBillingService_BTChanged();
             }
@@ -539,7 +539,7 @@ namespace WebTester
             {
                 OncompanyChanging(value);
                 ReportPropertyChanging("company");
-                _company = StructuralObject.SetValidValue(value, true, "company");
+                _company = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("company");
                 OncompanyChanged();
             }
@@ -563,7 +563,7 @@ namespace WebTester
             {
                 OncontactChanging(value);
                 ReportPropertyChanging("contact");
-                _contact = StructuralObject.SetValidValue(value, true, "contact");
+                _contact = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("contact");
                 OncontactChanged();
             }
@@ -587,7 +587,7 @@ namespace WebTester
             {
                 OnusernameChanging(value);
                 ReportPropertyChanging("username");
-                _username = StructuralObject.SetValidValue(value, false, "username");
+                _username = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("username");
                 OnusernameChanged();
             }
@@ -611,7 +611,7 @@ namespace WebTester
             {
                 OnpasswordChanging(value);
                 ReportPropertyChanging("password");
-                _password = StructuralObject.SetValidValue(value, false, "password");
+                _password = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("password");
                 OnpasswordChanged();
             }
@@ -635,7 +635,7 @@ namespace WebTester
             {
                 OnaccountChanging(value);
                 ReportPropertyChanging("account");
-                _account = StructuralObject.SetValidValue(value, false, "account");
+                _account = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("account");
                 OnaccountChanged();
             }
@@ -659,7 +659,7 @@ namespace WebTester
             {
                 OnclaimFileChanging(value);
                 ReportPropertyChanging("claimFile");
-                _claimFile = StructuralObject.SetValidValue(value, true, "claimFile");
+                _claimFile = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("claimFile");
                 OnclaimFileChanged();
             }
@@ -683,7 +683,7 @@ namespace WebTester
             {
                 OnstatementFileChanging(value);
                 ReportPropertyChanging("statementFile");
-                _statementFile = StructuralObject.SetValidValue(value, true, "statementFile");
+                _statementFile = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("statementFile");
                 OnstatementFileChanged();
             }
@@ -707,7 +707,7 @@ namespace WebTester
             {
                 OntypeChanging(value);
                 ReportPropertyChanging("type");
-                _type = StructuralObject.SetValidValue(value, false, "type");
+                _type = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("type");
                 OntypeChanged();
             }
@@ -731,7 +731,7 @@ namespace WebTester
             {
                 OnprofessionChanging(value);
                 ReportPropertyChanging("profession");
-                _profession = StructuralObject.SetValidValue(value, true, "profession");
+                _profession = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("profession");
                 OnprofessionChanged();
             }
@@ -755,7 +755,7 @@ namespace WebTester
             {
                 OnNEICSpecialtyCode_IDChanging(value);
                 ReportPropertyChanging("NEICSpecialtyCode_ID");
-                _NEICSpecialtyCode_ID = StructuralObject.SetValidValue(value, "NEICSpecialtyCode_ID");
+                _NEICSpecialtyCode_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NEICSpecialtyCode_ID");
                 OnNEICSpecialtyCode_IDChanged();
             }
@@ -779,7 +779,7 @@ namespace WebTester
             {
                 OnspecialtyChanging(value);
                 ReportPropertyChanging("specialty");
-                _specialty = StructuralObject.SetValidValue(value, true, "specialty");
+                _specialty = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("specialty");
                 OnspecialtyChanged();
             }
@@ -803,7 +803,7 @@ namespace WebTester
             {
                 OnemailChanging(value);
                 ReportPropertyChanging("email");
-                _email = StructuralObject.SetValidValue(value, false, "email");
+                _email = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("email");
                 OnemailChanged();
             }
@@ -827,7 +827,7 @@ namespace WebTester
             {
                 OnpaymentOptionChanging(value);
                 ReportPropertyChanging("paymentOption");
-                _paymentOption = StructuralObject.SetValidValue(value, "paymentOption");
+                _paymentOption = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("paymentOption");
                 OnpaymentOptionChanged();
             }
@@ -851,7 +851,7 @@ namespace WebTester
             {
                 OnprovidersChanging(value);
                 ReportPropertyChanging("providers");
-                _providers = StructuralObject.SetValidValue(value, "providers");
+                _providers = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("providers");
                 OnprovidersChanged();
             }
@@ -875,7 +875,7 @@ namespace WebTester
             {
                 OnroutingNumberChanging(value);
                 ReportPropertyChanging("routingNumber");
-                _routingNumber = StructuralObject.SetValidValue(value, true, "routingNumber");
+                _routingNumber = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("routingNumber");
                 OnroutingNumberChanged();
             }
@@ -899,7 +899,7 @@ namespace WebTester
             {
                 OnbankAccountChanging(value);
                 ReportPropertyChanging("bankAccount");
-                _bankAccount = StructuralObject.SetValidValue(value, true, "bankAccount");
+                _bankAccount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("bankAccount");
                 OnbankAccountChanged();
             }
@@ -923,7 +923,7 @@ namespace WebTester
             {
                 OnnameOnCardChanging(value);
                 ReportPropertyChanging("nameOnCard");
-                _nameOnCard = StructuralObject.SetValidValue(value, true, "nameOnCard");
+                _nameOnCard = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("nameOnCard");
                 OnnameOnCardChanged();
             }
@@ -947,7 +947,7 @@ namespace WebTester
             {
                 OncardNumberChanging(value);
                 ReportPropertyChanging("cardNumber");
-                _cardNumber = StructuralObject.SetValidValue(value, true, "cardNumber");
+                _cardNumber = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("cardNumber");
                 OncardNumberChanged();
             }
@@ -971,7 +971,7 @@ namespace WebTester
             {
                 OncardTypeChanging(value);
                 ReportPropertyChanging("cardType");
-                _cardType = StructuralObject.SetValidValue(value, "cardType");
+                _cardType = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("cardType");
                 OncardTypeChanged();
             }
@@ -995,7 +995,7 @@ namespace WebTester
             {
                 OnexpirationChanging(value);
                 ReportPropertyChanging("expiration");
-                _expiration = StructuralObject.SetValidValue(value, "expiration");
+                _expiration = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("expiration");
                 OnexpirationChanged();
             }
@@ -1019,7 +1019,7 @@ namespace WebTester
             {
                 OnbillingAddressChanging(value);
                 ReportPropertyChanging("billingAddress");
-                _billingAddress = StructuralObject.SetValidValue(value, true, "billingAddress");
+                _billingAddress = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("billingAddress");
                 OnbillingAddressChanged();
             }
@@ -1043,7 +1043,7 @@ namespace WebTester
             {
                 OncreatedChanging(value);
                 ReportPropertyChanging("created");
-                _created = StructuralObject.SetValidValue(value, "created");
+                _created = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("created");
                 OncreatedChanged();
             }
@@ -1067,7 +1067,7 @@ namespace WebTester
             {
                 OnadvUploadChanging(value);
                 ReportPropertyChanging("advUpload");
-                _advUpload = StructuralObject.SetValidValue(value, "advUpload");
+                _advUpload = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("advUpload");
                 OnadvUploadChanged();
             }
@@ -1091,7 +1091,7 @@ namespace WebTester
             {
                 OnaddressChanging(value);
                 ReportPropertyChanging("address");
-                _address = StructuralObject.SetValidValue(value, true, "address");
+                _address = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("address");
                 OnaddressChanged();
             }
@@ -1115,7 +1115,7 @@ namespace WebTester
             {
                 Onaddress1Changing(value);
                 ReportPropertyChanging("address1");
-                _address1 = StructuralObject.SetValidValue(value, true, "address1");
+                _address1 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("address1");
                 Onaddress1Changed();
             }
@@ -1139,7 +1139,7 @@ namespace WebTester
             {
                 Onaddress2Changing(value);
                 ReportPropertyChanging("address2");
-                _address2 = StructuralObject.SetValidValue(value, true, "address2");
+                _address2 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("address2");
                 Onaddress2Changed();
             }
@@ -1163,7 +1163,7 @@ namespace WebTester
             {
                 OnstChanging(value);
                 ReportPropertyChanging("st");
-                _st = StructuralObject.SetValidValue(value, true, "st");
+                _st = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("st");
                 OnstChanged();
             }
@@ -1187,7 +1187,7 @@ namespace WebTester
             {
                 OncityChanging(value);
                 ReportPropertyChanging("city");
-                _city = StructuralObject.SetValidValue(value, true, "city");
+                _city = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("city");
                 OncityChanged();
             }
@@ -1211,7 +1211,7 @@ namespace WebTester
             {
                 OnzipChanging(value);
                 ReportPropertyChanging("zip");
-                _zip = StructuralObject.SetValidValue(value, true, "zip");
+                _zip = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("zip");
                 OnzipChanged();
             }
@@ -1235,7 +1235,7 @@ namespace WebTester
             {
                 OnphoneChanging(value);
                 ReportPropertyChanging("phone");
-                _phone = StructuralObject.SetValidValue(value, true, "phone");
+                _phone = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("phone");
                 OnphoneChanged();
             }
@@ -1259,7 +1259,7 @@ namespace WebTester
             {
                 OnfaxChanging(value);
                 ReportPropertyChanging("fax");
-                _fax = StructuralObject.SetValidValue(value, true, "fax");
+                _fax = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("fax");
                 OnfaxChanged();
             }
@@ -1283,7 +1283,7 @@ namespace WebTester
             {
                 OntaxIdChanging(value);
                 ReportPropertyChanging("taxId");
-                _taxId = StructuralObject.SetValidValue(value, true, "taxId");
+                _taxId = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("taxId");
                 OntaxIdChanged();
             }
@@ -1307,7 +1307,7 @@ namespace WebTester
             {
                 OnisTaxIdTypeEINChanging(value);
                 ReportPropertyChanging("isTaxIdTypeEIN");
-                _isTaxIdTypeEIN = StructuralObject.SetValidValue(value, "isTaxIdTypeEIN");
+                _isTaxIdTypeEIN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("isTaxIdTypeEIN");
                 OnisTaxIdTypeEINChanged();
             }
@@ -1331,7 +1331,7 @@ namespace WebTester
             {
                 OnisSsnChanging(value);
                 ReportPropertyChanging("isSsn");
-                _isSsn = StructuralObject.SetValidValue(value, "isSsn");
+                _isSsn = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("isSsn");
                 OnisSsnChanged();
             }
@@ -1355,7 +1355,7 @@ namespace WebTester
             {
                 OnlicenseChanging(value);
                 ReportPropertyChanging("license");
-                _license = StructuralObject.SetValidValue(value, true, "license");
+                _license = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("license");
                 OnlicenseChanged();
             }
@@ -1379,7 +1379,7 @@ namespace WebTester
             {
                 OnbcbsChanging(value);
                 ReportPropertyChanging("bcbs");
-                _bcbs = StructuralObject.SetValidValue(value, true, "bcbs");
+                _bcbs = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("bcbs");
                 OnbcbsChanged();
             }
@@ -1403,7 +1403,7 @@ namespace WebTester
             {
                 OnbcbsGroupChanging(value);
                 ReportPropertyChanging("bcbsGroup");
-                _bcbsGroup = StructuralObject.SetValidValue(value, true, "bcbsGroup");
+                _bcbsGroup = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("bcbsGroup");
                 OnbcbsGroupChanged();
             }
@@ -1427,7 +1427,7 @@ namespace WebTester
             {
                 OnmedicareChanging(value);
                 ReportPropertyChanging("medicare");
-                _medicare = StructuralObject.SetValidValue(value, true, "medicare");
+                _medicare = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("medicare");
                 OnmedicareChanged();
             }
@@ -1451,7 +1451,7 @@ namespace WebTester
             {
                 OnmedicareGroupChanging(value);
                 ReportPropertyChanging("medicareGroup");
-                _medicareGroup = StructuralObject.SetValidValue(value, true, "medicareGroup");
+                _medicareGroup = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("medicareGroup");
                 OnmedicareGroupChanged();
             }
@@ -1475,7 +1475,7 @@ namespace WebTester
             {
                 OnmedicaidChanging(value);
                 ReportPropertyChanging("medicaid");
-                _medicaid = StructuralObject.SetValidValue(value, true, "medicaid");
+                _medicaid = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("medicaid");
                 OnmedicaidChanged();
             }
@@ -1499,7 +1499,7 @@ namespace WebTester
             {
                 OnmedicaidGroupChanging(value);
                 ReportPropertyChanging("medicaidGroup");
-                _medicaidGroup = StructuralObject.SetValidValue(value, true, "medicaidGroup");
+                _medicaidGroup = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("medicaidGroup");
                 OnmedicaidGroupChanged();
             }
@@ -1523,7 +1523,7 @@ namespace WebTester
             {
                 OnmultipleBillingChanging(value);
                 ReportPropertyChanging("multipleBilling");
-                _multipleBilling = StructuralObject.SetValidValue(value, true, "multipleBilling");
+                _multipleBilling = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("multipleBilling");
                 OnmultipleBillingChanged();
             }
@@ -1547,7 +1547,7 @@ namespace WebTester
             {
                 OnmultipleProvidersChanging(value);
                 ReportPropertyChanging("multipleProviders");
-                _multipleProviders = StructuralObject.SetValidValue(value, true, "multipleProviders");
+                _multipleProviders = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("multipleProviders");
                 OnmultipleProvidersChanged();
             }
@@ -1571,7 +1571,7 @@ namespace WebTester
             {
                 OnnumberProvidersChanging(value);
                 ReportPropertyChanging("numberProviders");
-                _numberProviders = StructuralObject.SetValidValue(value, "numberProviders");
+                _numberProviders = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("numberProviders");
                 OnnumberProvidersChanged();
             }
@@ -1595,7 +1595,7 @@ namespace WebTester
             {
                 OnvendorChanging(value);
                 ReportPropertyChanging("vendor");
-                _vendor = StructuralObject.SetValidValue(value, true, "vendor");
+                _vendor = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("vendor");
                 OnvendorChanged();
             }
@@ -1619,7 +1619,7 @@ namespace WebTester
             {
                 OnvendorIDChanging(value);
                 ReportPropertyChanging("vendorID");
-                _vendorID = StructuralObject.SetValidValue(value, "vendorID");
+                _vendorID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("vendorID");
                 OnvendorIDChanged();
             }
@@ -1643,7 +1643,7 @@ namespace WebTester
             {
                 OnrailroadMedicareChanging(value);
                 ReportPropertyChanging("railroadMedicare");
-                _railroadMedicare = StructuralObject.SetValidValue(value, true, "railroadMedicare");
+                _railroadMedicare = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("railroadMedicare");
                 OnrailroadMedicareChanged();
             }
@@ -1667,7 +1667,7 @@ namespace WebTester
             {
                 OnrailroadMedicareGroupChanging(value);
                 ReportPropertyChanging("railroadMedicareGroup");
-                _railroadMedicareGroup = StructuralObject.SetValidValue(value, true, "railroadMedicareGroup");
+                _railroadMedicareGroup = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("railroadMedicareGroup");
                 OnrailroadMedicareGroupChanged();
             }
@@ -1691,7 +1691,7 @@ namespace WebTester
             {
                 OndmeChanging(value);
                 ReportPropertyChanging("dme");
-                _dme = StructuralObject.SetValidValue(value, true, "dme");
+                _dme = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("dme");
                 OndmeChanged();
             }
@@ -1715,7 +1715,7 @@ namespace WebTester
             {
                 OnunitedConcordiaChanging(value);
                 ReportPropertyChanging("unitedConcordia");
-                _unitedConcordia = StructuralObject.SetValidValue(value, true, "unitedConcordia");
+                _unitedConcordia = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("unitedConcordia");
                 OnunitedConcordiaChanged();
             }
@@ -1739,7 +1739,7 @@ namespace WebTester
             {
                 OnsoftwareNameChanging(value);
                 ReportPropertyChanging("softwareName");
-                _softwareName = StructuralObject.SetValidValue(value, true, "softwareName");
+                _softwareName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("softwareName");
                 OnsoftwareNameChanged();
             }
@@ -1763,7 +1763,7 @@ namespace WebTester
             {
                 OnsoftwareVersionChanging(value);
                 ReportPropertyChanging("softwareVersion");
-                _softwareVersion = StructuralObject.SetValidValue(value, true, "softwareVersion");
+                _softwareVersion = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("softwareVersion");
                 OnsoftwareVersionChanged();
             }
@@ -1787,7 +1787,7 @@ namespace WebTester
             {
                 OncouponCodeChanging(value);
                 ReportPropertyChanging("couponCode");
-                _couponCode = StructuralObject.SetValidValue(value, true, "couponCode");
+                _couponCode = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("couponCode");
                 OncouponCodeChanged();
             }
@@ -1811,7 +1811,7 @@ namespace WebTester
             {
                 OninitiatedWebTestDriveChanging(value);
                 ReportPropertyChanging("initiatedWebTestDrive");
-                _initiatedWebTestDrive = StructuralObject.SetValidValue(value, "initiatedWebTestDrive");
+                _initiatedWebTestDrive = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("initiatedWebTestDrive");
                 OninitiatedWebTestDriveChanged();
             }
@@ -1835,7 +1835,7 @@ namespace WebTester
             {
                 OnneedToResetPasswordChanging(value);
                 ReportPropertyChanging("needToResetPassword");
-                _needToResetPassword = StructuralObject.SetValidValue(value, "needToResetPassword");
+                _needToResetPassword = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("needToResetPassword");
                 OnneedToResetPasswordChanged();
             }
@@ -1859,7 +1859,7 @@ namespace WebTester
             {
                 OnnpiChanging(value);
                 ReportPropertyChanging("npi");
-                _npi = StructuralObject.SetValidValue(value, true, "npi");
+                _npi = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("npi");
                 OnnpiChanged();
             }
@@ -1883,7 +1883,7 @@ namespace WebTester
             {
                 OnserviceLevelChanging(value);
                 ReportPropertyChanging("serviceLevel");
-                _serviceLevel = StructuralObject.SetValidValue(value, "serviceLevel");
+                _serviceLevel = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("serviceLevel");
                 OnserviceLevelChanged();
             }
@@ -1907,7 +1907,7 @@ namespace WebTester
             {
                 OnbillMethodChanging(value);
                 ReportPropertyChanging("billMethod");
-                _billMethod = StructuralObject.SetValidValue(value, "billMethod");
+                _billMethod = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("billMethod");
                 OnbillMethodChanged();
             }
@@ -1931,7 +1931,7 @@ namespace WebTester
             {
                 OnbillPerVolumeChanging(value);
                 ReportPropertyChanging("billPerVolume");
-                _billPerVolume = StructuralObject.SetValidValue(value, "billPerVolume");
+                _billPerVolume = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("billPerVolume");
                 OnbillPerVolumeChanged();
             }
@@ -1955,7 +1955,7 @@ namespace WebTester
             {
                 OnchargePerClaimOverThresholdOrElectChanging(value);
                 ReportPropertyChanging("chargePerClaimOverThresholdOrElect");
-                _chargePerClaimOverThresholdOrElect = StructuralObject.SetValidValue(value, "chargePerClaimOverThresholdOrElect");
+                _chargePerClaimOverThresholdOrElect = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("chargePerClaimOverThresholdOrElect");
                 OnchargePerClaimOverThresholdOrElectChanged();
             }
@@ -1979,7 +1979,7 @@ namespace WebTester
             {
                 OnchargePerClaimUnderThresholdOrPaperChanging(value);
                 ReportPropertyChanging("chargePerClaimUnderThresholdOrPaper");
-                _chargePerClaimUnderThresholdOrPaper = StructuralObject.SetValidValue(value, "chargePerClaimUnderThresholdOrPaper");
+                _chargePerClaimUnderThresholdOrPaper = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("chargePerClaimUnderThresholdOrPaper");
                 OnchargePerClaimUnderThresholdOrPaperChanged();
             }
@@ -2003,7 +2003,7 @@ namespace WebTester
             {
                 OnChargePerClaimPaper_SMChanging(value);
                 ReportPropertyChanging("ChargePerClaimPaper_SM");
-                _ChargePerClaimPaper_SM = StructuralObject.SetValidValue(value, "ChargePerClaimPaper_SM");
+                _ChargePerClaimPaper_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ChargePerClaimPaper_SM");
                 OnChargePerClaimPaper_SMChanged();
             }
@@ -2027,7 +2027,7 @@ namespace WebTester
             {
                 OnOldClaims_SMChanging(value);
                 ReportPropertyChanging("OldClaims_SM");
-                _OldClaims_SM = StructuralObject.SetValidValue(value, "OldClaims_SM");
+                _OldClaims_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("OldClaims_SM");
                 OnOldClaims_SMChanged();
             }
@@ -2051,7 +2051,7 @@ namespace WebTester
             {
                 OnrenderingProvTaxIdChanging(value);
                 ReportPropertyChanging("renderingProvTaxId");
-                _renderingProvTaxId = StructuralObject.SetValidValue(value, true, "renderingProvTaxId");
+                _renderingProvTaxId = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvTaxId");
                 OnrenderingProvTaxIdChanged();
             }
@@ -2075,7 +2075,7 @@ namespace WebTester
             {
                 OnisRenderingProvTaxIdTypeEINChanging(value);
                 ReportPropertyChanging("isRenderingProvTaxIdTypeEIN");
-                _isRenderingProvTaxIdTypeEIN = StructuralObject.SetValidValue(value, "isRenderingProvTaxIdTypeEIN");
+                _isRenderingProvTaxIdTypeEIN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("isRenderingProvTaxIdTypeEIN");
                 OnisRenderingProvTaxIdTypeEINChanged();
             }
@@ -2099,7 +2099,7 @@ namespace WebTester
             {
                 OnrenderingProvNpiChanging(value);
                 ReportPropertyChanging("renderingProvNpi");
-                _renderingProvNpi = StructuralObject.SetValidValue(value, true, "renderingProvNpi");
+                _renderingProvNpi = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvNpi");
                 OnrenderingProvNpiChanged();
             }
@@ -2123,7 +2123,7 @@ namespace WebTester
             {
                 OnrenderingProvLastNameChanging(value);
                 ReportPropertyChanging("renderingProvLastName");
-                _renderingProvLastName = StructuralObject.SetValidValue(value, true, "renderingProvLastName");
+                _renderingProvLastName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvLastName");
                 OnrenderingProvLastNameChanged();
             }
@@ -2147,7 +2147,7 @@ namespace WebTester
             {
                 OnrenderingProvFirstNameChanging(value);
                 ReportPropertyChanging("renderingProvFirstName");
-                _renderingProvFirstName = StructuralObject.SetValidValue(value, true, "renderingProvFirstName");
+                _renderingProvFirstName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvFirstName");
                 OnrenderingProvFirstNameChanged();
             }
@@ -2171,7 +2171,7 @@ namespace WebTester
             {
                 OnrenderingProvMIChanging(value);
                 ReportPropertyChanging("renderingProvMI");
-                _renderingProvMI = StructuralObject.SetValidValue(value, true, "renderingProvMI");
+                _renderingProvMI = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvMI");
                 OnrenderingProvMIChanged();
             }
@@ -2195,7 +2195,7 @@ namespace WebTester
             {
                 OnrenderingProvOrganizationChanging(value);
                 ReportPropertyChanging("renderingProvOrganization");
-                _renderingProvOrganization = StructuralObject.SetValidValue(value, true, "renderingProvOrganization");
+                _renderingProvOrganization = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvOrganization");
                 OnrenderingProvOrganizationChanged();
             }
@@ -2219,7 +2219,7 @@ namespace WebTester
             {
                 OnrenderingProvSpecialtyChanging(value);
                 ReportPropertyChanging("renderingProvSpecialty");
-                _renderingProvSpecialty = StructuralObject.SetValidValue(value, true, "renderingProvSpecialty");
+                _renderingProvSpecialty = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvSpecialty");
                 OnrenderingProvSpecialtyChanged();
             }
@@ -2243,7 +2243,7 @@ namespace WebTester
             {
                 OnrenderingProvNEICSpecialtyCodeChanging(value);
                 ReportPropertyChanging("renderingProvNEICSpecialtyCode");
-                _renderingProvNEICSpecialtyCode = StructuralObject.SetValidValue(value, true, "renderingProvNEICSpecialtyCode");
+                _renderingProvNEICSpecialtyCode = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvNEICSpecialtyCode");
                 OnrenderingProvNEICSpecialtyCodeChanged();
             }
@@ -2267,7 +2267,7 @@ namespace WebTester
             {
                 OnrenderingProvAddressChanging(value);
                 ReportPropertyChanging("renderingProvAddress");
-                _renderingProvAddress = StructuralObject.SetValidValue(value, true, "renderingProvAddress");
+                _renderingProvAddress = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvAddress");
                 OnrenderingProvAddressChanged();
             }
@@ -2291,7 +2291,7 @@ namespace WebTester
             {
                 OnrenderingProvAddress2Changing(value);
                 ReportPropertyChanging("renderingProvAddress2");
-                _renderingProvAddress2 = StructuralObject.SetValidValue(value, true, "renderingProvAddress2");
+                _renderingProvAddress2 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvAddress2");
                 OnrenderingProvAddress2Changed();
             }
@@ -2315,7 +2315,7 @@ namespace WebTester
             {
                 OnrenderingProvCityChanging(value);
                 ReportPropertyChanging("renderingProvCity");
-                _renderingProvCity = StructuralObject.SetValidValue(value, true, "renderingProvCity");
+                _renderingProvCity = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvCity");
                 OnrenderingProvCityChanged();
             }
@@ -2339,7 +2339,7 @@ namespace WebTester
             {
                 OnrenderingProvStChanging(value);
                 ReportPropertyChanging("renderingProvSt");
-                _renderingProvSt = StructuralObject.SetValidValue(value, true, "renderingProvSt");
+                _renderingProvSt = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvSt");
                 OnrenderingProvStChanged();
             }
@@ -2363,7 +2363,7 @@ namespace WebTester
             {
                 OnrenderingProvZipChanging(value);
                 ReportPropertyChanging("renderingProvZip");
-                _renderingProvZip = StructuralObject.SetValidValue(value, true, "renderingProvZip");
+                _renderingProvZip = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("renderingProvZip");
                 OnrenderingProvZipChanged();
             }
@@ -2387,7 +2387,7 @@ namespace WebTester
             {
                 OnsalesRepIdChanging(value);
                 ReportPropertyChanging("salesRepId");
-                _salesRepId = StructuralObject.SetValidValue(value, "salesRepId");
+                _salesRepId = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("salesRepId");
                 OnsalesRepIdChanged();
             }
@@ -2411,7 +2411,7 @@ namespace WebTester
             {
                 OnClaimSetupAmount_VCChanging(value);
                 ReportPropertyChanging("ClaimSetupAmount_VC");
-                _ClaimSetupAmount_VC = StructuralObject.SetValidValue(value, true, "ClaimSetupAmount_VC");
+                _ClaimSetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ClaimSetupAmount_VC");
                 OnClaimSetupAmount_VCChanged();
             }
@@ -2435,7 +2435,7 @@ namespace WebTester
             {
                 OnStatementSetupAmount_VCChanging(value);
                 ReportPropertyChanging("StatementSetupAmount_VC");
-                _StatementSetupAmount_VC = StructuralObject.SetValidValue(value, true, "StatementSetupAmount_VC");
+                _StatementSetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("StatementSetupAmount_VC");
                 OnStatementSetupAmount_VCChanged();
             }
@@ -2459,7 +2459,7 @@ namespace WebTester
             {
                 OnEligibilitySetupAmount_VCChanging(value);
                 ReportPropertyChanging("EligibilitySetupAmount_VC");
-                _EligibilitySetupAmount_VC = StructuralObject.SetValidValue(value, true, "EligibilitySetupAmount_VC");
+                _EligibilitySetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EligibilitySetupAmount_VC");
                 OnEligibilitySetupAmount_VCChanged();
             }
@@ -2483,7 +2483,7 @@ namespace WebTester
             {
                 OnCheckSetupAmount_VCChanging(value);
                 ReportPropertyChanging("CheckSetupAmount_VC");
-                _CheckSetupAmount_VC = StructuralObject.SetValidValue(value, true, "CheckSetupAmount_VC");
+                _CheckSetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("CheckSetupAmount_VC");
                 OnCheckSetupAmount_VCChanged();
             }
@@ -2507,7 +2507,7 @@ namespace WebTester
             {
                 OnDaysOldClaims_INChanging(value);
                 ReportPropertyChanging("DaysOldClaims_IN");
-                _DaysOldClaims_IN = StructuralObject.SetValidValue(value, "DaysOldClaims_IN");
+                _DaysOldClaims_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DaysOldClaims_IN");
                 OnDaysOldClaims_INChanged();
             }
@@ -2531,7 +2531,7 @@ namespace WebTester
             {
                 OnDentalERAAmount_VCChanging(value);
                 ReportPropertyChanging("DentalERAAmount_VC");
-                _DentalERAAmount_VC = StructuralObject.SetValidValue(value, true, "DentalERAAmount_VC");
+                _DentalERAAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("DentalERAAmount_VC");
                 OnDentalERAAmount_VCChanged();
             }
@@ -2555,7 +2555,7 @@ namespace WebTester
             {
                 OnMonthlyClaimThreshold_INChanging(value);
                 ReportPropertyChanging("MonthlyClaimThreshold_IN");
-                _MonthlyClaimThreshold_IN = StructuralObject.SetValidValue(value, "MonthlyClaimThreshold_IN");
+                _MonthlyClaimThreshold_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("MonthlyClaimThreshold_IN");
                 OnMonthlyClaimThreshold_INChanged();
             }
@@ -2579,7 +2579,7 @@ namespace WebTester
             {
                 OnMinimumFee_SMChanging(value);
                 ReportPropertyChanging("MinimumFee_SM");
-                _MinimumFee_SM = StructuralObject.SetValidValue(value, "MinimumFee_SM");
+                _MinimumFee_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("MinimumFee_SM");
                 OnMinimumFee_SMChanged();
             }
@@ -2603,7 +2603,7 @@ namespace WebTester
             {
                 OnNumberOfDaysFreeClaims_INChanging(value);
                 ReportPropertyChanging("NumberOfDaysFreeClaims_IN");
-                _NumberOfDaysFreeClaims_IN = StructuralObject.SetValidValue(value, "NumberOfDaysFreeClaims_IN");
+                _NumberOfDaysFreeClaims_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NumberOfDaysFreeClaims_IN");
                 OnNumberOfDaysFreeClaims_INChanged();
             }
@@ -2627,7 +2627,7 @@ namespace WebTester
             {
                 OnInnovationsMonthlyAmount_SMChanging(value);
                 ReportPropertyChanging("InnovationsMonthlyAmount_SM");
-                _InnovationsMonthlyAmount_SM = StructuralObject.SetValidValue(value, "InnovationsMonthlyAmount_SM");
+                _InnovationsMonthlyAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("InnovationsMonthlyAmount_SM");
                 OnInnovationsMonthlyAmount_SMChanged();
             }
@@ -2651,7 +2651,7 @@ namespace WebTester
             {
                 OnservicesChanging(value);
                 ReportPropertyChanging("services");
-                _services = StructuralObject.SetValidValue(value, true, "services");
+                _services = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("services");
                 OnservicesChanged();
             }
@@ -2675,7 +2675,7 @@ namespace WebTester
             {
                 OnacceptTermsDateChanging(value);
                 ReportPropertyChanging("acceptTermsDate");
-                _acceptTermsDate = StructuralObject.SetValidValue(value, "acceptTermsDate");
+                _acceptTermsDate = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("acceptTermsDate");
                 OnacceptTermsDateChanged();
             }
@@ -2699,7 +2699,7 @@ namespace WebTester
             {
                 OnEligibilityBaseAmountMed_VCChanging(value);
                 ReportPropertyChanging("EligibilityBaseAmountMed_VC");
-                _EligibilityBaseAmountMed_VC = StructuralObject.SetValidValue(value, true, "EligibilityBaseAmountMed_VC");
+                _EligibilityBaseAmountMed_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EligibilityBaseAmountMed_VC");
                 OnEligibilityBaseAmountMed_VCChanged();
             }
@@ -2723,7 +2723,7 @@ namespace WebTester
             {
                 OnNumberOfEligibilityTransBlockMed_INChanging(value);
                 ReportPropertyChanging("NumberOfEligibilityTransBlockMed_IN");
-                _NumberOfEligibilityTransBlockMed_IN = StructuralObject.SetValidValue(value, "NumberOfEligibilityTransBlockMed_IN");
+                _NumberOfEligibilityTransBlockMed_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NumberOfEligibilityTransBlockMed_IN");
                 OnNumberOfEligibilityTransBlockMed_INChanged();
             }
@@ -2747,7 +2747,7 @@ namespace WebTester
             {
                 OnEligibilityAmountOverThresholdMed_SMChanging(value);
                 ReportPropertyChanging("EligibilityAmountOverThresholdMed_SM");
-                _EligibilityAmountOverThresholdMed_SM = StructuralObject.SetValidValue(value, "EligibilityAmountOverThresholdMed_SM");
+                _EligibilityAmountOverThresholdMed_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("EligibilityAmountOverThresholdMed_SM");
                 OnEligibilityAmountOverThresholdMed_SMChanged();
             }
@@ -2771,7 +2771,7 @@ namespace WebTester
             {
                 OnBillingName_VCChanging(value);
                 ReportPropertyChanging("BillingName_VC");
-                _BillingName_VC = StructuralObject.SetValidValue(value, true, "BillingName_VC");
+                _BillingName_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingName_VC");
                 OnBillingName_VCChanged();
             }
@@ -2795,7 +2795,7 @@ namespace WebTester
             {
                 OnBillingAddress_VCChanging(value);
                 ReportPropertyChanging("BillingAddress_VC");
-                _BillingAddress_VC = StructuralObject.SetValidValue(value, true, "BillingAddress_VC");
+                _BillingAddress_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingAddress_VC");
                 OnBillingAddress_VCChanged();
             }
@@ -2819,7 +2819,7 @@ namespace WebTester
             {
                 OnBillingCity_VCChanging(value);
                 ReportPropertyChanging("BillingCity_VC");
-                _BillingCity_VC = StructuralObject.SetValidValue(value, true, "BillingCity_VC");
+                _BillingCity_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingCity_VC");
                 OnBillingCity_VCChanged();
             }
@@ -2843,7 +2843,7 @@ namespace WebTester
             {
                 OnBillingST_VCChanging(value);
                 ReportPropertyChanging("BillingST_VC");
-                _BillingST_VC = StructuralObject.SetValidValue(value, true, "BillingST_VC");
+                _BillingST_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingST_VC");
                 OnBillingST_VCChanged();
             }
@@ -2867,7 +2867,7 @@ namespace WebTester
             {
                 OnBillingZip_VCChanging(value);
                 ReportPropertyChanging("BillingZip_VC");
-                _BillingZip_VC = StructuralObject.SetValidValue(value, true, "BillingZip_VC");
+                _BillingZip_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingZip_VC");
                 OnBillingZip_VCChanged();
             }
@@ -2891,7 +2891,7 @@ namespace WebTester
             {
                 OnChampionsCode_VCChanging(value);
                 ReportPropertyChanging("ChampionsCode_VC");
-                _ChampionsCode_VC = StructuralObject.SetValidValue(value, true, "ChampionsCode_VC");
+                _ChampionsCode_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ChampionsCode_VC");
                 OnChampionsCode_VCChanged();
             }
@@ -2915,7 +2915,7 @@ namespace WebTester
             {
                 OnIsSubscribedSales_BTChanging(value);
                 ReportPropertyChanging("IsSubscribedSales_BT");
-                _IsSubscribedSales_BT = StructuralObject.SetValidValue(value, "IsSubscribedSales_BT");
+                _IsSubscribedSales_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsSubscribedSales_BT");
                 OnIsSubscribedSales_BTChanged();
             }
@@ -2939,7 +2939,7 @@ namespace WebTester
             {
                 OnSubscribedSales_DTChanging(value);
                 ReportPropertyChanging("SubscribedSales_DT");
-                _SubscribedSales_DT = StructuralObject.SetValidValue(value, "SubscribedSales_DT");
+                _SubscribedSales_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SubscribedSales_DT");
                 OnSubscribedSales_DTChanged();
             }
@@ -2963,7 +2963,7 @@ namespace WebTester
             {
                 OnSubscribedSalesIP_VCChanging(value);
                 ReportPropertyChanging("SubscribedSalesIP_VC");
-                _SubscribedSalesIP_VC = StructuralObject.SetValidValue(value, true, "SubscribedSalesIP_VC");
+                _SubscribedSalesIP_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SubscribedSalesIP_VC");
                 OnSubscribedSalesIP_VCChanged();
             }
@@ -2987,7 +2987,7 @@ namespace WebTester
             {
                 OnUnsubscribedSales_DTChanging(value);
                 ReportPropertyChanging("UnsubscribedSales_DT");
-                _UnsubscribedSales_DT = StructuralObject.SetValidValue(value, "UnsubscribedSales_DT");
+                _UnsubscribedSales_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("UnsubscribedSales_DT");
                 OnUnsubscribedSales_DTChanged();
             }
@@ -3011,7 +3011,7 @@ namespace WebTester
             {
                 OnNEAFacilityID_VCChanging(value);
                 ReportPropertyChanging("NEAFacilityID_VC");
-                _NEAFacilityID_VC = StructuralObject.SetValidValue(value, true, "NEAFacilityID_VC");
+                _NEAFacilityID_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("NEAFacilityID_VC");
                 OnNEAFacilityID_VCChanged();
             }
@@ -3035,7 +3035,7 @@ namespace WebTester
             {
                 OnIsNEAClient_BTChanging(value);
                 ReportPropertyChanging("IsNEAClient_BT");
-                _IsNEAClient_BT = StructuralObject.SetValidValue(value, "IsNEAClient_BT");
+                _IsNEAClient_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsNEAClient_BT");
                 OnIsNEAClient_BTChanged();
             }
@@ -3059,7 +3059,7 @@ namespace WebTester
             {
                 Onstat_RemitNameChanging(value);
                 ReportPropertyChanging("stat_RemitName");
-                _stat_RemitName = StructuralObject.SetValidValue(value, true, "stat_RemitName");
+                _stat_RemitName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitName");
                 Onstat_RemitNameChanged();
             }
@@ -3083,7 +3083,7 @@ namespace WebTester
             {
                 Onstat_RemitAddress1Changing(value);
                 ReportPropertyChanging("stat_RemitAddress1");
-                _stat_RemitAddress1 = StructuralObject.SetValidValue(value, true, "stat_RemitAddress1");
+                _stat_RemitAddress1 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitAddress1");
                 Onstat_RemitAddress1Changed();
             }
@@ -3107,7 +3107,7 @@ namespace WebTester
             {
                 Onstat_RemitAddress2Changing(value);
                 ReportPropertyChanging("stat_RemitAddress2");
-                _stat_RemitAddress2 = StructuralObject.SetValidValue(value, true, "stat_RemitAddress2");
+                _stat_RemitAddress2 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitAddress2");
                 Onstat_RemitAddress2Changed();
             }
@@ -3131,7 +3131,7 @@ namespace WebTester
             {
                 Onstat_RemitCityChanging(value);
                 ReportPropertyChanging("stat_RemitCity");
-                _stat_RemitCity = StructuralObject.SetValidValue(value, true, "stat_RemitCity");
+                _stat_RemitCity = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitCity");
                 Onstat_RemitCityChanged();
             }
@@ -3155,7 +3155,7 @@ namespace WebTester
             {
                 Onstat_RemitStChanging(value);
                 ReportPropertyChanging("stat_RemitSt");
-                _stat_RemitSt = StructuralObject.SetValidValue(value, true, "stat_RemitSt");
+                _stat_RemitSt = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitSt");
                 Onstat_RemitStChanged();
             }
@@ -3179,7 +3179,7 @@ namespace WebTester
             {
                 Onstat_RemitZipChanging(value);
                 ReportPropertyChanging("stat_RemitZip");
-                _stat_RemitZip = StructuralObject.SetValidValue(value, true, "stat_RemitZip");
+                _stat_RemitZip = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitZip");
                 Onstat_RemitZipChanged();
             }
@@ -3203,7 +3203,7 @@ namespace WebTester
             {
                 Onstat_RemitPhoneChanging(value);
                 ReportPropertyChanging("stat_RemitPhone");
-                _stat_RemitPhone = StructuralObject.SetValidValue(value, true, "stat_RemitPhone");
+                _stat_RemitPhone = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitPhone");
                 Onstat_RemitPhoneChanged();
             }
@@ -3227,7 +3227,7 @@ namespace WebTester
             {
                 Onstat_RemitPhoneExtChanging(value);
                 ReportPropertyChanging("stat_RemitPhoneExt");
-                _stat_RemitPhoneExt = StructuralObject.SetValidValue(value, true, "stat_RemitPhoneExt");
+                _stat_RemitPhoneExt = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitPhoneExt");
                 Onstat_RemitPhoneExtChanged();
             }
@@ -3251,7 +3251,7 @@ namespace WebTester
             {
                 Onstat_RemitPhoneAltChanging(value);
                 ReportPropertyChanging("stat_RemitPhoneAlt");
-                _stat_RemitPhoneAlt = StructuralObject.SetValidValue(value, true, "stat_RemitPhoneAlt");
+                _stat_RemitPhoneAlt = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitPhoneAlt");
                 Onstat_RemitPhoneAltChanged();
             }
@@ -3275,7 +3275,7 @@ namespace WebTester
             {
                 Onstat_RemitPhoneAltExtChanging(value);
                 ReportPropertyChanging("stat_RemitPhoneAltExt");
-                _stat_RemitPhoneAltExt = StructuralObject.SetValidValue(value, true, "stat_RemitPhoneAltExt");
+                _stat_RemitPhoneAltExt = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_RemitPhoneAltExt");
                 Onstat_RemitPhoneAltExtChanged();
             }
@@ -3299,7 +3299,7 @@ namespace WebTester
             {
                 Onstat_IndustryTypeChanging(value);
                 ReportPropertyChanging("stat_IndustryType");
-                _stat_IndustryType = StructuralObject.SetValidValue(value, "stat_IndustryType");
+                _stat_IndustryType = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("stat_IndustryType");
                 Onstat_IndustryTypeChanged();
             }
@@ -3323,7 +3323,7 @@ namespace WebTester
             {
                 Onstat_IndustryCommercialTypeChanging(value);
                 ReportPropertyChanging("stat_IndustryCommercialType");
-                _stat_IndustryCommercialType = StructuralObject.SetValidValue(value, true, "stat_IndustryCommercialType");
+                _stat_IndustryCommercialType = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_IndustryCommercialType");
                 Onstat_IndustryCommercialTypeChanged();
             }
@@ -3347,7 +3347,7 @@ namespace WebTester
             {
                 Onstat_CreditCardsAcceptedChanging(value);
                 ReportPropertyChanging("stat_CreditCardsAccepted");
-                _stat_CreditCardsAccepted = StructuralObject.SetValidValue(value, true, "stat_CreditCardsAccepted");
+                _stat_CreditCardsAccepted = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("stat_CreditCardsAccepted");
                 Onstat_CreditCardsAcceptedChanged();
             }
@@ -3371,7 +3371,7 @@ namespace WebTester
             {
                 OnStat_ChargePerStatOverThreshold_SMChanging(value);
                 ReportPropertyChanging("Stat_ChargePerStatOverThreshold_SM");
-                _Stat_ChargePerStatOverThreshold_SM = StructuralObject.SetValidValue(value, "Stat_ChargePerStatOverThreshold_SM");
+                _Stat_ChargePerStatOverThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ChargePerStatOverThreshold_SM");
                 OnStat_ChargePerStatOverThreshold_SMChanged();
             }
@@ -3395,7 +3395,7 @@ namespace WebTester
             {
                 OnStat_ChargePerStatUnderThreshold_SMChanging(value);
                 ReportPropertyChanging("Stat_ChargePerStatUnderThreshold_SM");
-                _Stat_ChargePerStatUnderThreshold_SM = StructuralObject.SetValidValue(value, "Stat_ChargePerStatUnderThreshold_SM");
+                _Stat_ChargePerStatUnderThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ChargePerStatUnderThreshold_SM");
                 OnStat_ChargePerStatUnderThreshold_SMChanged();
             }
@@ -3419,7 +3419,7 @@ namespace WebTester
             {
                 OnStat_ChargePerStatSecondPage_SMChanging(value);
                 ReportPropertyChanging("Stat_ChargePerStatSecondPage_SM");
-                _Stat_ChargePerStatSecondPage_SM = StructuralObject.SetValidValue(value, "Stat_ChargePerStatSecondPage_SM");
+                _Stat_ChargePerStatSecondPage_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ChargePerStatSecondPage_SM");
                 OnStat_ChargePerStatSecondPage_SMChanged();
             }
@@ -3443,7 +3443,7 @@ namespace WebTester
             {
                 OnStat_MinimumFeeAmount_SMChanging(value);
                 ReportPropertyChanging("Stat_MinimumFeeAmount_SM");
-                _Stat_MinimumFeeAmount_SM = StructuralObject.SetValidValue(value, "Stat_MinimumFeeAmount_SM");
+                _Stat_MinimumFeeAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_MinimumFeeAmount_SM");
                 OnStat_MinimumFeeAmount_SMChanged();
             }
@@ -3467,7 +3467,7 @@ namespace WebTester
             {
                 OnBillingAddress2_VCChanging(value);
                 ReportPropertyChanging("BillingAddress2_VC");
-                _BillingAddress2_VC = StructuralObject.SetValidValue(value, true, "BillingAddress2_VC");
+                _BillingAddress2_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingAddress2_VC");
                 OnBillingAddress2_VCChanged();
             }
@@ -3491,7 +3491,7 @@ namespace WebTester
             {
                 OnDeliveryPoint_VCChanging(value);
                 ReportPropertyChanging("DeliveryPoint_VC");
-                _DeliveryPoint_VC = StructuralObject.SetValidValue(value, true, "DeliveryPoint_VC");
+                _DeliveryPoint_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("DeliveryPoint_VC");
                 OnDeliveryPoint_VCChanged();
             }
@@ -3515,7 +3515,7 @@ namespace WebTester
             {
                 OnCheckDigit_VCChanging(value);
                 ReportPropertyChanging("CheckDigit_VC");
-                _CheckDigit_VC = StructuralObject.SetValidValue(value, true, "CheckDigit_VC");
+                _CheckDigit_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("CheckDigit_VC");
                 OnCheckDigit_VCChanged();
             }
@@ -3539,7 +3539,7 @@ namespace WebTester
             {
                 OnPerClaimRateOverBlockThreshold_SMChanging(value);
                 ReportPropertyChanging("PerClaimRateOverBlockThreshold_SM");
-                _PerClaimRateOverBlockThreshold_SM = StructuralObject.SetValidValue(value, "PerClaimRateOverBlockThreshold_SM");
+                _PerClaimRateOverBlockThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PerClaimRateOverBlockThreshold_SM");
                 OnPerClaimRateOverBlockThreshold_SMChanged();
             }
@@ -3550,6 +3550,7 @@ namespace WebTester
 
         #endregion
 
+    
     }
     
     /// <summary>
@@ -3849,7 +3850,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3868,7 +3869,7 @@ namespace WebTester
                 {
                     OnProvider_IDChanging(value);
                     ReportPropertyChanging("Provider_ID");
-                    _Provider_ID = StructuralObject.SetValidValue(value, "Provider_ID");
+                    _Provider_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("Provider_ID");
                     OnProvider_IDChanged();
                 }
@@ -3893,7 +3894,7 @@ namespace WebTester
             {
                 OnWebUserSettings_IDChanging(value);
                 ReportPropertyChanging("WebUserSettings_ID");
-                _WebUserSettings_ID = StructuralObject.SetValidValue(value, "WebUserSettings_ID");
+                _WebUserSettings_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("WebUserSettings_ID");
                 OnWebUserSettings_IDChanged();
             }
@@ -3917,7 +3918,7 @@ namespace WebTester
             {
                 OnPaymentMethod_IDChanging(value);
                 ReportPropertyChanging("PaymentMethod_ID");
-                _PaymentMethod_ID = StructuralObject.SetValidValue(value, "PaymentMethod_ID");
+                _PaymentMethod_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PaymentMethod_ID");
                 OnPaymentMethod_IDChanged();
             }
@@ -3941,7 +3942,7 @@ namespace WebTester
             {
                 OnLastUpdate_DTChanging(value);
                 ReportPropertyChanging("LastUpdate_DT");
-                _LastUpdate_DT = StructuralObject.SetValidValue(value, "LastUpdate_DT");
+                _LastUpdate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("LastUpdate_DT");
                 OnLastUpdate_DTChanged();
             }
@@ -3965,7 +3966,7 @@ namespace WebTester
             {
                 OnClientID_VCChanging(value);
                 ReportPropertyChanging("ClientID_VC");
-                _ClientID_VC = StructuralObject.SetValidValue(value, false, "ClientID_VC");
+                _ClientID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ClientID_VC");
                 OnClientID_VCChanged();
             }
@@ -3989,7 +3990,7 @@ namespace WebTester
             {
                 OnLastName_VCChanging(value);
                 ReportPropertyChanging("LastName_VC");
-                _LastName_VC = StructuralObject.SetValidValue(value, false, "LastName_VC");
+                _LastName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("LastName_VC");
                 OnLastName_VCChanged();
             }
@@ -4013,7 +4014,7 @@ namespace WebTester
             {
                 OnFirstName_VCChanging(value);
                 ReportPropertyChanging("FirstName_VC");
-                _FirstName_VC = StructuralObject.SetValidValue(value, false, "FirstName_VC");
+                _FirstName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("FirstName_VC");
                 OnFirstName_VCChanged();
             }
@@ -4037,7 +4038,7 @@ namespace WebTester
             {
                 OnMI_VCChanging(value);
                 ReportPropertyChanging("MI_VC");
-                _MI_VC = StructuralObject.SetValidValue(value, false, "MI_VC");
+                _MI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("MI_VC");
                 OnMI_VCChanged();
             }
@@ -4061,7 +4062,7 @@ namespace WebTester
             {
                 OnFirstNameIsMI_BTChanging(value);
                 ReportPropertyChanging("FirstNameIsMI_BT");
-                _FirstNameIsMI_BT = StructuralObject.SetValidValue(value, "FirstNameIsMI_BT");
+                _FirstNameIsMI_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("FirstNameIsMI_BT");
                 OnFirstNameIsMI_BTChanged();
             }
@@ -4085,7 +4086,7 @@ namespace WebTester
             {
                 OnOrganizationName_VCChanging(value);
                 ReportPropertyChanging("OrganizationName_VC");
-                _OrganizationName_VC = StructuralObject.SetValidValue(value, false, "OrganizationName_VC");
+                _OrganizationName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("OrganizationName_VC");
                 OnOrganizationName_VCChanged();
             }
@@ -4109,7 +4110,7 @@ namespace WebTester
             {
                 OnUseOrganizationName_BTChanging(value);
                 ReportPropertyChanging("UseOrganizationName_BT");
-                _UseOrganizationName_BT = StructuralObject.SetValidValue(value, "UseOrganizationName_BT");
+                _UseOrganizationName_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("UseOrganizationName_BT");
                 OnUseOrganizationName_BTChanged();
             }
@@ -4133,7 +4134,7 @@ namespace WebTester
             {
                 OnContactName_VCChanging(value);
                 ReportPropertyChanging("ContactName_VC");
-                _ContactName_VC = StructuralObject.SetValidValue(value, true, "ContactName_VC");
+                _ContactName_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ContactName_VC");
                 OnContactName_VCChanged();
             }
@@ -4157,7 +4158,7 @@ namespace WebTester
             {
                 OnUniqueNameOnClaim_VCChanging(value);
                 ReportPropertyChanging("UniqueNameOnClaim_VC");
-                _UniqueNameOnClaim_VC = StructuralObject.SetValidValue(value, false, "UniqueNameOnClaim_VC");
+                _UniqueNameOnClaim_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("UniqueNameOnClaim_VC");
                 OnUniqueNameOnClaim_VCChanged();
             }
@@ -4181,7 +4182,7 @@ namespace WebTester
             {
                 OnProviderStartDate_DTChanging(value);
                 ReportPropertyChanging("ProviderStartDate_DT");
-                _ProviderStartDate_DT = StructuralObject.SetValidValue(value, "ProviderStartDate_DT");
+                _ProviderStartDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ProviderStartDate_DT");
                 OnProviderStartDate_DTChanged();
             }
@@ -4205,7 +4206,7 @@ namespace WebTester
             {
                 OnSiteIsOnHold_BTChanging(value);
                 ReportPropertyChanging("SiteIsOnHold_BT");
-                _SiteIsOnHold_BT = StructuralObject.SetValidValue(value, "SiteIsOnHold_BT");
+                _SiteIsOnHold_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SiteIsOnHold_BT");
                 OnSiteIsOnHold_BTChanged();
             }
@@ -4229,7 +4230,7 @@ namespace WebTester
             {
                 OnIsOnWeb_BTChanging(value);
                 ReportPropertyChanging("IsOnWeb_BT");
-                _IsOnWeb_BT = StructuralObject.SetValidValue(value, "IsOnWeb_BT");
+                _IsOnWeb_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsOnWeb_BT");
                 OnIsOnWeb_BTChanged();
             }
@@ -4253,7 +4254,7 @@ namespace WebTester
             {
                 OnShowPaperClaims_BTChanging(value);
                 ReportPropertyChanging("ShowPaperClaims_BT");
-                _ShowPaperClaims_BT = StructuralObject.SetValidValue(value, "ShowPaperClaims_BT");
+                _ShowPaperClaims_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ShowPaperClaims_BT");
                 OnShowPaperClaims_BTChanged();
             }
@@ -4277,7 +4278,7 @@ namespace WebTester
             {
                 OnRejectPaperClaims_BTChanging(value);
                 ReportPropertyChanging("RejectPaperClaims_BT");
-                _RejectPaperClaims_BT = StructuralObject.SetValidValue(value, "RejectPaperClaims_BT");
+                _RejectPaperClaims_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RejectPaperClaims_BT");
                 OnRejectPaperClaims_BTChanged();
             }
@@ -4301,7 +4302,7 @@ namespace WebTester
             {
                 OnBillDocIfNoClaims_BTChanging(value);
                 ReportPropertyChanging("BillDocIfNoClaims_BT");
-                _BillDocIfNoClaims_BT = StructuralObject.SetValidValue(value, "BillDocIfNoClaims_BT");
+                _BillDocIfNoClaims_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillDocIfNoClaims_BT");
                 OnBillDocIfNoClaims_BTChanged();
             }
@@ -4325,7 +4326,7 @@ namespace WebTester
             {
                 OnDocIsInactive_BTChanging(value);
                 ReportPropertyChanging("DocIsInactive_BT");
-                _DocIsInactive_BT = StructuralObject.SetValidValue(value, "DocIsInactive_BT");
+                _DocIsInactive_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DocIsInactive_BT");
                 OnDocIsInactive_BTChanged();
             }
@@ -4349,7 +4350,7 @@ namespace WebTester
             {
                 OnDontSendAcceptanceReports_BTChanging(value);
                 ReportPropertyChanging("DontSendAcceptanceReports_BT");
-                _DontSendAcceptanceReports_BT = StructuralObject.SetValidValue(value, "DontSendAcceptanceReports_BT");
+                _DontSendAcceptanceReports_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DontSendAcceptanceReports_BT");
                 OnDontSendAcceptanceReports_BTChanged();
             }
@@ -4373,7 +4374,7 @@ namespace WebTester
             {
                 OnAddress1_VCChanging(value);
                 ReportPropertyChanging("Address1_VC");
-                _Address1_VC = StructuralObject.SetValidValue(value, false, "Address1_VC");
+                _Address1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Address1_VC");
                 OnAddress1_VCChanged();
             }
@@ -4397,7 +4398,7 @@ namespace WebTester
             {
                 OnAddress2_VCChanging(value);
                 ReportPropertyChanging("Address2_VC");
-                _Address2_VC = StructuralObject.SetValidValue(value, false, "Address2_VC");
+                _Address2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Address2_VC");
                 OnAddress2_VCChanged();
             }
@@ -4421,7 +4422,7 @@ namespace WebTester
             {
                 OnCity_VCChanging(value);
                 ReportPropertyChanging("City_VC");
-                _City_VC = StructuralObject.SetValidValue(value, false, "City_VC");
+                _City_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("City_VC");
                 OnCity_VCChanged();
             }
@@ -4445,7 +4446,7 @@ namespace WebTester
             {
                 OnST_IDChanging(value);
                 ReportPropertyChanging("ST_ID");
-                _ST_ID = StructuralObject.SetValidValue(value, "ST_ID");
+                _ST_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ST_ID");
                 OnST_IDChanged();
             }
@@ -4469,7 +4470,7 @@ namespace WebTester
             {
                 OnST_VCChanging(value);
                 ReportPropertyChanging("ST_VC");
-                _ST_VC = StructuralObject.SetValidValue(value, true, "ST_VC");
+                _ST_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ST_VC");
                 OnST_VCChanged();
             }
@@ -4493,7 +4494,7 @@ namespace WebTester
             {
                 OnZip_VCChanging(value);
                 ReportPropertyChanging("Zip_VC");
-                _Zip_VC = StructuralObject.SetValidValue(value, false, "Zip_VC");
+                _Zip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Zip_VC");
                 OnZip_VCChanged();
             }
@@ -4517,7 +4518,7 @@ namespace WebTester
             {
                 OnCountryCode_VCChanging(value);
                 ReportPropertyChanging("CountryCode_VC");
-                _CountryCode_VC = StructuralObject.SetValidValue(value, false, "CountryCode_VC");
+                _CountryCode_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CountryCode_VC");
                 OnCountryCode_VCChanged();
             }
@@ -4541,7 +4542,7 @@ namespace WebTester
             {
                 OnIsPayToProviderPerson_BTChanging(value);
                 ReportPropertyChanging("IsPayToProviderPerson_BT");
-                _IsPayToProviderPerson_BT = StructuralObject.SetValidValue(value, "IsPayToProviderPerson_BT");
+                _IsPayToProviderPerson_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsPayToProviderPerson_BT");
                 OnIsPayToProviderPerson_BTChanged();
             }
@@ -4565,7 +4566,7 @@ namespace WebTester
             {
                 OnPayToAddressAddress1_VCChanging(value);
                 ReportPropertyChanging("PayToAddressAddress1_VC");
-                _PayToAddressAddress1_VC = StructuralObject.SetValidValue(value, false, "PayToAddressAddress1_VC");
+                _PayToAddressAddress1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayToAddressAddress1_VC");
                 OnPayToAddressAddress1_VCChanged();
             }
@@ -4589,7 +4590,7 @@ namespace WebTester
             {
                 OnPayToAddressAddress2_VCChanging(value);
                 ReportPropertyChanging("PayToAddressAddress2_VC");
-                _PayToAddressAddress2_VC = StructuralObject.SetValidValue(value, false, "PayToAddressAddress2_VC");
+                _PayToAddressAddress2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayToAddressAddress2_VC");
                 OnPayToAddressAddress2_VCChanged();
             }
@@ -4613,7 +4614,7 @@ namespace WebTester
             {
                 OnPayToAddressCity_VCChanging(value);
                 ReportPropertyChanging("PayToAddressCity_VC");
-                _PayToAddressCity_VC = StructuralObject.SetValidValue(value, false, "PayToAddressCity_VC");
+                _PayToAddressCity_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayToAddressCity_VC");
                 OnPayToAddressCity_VCChanged();
             }
@@ -4637,7 +4638,7 @@ namespace WebTester
             {
                 OnPayToAddressST_VCChanging(value);
                 ReportPropertyChanging("PayToAddressST_VC");
-                _PayToAddressST_VC = StructuralObject.SetValidValue(value, false, "PayToAddressST_VC");
+                _PayToAddressST_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayToAddressST_VC");
                 OnPayToAddressST_VCChanged();
             }
@@ -4661,7 +4662,7 @@ namespace WebTester
             {
                 OnPayToAddressZip_VCChanging(value);
                 ReportPropertyChanging("PayToAddressZip_VC");
-                _PayToAddressZip_VC = StructuralObject.SetValidValue(value, false, "PayToAddressZip_VC");
+                _PayToAddressZip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayToAddressZip_VC");
                 OnPayToAddressZip_VCChanged();
             }
@@ -4685,7 +4686,7 @@ namespace WebTester
             {
                 OnPayToAddressCountryCode_VCChanging(value);
                 ReportPropertyChanging("PayToAddressCountryCode_VC");
-                _PayToAddressCountryCode_VC = StructuralObject.SetValidValue(value, false, "PayToAddressCountryCode_VC");
+                _PayToAddressCountryCode_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayToAddressCountryCode_VC");
                 OnPayToAddressCountryCode_VCChanged();
             }
@@ -4709,7 +4710,7 @@ namespace WebTester
             {
                 OnDeliveryPoint_VCChanging(value);
                 ReportPropertyChanging("DeliveryPoint_VC");
-                _DeliveryPoint_VC = StructuralObject.SetValidValue(value, false, "DeliveryPoint_VC");
+                _DeliveryPoint_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("DeliveryPoint_VC");
                 OnDeliveryPoint_VCChanged();
             }
@@ -4733,7 +4734,7 @@ namespace WebTester
             {
                 OnCheckDigit_VCChanging(value);
                 ReportPropertyChanging("CheckDigit_VC");
-                _CheckDigit_VC = StructuralObject.SetValidValue(value, false, "CheckDigit_VC");
+                _CheckDigit_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CheckDigit_VC");
                 OnCheckDigit_VCChanged();
             }
@@ -4757,7 +4758,7 @@ namespace WebTester
             {
                 OnPhone_VCChanging(value);
                 ReportPropertyChanging("Phone_VC");
-                _Phone_VC = StructuralObject.SetValidValue(value, false, "Phone_VC");
+                _Phone_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Phone_VC");
                 OnPhone_VCChanged();
             }
@@ -4781,7 +4782,7 @@ namespace WebTester
             {
                 OnFax_VCChanging(value);
                 ReportPropertyChanging("Fax_VC");
-                _Fax_VC = StructuralObject.SetValidValue(value, true, "Fax_VC");
+                _Fax_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Fax_VC");
                 OnFax_VCChanged();
             }
@@ -4805,7 +4806,7 @@ namespace WebTester
             {
                 OnEmailAddress_VCChanging(value);
                 ReportPropertyChanging("EmailAddress_VC");
-                _EmailAddress_VC = StructuralObject.SetValidValue(value, true, "EmailAddress_VC");
+                _EmailAddress_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EmailAddress_VC");
                 OnEmailAddress_VCChanged();
             }
@@ -4829,7 +4830,7 @@ namespace WebTester
             {
                 OnNPI_VCChanging(value);
                 ReportPropertyChanging("NPI_VC");
-                _NPI_VC = StructuralObject.SetValidValue(value, false, "NPI_VC");
+                _NPI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("NPI_VC");
                 OnNPI_VCChanged();
             }
@@ -4853,7 +4854,7 @@ namespace WebTester
             {
                 OnTaxID_VCChanging(value);
                 ReportPropertyChanging("TaxID_VC");
-                _TaxID_VC = StructuralObject.SetValidValue(value, false, "TaxID_VC");
+                _TaxID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("TaxID_VC");
                 OnTaxID_VCChanged();
             }
@@ -4877,7 +4878,7 @@ namespace WebTester
             {
                 OnIsTaxIDTypeEIN_BTChanging(value);
                 ReportPropertyChanging("IsTaxIDTypeEIN_BT");
-                _IsTaxIDTypeEIN_BT = StructuralObject.SetValidValue(value, "IsTaxIDTypeEIN_BT");
+                _IsTaxIDTypeEIN_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsTaxIDTypeEIN_BT");
                 OnIsTaxIDTypeEIN_BTChanged();
             }
@@ -4901,7 +4902,7 @@ namespace WebTester
             {
                 OnIsUseTaxIDonClaim_BTChanging(value);
                 ReportPropertyChanging("IsUseTaxIDonClaim_BT");
-                _IsUseTaxIDonClaim_BT = StructuralObject.SetValidValue(value, "IsUseTaxIDonClaim_BT");
+                _IsUseTaxIDonClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsUseTaxIDonClaim_BT");
                 OnIsUseTaxIDonClaim_BTChanged();
             }
@@ -4925,7 +4926,7 @@ namespace WebTester
             {
                 OnIsUseNPIOnClaim_BTChanging(value);
                 ReportPropertyChanging("IsUseNPIOnClaim_BT");
-                _IsUseNPIOnClaim_BT = StructuralObject.SetValidValue(value, "IsUseNPIOnClaim_BT");
+                _IsUseNPIOnClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsUseNPIOnClaim_BT");
                 OnIsUseNPIOnClaim_BTChanged();
             }
@@ -4949,7 +4950,7 @@ namespace WebTester
             {
                 OnIsUseFacilityAddOnClaim_BTChanging(value);
                 ReportPropertyChanging("IsUseFacilityAddOnClaim_BT");
-                _IsUseFacilityAddOnClaim_BT = StructuralObject.SetValidValue(value, "IsUseFacilityAddOnClaim_BT");
+                _IsUseFacilityAddOnClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsUseFacilityAddOnClaim_BT");
                 OnIsUseFacilityAddOnClaim_BTChanged();
             }
@@ -4973,7 +4974,7 @@ namespace WebTester
             {
                 OnLicense_VCChanging(value);
                 ReportPropertyChanging("License_VC");
-                _License_VC = StructuralObject.SetValidValue(value, false, "License_VC");
+                _License_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("License_VC");
                 OnLicense_VCChanged();
             }
@@ -4997,7 +4998,7 @@ namespace WebTester
             {
                 OnKeyFieldData_VCChanging(value);
                 ReportPropertyChanging("KeyFieldData_VC");
-                _KeyFieldData_VC = StructuralObject.SetValidValue(value, false, "KeyFieldData_VC");
+                _KeyFieldData_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("KeyFieldData_VC");
                 OnKeyFieldData_VCChanged();
             }
@@ -5021,7 +5022,7 @@ namespace WebTester
             {
                 OnNEICSiteCode_VCChanging(value);
                 ReportPropertyChanging("NEICSiteCode_VC");
-                _NEICSiteCode_VC = StructuralObject.SetValidValue(value, false, "NEICSiteCode_VC");
+                _NEICSiteCode_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("NEICSiteCode_VC");
                 OnNEICSiteCode_VCChanged();
             }
@@ -5045,7 +5046,7 @@ namespace WebTester
             {
                 OnProvTypeOrg_VCChanging(value);
                 ReportPropertyChanging("ProvTypeOrg_VC");
-                _ProvTypeOrg_VC = StructuralObject.SetValidValue(value, false, "ProvTypeOrg_VC");
+                _ProvTypeOrg_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ProvTypeOrg_VC");
                 OnProvTypeOrg_VCChanged();
             }
@@ -5069,7 +5070,7 @@ namespace WebTester
             {
                 OnPayerSpecificID_VCChanging(value);
                 ReportPropertyChanging("PayerSpecificID_VC");
-                _PayerSpecificID_VC = StructuralObject.SetValidValue(value, false, "PayerSpecificID_VC");
+                _PayerSpecificID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayerSpecificID_VC");
                 OnPayerSpecificID_VCChanged();
             }
@@ -5093,7 +5094,7 @@ namespace WebTester
             {
                 OnNetworkID_VCChanging(value);
                 ReportPropertyChanging("NetworkID_VC");
-                _NetworkID_VC = StructuralObject.SetValidValue(value, false, "NetworkID_VC");
+                _NetworkID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("NetworkID_VC");
                 OnNetworkID_VCChanged();
             }
@@ -5117,7 +5118,7 @@ namespace WebTester
             {
                 OnElectronicSubmitterID_VCChanging(value);
                 ReportPropertyChanging("ElectronicSubmitterID_VC");
-                _ElectronicSubmitterID_VC = StructuralObject.SetValidValue(value, false, "ElectronicSubmitterID_VC");
+                _ElectronicSubmitterID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ElectronicSubmitterID_VC");
                 OnElectronicSubmitterID_VCChanged();
             }
@@ -5141,7 +5142,7 @@ namespace WebTester
             {
                 OnBCBSIndividual_VCChanging(value);
                 ReportPropertyChanging("BCBSIndividual_VC");
-                _BCBSIndividual_VC = StructuralObject.SetValidValue(value, false, "BCBSIndividual_VC");
+                _BCBSIndividual_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BCBSIndividual_VC");
                 OnBCBSIndividual_VCChanged();
             }
@@ -5165,7 +5166,7 @@ namespace WebTester
             {
                 OnBCBSGroup_VCChanging(value);
                 ReportPropertyChanging("BCBSGroup_VC");
-                _BCBSGroup_VC = StructuralObject.SetValidValue(value, false, "BCBSGroup_VC");
+                _BCBSGroup_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BCBSGroup_VC");
                 OnBCBSGroup_VCChanged();
             }
@@ -5189,7 +5190,7 @@ namespace WebTester
             {
                 OnMedicaid_VCChanging(value);
                 ReportPropertyChanging("Medicaid_VC");
-                _Medicaid_VC = StructuralObject.SetValidValue(value, false, "Medicaid_VC");
+                _Medicaid_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Medicaid_VC");
                 OnMedicaid_VCChanged();
             }
@@ -5213,7 +5214,7 @@ namespace WebTester
             {
                 OnMedicaidGroup_VCChanging(value);
                 ReportPropertyChanging("MedicaidGroup_VC");
-                _MedicaidGroup_VC = StructuralObject.SetValidValue(value, false, "MedicaidGroup_VC");
+                _MedicaidGroup_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("MedicaidGroup_VC");
                 OnMedicaidGroup_VCChanged();
             }
@@ -5237,7 +5238,7 @@ namespace WebTester
             {
                 OnMamoCertNumber_VCChanging(value);
                 ReportPropertyChanging("MamoCertNumber_VC");
-                _MamoCertNumber_VC = StructuralObject.SetValidValue(value, false, "MamoCertNumber_VC");
+                _MamoCertNumber_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("MamoCertNumber_VC");
                 OnMamoCertNumber_VCChanged();
             }
@@ -5261,7 +5262,7 @@ namespace WebTester
             {
                 OnWorkersComp_VCChanging(value);
                 ReportPropertyChanging("WorkersComp_VC");
-                _WorkersComp_VC = StructuralObject.SetValidValue(value, false, "WorkersComp_VC");
+                _WorkersComp_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("WorkersComp_VC");
                 OnWorkersComp_VCChanged();
             }
@@ -5285,7 +5286,7 @@ namespace WebTester
             {
                 OnMedicareIndividual_VCChanging(value);
                 ReportPropertyChanging("MedicareIndividual_VC");
-                _MedicareIndividual_VC = StructuralObject.SetValidValue(value, false, "MedicareIndividual_VC");
+                _MedicareIndividual_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("MedicareIndividual_VC");
                 OnMedicareIndividual_VCChanged();
             }
@@ -5309,7 +5310,7 @@ namespace WebTester
             {
                 OnMedicareGroup_VCChanging(value);
                 ReportPropertyChanging("MedicareGroup_VC");
-                _MedicareGroup_VC = StructuralObject.SetValidValue(value, false, "MedicareGroup_VC");
+                _MedicareGroup_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("MedicareGroup_VC");
                 OnMedicareGroup_VCChanged();
             }
@@ -5333,7 +5334,7 @@ namespace WebTester
             {
                 OnRailroadMedicare_VCChanging(value);
                 ReportPropertyChanging("RailroadMedicare_VC");
-                _RailroadMedicare_VC = StructuralObject.SetValidValue(value, false, "RailroadMedicare_VC");
+                _RailroadMedicare_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RailroadMedicare_VC");
                 OnRailroadMedicare_VCChanged();
             }
@@ -5357,7 +5358,7 @@ namespace WebTester
             {
                 OnRailroadMedicareGroup_VCChanging(value);
                 ReportPropertyChanging("RailroadMedicareGroup_VC");
-                _RailroadMedicareGroup_VC = StructuralObject.SetValidValue(value, false, "RailroadMedicareGroup_VC");
+                _RailroadMedicareGroup_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RailroadMedicareGroup_VC");
                 OnRailroadMedicareGroup_VCChanged();
             }
@@ -5381,7 +5382,7 @@ namespace WebTester
             {
                 OnDMERC_VCChanging(value);
                 ReportPropertyChanging("DMERC_VC");
-                _DMERC_VC = StructuralObject.SetValidValue(value, false, "DMERC_VC");
+                _DMERC_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("DMERC_VC");
                 OnDMERC_VCChanged();
             }
@@ -5405,7 +5406,7 @@ namespace WebTester
             {
                 OnTricare_VCChanging(value);
                 ReportPropertyChanging("Tricare_VC");
-                _Tricare_VC = StructuralObject.SetValidValue(value, false, "Tricare_VC");
+                _Tricare_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Tricare_VC");
                 OnTricare_VCChanged();
             }
@@ -5429,7 +5430,7 @@ namespace WebTester
             {
                 OnBlueShield_VCChanging(value);
                 ReportPropertyChanging("BlueShield_VC");
-                _BlueShield_VC = StructuralObject.SetValidValue(value, false, "BlueShield_VC");
+                _BlueShield_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BlueShield_VC");
                 OnBlueShield_VCChanged();
             }
@@ -5453,7 +5454,7 @@ namespace WebTester
             {
                 OnBlueCross_VCChanging(value);
                 ReportPropertyChanging("BlueCross_VC");
-                _BlueCross_VC = StructuralObject.SetValidValue(value, false, "BlueCross_VC");
+                _BlueCross_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BlueCross_VC");
                 OnBlueCross_VCChanged();
             }
@@ -5477,7 +5478,7 @@ namespace WebTester
             {
                 OnUPIN_VCChanging(value);
                 ReportPropertyChanging("UPIN_VC");
-                _UPIN_VC = StructuralObject.SetValidValue(value, false, "UPIN_VC");
+                _UPIN_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("UPIN_VC");
                 OnUPIN_VCChanged();
             }
@@ -5501,7 +5502,7 @@ namespace WebTester
             {
                 OnDeltaDental_VCChanging(value);
                 ReportPropertyChanging("DeltaDental_VC");
-                _DeltaDental_VC = StructuralObject.SetValidValue(value, false, "DeltaDental_VC");
+                _DeltaDental_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("DeltaDental_VC");
                 OnDeltaDental_VCChanged();
             }
@@ -5525,7 +5526,7 @@ namespace WebTester
             {
                 OnNEICSpecialtyCode_IDChanging(value);
                 ReportPropertyChanging("NEICSpecialtyCode_ID");
-                _NEICSpecialtyCode_ID = StructuralObject.SetValidValue(value, "NEICSpecialtyCode_ID");
+                _NEICSpecialtyCode_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NEICSpecialtyCode_ID");
                 OnNEICSpecialtyCode_IDChanged();
             }
@@ -5549,7 +5550,7 @@ namespace WebTester
             {
                 OnProfession_IDChanging(value);
                 ReportPropertyChanging("Profession_ID");
-                _Profession_ID = StructuralObject.SetValidValue(value, "Profession_ID");
+                _Profession_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Profession_ID");
                 OnProfession_IDChanged();
             }
@@ -5573,7 +5574,7 @@ namespace WebTester
             {
                 OnPaymentMethod_TIChanging(value);
                 ReportPropertyChanging("PaymentMethod_TI");
-                _PaymentMethod_TI = StructuralObject.SetValidValue(value, "PaymentMethod_TI");
+                _PaymentMethod_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PaymentMethod_TI");
                 OnPaymentMethod_TIChanged();
             }
@@ -5597,7 +5598,7 @@ namespace WebTester
             {
                 OnCardCheckingAcctNum_VBChanging(value);
                 ReportPropertyChanging("CardCheckingAcctNum_VB");
-                _CardCheckingAcctNum_VB = StructuralObject.SetValidValue(value, false, "CardCheckingAcctNum_VB");
+                _CardCheckingAcctNum_VB = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CardCheckingAcctNum_VB");
                 OnCardCheckingAcctNum_VBChanged();
             }
@@ -5621,7 +5622,7 @@ namespace WebTester
             {
                 OnCheckingRoutingNum_VCChanging(value);
                 ReportPropertyChanging("CheckingRoutingNum_VC");
-                _CheckingRoutingNum_VC = StructuralObject.SetValidValue(value, false, "CheckingRoutingNum_VC");
+                _CheckingRoutingNum_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CheckingRoutingNum_VC");
                 OnCheckingRoutingNum_VCChanged();
             }
@@ -5645,7 +5646,7 @@ namespace WebTester
             {
                 OnCardExpiration_VCChanging(value);
                 ReportPropertyChanging("CardExpiration_VC");
-                _CardExpiration_VC = StructuralObject.SetValidValue(value, false, "CardExpiration_VC");
+                _CardExpiration_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CardExpiration_VC");
                 OnCardExpiration_VCChanged();
             }
@@ -5669,7 +5670,7 @@ namespace WebTester
             {
                 OnIsRenderingProvider_BTChanging(value);
                 ReportPropertyChanging("IsRenderingProvider_BT");
-                _IsRenderingProvider_BT = StructuralObject.SetValidValue(value, "IsRenderingProvider_BT");
+                _IsRenderingProvider_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsRenderingProvider_BT");
                 OnIsRenderingProvider_BTChanged();
             }
@@ -5693,7 +5694,7 @@ namespace WebTester
             {
                 OnRenderingProvTaxID_VCChanging(value);
                 ReportPropertyChanging("RenderingProvTaxID_VC");
-                _RenderingProvTaxID_VC = StructuralObject.SetValidValue(value, false, "RenderingProvTaxID_VC");
+                _RenderingProvTaxID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvTaxID_VC");
                 OnRenderingProvTaxID_VCChanged();
             }
@@ -5717,7 +5718,7 @@ namespace WebTester
             {
                 OnIsRenderingProvTaxIDTypeEIN_BTChanging(value);
                 ReportPropertyChanging("IsRenderingProvTaxIDTypeEIN_BT");
-                _IsRenderingProvTaxIDTypeEIN_BT = StructuralObject.SetValidValue(value, "IsRenderingProvTaxIDTypeEIN_BT");
+                _IsRenderingProvTaxIDTypeEIN_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsRenderingProvTaxIDTypeEIN_BT");
                 OnIsRenderingProvTaxIDTypeEIN_BTChanged();
             }
@@ -5741,7 +5742,7 @@ namespace WebTester
             {
                 OnRenderingProvNPI_VCChanging(value);
                 ReportPropertyChanging("RenderingProvNPI_VC");
-                _RenderingProvNPI_VC = StructuralObject.SetValidValue(value, false, "RenderingProvNPI_VC");
+                _RenderingProvNPI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvNPI_VC");
                 OnRenderingProvNPI_VCChanged();
             }
@@ -5765,7 +5766,7 @@ namespace WebTester
             {
                 OnRenderingProvOrganization_VCChanging(value);
                 ReportPropertyChanging("RenderingProvOrganization_VC");
-                _RenderingProvOrganization_VC = StructuralObject.SetValidValue(value, false, "RenderingProvOrganization_VC");
+                _RenderingProvOrganization_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvOrganization_VC");
                 OnRenderingProvOrganization_VCChanged();
             }
@@ -5789,7 +5790,7 @@ namespace WebTester
             {
                 OnRenderingProvUseOrganizationName_BTChanging(value);
                 ReportPropertyChanging("RenderingProvUseOrganizationName_BT");
-                _RenderingProvUseOrganizationName_BT = StructuralObject.SetValidValue(value, "RenderingProvUseOrganizationName_BT");
+                _RenderingProvUseOrganizationName_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RenderingProvUseOrganizationName_BT");
                 OnRenderingProvUseOrganizationName_BTChanged();
             }
@@ -5813,7 +5814,7 @@ namespace WebTester
             {
                 OnRenderingProvLastName_VCChanging(value);
                 ReportPropertyChanging("RenderingProvLastName_VC");
-                _RenderingProvLastName_VC = StructuralObject.SetValidValue(value, false, "RenderingProvLastName_VC");
+                _RenderingProvLastName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvLastName_VC");
                 OnRenderingProvLastName_VCChanged();
             }
@@ -5837,7 +5838,7 @@ namespace WebTester
             {
                 OnRenderingProvFirstName_VCChanging(value);
                 ReportPropertyChanging("RenderingProvFirstName_VC");
-                _RenderingProvFirstName_VC = StructuralObject.SetValidValue(value, false, "RenderingProvFirstName_VC");
+                _RenderingProvFirstName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvFirstName_VC");
                 OnRenderingProvFirstName_VCChanged();
             }
@@ -5861,7 +5862,7 @@ namespace WebTester
             {
                 OnRenderingProvMI_VCChanging(value);
                 ReportPropertyChanging("RenderingProvMI_VC");
-                _RenderingProvMI_VC = StructuralObject.SetValidValue(value, false, "RenderingProvMI_VC");
+                _RenderingProvMI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvMI_VC");
                 OnRenderingProvMI_VCChanged();
             }
@@ -5885,7 +5886,7 @@ namespace WebTester
             {
                 OnRenderingProvNEICSpecialtyCode_IDChanging(value);
                 ReportPropertyChanging("RenderingProvNEICSpecialtyCode_ID");
-                _RenderingProvNEICSpecialtyCode_ID = StructuralObject.SetValidValue(value, "RenderingProvNEICSpecialtyCode_ID");
+                _RenderingProvNEICSpecialtyCode_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RenderingProvNEICSpecialtyCode_ID");
                 OnRenderingProvNEICSpecialtyCode_IDChanged();
             }
@@ -5909,7 +5910,7 @@ namespace WebTester
             {
                 OnRenderingProvAddress_VCChanging(value);
                 ReportPropertyChanging("RenderingProvAddress_VC");
-                _RenderingProvAddress_VC = StructuralObject.SetValidValue(value, false, "RenderingProvAddress_VC");
+                _RenderingProvAddress_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvAddress_VC");
                 OnRenderingProvAddress_VCChanged();
             }
@@ -5933,7 +5934,7 @@ namespace WebTester
             {
                 OnRenderingProvAddress2_VCChanging(value);
                 ReportPropertyChanging("RenderingProvAddress2_VC");
-                _RenderingProvAddress2_VC = StructuralObject.SetValidValue(value, true, "RenderingProvAddress2_VC");
+                _RenderingProvAddress2_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RenderingProvAddress2_VC");
                 OnRenderingProvAddress2_VCChanged();
             }
@@ -5957,7 +5958,7 @@ namespace WebTester
             {
                 OnRenderingProvCity_VCChanging(value);
                 ReportPropertyChanging("RenderingProvCity_VC");
-                _RenderingProvCity_VC = StructuralObject.SetValidValue(value, false, "RenderingProvCity_VC");
+                _RenderingProvCity_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("RenderingProvCity_VC");
                 OnRenderingProvCity_VCChanged();
             }
@@ -5981,7 +5982,7 @@ namespace WebTester
             {
                 OnRenderingProvST_IDChanging(value);
                 ReportPropertyChanging("RenderingProvST_ID");
-                _RenderingProvST_ID = StructuralObject.SetValidValue(value, "RenderingProvST_ID");
+                _RenderingProvST_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RenderingProvST_ID");
                 OnRenderingProvST_IDChanged();
             }
@@ -6005,7 +6006,7 @@ namespace WebTester
             {
                 OnRenderingProvST_VCChanging(value);
                 ReportPropertyChanging("RenderingProvST_VC");
-                _RenderingProvST_VC = StructuralObject.SetValidValue(value, true, "RenderingProvST_VC");
+                _RenderingProvST_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RenderingProvST_VC");
                 OnRenderingProvST_VCChanged();
             }
@@ -6029,7 +6030,7 @@ namespace WebTester
             {
                 OnRenderingProvZip_VCChanging(value);
                 ReportPropertyChanging("RenderingProvZip_VC");
-                _RenderingProvZip_VC = StructuralObject.SetValidValue(value, true, "RenderingProvZip_VC");
+                _RenderingProvZip_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RenderingProvZip_VC");
                 OnRenderingProvZip_VCChanged();
             }
@@ -6053,7 +6054,7 @@ namespace WebTester
             {
                 OnSoftwareMapName_IDChanging(value);
                 ReportPropertyChanging("SoftwareMapName_ID");
-                _SoftwareMapName_ID = StructuralObject.SetValidValue(value, "SoftwareMapName_ID");
+                _SoftwareMapName_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SoftwareMapName_ID");
                 OnSoftwareMapName_IDChanged();
             }
@@ -6077,7 +6078,7 @@ namespace WebTester
             {
                 OnBillMethod_TIChanging(value);
                 ReportPropertyChanging("BillMethod_TI");
-                _BillMethod_TI = StructuralObject.SetValidValue(value, "BillMethod_TI");
+                _BillMethod_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillMethod_TI");
                 OnBillMethod_TIChanged();
             }
@@ -6101,7 +6102,7 @@ namespace WebTester
             {
                 OnClaimProductPurchased_IDChanging(value);
                 ReportPropertyChanging("ClaimProductPurchased_ID");
-                _ClaimProductPurchased_ID = StructuralObject.SetValidValue(value, "ClaimProductPurchased_ID");
+                _ClaimProductPurchased_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ClaimProductPurchased_ID");
                 OnClaimProductPurchased_IDChanged();
             }
@@ -6125,7 +6126,7 @@ namespace WebTester
             {
                 OnBillPerVolume_BTChanging(value);
                 ReportPropertyChanging("BillPerVolume_BT");
-                _BillPerVolume_BT = StructuralObject.SetValidValue(value, "BillPerVolume_BT");
+                _BillPerVolume_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillPerVolume_BT");
                 OnBillPerVolume_BTChanged();
             }
@@ -6149,7 +6150,7 @@ namespace WebTester
             {
                 OnMonthlyFee_SMChanging(value);
                 ReportPropertyChanging("MonthlyFee_SM");
-                _MonthlyFee_SM = StructuralObject.SetValidValue(value, "MonthlyFee_SM");
+                _MonthlyFee_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("MonthlyFee_SM");
                 OnMonthlyFee_SMChanged();
             }
@@ -6173,7 +6174,7 @@ namespace WebTester
             {
                 OnMinimumFee_SMChanging(value);
                 ReportPropertyChanging("MinimumFee_SM");
-                _MinimumFee_SM = StructuralObject.SetValidValue(value, "MinimumFee_SM");
+                _MinimumFee_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("MinimumFee_SM");
                 OnMinimumFee_SMChanged();
             }
@@ -6197,7 +6198,7 @@ namespace WebTester
             {
                 OnMonthlyClaimThreshold_INChanging(value);
                 ReportPropertyChanging("MonthlyClaimThreshold_IN");
-                _MonthlyClaimThreshold_IN = StructuralObject.SetValidValue(value, "MonthlyClaimThreshold_IN");
+                _MonthlyClaimThreshold_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("MonthlyClaimThreshold_IN");
                 OnMonthlyClaimThreshold_INChanged();
             }
@@ -6221,7 +6222,7 @@ namespace WebTester
             {
                 OnChargePerClaimOverThresholdOrElect_SMChanging(value);
                 ReportPropertyChanging("ChargePerClaimOverThresholdOrElect_SM");
-                _ChargePerClaimOverThresholdOrElect_SM = StructuralObject.SetValidValue(value, "ChargePerClaimOverThresholdOrElect_SM");
+                _ChargePerClaimOverThresholdOrElect_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ChargePerClaimOverThresholdOrElect_SM");
                 OnChargePerClaimOverThresholdOrElect_SMChanged();
             }
@@ -6245,7 +6246,7 @@ namespace WebTester
             {
                 OnChargePerClaimUnderThresholdOrPaper_SMChanging(value);
                 ReportPropertyChanging("ChargePerClaimUnderThresholdOrPaper_SM");
-                _ChargePerClaimUnderThresholdOrPaper_SM = StructuralObject.SetValidValue(value, "ChargePerClaimUnderThresholdOrPaper_SM");
+                _ChargePerClaimUnderThresholdOrPaper_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ChargePerClaimUnderThresholdOrPaper_SM");
                 OnChargePerClaimUnderThresholdOrPaper_SMChanged();
             }
@@ -6269,7 +6270,7 @@ namespace WebTester
             {
                 OnChargePerClaimPaper_SMChanging(value);
                 ReportPropertyChanging("ChargePerClaimPaper_SM");
-                _ChargePerClaimPaper_SM = StructuralObject.SetValidValue(value, "ChargePerClaimPaper_SM");
+                _ChargePerClaimPaper_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ChargePerClaimPaper_SM");
                 OnChargePerClaimPaper_SMChanged();
             }
@@ -6293,7 +6294,7 @@ namespace WebTester
             {
                 OnSoftwareName_VCChanging(value);
                 ReportPropertyChanging("SoftwareName_VC");
-                _SoftwareName_VC = StructuralObject.SetValidValue(value, true, "SoftwareName_VC");
+                _SoftwareName_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SoftwareName_VC");
                 OnSoftwareName_VCChanged();
             }
@@ -6317,7 +6318,7 @@ namespace WebTester
             {
                 OnSoftwareVersion_VCChanging(value);
                 ReportPropertyChanging("SoftwareVersion_VC");
-                _SoftwareVersion_VC = StructuralObject.SetValidValue(value, true, "SoftwareVersion_VC");
+                _SoftwareVersion_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SoftwareVersion_VC");
                 OnSoftwareVersion_VCChanged();
             }
@@ -6341,7 +6342,7 @@ namespace WebTester
             {
                 OnSoftwareConversion_IDChanging(value);
                 ReportPropertyChanging("SoftwareConversion_ID");
-                _SoftwareConversion_ID = StructuralObject.SetValidValue(value, "SoftwareConversion_ID");
+                _SoftwareConversion_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SoftwareConversion_ID");
                 OnSoftwareConversion_IDChanged();
             }
@@ -6365,7 +6366,7 @@ namespace WebTester
             {
                 OnLineItemMappingMin_VCChanging(value);
                 ReportPropertyChanging("LineItemMappingMin_VC");
-                _LineItemMappingMin_VC = StructuralObject.SetValidValue(value, true, "LineItemMappingMin_VC");
+                _LineItemMappingMin_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("LineItemMappingMin_VC");
                 OnLineItemMappingMin_VCChanged();
             }
@@ -6389,7 +6390,7 @@ namespace WebTester
             {
                 OnLineItemMappingMax_VCChanging(value);
                 ReportPropertyChanging("LineItemMappingMax_VC");
-                _LineItemMappingMax_VC = StructuralObject.SetValidValue(value, true, "LineItemMappingMax_VC");
+                _LineItemMappingMax_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("LineItemMappingMax_VC");
                 OnLineItemMappingMax_VCChanged();
             }
@@ -6413,7 +6414,7 @@ namespace WebTester
             {
                 OnStripString_VCChanging(value);
                 ReportPropertyChanging("StripString_VC");
-                _StripString_VC = StructuralObject.SetValidValue(value, false, "StripString_VC");
+                _StripString_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("StripString_VC");
                 OnStripString_VCChanged();
             }
@@ -6437,7 +6438,7 @@ namespace WebTester
             {
                 OnQualifications_VCChanging(value);
                 ReportPropertyChanging("Qualifications_VC");
-                _Qualifications_VC = StructuralObject.SetValidValue(value, false, "Qualifications_VC");
+                _Qualifications_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Qualifications_VC");
                 OnQualifications_VCChanged();
             }
@@ -6461,7 +6462,7 @@ namespace WebTester
             {
                 OnSalesCode_VCChanging(value);
                 ReportPropertyChanging("SalesCode_VC");
-                _SalesCode_VC = StructuralObject.SetValidValue(value, true, "SalesCode_VC");
+                _SalesCode_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SalesCode_VC");
                 OnSalesCode_VCChanged();
             }
@@ -6485,7 +6486,7 @@ namespace WebTester
             {
                 OnSalesRep1_IDChanging(value);
                 ReportPropertyChanging("SalesRep1_ID");
-                _SalesRep1_ID = StructuralObject.SetValidValue(value, "SalesRep1_ID");
+                _SalesRep1_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SalesRep1_ID");
                 OnSalesRep1_IDChanged();
             }
@@ -6509,7 +6510,7 @@ namespace WebTester
             {
                 OnCommissionElectronic1_SMChanging(value);
                 ReportPropertyChanging("CommissionElectronic1_SM");
-                _CommissionElectronic1_SM = StructuralObject.SetValidValue(value, "CommissionElectronic1_SM");
+                _CommissionElectronic1_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("CommissionElectronic1_SM");
                 OnCommissionElectronic1_SMChanged();
             }
@@ -6533,7 +6534,7 @@ namespace WebTester
             {
                 OnCommissionPaper1_SMChanging(value);
                 ReportPropertyChanging("CommissionPaper1_SM");
-                _CommissionPaper1_SM = StructuralObject.SetValidValue(value, "CommissionPaper1_SM");
+                _CommissionPaper1_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("CommissionPaper1_SM");
                 OnCommissionPaper1_SMChanged();
             }
@@ -6557,7 +6558,7 @@ namespace WebTester
             {
                 OnSalesRep2_IDChanging(value);
                 ReportPropertyChanging("SalesRep2_ID");
-                _SalesRep2_ID = StructuralObject.SetValidValue(value, "SalesRep2_ID");
+                _SalesRep2_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SalesRep2_ID");
                 OnSalesRep2_IDChanged();
             }
@@ -6581,7 +6582,7 @@ namespace WebTester
             {
                 OnCommissionElectronic2_SMChanging(value);
                 ReportPropertyChanging("CommissionElectronic2_SM");
-                _CommissionElectronic2_SM = StructuralObject.SetValidValue(value, "CommissionElectronic2_SM");
+                _CommissionElectronic2_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("CommissionElectronic2_SM");
                 OnCommissionElectronic2_SMChanged();
             }
@@ -6605,7 +6606,7 @@ namespace WebTester
             {
                 OnCommissionPaper2_SMChanging(value);
                 ReportPropertyChanging("CommissionPaper2_SM");
-                _CommissionPaper2_SM = StructuralObject.SetValidValue(value, "CommissionPaper2_SM");
+                _CommissionPaper2_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("CommissionPaper2_SM");
                 OnCommissionPaper2_SMChanged();
             }
@@ -6629,7 +6630,7 @@ namespace WebTester
             {
                 OnVendor1_IDChanging(value);
                 ReportPropertyChanging("Vendor1_ID");
-                _Vendor1_ID = StructuralObject.SetValidValue(value, "Vendor1_ID");
+                _Vendor1_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Vendor1_ID");
                 OnVendor1_IDChanged();
             }
@@ -6653,7 +6654,7 @@ namespace WebTester
             {
                 OnVendor2_IDChanging(value);
                 ReportPropertyChanging("Vendor2_ID");
-                _Vendor2_ID = StructuralObject.SetValidValue(value, "Vendor2_ID");
+                _Vendor2_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Vendor2_ID");
                 OnVendor2_IDChanged();
             }
@@ -6677,7 +6678,7 @@ namespace WebTester
             {
                 OnBillAllDocsAtThisSiteSeparately_BTChanging(value);
                 ReportPropertyChanging("BillAllDocsAtThisSiteSeparately_BT");
-                _BillAllDocsAtThisSiteSeparately_BT = StructuralObject.SetValidValue(value, "BillAllDocsAtThisSiteSeparately_BT");
+                _BillAllDocsAtThisSiteSeparately_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillAllDocsAtThisSiteSeparately_BT");
                 OnBillAllDocsAtThisSiteSeparately_BTChanged();
             }
@@ -6701,7 +6702,7 @@ namespace WebTester
             {
                 OnBillClaimsOnAnotherProvider_IDChanging(value);
                 ReportPropertyChanging("BillClaimsOnAnotherProvider_ID");
-                _BillClaimsOnAnotherProvider_ID = StructuralObject.SetValidValue(value, "BillClaimsOnAnotherProvider_ID");
+                _BillClaimsOnAnotherProvider_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillClaimsOnAnotherProvider_ID");
                 OnBillClaimsOnAnotherProvider_IDChanged();
             }
@@ -6725,7 +6726,7 @@ namespace WebTester
             {
                 OnBillingName_VCChanging(value);
                 ReportPropertyChanging("BillingName_VC");
-                _BillingName_VC = StructuralObject.SetValidValue(value, false, "BillingName_VC");
+                _BillingName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BillingName_VC");
                 OnBillingName_VCChanged();
             }
@@ -6749,7 +6750,7 @@ namespace WebTester
             {
                 OnBillingAddress_VCChanging(value);
                 ReportPropertyChanging("BillingAddress_VC");
-                _BillingAddress_VC = StructuralObject.SetValidValue(value, false, "BillingAddress_VC");
+                _BillingAddress_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BillingAddress_VC");
                 OnBillingAddress_VCChanged();
             }
@@ -6773,7 +6774,7 @@ namespace WebTester
             {
                 OnBillingAddress2_VCChanging(value);
                 ReportPropertyChanging("BillingAddress2_VC");
-                _BillingAddress2_VC = StructuralObject.SetValidValue(value, false, "BillingAddress2_VC");
+                _BillingAddress2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BillingAddress2_VC");
                 OnBillingAddress2_VCChanged();
             }
@@ -6797,7 +6798,7 @@ namespace WebTester
             {
                 OnBillingCity_VCChanging(value);
                 ReportPropertyChanging("BillingCity_VC");
-                _BillingCity_VC = StructuralObject.SetValidValue(value, false, "BillingCity_VC");
+                _BillingCity_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BillingCity_VC");
                 OnBillingCity_VCChanged();
             }
@@ -6821,7 +6822,7 @@ namespace WebTester
             {
                 OnBillingST_IDChanging(value);
                 ReportPropertyChanging("BillingST_ID");
-                _BillingST_ID = StructuralObject.SetValidValue(value, "BillingST_ID");
+                _BillingST_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillingST_ID");
                 OnBillingST_IDChanged();
             }
@@ -6845,7 +6846,7 @@ namespace WebTester
             {
                 OnBillingST_VCChanging(value);
                 ReportPropertyChanging("BillingST_VC");
-                _BillingST_VC = StructuralObject.SetValidValue(value, true, "BillingST_VC");
+                _BillingST_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingST_VC");
                 OnBillingST_VCChanged();
             }
@@ -6869,7 +6870,7 @@ namespace WebTester
             {
                 OnBillingZip_VCChanging(value);
                 ReportPropertyChanging("BillingZip_VC");
-                _BillingZip_VC = StructuralObject.SetValidValue(value, false, "BillingZip_VC");
+                _BillingZip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BillingZip_VC");
                 OnBillingZip_VCChanged();
             }
@@ -6893,7 +6894,7 @@ namespace WebTester
             {
                 OnNotes_VCChanging(value);
                 ReportPropertyChanging("Notes_VC");
-                _Notes_VC = StructuralObject.SetValidValue(value, false, "Notes_VC");
+                _Notes_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Notes_VC");
                 OnNotes_VCChanged();
             }
@@ -6917,7 +6918,7 @@ namespace WebTester
             {
                 OnReportIDNumbers_VCChanging(value);
                 ReportPropertyChanging("ReportIDNumbers_VC");
-                _ReportIDNumbers_VC = StructuralObject.SetValidValue(value, false, "ReportIDNumbers_VC");
+                _ReportIDNumbers_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ReportIDNumbers_VC");
                 OnReportIDNumbers_VCChanged();
             }
@@ -6941,7 +6942,7 @@ namespace WebTester
             {
                 OnRegistrationFee_SMChanging(value);
                 ReportPropertyChanging("RegistrationFee_SM");
-                _RegistrationFee_SM = StructuralObject.SetValidValue(value, "RegistrationFee_SM");
+                _RegistrationFee_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RegistrationFee_SM");
                 OnRegistrationFee_SMChanged();
             }
@@ -6965,7 +6966,7 @@ namespace WebTester
             {
                 OnAdjustment_SMChanging(value);
                 ReportPropertyChanging("Adjustment_SM");
-                _Adjustment_SM = StructuralObject.SetValidValue(value, "Adjustment_SM");
+                _Adjustment_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Adjustment_SM");
                 OnAdjustment_SMChanged();
             }
@@ -6989,7 +6990,7 @@ namespace WebTester
             {
                 OnAdjustmentDesc_VCChanging(value);
                 ReportPropertyChanging("AdjustmentDesc_VC");
-                _AdjustmentDesc_VC = StructuralObject.SetValidValue(value, false, "AdjustmentDesc_VC");
+                _AdjustmentDesc_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("AdjustmentDesc_VC");
                 OnAdjustmentDesc_VCChanged();
             }
@@ -7013,7 +7014,7 @@ namespace WebTester
             {
                 OnDepositAmount_SMChanging(value);
                 ReportPropertyChanging("DepositAmount_SM");
-                _DepositAmount_SM = StructuralObject.SetValidValue(value, "DepositAmount_SM");
+                _DepositAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DepositAmount_SM");
                 OnDepositAmount_SMChanged();
             }
@@ -7037,7 +7038,7 @@ namespace WebTester
             {
                 OnPayerEnrollmentPending_VCChanging(value);
                 ReportPropertyChanging("PayerEnrollmentPending_VC");
-                _PayerEnrollmentPending_VC = StructuralObject.SetValidValue(value, false, "PayerEnrollmentPending_VC");
+                _PayerEnrollmentPending_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayerEnrollmentPending_VC");
                 OnPayerEnrollmentPending_VCChanged();
             }
@@ -7061,7 +7062,7 @@ namespace WebTester
             {
                 OnPayerEnrollment_VCChanging(value);
                 ReportPropertyChanging("PayerEnrollment_VC");
-                _PayerEnrollment_VC = StructuralObject.SetValidValue(value, false, "PayerEnrollment_VC");
+                _PayerEnrollment_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PayerEnrollment_VC");
                 OnPayerEnrollment_VCChanged();
             }
@@ -7085,7 +7086,7 @@ namespace WebTester
             {
                 OnForceOutputFrom0_IDChanging(value);
                 ReportPropertyChanging("ForceOutputFrom0_ID");
-                _ForceOutputFrom0_ID = StructuralObject.SetValidValue(value, "ForceOutputFrom0_ID");
+                _ForceOutputFrom0_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ForceOutputFrom0_ID");
                 OnForceOutputFrom0_IDChanged();
             }
@@ -7109,7 +7110,7 @@ namespace WebTester
             {
                 OnForceOutputTo0_IDChanging(value);
                 ReportPropertyChanging("ForceOutputTo0_ID");
-                _ForceOutputTo0_ID = StructuralObject.SetValidValue(value, "ForceOutputTo0_ID");
+                _ForceOutputTo0_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ForceOutputTo0_ID");
                 OnForceOutputTo0_IDChanged();
             }
@@ -7133,7 +7134,7 @@ namespace WebTester
             {
                 OnForceOutputFrom1_IDChanging(value);
                 ReportPropertyChanging("ForceOutputFrom1_ID");
-                _ForceOutputFrom1_ID = StructuralObject.SetValidValue(value, "ForceOutputFrom1_ID");
+                _ForceOutputFrom1_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ForceOutputFrom1_ID");
                 OnForceOutputFrom1_IDChanged();
             }
@@ -7157,7 +7158,7 @@ namespace WebTester
             {
                 OnForceOutputTo1_IDChanging(value);
                 ReportPropertyChanging("ForceOutputTo1_ID");
-                _ForceOutputTo1_ID = StructuralObject.SetValidValue(value, "ForceOutputTo1_ID");
+                _ForceOutputTo1_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ForceOutputTo1_ID");
                 OnForceOutputTo1_IDChanged();
             }
@@ -7181,7 +7182,7 @@ namespace WebTester
             {
                 OnKWApexMap_IDChanging(value);
                 ReportPropertyChanging("KWApexMap_ID");
-                _KWApexMap_ID = StructuralObject.SetValidValue(value, "KWApexMap_ID");
+                _KWApexMap_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("KWApexMap_ID");
                 OnKWApexMap_IDChanged();
             }
@@ -7205,7 +7206,7 @@ namespace WebTester
             {
                 OnPEHP_VCChanging(value);
                 ReportPropertyChanging("PEHP_VC");
-                _PEHP_VC = StructuralObject.SetValidValue(value, false, "PEHP_VC");
+                _PEHP_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PEHP_VC");
                 OnPEHP_VCChanged();
             }
@@ -7229,7 +7230,7 @@ namespace WebTester
             {
                 OnCLIA_VCChanging(value);
                 ReportPropertyChanging("CLIA_VC");
-                _CLIA_VC = StructuralObject.SetValidValue(value, false, "CLIA_VC");
+                _CLIA_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("CLIA_VC");
                 OnCLIA_VCChanged();
             }
@@ -7253,7 +7254,7 @@ namespace WebTester
             {
                 OnBCBSMedicaid_VCChanging(value);
                 ReportPropertyChanging("BCBSMedicaid_VC");
-                _BCBSMedicaid_VC = StructuralObject.SetValidValue(value, false, "BCBSMedicaid_VC");
+                _BCBSMedicaid_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BCBSMedicaid_VC");
                 OnBCBSMedicaid_VCChanged();
             }
@@ -7277,7 +7278,7 @@ namespace WebTester
             {
                 OnStat_MonthlyStatThreshold_INChanging(value);
                 ReportPropertyChanging("Stat_MonthlyStatThreshold_IN");
-                _Stat_MonthlyStatThreshold_IN = StructuralObject.SetValidValue(value, "Stat_MonthlyStatThreshold_IN");
+                _Stat_MonthlyStatThreshold_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_MonthlyStatThreshold_IN");
                 OnStat_MonthlyStatThreshold_INChanged();
             }
@@ -7301,7 +7302,7 @@ namespace WebTester
             {
                 OnStat_ChargePerStatOverThreshold_SMChanging(value);
                 ReportPropertyChanging("Stat_ChargePerStatOverThreshold_SM");
-                _Stat_ChargePerStatOverThreshold_SM = StructuralObject.SetValidValue(value, "Stat_ChargePerStatOverThreshold_SM");
+                _Stat_ChargePerStatOverThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ChargePerStatOverThreshold_SM");
                 OnStat_ChargePerStatOverThreshold_SMChanged();
             }
@@ -7325,7 +7326,7 @@ namespace WebTester
             {
                 OnStat_ChargePerStatUnderThreshold_SMChanging(value);
                 ReportPropertyChanging("Stat_ChargePerStatUnderThreshold_SM");
-                _Stat_ChargePerStatUnderThreshold_SM = StructuralObject.SetValidValue(value, "Stat_ChargePerStatUnderThreshold_SM");
+                _Stat_ChargePerStatUnderThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ChargePerStatUnderThreshold_SM");
                 OnStat_ChargePerStatUnderThreshold_SMChanged();
             }
@@ -7349,7 +7350,7 @@ namespace WebTester
             {
                 OnStat_ChargePerStatSecondPage_SMChanging(value);
                 ReportPropertyChanging("Stat_ChargePerStatSecondPage_SM");
-                _Stat_ChargePerStatSecondPage_SM = StructuralObject.SetValidValue(value, "Stat_ChargePerStatSecondPage_SM");
+                _Stat_ChargePerStatSecondPage_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ChargePerStatSecondPage_SM");
                 OnStat_ChargePerStatSecondPage_SMChanged();
             }
@@ -7373,7 +7374,7 @@ namespace WebTester
             {
                 OnStat_MinimumFeeAmount_SMChanging(value);
                 ReportPropertyChanging("Stat_MinimumFeeAmount_SM");
-                _Stat_MinimumFeeAmount_SM = StructuralObject.SetValidValue(value, "Stat_MinimumFeeAmount_SM");
+                _Stat_MinimumFeeAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_MinimumFeeAmount_SM");
                 OnStat_MinimumFeeAmount_SMChanged();
             }
@@ -7397,7 +7398,7 @@ namespace WebTester
             {
                 OnStat_SoftwareMapName_IDChanging(value);
                 ReportPropertyChanging("Stat_SoftwareMapName_ID");
-                _Stat_SoftwareMapName_ID = StructuralObject.SetValidValue(value, "Stat_SoftwareMapName_ID");
+                _Stat_SoftwareMapName_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_SoftwareMapName_ID");
                 OnStat_SoftwareMapName_IDChanged();
             }
@@ -7421,7 +7422,7 @@ namespace WebTester
             {
                 OnStat_SoftwareConversion_IDChanging(value);
                 ReportPropertyChanging("Stat_SoftwareConversion_ID");
-                _Stat_SoftwareConversion_ID = StructuralObject.SetValidValue(value, "Stat_SoftwareConversion_ID");
+                _Stat_SoftwareConversion_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_SoftwareConversion_ID");
                 OnStat_SoftwareConversion_IDChanged();
             }
@@ -7445,7 +7446,7 @@ namespace WebTester
             {
                 OnStat_StripString_VCChanging(value);
                 ReportPropertyChanging("Stat_StripString_VC");
-                _Stat_StripString_VC = StructuralObject.SetValidValue(value, true, "Stat_StripString_VC");
+                _Stat_StripString_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_StripString_VC");
                 OnStat_StripString_VCChanged();
             }
@@ -7469,7 +7470,7 @@ namespace WebTester
             {
                 OnStat_KWApexMap_IDChanging(value);
                 ReportPropertyChanging("Stat_KWApexMap_ID");
-                _Stat_KWApexMap_ID = StructuralObject.SetValidValue(value, "Stat_KWApexMap_ID");
+                _Stat_KWApexMap_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_KWApexMap_ID");
                 OnStat_KWApexMap_IDChanged();
             }
@@ -7493,7 +7494,7 @@ namespace WebTester
             {
                 OnStat_KeyFieldData_VCChanging(value);
                 ReportPropertyChanging("Stat_KeyFieldData_VC");
-                _Stat_KeyFieldData_VC = StructuralObject.SetValidValue(value, true, "Stat_KeyFieldData_VC");
+                _Stat_KeyFieldData_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_KeyFieldData_VC");
                 OnStat_KeyFieldData_VCChanged();
             }
@@ -7517,7 +7518,7 @@ namespace WebTester
             {
                 OnStat_ProductType_TIChanging(value);
                 ReportPropertyChanging("Stat_ProductType_TI");
-                _Stat_ProductType_TI = StructuralObject.SetValidValue(value, "Stat_ProductType_TI");
+                _Stat_ProductType_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ProductType_TI");
                 OnStat_ProductType_TIChanged();
             }
@@ -7541,7 +7542,7 @@ namespace WebTester
             {
                 OnStat_Backprinting_BTChanging(value);
                 ReportPropertyChanging("Stat_Backprinting_BT");
-                _Stat_Backprinting_BT = StructuralObject.SetValidValue(value, "Stat_Backprinting_BT");
+                _Stat_Backprinting_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_Backprinting_BT");
                 OnStat_Backprinting_BTChanged();
             }
@@ -7565,7 +7566,7 @@ namespace WebTester
             {
                 OnStat_CreditCardsAccepted_CHChanging(value);
                 ReportPropertyChanging("Stat_CreditCardsAccepted_CH");
-                _Stat_CreditCardsAccepted_CH = StructuralObject.SetValidValue(value, true, "Stat_CreditCardsAccepted_CH");
+                _Stat_CreditCardsAccepted_CH = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_CreditCardsAccepted_CH");
                 OnStat_CreditCardsAccepted_CHChanged();
             }
@@ -7589,7 +7590,7 @@ namespace WebTester
             {
                 OnStat_IndustryType_TIChanging(value);
                 ReportPropertyChanging("Stat_IndustryType_TI");
-                _Stat_IndustryType_TI = StructuralObject.SetValidValue(value, "Stat_IndustryType_TI");
+                _Stat_IndustryType_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_IndustryType_TI");
                 OnStat_IndustryType_TIChanged();
             }
@@ -7613,7 +7614,7 @@ namespace WebTester
             {
                 OnStat_IndustryCommercialType_VCChanging(value);
                 ReportPropertyChanging("Stat_IndustryCommercialType_VC");
-                _Stat_IndustryCommercialType_VC = StructuralObject.SetValidValue(value, true, "Stat_IndustryCommercialType_VC");
+                _Stat_IndustryCommercialType_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_IndustryCommercialType_VC");
                 OnStat_IndustryCommercialType_VCChanged();
             }
@@ -7637,7 +7638,7 @@ namespace WebTester
             {
                 OnStat_CustomLogo_BTChanging(value);
                 ReportPropertyChanging("Stat_CustomLogo_BT");
-                _Stat_CustomLogo_BT = StructuralObject.SetValidValue(value, "Stat_CustomLogo_BT");
+                _Stat_CustomLogo_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_CustomLogo_BT");
                 OnStat_CustomLogo_BTChanged();
             }
@@ -7661,7 +7662,7 @@ namespace WebTester
             {
                 OnStat_IncludePaymentDueByDate_BTChanging(value);
                 ReportPropertyChanging("Stat_IncludePaymentDueByDate_BT");
-                _Stat_IncludePaymentDueByDate_BT = StructuralObject.SetValidValue(value, "Stat_IncludePaymentDueByDate_BT");
+                _Stat_IncludePaymentDueByDate_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_IncludePaymentDueByDate_BT");
                 OnStat_IncludePaymentDueByDate_BTChanged();
             }
@@ -7685,7 +7686,7 @@ namespace WebTester
             {
                 OnStat_IncludePaymentDueByDateNumberOfDays_TIChanging(value);
                 ReportPropertyChanging("Stat_IncludePaymentDueByDateNumberOfDays_TI");
-                _Stat_IncludePaymentDueByDateNumberOfDays_TI = StructuralObject.SetValidValue(value, "Stat_IncludePaymentDueByDateNumberOfDays_TI");
+                _Stat_IncludePaymentDueByDateNumberOfDays_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_IncludePaymentDueByDateNumberOfDays_TI");
                 OnStat_IncludePaymentDueByDateNumberOfDays_TIChanged();
             }
@@ -7709,7 +7710,7 @@ namespace WebTester
             {
                 OnStat_PaySalesRep1_BTChanging(value);
                 ReportPropertyChanging("Stat_PaySalesRep1_BT");
-                _Stat_PaySalesRep1_BT = StructuralObject.SetValidValue(value, "Stat_PaySalesRep1_BT");
+                _Stat_PaySalesRep1_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PaySalesRep1_BT");
                 OnStat_PaySalesRep1_BTChanged();
             }
@@ -7733,7 +7734,7 @@ namespace WebTester
             {
                 OnStat_PaySalesRep2_BTChanging(value);
                 ReportPropertyChanging("Stat_PaySalesRep2_BT");
-                _Stat_PaySalesRep2_BT = StructuralObject.SetValidValue(value, "Stat_PaySalesRep2_BT");
+                _Stat_PaySalesRep2_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PaySalesRep2_BT");
                 OnStat_PaySalesRep2_BTChanged();
             }
@@ -7757,7 +7758,7 @@ namespace WebTester
             {
                 OnStat_PayVendor1_BTChanging(value);
                 ReportPropertyChanging("Stat_PayVendor1_BT");
-                _Stat_PayVendor1_BT = StructuralObject.SetValidValue(value, "Stat_PayVendor1_BT");
+                _Stat_PayVendor1_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PayVendor1_BT");
                 OnStat_PayVendor1_BTChanged();
             }
@@ -7781,7 +7782,7 @@ namespace WebTester
             {
                 OnStat_PayVendor2_BTChanging(value);
                 ReportPropertyChanging("Stat_PayVendor2_BT");
-                _Stat_PayVendor2_BT = StructuralObject.SetValidValue(value, "Stat_PayVendor2_BT");
+                _Stat_PayVendor2_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PayVendor2_BT");
                 OnStat_PayVendor2_BTChanged();
             }
@@ -7805,7 +7806,7 @@ namespace WebTester
             {
                 OnStat_StatementStartDate_DTChanging(value);
                 ReportPropertyChanging("Stat_StatementStartDate_DT");
-                _Stat_StatementStartDate_DT = StructuralObject.SetValidValue(value, "Stat_StatementStartDate_DT");
+                _Stat_StatementStartDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_StatementStartDate_DT");
                 OnStat_StatementStartDate_DTChanged();
             }
@@ -7829,7 +7830,7 @@ namespace WebTester
             {
                 OnStat_Note_VCChanging(value);
                 ReportPropertyChanging("Stat_Note_VC");
-                _Stat_Note_VC = StructuralObject.SetValidValue(value, true, "Stat_Note_VC");
+                _Stat_Note_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_Note_VC");
                 OnStat_Note_VCChanged();
             }
@@ -7853,7 +7854,7 @@ namespace WebTester
             {
                 OnStat_Note1_VCChanging(value);
                 ReportPropertyChanging("Stat_Note1_VC");
-                _Stat_Note1_VC = StructuralObject.SetValidValue(value, true, "Stat_Note1_VC");
+                _Stat_Note1_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_Note1_VC");
                 OnStat_Note1_VCChanged();
             }
@@ -7877,7 +7878,7 @@ namespace WebTester
             {
                 OnStat_Note2_VCChanging(value);
                 ReportPropertyChanging("Stat_Note2_VC");
-                _Stat_Note2_VC = StructuralObject.SetValidValue(value, true, "Stat_Note2_VC");
+                _Stat_Note2_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_Note2_VC");
                 OnStat_Note2_VCChanged();
             }
@@ -7901,7 +7902,7 @@ namespace WebTester
             {
                 OnStat_Note3_VCChanging(value);
                 ReportPropertyChanging("Stat_Note3_VC");
-                _Stat_Note3_VC = StructuralObject.SetValidValue(value, true, "Stat_Note3_VC");
+                _Stat_Note3_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_Note3_VC");
                 OnStat_Note3_VCChanged();
             }
@@ -7925,7 +7926,7 @@ namespace WebTester
             {
                 OnStat_Note4_VCChanging(value);
                 ReportPropertyChanging("Stat_Note4_VC");
-                _Stat_Note4_VC = StructuralObject.SetValidValue(value, true, "Stat_Note4_VC");
+                _Stat_Note4_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_Note4_VC");
                 OnStat_Note4_VCChanged();
             }
@@ -7949,7 +7950,7 @@ namespace WebTester
             {
                 OnStat_Note5_VCChanging(value);
                 ReportPropertyChanging("Stat_Note5_VC");
-                _Stat_Note5_VC = StructuralObject.SetValidValue(value, true, "Stat_Note5_VC");
+                _Stat_Note5_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_Note5_VC");
                 OnStat_Note5_VCChanged();
             }
@@ -7973,7 +7974,7 @@ namespace WebTester
             {
                 OnStat_UniqueName_VCChanging(value);
                 ReportPropertyChanging("Stat_UniqueName_VC");
-                _Stat_UniqueName_VC = StructuralObject.SetValidValue(value, true, "Stat_UniqueName_VC");
+                _Stat_UniqueName_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_UniqueName_VC");
                 OnStat_UniqueName_VCChanged();
             }
@@ -7997,7 +7998,7 @@ namespace WebTester
             {
                 OnStat_RemitName_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitName_VC");
-                _Stat_RemitName_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitName_VC");
+                _Stat_RemitName_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitName_VC");
                 OnStat_RemitName_VCChanged();
             }
@@ -8021,7 +8022,7 @@ namespace WebTester
             {
                 OnStat_RemitAddress1_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitAddress1_VC");
-                _Stat_RemitAddress1_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitAddress1_VC");
+                _Stat_RemitAddress1_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitAddress1_VC");
                 OnStat_RemitAddress1_VCChanged();
             }
@@ -8045,7 +8046,7 @@ namespace WebTester
             {
                 OnStat_RemitAddress2_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitAddress2_VC");
-                _Stat_RemitAddress2_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitAddress2_VC");
+                _Stat_RemitAddress2_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitAddress2_VC");
                 OnStat_RemitAddress2_VCChanged();
             }
@@ -8069,7 +8070,7 @@ namespace WebTester
             {
                 OnStat_RemitCity_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitCity_VC");
-                _Stat_RemitCity_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitCity_VC");
+                _Stat_RemitCity_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitCity_VC");
                 OnStat_RemitCity_VCChanged();
             }
@@ -8093,7 +8094,7 @@ namespace WebTester
             {
                 OnStat_RemitST_IDChanging(value);
                 ReportPropertyChanging("Stat_RemitST_ID");
-                _Stat_RemitST_ID = StructuralObject.SetValidValue(value, "Stat_RemitST_ID");
+                _Stat_RemitST_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_RemitST_ID");
                 OnStat_RemitST_IDChanged();
             }
@@ -8117,7 +8118,7 @@ namespace WebTester
             {
                 OnStat_RemitST_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitST_VC");
-                _Stat_RemitST_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitST_VC");
+                _Stat_RemitST_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitST_VC");
                 OnStat_RemitST_VCChanged();
             }
@@ -8141,7 +8142,7 @@ namespace WebTester
             {
                 OnStat_RemitZip_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitZip_VC");
-                _Stat_RemitZip_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitZip_VC");
+                _Stat_RemitZip_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitZip_VC");
                 OnStat_RemitZip_VCChanged();
             }
@@ -8165,7 +8166,7 @@ namespace WebTester
             {
                 OnStat_RemitDeliveryPoint_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitDeliveryPoint_VC");
-                _Stat_RemitDeliveryPoint_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitDeliveryPoint_VC");
+                _Stat_RemitDeliveryPoint_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitDeliveryPoint_VC");
                 OnStat_RemitDeliveryPoint_VCChanged();
             }
@@ -8189,7 +8190,7 @@ namespace WebTester
             {
                 OnStat_RemitCheckDigit_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitCheckDigit_VC");
-                _Stat_RemitCheckDigit_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitCheckDigit_VC");
+                _Stat_RemitCheckDigit_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitCheckDigit_VC");
                 OnStat_RemitCheckDigit_VCChanged();
             }
@@ -8213,7 +8214,7 @@ namespace WebTester
             {
                 OnStat_RemitPhone_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitPhone_VC");
-                _Stat_RemitPhone_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitPhone_VC");
+                _Stat_RemitPhone_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitPhone_VC");
                 OnStat_RemitPhone_VCChanged();
             }
@@ -8237,7 +8238,7 @@ namespace WebTester
             {
                 OnStat_RemitPhoneAlt_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitPhoneAlt_VC");
-                _Stat_RemitPhoneAlt_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitPhoneAlt_VC");
+                _Stat_RemitPhoneAlt_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitPhoneAlt_VC");
                 OnStat_RemitPhoneAlt_VCChanged();
             }
@@ -8261,7 +8262,7 @@ namespace WebTester
             {
                 OnStat_RemitPhoneExt_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitPhoneExt_VC");
-                _Stat_RemitPhoneExt_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitPhoneExt_VC");
+                _Stat_RemitPhoneExt_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitPhoneExt_VC");
                 OnStat_RemitPhoneExt_VCChanged();
             }
@@ -8285,7 +8286,7 @@ namespace WebTester
             {
                 OnStat_RemitPhoneAltExt_VCChanging(value);
                 ReportPropertyChanging("Stat_RemitPhoneAltExt_VC");
-                _Stat_RemitPhoneAltExt_VC = StructuralObject.SetValidValue(value, true, "Stat_RemitPhoneAltExt_VC");
+                _Stat_RemitPhoneAltExt_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_RemitPhoneAltExt_VC");
                 OnStat_RemitPhoneAltExt_VCChanged();
             }
@@ -8309,7 +8310,7 @@ namespace WebTester
             {
                 OnStat_ShiftFirstLine_VCChanging(value);
                 ReportPropertyChanging("Stat_ShiftFirstLine_VC");
-                _Stat_ShiftFirstLine_VC = StructuralObject.SetValidValue(value, true, "Stat_ShiftFirstLine_VC");
+                _Stat_ShiftFirstLine_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_ShiftFirstLine_VC");
                 OnStat_ShiftFirstLine_VCChanged();
             }
@@ -8333,7 +8334,7 @@ namespace WebTester
             {
                 OnStat_ShiftSpaceLo_VCChanging(value);
                 ReportPropertyChanging("Stat_ShiftSpaceLo_VC");
-                _Stat_ShiftSpaceLo_VC = StructuralObject.SetValidValue(value, true, "Stat_ShiftSpaceLo_VC");
+                _Stat_ShiftSpaceLo_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_ShiftSpaceLo_VC");
                 OnStat_ShiftSpaceLo_VCChanged();
             }
@@ -8357,7 +8358,7 @@ namespace WebTester
             {
                 OnStat_ShiftSpaceHi_VCChanging(value);
                 ReportPropertyChanging("Stat_ShiftSpaceHi_VC");
-                _Stat_ShiftSpaceHi_VC = StructuralObject.SetValidValue(value, true, "Stat_ShiftSpaceHi_VC");
+                _Stat_ShiftSpaceHi_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_ShiftSpaceHi_VC");
                 OnStat_ShiftSpaceHi_VCChanged();
             }
@@ -8381,7 +8382,7 @@ namespace WebTester
             {
                 OnStat_UseUniqueSettings_INChanging(value);
                 ReportPropertyChanging("Stat_UseUniqueSettings_IN");
-                _Stat_UseUniqueSettings_IN = StructuralObject.SetValidValue(value, "Stat_UseUniqueSettings_IN");
+                _Stat_UseUniqueSettings_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_UseUniqueSettings_IN");
                 OnStat_UseUniqueSettings_INChanged();
             }
@@ -8405,7 +8406,7 @@ namespace WebTester
             {
                 OnStat_PaperColor_TIChanging(value);
                 ReportPropertyChanging("Stat_PaperColor_TI");
-                _Stat_PaperColor_TI = StructuralObject.SetValidValue(value, "Stat_PaperColor_TI");
+                _Stat_PaperColor_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PaperColor_TI");
                 OnStat_PaperColor_TIChanged();
             }
@@ -8429,7 +8430,7 @@ namespace WebTester
             {
                 OnStat_PullOfficeInfoFromStatement_BTChanging(value);
                 ReportPropertyChanging("Stat_PullOfficeInfoFromStatement_BT");
-                _Stat_PullOfficeInfoFromStatement_BT = StructuralObject.SetValidValue(value, "Stat_PullOfficeInfoFromStatement_BT");
+                _Stat_PullOfficeInfoFromStatement_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PullOfficeInfoFromStatement_BT");
                 OnStat_PullOfficeInfoFromStatement_BTChanged();
             }
@@ -8453,7 +8454,7 @@ namespace WebTester
             {
                 OnStat_PullRemitToInfoFromStatement_BTChanging(value);
                 ReportPropertyChanging("Stat_PullRemitToInfoFromStatement_BT");
-                _Stat_PullRemitToInfoFromStatement_BT = StructuralObject.SetValidValue(value, "Stat_PullRemitToInfoFromStatement_BT");
+                _Stat_PullRemitToInfoFromStatement_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_PullRemitToInfoFromStatement_BT");
                 OnStat_PullRemitToInfoFromStatement_BTChanged();
             }
@@ -8477,7 +8478,7 @@ namespace WebTester
             {
                 OnStat_ExcludeBalanceDue_BTChanging(value);
                 ReportPropertyChanging("Stat_ExcludeBalanceDue_BT");
-                _Stat_ExcludeBalanceDue_BT = StructuralObject.SetValidValue(value, "Stat_ExcludeBalanceDue_BT");
+                _Stat_ExcludeBalanceDue_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ExcludeBalanceDue_BT");
                 OnStat_ExcludeBalanceDue_BTChanged();
             }
@@ -8501,7 +8502,7 @@ namespace WebTester
             {
                 OnStat_HasFloatingFooterHeader_BTChanging(value);
                 ReportPropertyChanging("Stat_HasFloatingFooterHeader_BT");
-                _Stat_HasFloatingFooterHeader_BT = StructuralObject.SetValidValue(value, "Stat_HasFloatingFooterHeader_BT");
+                _Stat_HasFloatingFooterHeader_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_HasFloatingFooterHeader_BT");
                 OnStat_HasFloatingFooterHeader_BTChanged();
             }
@@ -8525,7 +8526,7 @@ namespace WebTester
             {
                 OnStat_FooterHeaderCorrectLineNumber_INChanging(value);
                 ReportPropertyChanging("Stat_FooterHeaderCorrectLineNumber_IN");
-                _Stat_FooterHeaderCorrectLineNumber_IN = StructuralObject.SetValidValue(value, "Stat_FooterHeaderCorrectLineNumber_IN");
+                _Stat_FooterHeaderCorrectLineNumber_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_FooterHeaderCorrectLineNumber_IN");
                 OnStat_FooterHeaderCorrectLineNumber_INChanged();
             }
@@ -8549,7 +8550,7 @@ namespace WebTester
             {
                 OnStat_FooterHeaderString_VCChanging(value);
                 ReportPropertyChanging("Stat_FooterHeaderString_VC");
-                _Stat_FooterHeaderString_VC = StructuralObject.SetValidValue(value, true, "Stat_FooterHeaderString_VC");
+                _Stat_FooterHeaderString_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_FooterHeaderString_VC");
                 OnStat_FooterHeaderString_VCChanged();
             }
@@ -8573,7 +8574,7 @@ namespace WebTester
             {
                 OnStat_ClaimStartString_VCChanging(value);
                 ReportPropertyChanging("Stat_ClaimStartString_VC");
-                _Stat_ClaimStartString_VC = StructuralObject.SetValidValue(value, true, "Stat_ClaimStartString_VC");
+                _Stat_ClaimStartString_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_ClaimStartString_VC");
                 OnStat_ClaimStartString_VCChanged();
             }
@@ -8597,7 +8598,7 @@ namespace WebTester
             {
                 OnStat_LineItemStartsWithRegex_VCChanging(value);
                 ReportPropertyChanging("Stat_LineItemStartsWithRegex_VC");
-                _Stat_LineItemStartsWithRegex_VC = StructuralObject.SetValidValue(value, true, "Stat_LineItemStartsWithRegex_VC");
+                _Stat_LineItemStartsWithRegex_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Stat_LineItemStartsWithRegex_VC");
                 OnStat_LineItemStartsWithRegex_VCChanged();
             }
@@ -8621,7 +8622,7 @@ namespace WebTester
             {
                 OnStat_LineItemStartsWithRegexPatternLength_INChanging(value);
                 ReportPropertyChanging("Stat_LineItemStartsWithRegexPatternLength_IN");
-                _Stat_LineItemStartsWithRegexPatternLength_IN = StructuralObject.SetValidValue(value, "Stat_LineItemStartsWithRegexPatternLength_IN");
+                _Stat_LineItemStartsWithRegexPatternLength_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_LineItemStartsWithRegexPatternLength_IN");
                 OnStat_LineItemStartsWithRegexPatternLength_INChanged();
             }
@@ -8645,7 +8646,7 @@ namespace WebTester
             {
                 OnAcceptTermsDate_DTChanging(value);
                 ReportPropertyChanging("AcceptTermsDate_DT");
-                _AcceptTermsDate_DT = StructuralObject.SetValidValue(value, "AcceptTermsDate_DT");
+                _AcceptTermsDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AcceptTermsDate_DT");
                 OnAcceptTermsDate_DTChanged();
             }
@@ -8669,7 +8670,7 @@ namespace WebTester
             {
                 OnDontSendHumanReadableEOBReports_BTChanging(value);
                 ReportPropertyChanging("DontSendHumanReadableEOBReports_BT");
-                _DontSendHumanReadableEOBReports_BT = StructuralObject.SetValidValue(value, "DontSendHumanReadableEOBReports_BT");
+                _DontSendHumanReadableEOBReports_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DontSendHumanReadableEOBReports_BT");
                 OnDontSendHumanReadableEOBReports_BTChanged();
             }
@@ -8693,7 +8694,7 @@ namespace WebTester
             {
                 OnDontSendMachineReadableEOBReports_BTChanging(value);
                 ReportPropertyChanging("DontSendMachineReadableEOBReports_BT");
-                _DontSendMachineReadableEOBReports_BT = StructuralObject.SetValidValue(value, "DontSendMachineReadableEOBReports_BT");
+                _DontSendMachineReadableEOBReports_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DontSendMachineReadableEOBReports_BT");
                 OnDontSendMachineReadableEOBReports_BTChanged();
             }
@@ -8717,7 +8718,7 @@ namespace WebTester
             {
                 OnRejectAllClaims_BTChanging(value);
                 ReportPropertyChanging("RejectAllClaims_BT");
-                _RejectAllClaims_BT = StructuralObject.SetValidValue(value, "RejectAllClaims_BT");
+                _RejectAllClaims_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RejectAllClaims_BT");
                 OnRejectAllClaims_BTChanged();
             }
@@ -8741,7 +8742,7 @@ namespace WebTester
             {
                 OnBillingStartDate_DTChanging(value);
                 ReportPropertyChanging("BillingStartDate_DT");
-                _BillingStartDate_DT = StructuralObject.SetValidValue(value, "BillingStartDate_DT");
+                _BillingStartDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("BillingStartDate_DT");
                 OnBillingStartDate_DTChanged();
             }
@@ -8765,7 +8766,7 @@ namespace WebTester
             {
                 OnPGPPubKey_VCChanging(value);
                 ReportPropertyChanging("PGPPubKey_VC");
-                _PGPPubKey_VC = StructuralObject.SetValidValue(value, false, "PGPPubKey_VC");
+                _PGPPubKey_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("PGPPubKey_VC");
                 OnPGPPubKey_VCChanged();
             }
@@ -8789,7 +8790,7 @@ namespace WebTester
             {
                 OnAcctVerifiedByApex_BTChanging(value);
                 ReportPropertyChanging("AcctVerifiedByApex_BT");
-                _AcctVerifiedByApex_BT = StructuralObject.SetValidValue(value, "AcctVerifiedByApex_BT");
+                _AcctVerifiedByApex_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AcctVerifiedByApex_BT");
                 OnAcctVerifiedByApex_BTChanged();
             }
@@ -8813,7 +8814,7 @@ namespace WebTester
             {
                 OnAcctVerifiedByClient_BTChanging(value);
                 ReportPropertyChanging("AcctVerifiedByClient_BT");
-                _AcctVerifiedByClient_BT = StructuralObject.SetValidValue(value, "AcctVerifiedByClient_BT");
+                _AcctVerifiedByClient_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AcctVerifiedByClient_BT");
                 OnAcctVerifiedByClient_BTChanged();
             }
@@ -8837,7 +8838,7 @@ namespace WebTester
             {
                 OnServiceLevel_TIChanging(value);
                 ReportPropertyChanging("ServiceLevel_TI");
-                _ServiceLevel_TI = StructuralObject.SetValidValue(value, "ServiceLevel_TI");
+                _ServiceLevel_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ServiceLevel_TI");
                 OnServiceLevel_TIChanged();
             }
@@ -8861,7 +8862,7 @@ namespace WebTester
             {
                 OnSendUTMedicareERAOnly_BTChanging(value);
                 ReportPropertyChanging("SendUTMedicareERAOnly_BT");
-                _SendUTMedicareERAOnly_BT = StructuralObject.SetValidValue(value, "SendUTMedicareERAOnly_BT");
+                _SendUTMedicareERAOnly_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SendUTMedicareERAOnly_BT");
                 OnSendUTMedicareERAOnly_BTChanged();
             }
@@ -8885,7 +8886,7 @@ namespace WebTester
             {
                 OnHoldStatementsForReview_BTChanging(value);
                 ReportPropertyChanging("HoldStatementsForReview_BT");
-                _HoldStatementsForReview_BT = StructuralObject.SetValidValue(value, "HoldStatementsForReview_BT");
+                _HoldStatementsForReview_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("HoldStatementsForReview_BT");
                 OnHoldStatementsForReview_BTChanged();
             }
@@ -8909,7 +8910,7 @@ namespace WebTester
             {
                 OnRequireSoftwareUpdate_BTChanging(value);
                 ReportPropertyChanging("RequireSoftwareUpdate_BT");
-                _RequireSoftwareUpdate_BT = StructuralObject.SetValidValue(value, "RequireSoftwareUpdate_BT");
+                _RequireSoftwareUpdate_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("RequireSoftwareUpdate_BT");
                 OnRequireSoftwareUpdate_BTChanged();
             }
@@ -8933,7 +8934,7 @@ namespace WebTester
             {
                 OnReportOnPreviousFailedClaims_BTChanging(value);
                 ReportPropertyChanging("ReportOnPreviousFailedClaims_BT");
-                _ReportOnPreviousFailedClaims_BT = StructuralObject.SetValidValue(value, "ReportOnPreviousFailedClaims_BT");
+                _ReportOnPreviousFailedClaims_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ReportOnPreviousFailedClaims_BT");
                 OnReportOnPreviousFailedClaims_BTChanged();
             }
@@ -8957,7 +8958,7 @@ namespace WebTester
             {
                 OnOutputMedicareLegacy_BTChanging(value);
                 ReportPropertyChanging("OutputMedicareLegacy_BT");
-                _OutputMedicareLegacy_BT = StructuralObject.SetValidValue(value, "OutputMedicareLegacy_BT");
+                _OutputMedicareLegacy_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("OutputMedicareLegacy_BT");
                 OnOutputMedicareLegacy_BTChanged();
             }
@@ -8981,7 +8982,7 @@ namespace WebTester
             {
                 OnSendApexReports_BTChanging(value);
                 ReportPropertyChanging("SendApexReports_BT");
-                _SendApexReports_BT = StructuralObject.SetValidValue(value, "SendApexReports_BT");
+                _SendApexReports_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SendApexReports_BT");
                 OnSendApexReports_BTChanged();
             }
@@ -9005,7 +9006,7 @@ namespace WebTester
             {
                 OnDocIsAlwaysBilled_BTChanging(value);
                 ReportPropertyChanging("DocIsAlwaysBilled_BT");
-                _DocIsAlwaysBilled_BT = StructuralObject.SetValidValue(value, "DocIsAlwaysBilled_BT");
+                _DocIsAlwaysBilled_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DocIsAlwaysBilled_BT");
                 OnDocIsAlwaysBilled_BTChanged();
             }
@@ -9029,7 +9030,7 @@ namespace WebTester
             {
                 OnDaysOldClaims_INChanging(value);
                 ReportPropertyChanging("DaysOldClaims_IN");
-                _DaysOldClaims_IN = StructuralObject.SetValidValue(value, "DaysOldClaims_IN");
+                _DaysOldClaims_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DaysOldClaims_IN");
                 OnDaysOldClaims_INChanged();
             }
@@ -9053,7 +9054,7 @@ namespace WebTester
             {
                 OnOldClaims_SMChanging(value);
                 ReportPropertyChanging("OldClaims_SM");
-                _OldClaims_SM = StructuralObject.SetValidValue(value, "OldClaims_SM");
+                _OldClaims_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("OldClaims_SM");
                 OnOldClaims_SMChanged();
             }
@@ -9077,7 +9078,7 @@ namespace WebTester
             {
                 OnDentalERAAmount_VCChanging(value);
                 ReportPropertyChanging("DentalERAAmount_VC");
-                _DentalERAAmount_VC = StructuralObject.SetValidValue(value, true, "DentalERAAmount_VC");
+                _DentalERAAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("DentalERAAmount_VC");
                 OnDentalERAAmount_VCChanged();
             }
@@ -9101,7 +9102,7 @@ namespace WebTester
             {
                 OnNumberOfDaysFreeClaims_INChanging(value);
                 ReportPropertyChanging("NumberOfDaysFreeClaims_IN");
-                _NumberOfDaysFreeClaims_IN = StructuralObject.SetValidValue(value, "NumberOfDaysFreeClaims_IN");
+                _NumberOfDaysFreeClaims_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NumberOfDaysFreeClaims_IN");
                 OnNumberOfDaysFreeClaims_INChanged();
             }
@@ -9125,7 +9126,7 @@ namespace WebTester
             {
                 OnInnovationsMonthlyAmount_SMChanging(value);
                 ReportPropertyChanging("InnovationsMonthlyAmount_SM");
-                _InnovationsMonthlyAmount_SM = StructuralObject.SetValidValue(value, "InnovationsMonthlyAmount_SM");
+                _InnovationsMonthlyAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("InnovationsMonthlyAmount_SM");
                 OnInnovationsMonthlyAmount_SMChanged();
             }
@@ -9149,7 +9150,7 @@ namespace WebTester
             {
                 OnEligibilityBaseAmountMed_VCChanging(value);
                 ReportPropertyChanging("EligibilityBaseAmountMed_VC");
-                _EligibilityBaseAmountMed_VC = StructuralObject.SetValidValue(value, true, "EligibilityBaseAmountMed_VC");
+                _EligibilityBaseAmountMed_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EligibilityBaseAmountMed_VC");
                 OnEligibilityBaseAmountMed_VCChanged();
             }
@@ -9173,7 +9174,7 @@ namespace WebTester
             {
                 OnNumberOfEligibilityTransBlockMed_INChanging(value);
                 ReportPropertyChanging("NumberOfEligibilityTransBlockMed_IN");
-                _NumberOfEligibilityTransBlockMed_IN = StructuralObject.SetValidValue(value, "NumberOfEligibilityTransBlockMed_IN");
+                _NumberOfEligibilityTransBlockMed_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NumberOfEligibilityTransBlockMed_IN");
                 OnNumberOfEligibilityTransBlockMed_INChanged();
             }
@@ -9197,7 +9198,7 @@ namespace WebTester
             {
                 OnEligibilityAmountOverThresholdMed_SMChanging(value);
                 ReportPropertyChanging("EligibilityAmountOverThresholdMed_SM");
-                _EligibilityAmountOverThresholdMed_SM = StructuralObject.SetValidValue(value, "EligibilityAmountOverThresholdMed_SM");
+                _EligibilityAmountOverThresholdMed_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("EligibilityAmountOverThresholdMed_SM");
                 OnEligibilityAmountOverThresholdMed_SMChanged();
             }
@@ -9221,7 +9222,7 @@ namespace WebTester
             {
                 OnIsSubscribedSales_BTChanging(value);
                 ReportPropertyChanging("IsSubscribedSales_BT");
-                _IsSubscribedSales_BT = StructuralObject.SetValidValue(value, "IsSubscribedSales_BT");
+                _IsSubscribedSales_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsSubscribedSales_BT");
                 OnIsSubscribedSales_BTChanged();
             }
@@ -9245,7 +9246,7 @@ namespace WebTester
             {
                 OnSubscribedSales_DTChanging(value);
                 ReportPropertyChanging("SubscribedSales_DT");
-                _SubscribedSales_DT = StructuralObject.SetValidValue(value, "SubscribedSales_DT");
+                _SubscribedSales_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SubscribedSales_DT");
                 OnSubscribedSales_DTChanged();
             }
@@ -9269,7 +9270,7 @@ namespace WebTester
             {
                 OnSubscribedSalesIP_VCChanging(value);
                 ReportPropertyChanging("SubscribedSalesIP_VC");
-                _SubscribedSalesIP_VC = StructuralObject.SetValidValue(value, true, "SubscribedSalesIP_VC");
+                _SubscribedSalesIP_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SubscribedSalesIP_VC");
                 OnSubscribedSalesIP_VCChanged();
             }
@@ -9293,7 +9294,7 @@ namespace WebTester
             {
                 OnUnsubscribedSales_DTChanging(value);
                 ReportPropertyChanging("UnsubscribedSales_DT");
-                _UnsubscribedSales_DT = StructuralObject.SetValidValue(value, "UnsubscribedSales_DT");
+                _UnsubscribedSales_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("UnsubscribedSales_DT");
                 OnUnsubscribedSales_DTChanged();
             }
@@ -9317,7 +9318,7 @@ namespace WebTester
             {
                 OnIsTestAccount_BTChanging(value);
                 ReportPropertyChanging("IsTestAccount_BT");
-                _IsTestAccount_BT = StructuralObject.SetValidValue(value, "IsTestAccount_BT");
+                _IsTestAccount_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsTestAccount_BT");
                 OnIsTestAccount_BTChanged();
             }
@@ -9341,7 +9342,7 @@ namespace WebTester
             {
                 OnPracticeGUIDChanging(value);
                 ReportPropertyChanging("PracticeGUID");
-                _PracticeGUID = StructuralObject.SetValidValue(value, "PracticeGUID");
+                _PracticeGUID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PracticeGUID");
                 OnPracticeGUIDChanged();
             }
@@ -9365,7 +9366,7 @@ namespace WebTester
             {
                 OnIsMigratable_BTChanging(value);
                 ReportPropertyChanging("IsMigratable_BT");
-                _IsMigratable_BT = StructuralObject.SetValidValue(value, "IsMigratable_BT");
+                _IsMigratable_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsMigratable_BT");
                 OnIsMigratable_BTChanged();
             }
@@ -9389,7 +9390,7 @@ namespace WebTester
             {
                 OnStatementForm_IDChanging(value);
                 ReportPropertyChanging("StatementForm_ID");
-                _StatementForm_ID = StructuralObject.SetValidValue(value, "StatementForm_ID");
+                _StatementForm_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("StatementForm_ID");
                 OnStatementForm_IDChanged();
             }
@@ -9413,7 +9414,7 @@ namespace WebTester
             {
                 OnUseClaimRemedi_BTChanging(value);
                 ReportPropertyChanging("UseClaimRemedi_BT");
-                _UseClaimRemedi_BT = StructuralObject.SetValidValue(value, "UseClaimRemedi_BT");
+                _UseClaimRemedi_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("UseClaimRemedi_BT");
                 OnUseClaimRemedi_BTChanged();
             }
@@ -9437,7 +9438,7 @@ namespace WebTester
             {
                 OnNEAFacilityID_VCChanging(value);
                 ReportPropertyChanging("NEAFacilityID_VC");
-                _NEAFacilityID_VC = StructuralObject.SetValidValue(value, true, "NEAFacilityID_VC");
+                _NEAFacilityID_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("NEAFacilityID_VC");
                 OnNEAFacilityID_VCChanged();
             }
@@ -9461,7 +9462,7 @@ namespace WebTester
             {
                 OnIsNEAClient_BTChanging(value);
                 ReportPropertyChanging("IsNEAClient_BT");
-                _IsNEAClient_BT = StructuralObject.SetValidValue(value, "IsNEAClient_BT");
+                _IsNEAClient_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsNEAClient_BT");
                 OnIsNEAClient_BTChanged();
             }
@@ -9485,7 +9486,7 @@ namespace WebTester
             {
                 OnIsUseProviderFromClaim_BTChanging(value);
                 ReportPropertyChanging("IsUseProviderFromClaim_BT");
-                _IsUseProviderFromClaim_BT = StructuralObject.SetValidValue(value, "IsUseProviderFromClaim_BT");
+                _IsUseProviderFromClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsUseProviderFromClaim_BT");
                 OnIsUseProviderFromClaim_BTChanged();
             }
@@ -9509,7 +9510,7 @@ namespace WebTester
             {
                 OnIsUsePayToProviderFromClaim_BTChanging(value);
                 ReportPropertyChanging("IsUsePayToProviderFromClaim_BT");
-                _IsUsePayToProviderFromClaim_BT = StructuralObject.SetValidValue(value, "IsUsePayToProviderFromClaim_BT");
+                _IsUsePayToProviderFromClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsUsePayToProviderFromClaim_BT");
                 OnIsUsePayToProviderFromClaim_BTChanged();
             }
@@ -9533,7 +9534,7 @@ namespace WebTester
             {
                 OnUse5010Tables_BTChanging(value);
                 ReportPropertyChanging("Use5010Tables_BT");
-                _Use5010Tables_BT = StructuralObject.SetValidValue(value, "Use5010Tables_BT");
+                _Use5010Tables_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Use5010Tables_BT");
                 OnUse5010Tables_BTChanged();
             }
@@ -9557,7 +9558,7 @@ namespace WebTester
             {
                 OnWhiteLabel_IDChanging(value);
                 ReportPropertyChanging("WhiteLabel_ID");
-                _WhiteLabel_ID = StructuralObject.SetValidValue(value, "WhiteLabel_ID");
+                _WhiteLabel_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("WhiteLabel_ID");
                 OnWhiteLabel_IDChanged();
             }
@@ -9581,7 +9582,7 @@ namespace WebTester
             {
                 OnProviderSale_DTChanging(value);
                 ReportPropertyChanging("ProviderSale_DT");
-                _ProviderSale_DT = StructuralObject.SetValidValue(value, "ProviderSale_DT");
+                _ProviderSale_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ProviderSale_DT");
                 OnProviderSale_DTChanged();
             }
@@ -9605,7 +9606,7 @@ namespace WebTester
             {
                 OnQuit_DTChanging(value);
                 ReportPropertyChanging("Quit_DT");
-                _Quit_DT = StructuralObject.SetValidValue(value, "Quit_DT");
+                _Quit_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Quit_DT");
                 OnQuit_DTChanged();
             }
@@ -9629,7 +9630,7 @@ namespace WebTester
             {
                 OnPerClaimRateOverBlockThreshold_SMChanging(value);
                 ReportPropertyChanging("PerClaimRateOverBlockThreshold_SM");
-                _PerClaimRateOverBlockThreshold_SM = StructuralObject.SetValidValue(value, "PerClaimRateOverBlockThreshold_SM");
+                _PerClaimRateOverBlockThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PerClaimRateOverBlockThreshold_SM");
                 OnPerClaimRateOverBlockThreshold_SMChanged();
             }
@@ -9653,7 +9654,7 @@ namespace WebTester
             {
                 OnStat_ExcludeRemitToAddress_BTChanging(value);
                 ReportPropertyChanging("Stat_ExcludeRemitToAddress_BT");
-                _Stat_ExcludeRemitToAddress_BT = StructuralObject.SetValidValue(value, "Stat_ExcludeRemitToAddress_BT");
+                _Stat_ExcludeRemitToAddress_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Stat_ExcludeRemitToAddress_BT");
                 OnStat_ExcludeRemitToAddress_BTChanged();
             }
@@ -9664,6 +9665,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -9781,7 +9783,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9800,7 +9802,7 @@ namespace WebTester
                 {
                     OnSalesCode_IDChanging(value);
                     ReportPropertyChanging("SalesCode_ID");
-                    _SalesCode_ID = StructuralObject.SetValidValue(value, "SalesCode_ID");
+                    _SalesCode_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("SalesCode_ID");
                     OnSalesCode_IDChanged();
                 }
@@ -9825,7 +9827,7 @@ namespace WebTester
             {
                 OnLastUpdate_DTChanging(value);
                 ReportPropertyChanging("LastUpdate_DT");
-                _LastUpdate_DT = StructuralObject.SetValidValue(value, "LastUpdate_DT");
+                _LastUpdate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("LastUpdate_DT");
                 OnLastUpdate_DTChanged();
             }
@@ -9849,7 +9851,7 @@ namespace WebTester
             {
                 OnCode_VCChanging(value);
                 ReportPropertyChanging("Code_VC");
-                _Code_VC = StructuralObject.SetValidValue(value, false, "Code_VC");
+                _Code_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Code_VC");
                 OnCode_VCChanged();
             }
@@ -9873,7 +9875,7 @@ namespace WebTester
             {
                 OnSalesCodeType_IDChanging(value);
                 ReportPropertyChanging("SalesCodeType_ID");
-                _SalesCodeType_ID = StructuralObject.SetValidValue(value, "SalesCodeType_ID");
+                _SalesCodeType_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SalesCodeType_ID");
                 OnSalesCodeType_IDChanged();
             }
@@ -9884,6 +9886,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -10039,7 +10042,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10058,7 +10061,7 @@ namespace WebTester
                 {
                     OnSalesCodeType_IDChanging(value);
                     ReportPropertyChanging("SalesCodeType_ID");
-                    _SalesCodeType_ID = StructuralObject.SetValidValue(value, "SalesCodeType_ID");
+                    _SalesCodeType_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("SalesCodeType_ID");
                     OnSalesCodeType_IDChanged();
                 }
@@ -10083,7 +10086,7 @@ namespace WebTester
             {
                 OnSpecialCode_VCChanging(value);
                 ReportPropertyChanging("SpecialCode_VC");
-                _SpecialCode_VC = StructuralObject.SetValidValue(value, true, "SpecialCode_VC");
+                _SpecialCode_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SpecialCode_VC");
                 OnSpecialCode_VCChanged();
             }
@@ -10107,7 +10110,7 @@ namespace WebTester
             {
                 OnLastUpdate_DTChanging(value);
                 ReportPropertyChanging("LastUpdate_DT");
-                _LastUpdate_DT = StructuralObject.SetValidValue(value, "LastUpdate_DT");
+                _LastUpdate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("LastUpdate_DT");
                 OnLastUpdate_DTChanged();
             }
@@ -10131,7 +10134,7 @@ namespace WebTester
             {
                 OnNotes_VCChanging(value);
                 ReportPropertyChanging("Notes_VC");
-                _Notes_VC = StructuralObject.SetValidValue(value, true, "Notes_VC");
+                _Notes_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Notes_VC");
                 OnNotes_VCChanged();
             }
@@ -10155,7 +10158,7 @@ namespace WebTester
             {
                 OnDescription_VCChanging(value);
                 ReportPropertyChanging("Description_VC");
-                _Description_VC = StructuralObject.SetValidValue(value, false, "Description_VC");
+                _Description_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Description_VC");
                 OnDescription_VCChanged();
             }
@@ -10179,7 +10182,7 @@ namespace WebTester
             {
                 OnClaimSetupAmount_VCChanging(value);
                 ReportPropertyChanging("ClaimSetupAmount_VC");
-                _ClaimSetupAmount_VC = StructuralObject.SetValidValue(value, true, "ClaimSetupAmount_VC");
+                _ClaimSetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ClaimSetupAmount_VC");
                 OnClaimSetupAmount_VCChanged();
             }
@@ -10203,7 +10206,7 @@ namespace WebTester
             {
                 OnStatementSetupAmount_VCChanging(value);
                 ReportPropertyChanging("StatementSetupAmount_VC");
-                _StatementSetupAmount_VC = StructuralObject.SetValidValue(value, true, "StatementSetupAmount_VC");
+                _StatementSetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("StatementSetupAmount_VC");
                 OnStatementSetupAmount_VCChanged();
             }
@@ -10227,7 +10230,7 @@ namespace WebTester
             {
                 OnSpecPricingFlatRateLevel1_SMChanging(value);
                 ReportPropertyChanging("SpecPricingFlatRateLevel1_SM");
-                _SpecPricingFlatRateLevel1_SM = StructuralObject.SetValidValue(value, "SpecPricingFlatRateLevel1_SM");
+                _SpecPricingFlatRateLevel1_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingFlatRateLevel1_SM");
                 OnSpecPricingFlatRateLevel1_SMChanged();
             }
@@ -10251,7 +10254,7 @@ namespace WebTester
             {
                 OnSpecPricingFlatRateLevel2_SMChanging(value);
                 ReportPropertyChanging("SpecPricingFlatRateLevel2_SM");
-                _SpecPricingFlatRateLevel2_SM = StructuralObject.SetValidValue(value, "SpecPricingFlatRateLevel2_SM");
+                _SpecPricingFlatRateLevel2_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingFlatRateLevel2_SM");
                 OnSpecPricingFlatRateLevel2_SMChanged();
             }
@@ -10275,7 +10278,7 @@ namespace WebTester
             {
                 OnSpecPricingFlatRateLevel3_SMChanging(value);
                 ReportPropertyChanging("SpecPricingFlatRateLevel3_SM");
-                _SpecPricingFlatRateLevel3_SM = StructuralObject.SetValidValue(value, "SpecPricingFlatRateLevel3_SM");
+                _SpecPricingFlatRateLevel3_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingFlatRateLevel3_SM");
                 OnSpecPricingFlatRateLevel3_SMChanged();
             }
@@ -10299,7 +10302,7 @@ namespace WebTester
             {
                 OnSpecPricingBlockRateLevel1_SMChanging(value);
                 ReportPropertyChanging("SpecPricingBlockRateLevel1_SM");
-                _SpecPricingBlockRateLevel1_SM = StructuralObject.SetValidValue(value, "SpecPricingBlockRateLevel1_SM");
+                _SpecPricingBlockRateLevel1_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingBlockRateLevel1_SM");
                 OnSpecPricingBlockRateLevel1_SMChanged();
             }
@@ -10323,7 +10326,7 @@ namespace WebTester
             {
                 OnSpecPricingBlockRateLevel2_SMChanging(value);
                 ReportPropertyChanging("SpecPricingBlockRateLevel2_SM");
-                _SpecPricingBlockRateLevel2_SM = StructuralObject.SetValidValue(value, "SpecPricingBlockRateLevel2_SM");
+                _SpecPricingBlockRateLevel2_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingBlockRateLevel2_SM");
                 OnSpecPricingBlockRateLevel2_SMChanged();
             }
@@ -10347,7 +10350,7 @@ namespace WebTester
             {
                 OnSpecPricingBlockRateLevel3_SMChanging(value);
                 ReportPropertyChanging("SpecPricingBlockRateLevel3_SM");
-                _SpecPricingBlockRateLevel3_SM = StructuralObject.SetValidValue(value, "SpecPricingBlockRateLevel3_SM");
+                _SpecPricingBlockRateLevel3_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingBlockRateLevel3_SM");
                 OnSpecPricingBlockRateLevel3_SMChanged();
             }
@@ -10371,7 +10374,7 @@ namespace WebTester
             {
                 OnSpecPricingNumClaimsPerBlockLevel1_INChanging(value);
                 ReportPropertyChanging("SpecPricingNumClaimsPerBlockLevel1_IN");
-                _SpecPricingNumClaimsPerBlockLevel1_IN = StructuralObject.SetValidValue(value, "SpecPricingNumClaimsPerBlockLevel1_IN");
+                _SpecPricingNumClaimsPerBlockLevel1_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingNumClaimsPerBlockLevel1_IN");
                 OnSpecPricingNumClaimsPerBlockLevel1_INChanged();
             }
@@ -10395,7 +10398,7 @@ namespace WebTester
             {
                 OnSpecPricingNumClaimsPerBlockLevel2_INChanging(value);
                 ReportPropertyChanging("SpecPricingNumClaimsPerBlockLevel2_IN");
-                _SpecPricingNumClaimsPerBlockLevel2_IN = StructuralObject.SetValidValue(value, "SpecPricingNumClaimsPerBlockLevel2_IN");
+                _SpecPricingNumClaimsPerBlockLevel2_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingNumClaimsPerBlockLevel2_IN");
                 OnSpecPricingNumClaimsPerBlockLevel2_INChanged();
             }
@@ -10419,7 +10422,7 @@ namespace WebTester
             {
                 OnSpecPricingNumClaimsPerBlockLevel3_INChanging(value);
                 ReportPropertyChanging("SpecPricingNumClaimsPerBlockLevel3_IN");
-                _SpecPricingNumClaimsPerBlockLevel3_IN = StructuralObject.SetValidValue(value, "SpecPricingNumClaimsPerBlockLevel3_IN");
+                _SpecPricingNumClaimsPerBlockLevel3_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingNumClaimsPerBlockLevel3_IN");
                 OnSpecPricingNumClaimsPerBlockLevel3_INChanged();
             }
@@ -10443,7 +10446,7 @@ namespace WebTester
             {
                 OnSpecPricingPerClaimRateLevel1_SMChanging(value);
                 ReportPropertyChanging("SpecPricingPerClaimRateLevel1_SM");
-                _SpecPricingPerClaimRateLevel1_SM = StructuralObject.SetValidValue(value, "SpecPricingPerClaimRateLevel1_SM");
+                _SpecPricingPerClaimRateLevel1_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingPerClaimRateLevel1_SM");
                 OnSpecPricingPerClaimRateLevel1_SMChanged();
             }
@@ -10467,7 +10470,7 @@ namespace WebTester
             {
                 OnSpecPricingPerClaimRateLevel2_SMChanging(value);
                 ReportPropertyChanging("SpecPricingPerClaimRateLevel2_SM");
-                _SpecPricingPerClaimRateLevel2_SM = StructuralObject.SetValidValue(value, "SpecPricingPerClaimRateLevel2_SM");
+                _SpecPricingPerClaimRateLevel2_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingPerClaimRateLevel2_SM");
                 OnSpecPricingPerClaimRateLevel2_SMChanged();
             }
@@ -10491,7 +10494,7 @@ namespace WebTester
             {
                 OnSpecPricingPerClaimRateLevel3_SMChanging(value);
                 ReportPropertyChanging("SpecPricingPerClaimRateLevel3_SM");
-                _SpecPricingPerClaimRateLevel3_SM = StructuralObject.SetValidValue(value, "SpecPricingPerClaimRateLevel3_SM");
+                _SpecPricingPerClaimRateLevel3_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingPerClaimRateLevel3_SM");
                 OnSpecPricingPerClaimRateLevel3_SMChanged();
             }
@@ -10515,7 +10518,7 @@ namespace WebTester
             {
                 OnSpecPricingMinimumPerClaimAmountLevel1_SMChanging(value);
                 ReportPropertyChanging("SpecPricingMinimumPerClaimAmountLevel1_SM");
-                _SpecPricingMinimumPerClaimAmountLevel1_SM = StructuralObject.SetValidValue(value, "SpecPricingMinimumPerClaimAmountLevel1_SM");
+                _SpecPricingMinimumPerClaimAmountLevel1_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingMinimumPerClaimAmountLevel1_SM");
                 OnSpecPricingMinimumPerClaimAmountLevel1_SMChanged();
             }
@@ -10539,7 +10542,7 @@ namespace WebTester
             {
                 OnSpecPricingMinimumPerClaimAmountLevel2_SMChanging(value);
                 ReportPropertyChanging("SpecPricingMinimumPerClaimAmountLevel2_SM");
-                _SpecPricingMinimumPerClaimAmountLevel2_SM = StructuralObject.SetValidValue(value, "SpecPricingMinimumPerClaimAmountLevel2_SM");
+                _SpecPricingMinimumPerClaimAmountLevel2_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingMinimumPerClaimAmountLevel2_SM");
                 OnSpecPricingMinimumPerClaimAmountLevel2_SMChanged();
             }
@@ -10563,7 +10566,7 @@ namespace WebTester
             {
                 OnSpecPricingMinimumPerClaimAmountLevel3_SMChanging(value);
                 ReportPropertyChanging("SpecPricingMinimumPerClaimAmountLevel3_SM");
-                _SpecPricingMinimumPerClaimAmountLevel3_SM = StructuralObject.SetValidValue(value, "SpecPricingMinimumPerClaimAmountLevel3_SM");
+                _SpecPricingMinimumPerClaimAmountLevel3_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingMinimumPerClaimAmountLevel3_SM");
                 OnSpecPricingMinimumPerClaimAmountLevel3_SMChanged();
             }
@@ -10587,7 +10590,7 @@ namespace WebTester
             {
                 OnSpecPricingInnovationsMonthlyAmount_SMChanging(value);
                 ReportPropertyChanging("SpecPricingInnovationsMonthlyAmount_SM");
-                _SpecPricingInnovationsMonthlyAmount_SM = StructuralObject.SetValidValue(value, "SpecPricingInnovationsMonthlyAmount_SM");
+                _SpecPricingInnovationsMonthlyAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SpecPricingInnovationsMonthlyAmount_SM");
                 OnSpecPricingInnovationsMonthlyAmount_SMChanged();
             }
@@ -10611,7 +10614,7 @@ namespace WebTester
             {
                 OnOldClaims_SMChanging(value);
                 ReportPropertyChanging("OldClaims_SM");
-                _OldClaims_SM = StructuralObject.SetValidValue(value, "OldClaims_SM");
+                _OldClaims_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("OldClaims_SM");
                 OnOldClaims_SMChanged();
             }
@@ -10635,7 +10638,7 @@ namespace WebTester
             {
                 OnPaperClaims_SMChanging(value);
                 ReportPropertyChanging("PaperClaims_SM");
-                _PaperClaims_SM = StructuralObject.SetValidValue(value, "PaperClaims_SM");
+                _PaperClaims_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PaperClaims_SM");
                 OnPaperClaims_SMChanged();
             }
@@ -10659,7 +10662,7 @@ namespace WebTester
             {
                 OnStatementFirstPageAmount_SMChanging(value);
                 ReportPropertyChanging("StatementFirstPageAmount_SM");
-                _StatementFirstPageAmount_SM = StructuralObject.SetValidValue(value, "StatementFirstPageAmount_SM");
+                _StatementFirstPageAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("StatementFirstPageAmount_SM");
                 OnStatementFirstPageAmount_SMChanged();
             }
@@ -10683,7 +10686,7 @@ namespace WebTester
             {
                 OnStatementAdditionalPageAmount_SMChanging(value);
                 ReportPropertyChanging("StatementAdditionalPageAmount_SM");
-                _StatementAdditionalPageAmount_SM = StructuralObject.SetValidValue(value, "StatementAdditionalPageAmount_SM");
+                _StatementAdditionalPageAmount_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("StatementAdditionalPageAmount_SM");
                 OnStatementAdditionalPageAmount_SMChanged();
             }
@@ -10707,7 +10710,7 @@ namespace WebTester
             {
                 OnDaysOldClaims_INChanging(value);
                 ReportPropertyChanging("DaysOldClaims_IN");
-                _DaysOldClaims_IN = StructuralObject.SetValidValue(value, "DaysOldClaims_IN");
+                _DaysOldClaims_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DaysOldClaims_IN");
                 OnDaysOldClaims_INChanged();
             }
@@ -10731,7 +10734,7 @@ namespace WebTester
             {
                 OnDentalERAAmount_VCChanging(value);
                 ReportPropertyChanging("DentalERAAmount_VC");
-                _DentalERAAmount_VC = StructuralObject.SetValidValue(value, true, "DentalERAAmount_VC");
+                _DentalERAAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("DentalERAAmount_VC");
                 OnDentalERAAmount_VCChanged();
             }
@@ -10755,7 +10758,7 @@ namespace WebTester
             {
                 OnNumberOfDaysFreeClaims_INChanging(value);
                 ReportPropertyChanging("NumberOfDaysFreeClaims_IN");
-                _NumberOfDaysFreeClaims_IN = StructuralObject.SetValidValue(value, "NumberOfDaysFreeClaims_IN");
+                _NumberOfDaysFreeClaims_IN = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NumberOfDaysFreeClaims_IN");
                 OnNumberOfDaysFreeClaims_INChanged();
             }
@@ -10779,7 +10782,7 @@ namespace WebTester
             {
                 OnStatementSetupAmountWithClaims_VCChanging(value);
                 ReportPropertyChanging("StatementSetupAmountWithClaims_VC");
-                _StatementSetupAmountWithClaims_VC = StructuralObject.SetValidValue(value, true, "StatementSetupAmountWithClaims_VC");
+                _StatementSetupAmountWithClaims_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("StatementSetupAmountWithClaims_VC");
                 OnStatementSetupAmountWithClaims_VCChanged();
             }
@@ -10803,7 +10806,7 @@ namespace WebTester
             {
                 OnEligibilitySetupAmount_VCChanging(value);
                 ReportPropertyChanging("EligibilitySetupAmount_VC");
-                _EligibilitySetupAmount_VC = StructuralObject.SetValidValue(value, true, "EligibilitySetupAmount_VC");
+                _EligibilitySetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EligibilitySetupAmount_VC");
                 OnEligibilitySetupAmount_VCChanged();
             }
@@ -10827,7 +10830,7 @@ namespace WebTester
             {
                 OnEligibilitySetupAmountWithClaims_VCChanging(value);
                 ReportPropertyChanging("EligibilitySetupAmountWithClaims_VC");
-                _EligibilitySetupAmountWithClaims_VC = StructuralObject.SetValidValue(value, true, "EligibilitySetupAmountWithClaims_VC");
+                _EligibilitySetupAmountWithClaims_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EligibilitySetupAmountWithClaims_VC");
                 OnEligibilitySetupAmountWithClaims_VCChanged();
             }
@@ -10851,7 +10854,7 @@ namespace WebTester
             {
                 OnCheckSetupAmount_VCChanging(value);
                 ReportPropertyChanging("CheckSetupAmount_VC");
-                _CheckSetupAmount_VC = StructuralObject.SetValidValue(value, true, "CheckSetupAmount_VC");
+                _CheckSetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("CheckSetupAmount_VC");
                 OnCheckSetupAmount_VCChanged();
             }
@@ -10875,7 +10878,7 @@ namespace WebTester
             {
                 OnCheckSetupAmountWithClaims_VCChanging(value);
                 ReportPropertyChanging("CheckSetupAmountWithClaims_VC");
-                _CheckSetupAmountWithClaims_VC = StructuralObject.SetValidValue(value, true, "CheckSetupAmountWithClaims_VC");
+                _CheckSetupAmountWithClaims_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("CheckSetupAmountWithClaims_VC");
                 OnCheckSetupAmountWithClaims_VCChanged();
             }
@@ -10899,7 +10902,7 @@ namespace WebTester
             {
                 OnAllowPerClaimBillingType_BTChanging(value);
                 ReportPropertyChanging("AllowPerClaimBillingType_BT");
-                _AllowPerClaimBillingType_BT = StructuralObject.SetValidValue(value, "AllowPerClaimBillingType_BT");
+                _AllowPerClaimBillingType_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AllowPerClaimBillingType_BT");
                 OnAllowPerClaimBillingType_BTChanged();
             }
@@ -10923,7 +10926,7 @@ namespace WebTester
             {
                 OnAllowBlockRateBillingType_BTChanging(value);
                 ReportPropertyChanging("AllowBlockRateBillingType_BT");
-                _AllowBlockRateBillingType_BT = StructuralObject.SetValidValue(value, "AllowBlockRateBillingType_BT");
+                _AllowBlockRateBillingType_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AllowBlockRateBillingType_BT");
                 OnAllowBlockRateBillingType_BTChanged();
             }
@@ -10947,7 +10950,7 @@ namespace WebTester
             {
                 OnAllowFlatRateBillingType_BTChanging(value);
                 ReportPropertyChanging("AllowFlatRateBillingType_BT");
-                _AllowFlatRateBillingType_BT = StructuralObject.SetValidValue(value, "AllowFlatRateBillingType_BT");
+                _AllowFlatRateBillingType_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AllowFlatRateBillingType_BT");
                 OnAllowFlatRateBillingType_BTChanged();
             }
@@ -10971,7 +10974,7 @@ namespace WebTester
             {
                 OnAllowServiceLevel1_BTChanging(value);
                 ReportPropertyChanging("AllowServiceLevel1_BT");
-                _AllowServiceLevel1_BT = StructuralObject.SetValidValue(value, "AllowServiceLevel1_BT");
+                _AllowServiceLevel1_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AllowServiceLevel1_BT");
                 OnAllowServiceLevel1_BTChanged();
             }
@@ -10995,7 +10998,7 @@ namespace WebTester
             {
                 OnAllowServiceLevel2_BTChanging(value);
                 ReportPropertyChanging("AllowServiceLevel2_BT");
-                _AllowServiceLevel2_BT = StructuralObject.SetValidValue(value, "AllowServiceLevel2_BT");
+                _AllowServiceLevel2_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AllowServiceLevel2_BT");
                 OnAllowServiceLevel2_BTChanged();
             }
@@ -11019,7 +11022,7 @@ namespace WebTester
             {
                 OnAllowServiceLevel3_BTChanging(value);
                 ReportPropertyChanging("AllowServiceLevel3_BT");
-                _AllowServiceLevel3_BT = StructuralObject.SetValidValue(value, "AllowServiceLevel3_BT");
+                _AllowServiceLevel3_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AllowServiceLevel3_BT");
                 OnAllowServiceLevel3_BTChanged();
             }
@@ -11043,7 +11046,7 @@ namespace WebTester
             {
                 OnStartDate_DTChanging(value);
                 ReportPropertyChanging("StartDate_DT");
-                _StartDate_DT = StructuralObject.SetValidValue(value, "StartDate_DT");
+                _StartDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("StartDate_DT");
                 OnStartDate_DTChanged();
             }
@@ -11067,7 +11070,7 @@ namespace WebTester
             {
                 OnExpirationDate_DTChanging(value);
                 ReportPropertyChanging("ExpirationDate_DT");
-                _ExpirationDate_DT = StructuralObject.SetValidValue(value, "ExpirationDate_DT");
+                _ExpirationDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ExpirationDate_DT");
                 OnExpirationDate_DTChanged();
             }
@@ -11091,7 +11094,7 @@ namespace WebTester
             {
                 OnAllowedSalesReps_VCChanging(value);
                 ReportPropertyChanging("AllowedSalesReps_VC");
-                _AllowedSalesReps_VC = StructuralObject.SetValidValue(value, true, "AllowedSalesReps_VC");
+                _AllowedSalesReps_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("AllowedSalesReps_VC");
                 OnAllowedSalesReps_VCChanged();
             }
@@ -11115,7 +11118,7 @@ namespace WebTester
             {
                 OnVendor_IDChanging(value);
                 ReportPropertyChanging("Vendor_ID");
-                _Vendor_ID = StructuralObject.SetValidValue(value, "Vendor_ID");
+                _Vendor_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Vendor_ID");
                 OnVendor_IDChanged();
             }
@@ -11139,7 +11142,7 @@ namespace WebTester
             {
                 OnIsAnnualAgreement_BTChanging(value);
                 ReportPropertyChanging("IsAnnualAgreement_BT");
-                _IsAnnualAgreement_BT = StructuralObject.SetValidValue(value, "IsAnnualAgreement_BT");
+                _IsAnnualAgreement_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsAnnualAgreement_BT");
                 OnIsAnnualAgreement_BTChanged();
             }
@@ -11163,7 +11166,7 @@ namespace WebTester
             {
                 OnPerClaimRateOverBlockThreshold_SMChanging(value);
                 ReportPropertyChanging("PerClaimRateOverBlockThreshold_SM");
-                _PerClaimRateOverBlockThreshold_SM = StructuralObject.SetValidValue(value, "PerClaimRateOverBlockThreshold_SM");
+                _PerClaimRateOverBlockThreshold_SM = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("PerClaimRateOverBlockThreshold_SM");
                 OnPerClaimRateOverBlockThreshold_SMChanged();
             }
@@ -11187,7 +11190,7 @@ namespace WebTester
             {
                 OnEligibilityBaseAmount_VCChanging(value);
                 ReportPropertyChanging("EligibilityBaseAmount_VC");
-                _EligibilityBaseAmount_VC = StructuralObject.SetValidValue(value, true, "EligibilityBaseAmount_VC");
+                _EligibilityBaseAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("EligibilityBaseAmount_VC");
                 OnEligibilityBaseAmount_VCChanged();
             }
@@ -11198,6 +11201,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -11275,7 +11279,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11294,7 +11298,7 @@ namespace WebTester
                 {
                     OnSalesRep_IDChanging(value);
                     ReportPropertyChanging("SalesRep_ID");
-                    _SalesRep_ID = StructuralObject.SetValidValue(value, "SalesRep_ID");
+                    _SalesRep_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("SalesRep_ID");
                     OnSalesRep_IDChanged();
                 }
@@ -11319,7 +11323,7 @@ namespace WebTester
             {
                 OnEmployeeType_IDChanging(value);
                 ReportPropertyChanging("EmployeeType_ID");
-                _EmployeeType_ID = StructuralObject.SetValidValue(value, "EmployeeType_ID");
+                _EmployeeType_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("EmployeeType_ID");
                 OnEmployeeType_IDChanged();
             }
@@ -11343,7 +11347,7 @@ namespace WebTester
             {
                 OnLastUpdate_DTChanging(value);
                 ReportPropertyChanging("LastUpdate_DT");
-                _LastUpdate_DT = StructuralObject.SetValidValue(value, "LastUpdate_DT");
+                _LastUpdate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("LastUpdate_DT");
                 OnLastUpdate_DTChanged();
             }
@@ -11367,7 +11371,7 @@ namespace WebTester
             {
                 OnName_VCChanging(value);
                 ReportPropertyChanging("Name_VC");
-                _Name_VC = StructuralObject.SetValidValue(value, false, "Name_VC");
+                _Name_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Name_VC");
                 OnName_VCChanged();
             }
@@ -11391,7 +11395,7 @@ namespace WebTester
             {
                 OnAddress1_VCChanging(value);
                 ReportPropertyChanging("Address1_VC");
-                _Address1_VC = StructuralObject.SetValidValue(value, false, "Address1_VC");
+                _Address1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Address1_VC");
                 OnAddress1_VCChanged();
             }
@@ -11415,7 +11419,7 @@ namespace WebTester
             {
                 OnAddress2_VCChanging(value);
                 ReportPropertyChanging("Address2_VC");
-                _Address2_VC = StructuralObject.SetValidValue(value, true, "Address2_VC");
+                _Address2_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Address2_VC");
                 OnAddress2_VCChanged();
             }
@@ -11439,7 +11443,7 @@ namespace WebTester
             {
                 OnCity_VCChanging(value);
                 ReportPropertyChanging("City_VC");
-                _City_VC = StructuralObject.SetValidValue(value, false, "City_VC");
+                _City_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("City_VC");
                 OnCity_VCChanged();
             }
@@ -11463,7 +11467,7 @@ namespace WebTester
             {
                 OnST_IDChanging(value);
                 ReportPropertyChanging("ST_ID");
-                _ST_ID = StructuralObject.SetValidValue(value, "ST_ID");
+                _ST_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ST_ID");
                 OnST_IDChanged();
             }
@@ -11487,7 +11491,7 @@ namespace WebTester
             {
                 OnZip_VCChanging(value);
                 ReportPropertyChanging("Zip_VC");
-                _Zip_VC = StructuralObject.SetValidValue(value, false, "Zip_VC");
+                _Zip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Zip_VC");
                 OnZip_VCChanged();
             }
@@ -11511,7 +11515,7 @@ namespace WebTester
             {
                 OnPhone_VCChanging(value);
                 ReportPropertyChanging("Phone_VC");
-                _Phone_VC = StructuralObject.SetValidValue(value, true, "Phone_VC");
+                _Phone_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Phone_VC");
                 OnPhone_VCChanged();
             }
@@ -11535,7 +11539,7 @@ namespace WebTester
             {
                 OnEmail_VCChanging(value);
                 ReportPropertyChanging("Email_VC");
-                _Email_VC = StructuralObject.SetValidValue(value, false, "Email_VC");
+                _Email_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Email_VC");
                 OnEmail_VCChanged();
             }
@@ -11559,7 +11563,7 @@ namespace WebTester
             {
                 OnPassword_VCChanging(value);
                 ReportPropertyChanging("Password_VC");
-                _Password_VC = StructuralObject.SetValidValue(value, false, "Password_VC");
+                _Password_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Password_VC");
                 OnPassword_VCChanged();
             }
@@ -11583,7 +11587,7 @@ namespace WebTester
             {
                 OnIsSalesRep_BTChanging(value);
                 ReportPropertyChanging("IsSalesRep_BT");
-                _IsSalesRep_BT = StructuralObject.SetValidValue(value, "IsSalesRep_BT");
+                _IsSalesRep_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsSalesRep_BT");
                 OnIsSalesRep_BTChanged();
             }
@@ -11607,7 +11611,7 @@ namespace WebTester
             {
                 OnIsAccountManager_BTChanging(value);
                 ReportPropertyChanging("IsAccountManager_BT");
-                _IsAccountManager_BT = StructuralObject.SetValidValue(value, "IsAccountManager_BT");
+                _IsAccountManager_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsAccountManager_BT");
                 OnIsAccountManager_BTChanged();
             }
@@ -11631,7 +11635,7 @@ namespace WebTester
             {
                 OnUniqueSalesRepCode_VCChanging(value);
                 ReportPropertyChanging("UniqueSalesRepCode_VC");
-                _UniqueSalesRepCode_VC = StructuralObject.SetValidValue(value, false, "UniqueSalesRepCode_VC");
+                _UniqueSalesRepCode_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("UniqueSalesRepCode_VC");
                 OnUniqueSalesRepCode_VCChanged();
             }
@@ -11655,7 +11659,7 @@ namespace WebTester
             {
                 OnSQLUsername_VCChanging(value);
                 ReportPropertyChanging("SQLUsername_VC");
-                _SQLUsername_VC = StructuralObject.SetValidValue(value, true, "SQLUsername_VC");
+                _SQLUsername_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SQLUsername_VC");
                 OnSQLUsername_VCChanged();
             }
@@ -11679,7 +11683,7 @@ namespace WebTester
             {
                 OnTradingPartnerManager_IDChanging(value);
                 ReportPropertyChanging("TradingPartnerManager_ID");
-                _TradingPartnerManager_ID = StructuralObject.SetValidValue(value, "TradingPartnerManager_ID");
+                _TradingPartnerManager_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("TradingPartnerManager_ID");
                 OnTradingPartnerManager_IDChanged();
             }
@@ -11690,6 +11694,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -11759,7 +11764,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -11778,7 +11783,7 @@ namespace WebTester
                 {
                     OnService_IDChanging(value);
                     ReportPropertyChanging("Service_ID");
-                    _Service_ID = StructuralObject.SetValidValue(value, "Service_ID");
+                    _Service_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("Service_ID");
                     OnService_IDChanged();
                 }
@@ -11803,7 +11808,7 @@ namespace WebTester
             {
                 OnSalesCode_IDChanging(value);
                 ReportPropertyChanging("SalesCode_ID");
-                _SalesCode_ID = StructuralObject.SetValidValue(value, "SalesCode_ID");
+                _SalesCode_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SalesCode_ID");
                 OnSalesCode_IDChanged();
             }
@@ -11827,7 +11832,7 @@ namespace WebTester
             {
                 OnSalesRep_IDChanging(value);
                 ReportPropertyChanging("SalesRep_ID");
-                _SalesRep_ID = StructuralObject.SetValidValue(value, "SalesRep_ID");
+                _SalesRep_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SalesRep_ID");
                 OnSalesRep_IDChanged();
             }
@@ -11851,7 +11856,7 @@ namespace WebTester
             {
                 OnProvider_IDChanging(value);
                 ReportPropertyChanging("Provider_ID");
-                _Provider_ID = StructuralObject.SetValidValue(value, "Provider_ID");
+                _Provider_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Provider_ID");
                 OnProvider_IDChanged();
             }
@@ -11875,7 +11880,7 @@ namespace WebTester
             {
                 OnServiceType_IDChanging(value);
                 ReportPropertyChanging("ServiceType_ID");
-                _ServiceType_ID = StructuralObject.SetValidValue(value, "ServiceType_ID");
+                _ServiceType_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ServiceType_ID");
                 OnServiceType_IDChanged();
             }
@@ -11899,7 +11904,7 @@ namespace WebTester
             {
                 OnSetupStatus_IDChanging(value);
                 ReportPropertyChanging("SetupStatus_ID");
-                _SetupStatus_ID = StructuralObject.SetValidValue(value, "SetupStatus_ID");
+                _SetupStatus_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SetupStatus_ID");
                 OnSetupStatus_IDChanged();
             }
@@ -11923,7 +11928,7 @@ namespace WebTester
             {
                 OnSetupAmount_VCChanging(value);
                 ReportPropertyChanging("SetupAmount_VC");
-                _SetupAmount_VC = StructuralObject.SetValidValue(value, true, "SetupAmount_VC");
+                _SetupAmount_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("SetupAmount_VC");
                 OnSetupAmount_VCChanged();
             }
@@ -11947,7 +11952,7 @@ namespace WebTester
             {
                 OnSetupBilledDate_DTChanging(value);
                 ReportPropertyChanging("SetupBilledDate_DT");
-                _SetupBilledDate_DT = StructuralObject.SetValidValue(value, "SetupBilledDate_DT");
+                _SetupBilledDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SetupBilledDate_DT");
                 OnSetupBilledDate_DTChanged();
             }
@@ -11971,7 +11976,7 @@ namespace WebTester
             {
                 OnAuthorizedByName_VCChanging(value);
                 ReportPropertyChanging("AuthorizedByName_VC");
-                _AuthorizedByName_VC = StructuralObject.SetValidValue(value, false, "AuthorizedByName_VC");
+                _AuthorizedByName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("AuthorizedByName_VC");
                 OnAuthorizedByName_VCChanged();
             }
@@ -11995,7 +12000,7 @@ namespace WebTester
             {
                 OnIsAddlProvider_BTChanging(value);
                 ReportPropertyChanging("IsAddlProvider_BT");
-                _IsAddlProvider_BT = StructuralObject.SetValidValue(value, "IsAddlProvider_BT");
+                _IsAddlProvider_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsAddlProvider_BT");
                 OnIsAddlProvider_BTChanged();
             }
@@ -12019,7 +12024,7 @@ namespace WebTester
             {
                 OnAcceptTermsDate_DTChanging(value);
                 ReportPropertyChanging("AcceptTermsDate_DT");
-                _AcceptTermsDate_DT = StructuralObject.SetValidValue(value, "AcceptTermsDate_DT");
+                _AcceptTermsDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("AcceptTermsDate_DT");
                 OnAcceptTermsDate_DTChanged();
             }
@@ -12043,7 +12048,7 @@ namespace WebTester
             {
                 OnChargeAddlProviderFee_BTChanging(value);
                 ReportPropertyChanging("ChargeAddlProviderFee_BT");
-                _ChargeAddlProviderFee_BT = StructuralObject.SetValidValue(value, "ChargeAddlProviderFee_BT");
+                _ChargeAddlProviderFee_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ChargeAddlProviderFee_BT");
                 OnChargeAddlProviderFee_BTChanged();
             }
@@ -12054,6 +12059,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -12275,7 +12281,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12294,7 +12300,7 @@ namespace WebTester
                 {
                     OnServiceLine_IDChanging(value);
                     ReportPropertyChanging("ServiceLine_ID");
-                    _ServiceLine_ID = StructuralObject.SetValidValue(value, "ServiceLine_ID");
+                    _ServiceLine_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ServiceLine_ID");
                     OnServiceLine_IDChanged();
                 }
@@ -12319,7 +12325,7 @@ namespace WebTester
             {
                 OnClaim_IDChanging(value);
                 ReportPropertyChanging("Claim_ID");
-                _Claim_ID = StructuralObject.SetValidValue(value, "Claim_ID");
+                _Claim_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Claim_ID");
                 OnClaim_IDChanged();
             }
@@ -12343,7 +12349,7 @@ namespace WebTester
             {
                 OnplaceOfServiceChanging(value);
                 ReportPropertyChanging("placeOfService");
-                _placeOfService = StructuralObject.SetValidValue(value, true, "placeOfService");
+                _placeOfService = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("placeOfService");
                 OnplaceOfServiceChanged();
             }
@@ -12367,7 +12373,7 @@ namespace WebTester
             {
                 OnprocedureCodeChanging(value);
                 ReportPropertyChanging("procedureCode");
-                _procedureCode = StructuralObject.SetValidValue(value, true, "procedureCode");
+                _procedureCode = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("procedureCode");
                 OnprocedureCodeChanged();
             }
@@ -12391,7 +12397,7 @@ namespace WebTester
             {
                 OnprocModifier1Changing(value);
                 ReportPropertyChanging("procModifier1");
-                _procModifier1 = StructuralObject.SetValidValue(value, true, "procModifier1");
+                _procModifier1 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("procModifier1");
                 OnprocModifier1Changed();
             }
@@ -12415,7 +12421,7 @@ namespace WebTester
             {
                 OnprocModifier2Changing(value);
                 ReportPropertyChanging("procModifier2");
-                _procModifier2 = StructuralObject.SetValidValue(value, true, "procModifier2");
+                _procModifier2 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("procModifier2");
                 OnprocModifier2Changed();
             }
@@ -12439,7 +12445,7 @@ namespace WebTester
             {
                 OnprocModifier3Changing(value);
                 ReportPropertyChanging("procModifier3");
-                _procModifier3 = StructuralObject.SetValidValue(value, true, "procModifier3");
+                _procModifier3 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("procModifier3");
                 OnprocModifier3Changed();
             }
@@ -12463,7 +12469,7 @@ namespace WebTester
             {
                 OnprocModifier4Changing(value);
                 ReportPropertyChanging("procModifier4");
-                _procModifier4 = StructuralObject.SetValidValue(value, true, "procModifier4");
+                _procModifier4 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("procModifier4");
                 OnprocModifier4Changed();
             }
@@ -12487,7 +12493,7 @@ namespace WebTester
             {
                 OnproviderControlNumberChanging(value);
                 ReportPropertyChanging("providerControlNumber");
-                _providerControlNumber = StructuralObject.SetValidValue(value, true, "providerControlNumber");
+                _providerControlNumber = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("providerControlNumber");
                 OnproviderControlNumberChanged();
             }
@@ -12511,7 +12517,7 @@ namespace WebTester
             {
                 OnserviceEndDateChanging(value);
                 ReportPropertyChanging("serviceEndDate");
-                _serviceEndDate = StructuralObject.SetValidValue(value, true, "serviceEndDate");
+                _serviceEndDate = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("serviceEndDate");
                 OnserviceEndDateChanged();
             }
@@ -12535,7 +12541,7 @@ namespace WebTester
             {
                 OnserviceStartDateChanging(value);
                 ReportPropertyChanging("serviceStartDate");
-                _serviceStartDate = StructuralObject.SetValidValue(value, true, "serviceStartDate");
+                _serviceStartDate = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("serviceStartDate");
                 OnserviceStartDateChanged();
             }
@@ -12559,7 +12565,7 @@ namespace WebTester
             {
                 OnchargesChanging(value);
                 ReportPropertyChanging("charges");
-                _charges = StructuralObject.SetValidValue(value, true, "charges");
+                _charges = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("charges");
                 OnchargesChanged();
             }
@@ -12583,7 +12589,7 @@ namespace WebTester
             {
                 OnerrorChanging(value);
                 ReportPropertyChanging("error");
-                _error = StructuralObject.SetValidValue(value, true, "error");
+                _error = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("error");
                 OnerrorChanged();
             }
@@ -12607,7 +12613,7 @@ namespace WebTester
             {
                 OndescriptionChanging(value);
                 ReportPropertyChanging("description");
-                _description = StructuralObject.SetValidValue(value, true, "description");
+                _description = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("description");
                 OndescriptionChanged();
             }
@@ -12631,7 +12637,7 @@ namespace WebTester
             {
                 OndaysUnitsQuantityChanging(value);
                 ReportPropertyChanging("daysUnitsQuantity");
-                _daysUnitsQuantity = StructuralObject.SetValidValue(value, true, "daysUnitsQuantity");
+                _daysUnitsQuantity = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("daysUnitsQuantity");
                 OndaysUnitsQuantityChanged();
             }
@@ -12655,7 +12661,7 @@ namespace WebTester
             {
                 OnnoteChanging(value);
                 ReportPropertyChanging("note");
-                _note = StructuralObject.SetValidValue(value, true, "note");
+                _note = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("note");
                 OnnoteChanged();
             }
@@ -12679,7 +12685,7 @@ namespace WebTester
             {
                 OntoothChanging(value);
                 ReportPropertyChanging("tooth");
-                _tooth = StructuralObject.SetValidValue(value, true, "tooth");
+                _tooth = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("tooth");
                 OntoothChanged();
             }
@@ -12703,7 +12709,7 @@ namespace WebTester
             {
                 OnsurfaceChanging(value);
                 ReportPropertyChanging("surface");
-                _surface = StructuralObject.SetValidValue(value, true, "surface");
+                _surface = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("surface");
                 OnsurfaceChanged();
             }
@@ -12727,7 +12733,7 @@ namespace WebTester
             {
                 OntypeOfServiceChanging(value);
                 ReportPropertyChanging("typeOfService");
-                _typeOfService = StructuralObject.SetValidValue(value, true, "typeOfService");
+                _typeOfService = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("typeOfService");
                 OntypeOfServiceChanged();
             }
@@ -12751,7 +12757,7 @@ namespace WebTester
             {
                 OndiagnosisPointer1Changing(value);
                 ReportPropertyChanging("diagnosisPointer1");
-                _diagnosisPointer1 = StructuralObject.SetValidValue(value, true, "diagnosisPointer1");
+                _diagnosisPointer1 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer1");
                 OndiagnosisPointer1Changed();
             }
@@ -12775,7 +12781,7 @@ namespace WebTester
             {
                 OndiagnosisPointer2Changing(value);
                 ReportPropertyChanging("diagnosisPointer2");
-                _diagnosisPointer2 = StructuralObject.SetValidValue(value, true, "diagnosisPointer2");
+                _diagnosisPointer2 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer2");
                 OndiagnosisPointer2Changed();
             }
@@ -12799,7 +12805,7 @@ namespace WebTester
             {
                 OndiagnosisPointer3Changing(value);
                 ReportPropertyChanging("diagnosisPointer3");
-                _diagnosisPointer3 = StructuralObject.SetValidValue(value, true, "diagnosisPointer3");
+                _diagnosisPointer3 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer3");
                 OndiagnosisPointer3Changed();
             }
@@ -12823,7 +12829,7 @@ namespace WebTester
             {
                 OndiagnosisPointer4Changing(value);
                 ReportPropertyChanging("diagnosisPointer4");
-                _diagnosisPointer4 = StructuralObject.SetValidValue(value, true, "diagnosisPointer4");
+                _diagnosisPointer4 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer4");
                 OndiagnosisPointer4Changed();
             }
@@ -12847,7 +12853,7 @@ namespace WebTester
             {
                 OndiagnosisPointer5Changing(value);
                 ReportPropertyChanging("diagnosisPointer5");
-                _diagnosisPointer5 = StructuralObject.SetValidValue(value, true, "diagnosisPointer5");
+                _diagnosisPointer5 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer5");
                 OndiagnosisPointer5Changed();
             }
@@ -12871,7 +12877,7 @@ namespace WebTester
             {
                 OndiagnosisPointer6Changing(value);
                 ReportPropertyChanging("diagnosisPointer6");
-                _diagnosisPointer6 = StructuralObject.SetValidValue(value, true, "diagnosisPointer6");
+                _diagnosisPointer6 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer6");
                 OndiagnosisPointer6Changed();
             }
@@ -12895,7 +12901,7 @@ namespace WebTester
             {
                 OndiagnosisPointer7Changing(value);
                 ReportPropertyChanging("diagnosisPointer7");
-                _diagnosisPointer7 = StructuralObject.SetValidValue(value, true, "diagnosisPointer7");
+                _diagnosisPointer7 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer7");
                 OndiagnosisPointer7Changed();
             }
@@ -12919,7 +12925,7 @@ namespace WebTester
             {
                 OndiagnosisPointer8Changing(value);
                 ReportPropertyChanging("diagnosisPointer8");
-                _diagnosisPointer8 = StructuralObject.SetValidValue(value, true, "diagnosisPointer8");
+                _diagnosisPointer8 = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("diagnosisPointer8");
                 OndiagnosisPointer8Changed();
             }
@@ -12943,7 +12949,7 @@ namespace WebTester
             {
                 OndaysUnitsChanging(value);
                 ReportPropertyChanging("daysUnits");
-                _daysUnits = StructuralObject.SetValidValue(value, true, "daysUnits");
+                _daysUnits = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("daysUnits");
                 OndaysUnitsChanged();
             }
@@ -12967,7 +12973,7 @@ namespace WebTester
             {
                 OnserviceTypeCodeChanging(value);
                 ReportPropertyChanging("serviceTypeCode");
-                _serviceTypeCode = StructuralObject.SetValidValue(value, true, "serviceTypeCode");
+                _serviceTypeCode = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("serviceTypeCode");
                 OnserviceTypeCodeChanged();
             }
@@ -12991,7 +12997,7 @@ namespace WebTester
             {
                 OnepsdtChanging(value);
                 ReportPropertyChanging("epsdt");
-                _epsdt = StructuralObject.SetValidValue(value, true, "epsdt");
+                _epsdt = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("epsdt");
                 OnepsdtChanged();
             }
@@ -13015,7 +13021,7 @@ namespace WebTester
             {
                 OnemgChanging(value);
                 ReportPropertyChanging("emg");
-                _emg = StructuralObject.SetValidValue(value, true, "emg");
+                _emg = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("emg");
                 OnemgChanged();
             }
@@ -13039,7 +13045,7 @@ namespace WebTester
             {
                 OncobChanging(value);
                 ReportPropertyChanging("cob");
-                _cob = StructuralObject.SetValidValue(value, true, "cob");
+                _cob = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("cob");
                 OncobChanged();
             }
@@ -13063,7 +13069,7 @@ namespace WebTester
             {
                 OnlocalUseChanging(value);
                 ReportPropertyChanging("localUse");
-                _localUse = StructuralObject.SetValidValue(value, true, "localUse");
+                _localUse = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("localUse");
                 OnlocalUseChanged();
             }
@@ -13087,7 +13093,7 @@ namespace WebTester
             {
                 OnadjudicationDateChanging(value);
                 ReportPropertyChanging("adjudicationDate");
-                _adjudicationDate = StructuralObject.SetValidValue(value, true, "adjudicationDate");
+                _adjudicationDate = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("adjudicationDate");
                 OnadjudicationDateChanged();
             }
@@ -13111,7 +13117,7 @@ namespace WebTester
             {
                 OnprimaryPaidAmountChanging(value);
                 ReportPropertyChanging("primaryPaidAmount");
-                _primaryPaidAmount = StructuralObject.SetValidValue(value, true, "primaryPaidAmount");
+                _primaryPaidAmount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("primaryPaidAmount");
                 OnprimaryPaidAmountChanged();
             }
@@ -13135,7 +13141,7 @@ namespace WebTester
             {
                 OnadjustmentAmountChanging(value);
                 ReportPropertyChanging("adjustmentAmount");
-                _adjustmentAmount = StructuralObject.SetValidValue(value, true, "adjustmentAmount");
+                _adjustmentAmount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("adjustmentAmount");
                 OnadjustmentAmountChanged();
             }
@@ -13159,7 +13165,7 @@ namespace WebTester
             {
                 OnpatientResponsibleAmountChanging(value);
                 ReportPropertyChanging("patientResponsibleAmount");
-                _patientResponsibleAmount = StructuralObject.SetValidValue(value, true, "patientResponsibleAmount");
+                _patientResponsibleAmount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("patientResponsibleAmount");
                 OnpatientResponsibleAmountChanged();
             }
@@ -13183,7 +13189,7 @@ namespace WebTester
             {
                 OndeductibleAmountChanging(value);
                 ReportPropertyChanging("deductibleAmount");
-                _deductibleAmount = StructuralObject.SetValidValue(value, true, "deductibleAmount");
+                _deductibleAmount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("deductibleAmount");
                 OndeductibleAmountChanged();
             }
@@ -13207,7 +13213,7 @@ namespace WebTester
             {
                 OnallowedAmountChanging(value);
                 ReportPropertyChanging("allowedAmount");
-                _allowedAmount = StructuralObject.SetValidValue(value, true, "allowedAmount");
+                _allowedAmount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("allowedAmount");
                 OnallowedAmountChanged();
             }
@@ -13231,7 +13237,7 @@ namespace WebTester
             {
                 OncontractTypeCodeChanging(value);
                 ReportPropertyChanging("contractTypeCode");
-                _contractTypeCode = StructuralObject.SetValidValue(value, true, "contractTypeCode");
+                _contractTypeCode = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("contractTypeCode");
                 OncontractTypeCodeChanged();
             }
@@ -13255,7 +13261,7 @@ namespace WebTester
             {
                 OnnpiChanging(value);
                 ReportPropertyChanging("npi");
-                _npi = StructuralObject.SetValidValue(value, true, "npi");
+                _npi = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("npi");
                 OnnpiChanged();
             }
@@ -13279,7 +13285,7 @@ namespace WebTester
             {
                 OnndcChanging(value);
                 ReportPropertyChanging("ndc");
-                _ndc = StructuralObject.SetValidValue(value, true, "ndc");
+                _ndc = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ndc");
                 OnndcChanged();
             }
@@ -13303,7 +13309,7 @@ namespace WebTester
             {
                 OnndcUnitOfMeasureChanging(value);
                 ReportPropertyChanging("ndcUnitOfMeasure");
-                _ndcUnitOfMeasure = StructuralObject.SetValidValue(value, true, "ndcUnitOfMeasure");
+                _ndcUnitOfMeasure = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ndcUnitOfMeasure");
                 OnndcUnitOfMeasureChanged();
             }
@@ -13327,7 +13333,7 @@ namespace WebTester
             {
                 OnndcQuantityChanging(value);
                 ReportPropertyChanging("ndcQuantity");
-                _ndcQuantity = StructuralObject.SetValidValue(value, true, "ndcQuantity");
+                _ndcQuantity = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ndcQuantity");
                 OnndcQuantityChanged();
             }
@@ -13351,7 +13357,7 @@ namespace WebTester
             {
                 OnndcPriceChanging(value);
                 ReportPropertyChanging("ndcPrice");
-                _ndcPrice = StructuralObject.SetValidValue(value, true, "ndcPrice");
+                _ndcPrice = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ndcPrice");
                 OnndcPriceChanged();
             }
@@ -13375,7 +13381,7 @@ namespace WebTester
             {
                 OnmeasurementIDChanging(value);
                 ReportPropertyChanging("measurementID");
-                _measurementID = StructuralObject.SetValidValue(value, true, "measurementID");
+                _measurementID = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("measurementID");
                 OnmeasurementIDChanged();
             }
@@ -13399,7 +13405,7 @@ namespace WebTester
             {
                 OnmeasurementQualifierChanging(value);
                 ReportPropertyChanging("measurementQualifier");
-                _measurementQualifier = StructuralObject.SetValidValue(value, true, "measurementQualifier");
+                _measurementQualifier = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("measurementQualifier");
                 OnmeasurementQualifierChanged();
             }
@@ -13423,7 +13429,7 @@ namespace WebTester
             {
                 OnmeasurementValueChanging(value);
                 ReportPropertyChanging("measurementValue");
-                _measurementValue = StructuralObject.SetValidValue(value, true, "measurementValue");
+                _measurementValue = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("measurementValue");
                 OnmeasurementValueChanged();
             }
@@ -13447,7 +13453,7 @@ namespace WebTester
             {
                 OnorderingPhysicianLastNameChanging(value);
                 ReportPropertyChanging("orderingPhysicianLastName");
-                _orderingPhysicianLastName = StructuralObject.SetValidValue(value, true, "orderingPhysicianLastName");
+                _orderingPhysicianLastName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianLastName");
                 OnorderingPhysicianLastNameChanged();
             }
@@ -13471,7 +13477,7 @@ namespace WebTester
             {
                 OnorderingPhysicianFirstNameChanging(value);
                 ReportPropertyChanging("orderingPhysicianFirstName");
-                _orderingPhysicianFirstName = StructuralObject.SetValidValue(value, true, "orderingPhysicianFirstName");
+                _orderingPhysicianFirstName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianFirstName");
                 OnorderingPhysicianFirstNameChanged();
             }
@@ -13495,7 +13501,7 @@ namespace WebTester
             {
                 OnorderingPhysicianMiddleInitialChanging(value);
                 ReportPropertyChanging("orderingPhysicianMiddleInitial");
-                _orderingPhysicianMiddleInitial = StructuralObject.SetValidValue(value, true, "orderingPhysicianMiddleInitial");
+                _orderingPhysicianMiddleInitial = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianMiddleInitial");
                 OnorderingPhysicianMiddleInitialChanged();
             }
@@ -13519,7 +13525,7 @@ namespace WebTester
             {
                 OnorderingPhysicianProviderIDQualifierChanging(value);
                 ReportPropertyChanging("orderingPhysicianProviderIDQualifier");
-                _orderingPhysicianProviderIDQualifier = StructuralObject.SetValidValue(value, true, "orderingPhysicianProviderIDQualifier");
+                _orderingPhysicianProviderIDQualifier = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianProviderIDQualifier");
                 OnorderingPhysicianProviderIDQualifierChanged();
             }
@@ -13543,7 +13549,7 @@ namespace WebTester
             {
                 OnorderingPhysicianProviderIDChanging(value);
                 ReportPropertyChanging("orderingPhysicianProviderID");
-                _orderingPhysicianProviderID = StructuralObject.SetValidValue(value, true, "orderingPhysicianProviderID");
+                _orderingPhysicianProviderID = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianProviderID");
                 OnorderingPhysicianProviderIDChanged();
             }
@@ -13567,7 +13573,7 @@ namespace WebTester
             {
                 OnorderingPhysicianAddressChanging(value);
                 ReportPropertyChanging("orderingPhysicianAddress");
-                _orderingPhysicianAddress = StructuralObject.SetValidValue(value, true, "orderingPhysicianAddress");
+                _orderingPhysicianAddress = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianAddress");
                 OnorderingPhysicianAddressChanged();
             }
@@ -13591,7 +13597,7 @@ namespace WebTester
             {
                 OnorderingPhysicianCityChanging(value);
                 ReportPropertyChanging("orderingPhysicianCity");
-                _orderingPhysicianCity = StructuralObject.SetValidValue(value, true, "orderingPhysicianCity");
+                _orderingPhysicianCity = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianCity");
                 OnorderingPhysicianCityChanged();
             }
@@ -13615,7 +13621,7 @@ namespace WebTester
             {
                 OnorderingPhysicianStateChanging(value);
                 ReportPropertyChanging("orderingPhysicianState");
-                _orderingPhysicianState = StructuralObject.SetValidValue(value, true, "orderingPhysicianState");
+                _orderingPhysicianState = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianState");
                 OnorderingPhysicianStateChanged();
             }
@@ -13639,7 +13645,7 @@ namespace WebTester
             {
                 OnorderingPhysicianZipChanging(value);
                 ReportPropertyChanging("orderingPhysicianZip");
-                _orderingPhysicianZip = StructuralObject.SetValidValue(value, true, "orderingPhysicianZip");
+                _orderingPhysicianZip = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("orderingPhysicianZip");
                 OnorderingPhysicianZipChanged();
             }
@@ -13663,7 +13669,7 @@ namespace WebTester
             {
                 OnpurchasedServiceProviderIDChanging(value);
                 ReportPropertyChanging("purchasedServiceProviderID");
-                _purchasedServiceProviderID = StructuralObject.SetValidValue(value, true, "purchasedServiceProviderID");
+                _purchasedServiceProviderID = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("purchasedServiceProviderID");
                 OnpurchasedServiceProviderIDChanged();
             }
@@ -13687,7 +13693,7 @@ namespace WebTester
             {
                 OnpurchasedServiceProviderAmountChanging(value);
                 ReportPropertyChanging("purchasedServiceProviderAmount");
-                _purchasedServiceProviderAmount = StructuralObject.SetValidValue(value, true, "purchasedServiceProviderAmount");
+                _purchasedServiceProviderAmount = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("purchasedServiceProviderAmount");
                 OnpurchasedServiceProviderAmountChanged();
             }
@@ -13698,6 +13704,7 @@ namespace WebTester
 
         #endregion
 
+    
     }
     
     /// <summary>
@@ -13727,7 +13734,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -13746,7 +13753,7 @@ namespace WebTester
                 {
                     OnServiceType_IDChanging(value);
                     ReportPropertyChanging("ServiceType_ID");
-                    _ServiceType_ID = StructuralObject.SetValidValue(value, "ServiceType_ID");
+                    _ServiceType_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("ServiceType_ID");
                     OnServiceType_IDChanged();
                 }
@@ -13771,7 +13778,7 @@ namespace WebTester
             {
                 OnServiceType_TIChanging(value);
                 ReportPropertyChanging("ServiceType_TI");
-                _ServiceType_TI = StructuralObject.SetValidValue(value, "ServiceType_TI");
+                _ServiceType_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ServiceType_TI");
                 OnServiceType_TIChanged();
             }
@@ -13795,7 +13802,7 @@ namespace WebTester
             {
                 OnServiceName_VCChanging(value);
                 ReportPropertyChanging("ServiceName_VC");
-                _ServiceName_VC = StructuralObject.SetValidValue(value, false, "ServiceName_VC");
+                _ServiceName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ServiceName_VC");
                 OnServiceName_VCChanged();
             }
@@ -13806,6 +13813,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -13861,7 +13869,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -13880,7 +13888,7 @@ namespace WebTester
                 {
                     OnSetupStatus_IDChanging(value);
                     ReportPropertyChanging("SetupStatus_ID");
-                    _SetupStatus_ID = StructuralObject.SetValidValue(value, "SetupStatus_ID");
+                    _SetupStatus_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("SetupStatus_ID");
                     OnSetupStatus_IDChanged();
                 }
@@ -13905,7 +13913,7 @@ namespace WebTester
             {
                 OnSetupStatus_TIChanging(value);
                 ReportPropertyChanging("SetupStatus_TI");
-                _SetupStatus_TI = StructuralObject.SetValidValue(value, "SetupStatus_TI");
+                _SetupStatus_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("SetupStatus_TI");
                 OnSetupStatus_TIChanged();
             }
@@ -13929,7 +13937,7 @@ namespace WebTester
             {
                 OnSetupStatusName_VCChanging(value);
                 ReportPropertyChanging("SetupStatusName_VC");
-                _SetupStatusName_VC = StructuralObject.SetValidValue(value, false, "SetupStatusName_VC");
+                _SetupStatusName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("SetupStatusName_VC");
                 OnSetupStatusName_VCChanged();
             }
@@ -13940,6 +13948,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -13995,7 +14004,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14014,7 +14023,7 @@ namespace WebTester
                 {
                     OnSoftware_IDChanging(value);
                     ReportPropertyChanging("Software_ID");
-                    _Software_ID = StructuralObject.SetValidValue(value, "Software_ID");
+                    _Software_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("Software_ID");
                     OnSoftware_IDChanged();
                 }
@@ -14039,7 +14048,7 @@ namespace WebTester
             {
                 OnProfession_IDChanging(value);
                 ReportPropertyChanging("Profession_ID");
-                _Profession_ID = StructuralObject.SetValidValue(value, "Profession_ID");
+                _Profession_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Profession_ID");
                 OnProfession_IDChanged();
             }
@@ -14063,7 +14072,7 @@ namespace WebTester
             {
                 OnSoftwareName_VCChanging(value);
                 ReportPropertyChanging("SoftwareName_VC");
-                _SoftwareName_VC = StructuralObject.SetValidValue(value, false, "SoftwareName_VC");
+                _SoftwareName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("SoftwareName_VC");
                 OnSoftwareName_VCChanged();
             }
@@ -14074,6 +14083,7 @@ namespace WebTester
 
         #endregion
 
+    
     }
     
     /// <summary>
@@ -14101,7 +14111,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14120,7 +14130,7 @@ namespace WebTester
                 {
                     OnSoftwareConversion_IDChanging(value);
                     ReportPropertyChanging("SoftwareConversion_ID");
-                    _SoftwareConversion_ID = StructuralObject.SetValidValue(value, "SoftwareConversion_ID");
+                    _SoftwareConversion_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("SoftwareConversion_ID");
                     OnSoftwareConversion_IDChanged();
                 }
@@ -14145,7 +14155,7 @@ namespace WebTester
             {
                 OnConversionName_VCChanging(value);
                 ReportPropertyChanging("ConversionName_VC");
-                _ConversionName_VC = StructuralObject.SetValidValue(value, false, "ConversionName_VC");
+                _ConversionName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ConversionName_VC");
                 OnConversionName_VCChanged();
             }
@@ -14156,6 +14166,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -14367,7 +14378,7 @@ namespace WebTester
 
         #endregion
 
-        #region Simple Properties
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -14386,7 +14397,7 @@ namespace WebTester
                 {
                     OnClaim_IDChanging(value);
                     ReportPropertyChanging("Claim_ID");
-                    _Claim_ID = StructuralObject.SetValidValue(value, "Claim_ID");
+                    _Claim_ID = StructuralObject.SetValidValue(value);
                     ReportPropertyChanged("Claim_ID");
                     OnClaim_IDChanged();
                 }
@@ -14411,7 +14422,7 @@ namespace WebTester
             {
                 OnParent_IDChanging(value);
                 ReportPropertyChanging("Parent_ID");
-                _Parent_ID = StructuralObject.SetValidValue(value, "Parent_ID");
+                _Parent_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Parent_ID");
                 OnParent_IDChanged();
             }
@@ -14435,7 +14446,7 @@ namespace WebTester
             {
                 OnLastUpdate_DTChanging(value);
                 ReportPropertyChanging("LastUpdate_DT");
-                _LastUpdate_DT = StructuralObject.SetValidValue(value, "LastUpdate_DT");
+                _LastUpdate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("LastUpdate_DT");
                 OnLastUpdate_DTChanged();
             }
@@ -14459,7 +14470,7 @@ namespace WebTester
             {
                 OnPayer_IDChanging(value);
                 ReportPropertyChanging("Payer_ID");
-                _Payer_ID = StructuralObject.SetValidValue(value, "Payer_ID");
+                _Payer_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Payer_ID");
                 OnPayer_IDChanged();
             }
@@ -14483,7 +14494,7 @@ namespace WebTester
             {
                 OnProvider_IDChanging(value);
                 ReportPropertyChanging("Provider_ID");
-                _Provider_ID = StructuralObject.SetValidValue(value, "Provider_ID");
+                _Provider_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Provider_ID");
                 OnProvider_IDChanged();
             }
@@ -14507,7 +14518,7 @@ namespace WebTester
             {
                 OnBatchNum_VCChanging(value);
                 ReportPropertyChanging("BatchNum_VC");
-                _BatchNum_VC = StructuralObject.SetValidValue(value, false, "BatchNum_VC");
+                _BatchNum_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BatchNum_VC");
                 OnBatchNum_VCChanged();
             }
@@ -14531,7 +14542,7 @@ namespace WebTester
             {
                 OnClientID_VCChanging(value);
                 ReportPropertyChanging("ClientID_VC");
-                _ClientID_VC = StructuralObject.SetValidValue(value, true, "ClientID_VC");
+                _ClientID_VC = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ClientID_VC");
                 OnClientID_VCChanged();
             }
@@ -14555,7 +14566,7 @@ namespace WebTester
             {
                 OnVendorClaimID_VCChanging(value);
                 ReportPropertyChanging("VendorClaimID_VC");
-                _VendorClaimID_VC = StructuralObject.SetValidValue(value, false, "VendorClaimID_VC");
+                _VendorClaimID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("VendorClaimID_VC");
                 OnVendorClaimID_VCChanged();
             }
@@ -14579,7 +14590,7 @@ namespace WebTester
             {
                 OnIsDuplicateClaim_BTChanging(value);
                 ReportPropertyChanging("IsDuplicateClaim_BT");
-                _IsDuplicateClaim_BT = StructuralObject.SetValidValue(value, "IsDuplicateClaim_BT");
+                _IsDuplicateClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsDuplicateClaim_BT");
                 OnIsDuplicateClaim_BTChanged();
             }
@@ -14603,7 +14614,7 @@ namespace WebTester
             {
                 OnReportDate_DTChanging(value);
                 ReportPropertyChanging("ReportDate_DT");
-                _ReportDate_DT = StructuralObject.SetValidValue(value, "ReportDate_DT");
+                _ReportDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ReportDate_DT");
                 OnReportDate_DTChanged();
             }
@@ -14627,7 +14638,7 @@ namespace WebTester
             {
                 OnLastProcessDate_DTChanging(value);
                 ReportPropertyChanging("LastProcessDate_DT");
-                _LastProcessDate_DT = StructuralObject.SetValidValue(value, "LastProcessDate_DT");
+                _LastProcessDate_DT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("LastProcessDate_DT");
                 OnLastProcessDate_DTChanged();
             }
@@ -14651,7 +14662,7 @@ namespace WebTester
             {
                 OnClaimStatus_TIChanging(value);
                 ReportPropertyChanging("ClaimStatus_TI");
-                _ClaimStatus_TI = StructuralObject.SetValidValue(value, "ClaimStatus_TI");
+                _ClaimStatus_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("ClaimStatus_TI");
                 OnClaimStatus_TIChanged();
             }
@@ -14675,7 +14686,7 @@ namespace WebTester
             {
                 OnIsProcessNow_BTChanging(value);
                 ReportPropertyChanging("IsProcessNow_BT");
-                _IsProcessNow_BT = StructuralObject.SetValidValue(value, "IsProcessNow_BT");
+                _IsProcessNow_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsProcessNow_BT");
                 OnIsProcessNow_BTChanged();
             }
@@ -14699,7 +14710,7 @@ namespace WebTester
             {
                 OnIsDoNotProcess_BTChanging(value);
                 ReportPropertyChanging("IsDoNotProcess_BT");
-                _IsDoNotProcess_BT = StructuralObject.SetValidValue(value, "IsDoNotProcess_BT");
+                _IsDoNotProcess_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsDoNotProcess_BT");
                 OnIsDoNotProcess_BTChanged();
             }
@@ -14723,7 +14734,7 @@ namespace WebTester
             {
                 OnIsNoCharge_BTChanging(value);
                 ReportPropertyChanging("IsNoCharge_BT");
-                _IsNoCharge_BT = StructuralObject.SetValidValue(value, "IsNoCharge_BT");
+                _IsNoCharge_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsNoCharge_BT");
                 OnIsNoCharge_BTChanged();
             }
@@ -14747,7 +14758,7 @@ namespace WebTester
             {
                 OnIsNewDocClaim_BTChanging(value);
                 ReportPropertyChanging("IsNewDocClaim_BT");
-                _IsNewDocClaim_BT = StructuralObject.SetValidValue(value, "IsNewDocClaim_BT");
+                _IsNewDocClaim_BT = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("IsNewDocClaim_BT");
                 OnIsNewDocClaim_BTChanged();
             }
@@ -14771,7 +14782,7 @@ namespace WebTester
             {
                 OnErrors_CHChanging(value);
                 ReportPropertyChanging("Errors_CH");
-                _Errors_CH = StructuralObject.SetValidValue(value, false, "Errors_CH");
+                _Errors_CH = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Errors_CH");
                 OnErrors_CHChanged();
             }
@@ -14795,7 +14806,7 @@ namespace WebTester
             {
                 OnNumberOfClaims_TIChanging(value);
                 ReportPropertyChanging("NumberOfClaims_TI");
-                _NumberOfClaims_TI = StructuralObject.SetValidValue(value, "NumberOfClaims_TI");
+                _NumberOfClaims_TI = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("NumberOfClaims_TI");
                 OnNumberOfClaims_TIChanged();
             }
@@ -14819,7 +14830,7 @@ namespace WebTester
             {
                 OnOutputSub_IDChanging(value);
                 ReportPropertyChanging("OutputSub_ID");
-                _OutputSub_ID = StructuralObject.SetValidValue(value, "OutputSub_ID");
+                _OutputSub_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("OutputSub_ID");
                 OnOutputSub_IDChanged();
             }
@@ -14843,7 +14854,7 @@ namespace WebTester
             {
                 OnNote_VCChanging(value);
                 ReportPropertyChanging("Note_VC");
-                _Note_VC = StructuralObject.SetValidValue(value, false, "Note_VC");
+                _Note_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Note_VC");
                 OnNote_VCChanged();
             }
@@ -14867,7 +14878,7 @@ namespace WebTester
             {
                 OnF01_RecipientAccountNumber_VCChanging(value);
                 ReportPropertyChanging("F01_RecipientAccountNumber_VC");
-                _F01_RecipientAccountNumber_VC = StructuralObject.SetValidValue(value, false, "F01_RecipientAccountNumber_VC");
+                _F01_RecipientAccountNumber_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F01_RecipientAccountNumber_VC");
                 OnF01_RecipientAccountNumber_VCChanged();
             }
@@ -14891,7 +14902,7 @@ namespace WebTester
             {
                 OnF02_RecipientLastName_VCChanging(value);
                 ReportPropertyChanging("F02_RecipientLastName_VC");
-                _F02_RecipientLastName_VC = StructuralObject.SetValidValue(value, false, "F02_RecipientLastName_VC");
+                _F02_RecipientLastName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F02_RecipientLastName_VC");
                 OnF02_RecipientLastName_VCChanged();
             }
@@ -14915,7 +14926,7 @@ namespace WebTester
             {
                 OnF02_RecipientFirstName_VCChanging(value);
                 ReportPropertyChanging("F02_RecipientFirstName_VC");
-                _F02_RecipientFirstName_VC = StructuralObject.SetValidValue(value, false, "F02_RecipientFirstName_VC");
+                _F02_RecipientFirstName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F02_RecipientFirstName_VC");
                 OnF02_RecipientFirstName_VCChanged();
             }
@@ -14939,7 +14950,7 @@ namespace WebTester
             {
                 OnF02_RecipientMI_VCChanging(value);
                 ReportPropertyChanging("F02_RecipientMI_VC");
-                _F02_RecipientMI_VC = StructuralObject.SetValidValue(value, false, "F02_RecipientMI_VC");
+                _F02_RecipientMI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F02_RecipientMI_VC");
                 OnF02_RecipientMI_VCChanged();
             }
@@ -14963,7 +14974,7 @@ namespace WebTester
             {
                 OnF03A_RecipientAddress1_VCChanging(value);
                 ReportPropertyChanging("F03A_RecipientAddress1_VC");
-                _F03A_RecipientAddress1_VC = StructuralObject.SetValidValue(value, false, "F03A_RecipientAddress1_VC");
+                _F03A_RecipientAddress1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F03A_RecipientAddress1_VC");
                 OnF03A_RecipientAddress1_VCChanged();
             }
@@ -14987,7 +14998,7 @@ namespace WebTester
             {
                 OnF03B_RecipientAddress2_VCChanging(value);
                 ReportPropertyChanging("F03B_RecipientAddress2_VC");
-                _F03B_RecipientAddress2_VC = StructuralObject.SetValidValue(value, false, "F03B_RecipientAddress2_VC");
+                _F03B_RecipientAddress2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F03B_RecipientAddress2_VC");
                 OnF03B_RecipientAddress2_VCChanged();
             }
@@ -15011,7 +15022,7 @@ namespace WebTester
             {
                 OnF04_RecipientCity_VCChanging(value);
                 ReportPropertyChanging("F04_RecipientCity_VC");
-                _F04_RecipientCity_VC = StructuralObject.SetValidValue(value, false, "F04_RecipientCity_VC");
+                _F04_RecipientCity_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F04_RecipientCity_VC");
                 OnF04_RecipientCity_VCChanged();
             }
@@ -15035,7 +15046,7 @@ namespace WebTester
             {
                 OnF05_RecipientST_VCChanging(value);
                 ReportPropertyChanging("F05_RecipientST_VC");
-                _F05_RecipientST_VC = StructuralObject.SetValidValue(value, false, "F05_RecipientST_VC");
+                _F05_RecipientST_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F05_RecipientST_VC");
                 OnF05_RecipientST_VCChanged();
             }
@@ -15059,7 +15070,7 @@ namespace WebTester
             {
                 OnF06_RecipientZip_VCChanging(value);
                 ReportPropertyChanging("F06_RecipientZip_VC");
-                _F06_RecipientZip_VC = StructuralObject.SetValidValue(value, false, "F06_RecipientZip_VC");
+                _F06_RecipientZip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F06_RecipientZip_VC");
                 OnF06_RecipientZip_VCChanged();
             }
@@ -15083,7 +15094,7 @@ namespace WebTester
             {
                 OnF51_PatientLastName_VCChanging(value);
                 ReportPropertyChanging("F51_PatientLastName_VC");
-                _F51_PatientLastName_VC = StructuralObject.SetValidValue(value, false, "F51_PatientLastName_VC");
+                _F51_PatientLastName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F51_PatientLastName_VC");
                 OnF51_PatientLastName_VCChanged();
             }
@@ -15107,7 +15118,7 @@ namespace WebTester
             {
                 OnF51_PatientFirstName_VCChanging(value);
                 ReportPropertyChanging("F51_PatientFirstName_VC");
-                _F51_PatientFirstName_VC = StructuralObject.SetValidValue(value, false, "F51_PatientFirstName_VC");
+                _F51_PatientFirstName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F51_PatientFirstName_VC");
                 OnF51_PatientFirstName_VCChanged();
             }
@@ -15131,7 +15142,7 @@ namespace WebTester
             {
                 OnF51_PatientMI_VCChanging(value);
                 ReportPropertyChanging("F51_PatientMI_VC");
-                _F51_PatientMI_VC = StructuralObject.SetValidValue(value, false, "F51_PatientMI_VC");
+                _F51_PatientMI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F51_PatientMI_VC");
                 OnF51_PatientMI_VCChanged();
             }
@@ -15155,7 +15166,7 @@ namespace WebTester
             {
                 OnF07_OfficeName_VCChanging(value);
                 ReportPropertyChanging("F07_OfficeName_VC");
-                _F07_OfficeName_VC = StructuralObject.SetValidValue(value, false, "F07_OfficeName_VC");
+                _F07_OfficeName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F07_OfficeName_VC");
                 OnF07_OfficeName_VCChanged();
             }
@@ -15179,7 +15190,7 @@ namespace WebTester
             {
                 OnF08A_OfficeAddress1_VCChanging(value);
                 ReportPropertyChanging("F08A_OfficeAddress1_VC");
-                _F08A_OfficeAddress1_VC = StructuralObject.SetValidValue(value, false, "F08A_OfficeAddress1_VC");
+                _F08A_OfficeAddress1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F08A_OfficeAddress1_VC");
                 OnF08A_OfficeAddress1_VCChanged();
             }
@@ -15203,7 +15214,7 @@ namespace WebTester
             {
                 OnF08B_OfficeAddress2_VCChanging(value);
                 ReportPropertyChanging("F08B_OfficeAddress2_VC");
-                _F08B_OfficeAddress2_VC = StructuralObject.SetValidValue(value, false, "F08B_OfficeAddress2_VC");
+                _F08B_OfficeAddress2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F08B_OfficeAddress2_VC");
                 OnF08B_OfficeAddress2_VCChanged();
             }
@@ -15227,7 +15238,7 @@ namespace WebTester
             {
                 OnF09_OfficeCity_VCChanging(value);
                 ReportPropertyChanging("F09_OfficeCity_VC");
-                _F09_OfficeCity_VC = StructuralObject.SetValidValue(value, false, "F09_OfficeCity_VC");
+                _F09_OfficeCity_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F09_OfficeCity_VC");
                 OnF09_OfficeCity_VCChanged();
             }
@@ -15251,7 +15262,7 @@ namespace WebTester
             {
                 OnF10_OfficeST_VCChanging(value);
                 ReportPropertyChanging("F10_OfficeST_VC");
-                _F10_OfficeST_VC = StructuralObject.SetValidValue(value, false, "F10_OfficeST_VC");
+                _F10_OfficeST_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F10_OfficeST_VC");
                 OnF10_OfficeST_VCChanged();
             }
@@ -15275,7 +15286,7 @@ namespace WebTester
             {
                 OnF11_OfficeZip_VCChanging(value);
                 ReportPropertyChanging("F11_OfficeZip_VC");
-                _F11_OfficeZip_VC = StructuralObject.SetValidValue(value, false, "F11_OfficeZip_VC");
+                _F11_OfficeZip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F11_OfficeZip_VC");
                 OnF11_OfficeZip_VCChanged();
             }
@@ -15299,7 +15310,7 @@ namespace WebTester
             {
                 OnF12_OfficePhone_VCChanging(value);
                 ReportPropertyChanging("F12_OfficePhone_VC");
-                _F12_OfficePhone_VC = StructuralObject.SetValidValue(value, false, "F12_OfficePhone_VC");
+                _F12_OfficePhone_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F12_OfficePhone_VC");
                 OnF12_OfficePhone_VCChanged();
             }
@@ -15323,7 +15334,7 @@ namespace WebTester
             {
                 OnF13_PatientAccountNumber_VCChanging(value);
                 ReportPropertyChanging("F13_PatientAccountNumber_VC");
-                _F13_PatientAccountNumber_VC = StructuralObject.SetValidValue(value, false, "F13_PatientAccountNumber_VC");
+                _F13_PatientAccountNumber_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F13_PatientAccountNumber_VC");
                 OnF13_PatientAccountNumber_VCChanged();
             }
@@ -15347,7 +15358,7 @@ namespace WebTester
             {
                 OnF14_StatementDate_VCChanging(value);
                 ReportPropertyChanging("F14_StatementDate_VC");
-                _F14_StatementDate_VC = StructuralObject.SetValidValue(value, false, "F14_StatementDate_VC");
+                _F14_StatementDate_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F14_StatementDate_VC");
                 OnF14_StatementDate_VCChanged();
             }
@@ -15371,7 +15382,7 @@ namespace WebTester
             {
                 OnF15_PageNumber_VCChanging(value);
                 ReportPropertyChanging("F15_PageNumber_VC");
-                _F15_PageNumber_VC = StructuralObject.SetValidValue(value, false, "F15_PageNumber_VC");
+                _F15_PageNumber_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F15_PageNumber_VC");
                 OnF15_PageNumber_VCChanged();
             }
@@ -15395,7 +15406,7 @@ namespace WebTester
             {
                 OnF16_RemitToName_VCChanging(value);
                 ReportPropertyChanging("F16_RemitToName_VC");
-                _F16_RemitToName_VC = StructuralObject.SetValidValue(value, false, "F16_RemitToName_VC");
+                _F16_RemitToName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F16_RemitToName_VC");
                 OnF16_RemitToName_VCChanged();
             }
@@ -15419,7 +15430,7 @@ namespace WebTester
             {
                 OnF17_RemitToAddress1_VCChanging(value);
                 ReportPropertyChanging("F17_RemitToAddress1_VC");
-                _F17_RemitToAddress1_VC = StructuralObject.SetValidValue(value, false, "F17_RemitToAddress1_VC");
+                _F17_RemitToAddress1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F17_RemitToAddress1_VC");
                 OnF17_RemitToAddress1_VCChanged();
             }
@@ -15443,7 +15454,7 @@ namespace WebTester
             {
                 OnF18_RemitToAddress2_VCChanging(value);
                 ReportPropertyChanging("F18_RemitToAddress2_VC");
-                _F18_RemitToAddress2_VC = StructuralObject.SetValidValue(value, false, "F18_RemitToAddress2_VC");
+                _F18_RemitToAddress2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F18_RemitToAddress2_VC");
                 OnF18_RemitToAddress2_VCChanged();
             }
@@ -15467,7 +15478,7 @@ namespace WebTester
             {
                 OnF19_RemitToCity_VCChanging(value);
                 ReportPropertyChanging("F19_RemitToCity_VC");
-                _F19_RemitToCity_VC = StructuralObject.SetValidValue(value, false, "F19_RemitToCity_VC");
+                _F19_RemitToCity_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F19_RemitToCity_VC");
                 OnF19_RemitToCity_VCChanged();
             }
@@ -15491,7 +15502,7 @@ namespace WebTester
             {
                 OnF20_RemitToST_VCChanging(value);
                 ReportPropertyChanging("F20_RemitToST_VC");
-                _F20_RemitToST_VC = StructuralObject.SetValidValue(value, false, "F20_RemitToST_VC");
+                _F20_RemitToST_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F20_RemitToST_VC");
                 OnF20_RemitToST_VCChanged();
             }
@@ -15515,7 +15526,7 @@ namespace WebTester
             {
                 OnF21_RemitToZip_VCChanging(value);
                 ReportPropertyChanging("F21_RemitToZip_VC");
-                _F21_RemitToZip_VC = StructuralObject.SetValidValue(value, false, "F21_RemitToZip_VC");
+                _F21_RemitToZip_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F21_RemitToZip_VC");
                 OnF21_RemitToZip_VCChanged();
             }
@@ -15539,7 +15550,7 @@ namespace WebTester
             {
                 OnF22_RemitToPhone_VCChanging(value);
                 ReportPropertyChanging("F22_RemitToPhone_VC");
-                _F22_RemitToPhone_VC = StructuralObject.SetValidValue(value, false, "F22_RemitToPhone_VC");
+                _F22_RemitToPhone_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F22_RemitToPhone_VC");
                 OnF22_RemitToPhone_VCChanged();
             }
@@ -15563,7 +15574,7 @@ namespace WebTester
             {
                 OnF23_RenderingProviderLastName_VCChanging(value);
                 ReportPropertyChanging("F23_RenderingProviderLastName_VC");
-                _F23_RenderingProviderLastName_VC = StructuralObject.SetValidValue(value, false, "F23_RenderingProviderLastName_VC");
+                _F23_RenderingProviderLastName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F23_RenderingProviderLastName_VC");
                 OnF23_RenderingProviderLastName_VCChanged();
             }
@@ -15587,7 +15598,7 @@ namespace WebTester
             {
                 OnF23_RenderingProviderFirstName_VCChanging(value);
                 ReportPropertyChanging("F23_RenderingProviderFirstName_VC");
-                _F23_RenderingProviderFirstName_VC = StructuralObject.SetValidValue(value, false, "F23_RenderingProviderFirstName_VC");
+                _F23_RenderingProviderFirstName_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F23_RenderingProviderFirstName_VC");
                 OnF23_RenderingProviderFirstName_VCChanged();
             }
@@ -15611,7 +15622,7 @@ namespace WebTester
             {
                 OnF23_RenderingProviderMI_VCChanging(value);
                 ReportPropertyChanging("F23_RenderingProviderMI_VC");
-                _F23_RenderingProviderMI_VC = StructuralObject.SetValidValue(value, false, "F23_RenderingProviderMI_VC");
+                _F23_RenderingProviderMI_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F23_RenderingProviderMI_VC");
                 OnF23_RenderingProviderMI_VCChanged();
             }
@@ -15635,7 +15646,7 @@ namespace WebTester
             {
                 OnF24_RenderingProviderID_VCChanging(value);
                 ReportPropertyChanging("F24_RenderingProviderID_VC");
-                _F24_RenderingProviderID_VC = StructuralObject.SetValidValue(value, false, "F24_RenderingProviderID_VC");
+                _F24_RenderingProviderID_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F24_RenderingProviderID_VC");
                 OnF24_RenderingProviderID_VCChanged();
             }
@@ -15659,7 +15670,7 @@ namespace WebTester
             {
                 OnF25_RenderingProviderST_VCChanging(value);
                 ReportPropertyChanging("F25_RenderingProviderST_VC");
-                _F25_RenderingProviderST_VC = StructuralObject.SetValidValue(value, false, "F25_RenderingProviderST_VC");
+                _F25_RenderingProviderST_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F25_RenderingProviderST_VC");
                 OnF25_RenderingProviderST_VCChanged();
             }
@@ -15683,7 +15694,7 @@ namespace WebTester
             {
                 OnF26_PriorStatementDate_VCChanging(value);
                 ReportPropertyChanging("F26_PriorStatementDate_VC");
-                _F26_PriorStatementDate_VC = StructuralObject.SetValidValue(value, false, "F26_PriorStatementDate_VC");
+                _F26_PriorStatementDate_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F26_PriorStatementDate_VC");
                 OnF26_PriorStatementDate_VCChanged();
             }
@@ -15707,7 +15718,7 @@ namespace WebTester
             {
                 OnF27_PaymentDueDate_VCChanging(value);
                 ReportPropertyChanging("F27_PaymentDueDate_VC");
-                _F27_PaymentDueDate_VC = StructuralObject.SetValidValue(value, false, "F27_PaymentDueDate_VC");
+                _F27_PaymentDueDate_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F27_PaymentDueDate_VC");
                 OnF27_PaymentDueDate_VCChanged();
             }
@@ -15731,7 +15742,7 @@ namespace WebTester
             {
                 OnF28_PriorBalance_VCChanging(value);
                 ReportPropertyChanging("F28_PriorBalance_VC");
-                _F28_PriorBalance_VC = StructuralObject.SetValidValue(value, false, "F28_PriorBalance_VC");
+                _F28_PriorBalance_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F28_PriorBalance_VC");
                 OnF28_PriorBalance_VCChanged();
             }
@@ -15755,7 +15766,7 @@ namespace WebTester
             {
                 OnF29_Adjustments_VCChanging(value);
                 ReportPropertyChanging("F29_Adjustments_VC");
-                _F29_Adjustments_VC = StructuralObject.SetValidValue(value, false, "F29_Adjustments_VC");
+                _F29_Adjustments_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F29_Adjustments_VC");
                 OnF29_Adjustments_VCChanged();
             }
@@ -15779,7 +15790,7 @@ namespace WebTester
             {
                 OnF30_BalanceDue_VCChanging(value);
                 ReportPropertyChanging("F30_BalanceDue_VC");
-                _F30_BalanceDue_VC = StructuralObject.SetValidValue(value, false, "F30_BalanceDue_VC");
+                _F30_BalanceDue_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F30_BalanceDue_VC");
                 OnF30_BalanceDue_VCChanged();
             }
@@ -15803,7 +15814,7 @@ namespace WebTester
             {
                 OnF30B_AccountBalance_VCChanging(value);
                 ReportPropertyChanging("F30B_AccountBalance_VC");
-                _F30B_AccountBalance_VC = StructuralObject.SetValidValue(value, false, "F30B_AccountBalance_VC");
+                _F30B_AccountBalance_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F30B_AccountBalance_VC");
                 OnF30B_AccountBalance_VCChanged();
             }
@@ -15827,7 +15838,7 @@ namespace WebTester
             {
                 OnF31_FinanceCharge_VCChanging(value);
                 ReportPropertyChanging("F31_FinanceCharge_VC");
-                _F31_FinanceCharge_VC = StructuralObject.SetValidValue(value, false, "F31_FinanceCharge_VC");
+                _F31_FinanceCharge_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F31_FinanceCharge_VC");
                 OnF31_FinanceCharge_VCChanged();
             }
@@ -15851,7 +15862,7 @@ namespace WebTester
             {
                 OnF32_Credits_VCChanging(value);
                 ReportPropertyChanging("F32_Credits_VC");
-                _F32_Credits_VC = StructuralObject.SetValidValue(value, false, "F32_Credits_VC");
+                _F32_Credits_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F32_Credits_VC");
                 OnF32_Credits_VCChanged();
             }
@@ -15875,7 +15886,7 @@ namespace WebTester
             {
                 OnF33_EstimatedInsurancePayment_VCChanging(value);
                 ReportPropertyChanging("F33_EstimatedInsurancePayment_VC");
-                _F33_EstimatedInsurancePayment_VC = StructuralObject.SetValidValue(value, false, "F33_EstimatedInsurancePayment_VC");
+                _F33_EstimatedInsurancePayment_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F33_EstimatedInsurancePayment_VC");
                 OnF33_EstimatedInsurancePayment_VCChanged();
             }
@@ -15899,7 +15910,7 @@ namespace WebTester
             {
                 OnF34_PatientShare_VCChanging(value);
                 ReportPropertyChanging("F34_PatientShare_VC");
-                _F34_PatientShare_VC = StructuralObject.SetValidValue(value, false, "F34_PatientShare_VC");
+                _F34_PatientShare_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F34_PatientShare_VC");
                 OnF34_PatientShare_VCChanged();
             }
@@ -15923,7 +15934,7 @@ namespace WebTester
             {
                 OnF35_CurrentBalance_VCChanging(value);
                 ReportPropertyChanging("F35_CurrentBalance_VC");
-                _F35_CurrentBalance_VC = StructuralObject.SetValidValue(value, false, "F35_CurrentBalance_VC");
+                _F35_CurrentBalance_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F35_CurrentBalance_VC");
                 OnF35_CurrentBalance_VCChanged();
             }
@@ -15947,7 +15958,7 @@ namespace WebTester
             {
                 OnF36_PastDue30_VCChanging(value);
                 ReportPropertyChanging("F36_PastDue30_VC");
-                _F36_PastDue30_VC = StructuralObject.SetValidValue(value, false, "F36_PastDue30_VC");
+                _F36_PastDue30_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F36_PastDue30_VC");
                 OnF36_PastDue30_VCChanged();
             }
@@ -15971,7 +15982,7 @@ namespace WebTester
             {
                 OnF37_PastDue60_VCChanging(value);
                 ReportPropertyChanging("F37_PastDue60_VC");
-                _F37_PastDue60_VC = StructuralObject.SetValidValue(value, false, "F37_PastDue60_VC");
+                _F37_PastDue60_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F37_PastDue60_VC");
                 OnF37_PastDue60_VCChanged();
             }
@@ -15995,7 +16006,7 @@ namespace WebTester
             {
                 OnF38_PastDue90_VCChanging(value);
                 ReportPropertyChanging("F38_PastDue90_VC");
-                _F38_PastDue90_VC = StructuralObject.SetValidValue(value, false, "F38_PastDue90_VC");
+                _F38_PastDue90_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F38_PastDue90_VC");
                 OnF38_PastDue90_VCChanged();
             }
@@ -16019,7 +16030,7 @@ namespace WebTester
             {
                 OnF39_PastDue120_VCChanging(value);
                 ReportPropertyChanging("F39_PastDue120_VC");
-                _F39_PastDue120_VC = StructuralObject.SetValidValue(value, false, "F39_PastDue120_VC");
+                _F39_PastDue120_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F39_PastDue120_VC");
                 OnF39_PastDue120_VCChanged();
             }
@@ -16043,7 +16054,7 @@ namespace WebTester
             {
                 OnTopNote_VCChanging(value);
                 ReportPropertyChanging("TopNote_VC");
-                _TopNote_VC = StructuralObject.SetValidValue(value, false, "TopNote_VC");
+                _TopNote_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("TopNote_VC");
                 OnTopNote_VCChanged();
             }
@@ -16067,7 +16078,7 @@ namespace WebTester
             {
                 OnF40_Notes1_VCChanging(value);
                 ReportPropertyChanging("F40_Notes1_VC");
-                _F40_Notes1_VC = StructuralObject.SetValidValue(value, false, "F40_Notes1_VC");
+                _F40_Notes1_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F40_Notes1_VC");
                 OnF40_Notes1_VCChanged();
             }
@@ -16091,7 +16102,7 @@ namespace WebTester
             {
                 OnF41_Notes2_VCChanging(value);
                 ReportPropertyChanging("F41_Notes2_VC");
-                _F41_Notes2_VC = StructuralObject.SetValidValue(value, false, "F41_Notes2_VC");
+                _F41_Notes2_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F41_Notes2_VC");
                 OnF41_Notes2_VCChanged();
             }
@@ -16115,7 +16126,7 @@ namespace WebTester
             {
                 OnF42_Notes3_VCChanging(value);
                 ReportPropertyChanging("F42_Notes3_VC");
-                _F42_Notes3_VC = StructuralObject.SetValidValue(value, false, "F42_Notes3_VC");
+                _F42_Notes3_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F42_Notes3_VC");
                 OnF42_Notes3_VCChanged();
             }
@@ -16139,7 +16150,7 @@ namespace WebTester
             {
                 OnF43_Notes4_VCChanging(value);
                 ReportPropertyChanging("F43_Notes4_VC");
-                _F43_Notes4_VC = StructuralObject.SetValidValue(value, false, "F43_Notes4_VC");
+                _F43_Notes4_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F43_Notes4_VC");
                 OnF43_Notes4_VCChanged();
             }
@@ -16163,7 +16174,7 @@ namespace WebTester
             {
                 OnF44_Notes5_VCChanging(value);
                 ReportPropertyChanging("F44_Notes5_VC");
-                _F44_Notes5_VC = StructuralObject.SetValidValue(value, false, "F44_Notes5_VC");
+                _F44_Notes5_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F44_Notes5_VC");
                 OnF44_Notes5_VCChanged();
             }
@@ -16187,7 +16198,7 @@ namespace WebTester
             {
                 OnF45_Notes6_VCChanging(value);
                 ReportPropertyChanging("F45_Notes6_VC");
-                _F45_Notes6_VC = StructuralObject.SetValidValue(value, false, "F45_Notes6_VC");
+                _F45_Notes6_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F45_Notes6_VC");
                 OnF45_Notes6_VCChanged();
             }
@@ -16211,7 +16222,7 @@ namespace WebTester
             {
                 OnF46_Notes7_VCChanging(value);
                 ReportPropertyChanging("F46_Notes7_VC");
-                _F46_Notes7_VC = StructuralObject.SetValidValue(value, false, "F46_Notes7_VC");
+                _F46_Notes7_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F46_Notes7_VC");
                 OnF46_Notes7_VCChanged();
             }
@@ -16235,7 +16246,7 @@ namespace WebTester
             {
                 OnF47_Notes8_VCChanging(value);
                 ReportPropertyChanging("F47_Notes8_VC");
-                _F47_Notes8_VC = StructuralObject.SetValidValue(value, false, "F47_Notes8_VC");
+                _F47_Notes8_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F47_Notes8_VC");
                 OnF47_Notes8_VCChanged();
             }
@@ -16259,7 +16270,7 @@ namespace WebTester
             {
                 OnF48_Notes9_VCChanging(value);
                 ReportPropertyChanging("F48_Notes9_VC");
-                _F48_Notes9_VC = StructuralObject.SetValidValue(value, false, "F48_Notes9_VC");
+                _F48_Notes9_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F48_Notes9_VC");
                 OnF48_Notes9_VCChanged();
             }
@@ -16283,7 +16294,7 @@ namespace WebTester
             {
                 OnF49_Notes10_VCChanging(value);
                 ReportPropertyChanging("F49_Notes10_VC");
-                _F49_Notes10_VC = StructuralObject.SetValidValue(value, false, "F49_Notes10_VC");
+                _F49_Notes10_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F49_Notes10_VC");
                 OnF49_Notes10_VCChanged();
             }
@@ -16307,7 +16318,7 @@ namespace WebTester
             {
                 OnF00_StatementTitle_VCChanging(value);
                 ReportPropertyChanging("F00_StatementTitle_VC");
-                _F00_StatementTitle_VC = StructuralObject.SetValidValue(value, false, "F00_StatementTitle_VC");
+                _F00_StatementTitle_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F00_StatementTitle_VC");
                 OnF00_StatementTitle_VCChanged();
             }
@@ -16331,7 +16342,7 @@ namespace WebTester
             {
                 OnF50_PendingAtInsurance_VCChanging(value);
                 ReportPropertyChanging("F50_PendingAtInsurance_VC");
-                _F50_PendingAtInsurance_VC = StructuralObject.SetValidValue(value, false, "F50_PendingAtInsurance_VC");
+                _F50_PendingAtInsurance_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("F50_PendingAtInsurance_VC");
                 OnF50_PendingAtInsurance_VCChanged();
             }
@@ -16355,7 +16366,7 @@ namespace WebTester
             {
                 OnServiceDate_VCChanging(value);
                 ReportPropertyChanging("ServiceDate_VC");
-                _ServiceDate_VC = StructuralObject.SetValidValue(value, false, "ServiceDate_VC");
+                _ServiceDate_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("ServiceDate_VC");
                 OnServiceDate_VCChanged();
             }
@@ -16379,7 +16390,7 @@ namespace WebTester
             {
                 OnUniqueNameOnClaim_VCChanging(value);
                 ReportPropertyChanging("UniqueNameOnClaim_VC");
-                _UniqueNameOnClaim_VC = StructuralObject.SetValidValue(value, false, "UniqueNameOnClaim_VC");
+                _UniqueNameOnClaim_VC = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("UniqueNameOnClaim_VC");
                 OnUniqueNameOnClaim_VCChanged();
             }
@@ -16403,7 +16414,7 @@ namespace WebTester
             {
                 OnVendor_IDChanging(value);
                 ReportPropertyChanging("Vendor_ID");
-                _Vendor_ID = StructuralObject.SetValidValue(value, "Vendor_ID");
+                _Vendor_ID = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Vendor_ID");
                 OnVendor_IDChanged();
             }
@@ -16427,7 +16438,7 @@ namespace WebTester
             {
                 OnOriginalDocumentPageCountChanging(value);
                 ReportPropertyChanging("OriginalDocumentPageCount");
-                _OriginalDocumentPageCount = StructuralObject.SetValidValue(value, "OriginalDocumentPageCount");
+                _OriginalDocumentPageCount = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("OriginalDocumentPageCount");
                 OnOriginalDocumentPageCountChanged();
             }
@@ -16451,7 +16462,7 @@ namespace WebTester
             {
                 OnOriginalDocumentNameChanging(value);
                 ReportPropertyChanging("OriginalDocumentName");
-                _OriginalDocumentName = StructuralObject.SetValidValue(value, true, "OriginalDocumentName");
+                _OriginalDocumentName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("OriginalDocumentName");
                 OnOriginalDocumentNameChanged();
             }
@@ -16475,7 +16486,7 @@ namespace WebTester
             {
                 OnCreateDateChanging(value);
                 ReportPropertyChanging("CreateDate");
-                _CreateDate = StructuralObject.SetValidValue(value, "CreateDate");
+                _CreateDate = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("CreateDate");
                 OnCreateDateChanged();
             }
@@ -16499,7 +16510,7 @@ namespace WebTester
             {
                 OnRenderingProviderNameSuffixChanging(value);
                 ReportPropertyChanging("RenderingProviderNameSuffix");
-                _RenderingProviderNameSuffix = StructuralObject.SetValidValue(value, true, "RenderingProviderNameSuffix");
+                _RenderingProviderNameSuffix = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RenderingProviderNameSuffix");
                 OnRenderingProviderNameSuffixChanged();
             }
@@ -16523,7 +16534,7 @@ namespace WebTester
             {
                 OnBillingContactFirstNameChanging(value);
                 ReportPropertyChanging("BillingContactFirstName");
-                _BillingContactFirstName = StructuralObject.SetValidValue(value, true, "BillingContactFirstName");
+                _BillingContactFirstName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingContactFirstName");
                 OnBillingContactFirstNameChanged();
             }
@@ -16547,7 +16558,7 @@ namespace WebTester
             {
                 OnBillingContactMiddleNameChanging(value);
                 ReportPropertyChanging("BillingContactMiddleName");
-                _BillingContactMiddleName = StructuralObject.SetValidValue(value, true, "BillingContactMiddleName");
+                _BillingContactMiddleName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingContactMiddleName");
                 OnBillingContactMiddleNameChanged();
             }
@@ -16571,7 +16582,7 @@ namespace WebTester
             {
                 OnBillingContactLastNameChanging(value);
                 ReportPropertyChanging("BillingContactLastName");
-                _BillingContactLastName = StructuralObject.SetValidValue(value, true, "BillingContactLastName");
+                _BillingContactLastName = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingContactLastName");
                 OnBillingContactLastNameChanged();
             }
@@ -16595,7 +16606,7 @@ namespace WebTester
             {
                 OnBillingContactSuffixChanging(value);
                 ReportPropertyChanging("BillingContactSuffix");
-                _BillingContactSuffix = StructuralObject.SetValidValue(value, true, "BillingContactSuffix");
+                _BillingContactSuffix = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("BillingContactSuffix");
                 OnBillingContactSuffixChanged();
             }
@@ -16619,7 +16630,7 @@ namespace WebTester
             {
                 OnRecipientNameSuffixChanging(value);
                 ReportPropertyChanging("RecipientNameSuffix");
-                _RecipientNameSuffix = StructuralObject.SetValidValue(value, true, "RecipientNameSuffix");
+                _RecipientNameSuffix = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RecipientNameSuffix");
                 OnRecipientNameSuffixChanged();
             }
@@ -16643,7 +16654,7 @@ namespace WebTester
             {
                 OnPatientNameSuffixChanging(value);
                 ReportPropertyChanging("PatientNameSuffix");
-                _PatientNameSuffix = StructuralObject.SetValidValue(value, true, "PatientNameSuffix");
+                _PatientNameSuffix = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("PatientNameSuffix");
                 OnPatientNameSuffixChanged();
             }
@@ -16667,7 +16678,7 @@ namespace WebTester
             {
                 OnDocumentSourceChanging(value);
                 ReportPropertyChanging("DocumentSource");
-                _DocumentSource = StructuralObject.SetValidValue(value, "DocumentSource");
+                _DocumentSource = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("DocumentSource");
                 OnDocumentSourceChanged();
             }
@@ -16678,6 +16689,7 @@ namespace WebTester
 
         #endregion
 
+    
         #region Navigation Properties
     
         /// <summary>
@@ -16724,4 +16736,5 @@ namespace WebTester
 
     #endregion
 
+    
 }

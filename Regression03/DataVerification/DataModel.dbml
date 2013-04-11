@@ -1,18 +1,63 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ClaimStaker" Class="DataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=APEXSQL;Initial Catalog=ClaimStaker;Persist Security Info=True;User ID=QAUser" SettingsObjectName="DataVerification.Properties.Settings" SettingsPropertyName="ClaimStakerConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Batch_T" Member="Batch_Ts">
-    <Type Name="Batch_T">
-      <Column Name="Batch_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Profession_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="BatchStatus_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
-      <Column Name="BatchName_VC" Type="System.String" DbType="Char(14) NOT NULL" CanBeNull="false" />
-      <Column Name="WhenUploaded_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="NumFailed_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NumTotal_IN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="UploadStatus_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="IsCheckedForAttachment_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="IsFromWeb_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ClaimStakerDEV" Class="DataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=APEXEDI-DEV\APEXEDIDEV;Initial Catalog=ClaimStakerDEV;Persist Security Info=True;User ID=dariantest" SettingsObjectName="DataVerification.Properties.Settings" SettingsPropertyName="ClaimStakerDEVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClaimDentalBase_T" Member="ClaimDentalBase_Ts">
+    <Type Name="ClaimDentalBase_T">
+      <Column Name="ClaimDentalBase_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClaimDentalBillingProvider_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Provider_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaimDentalPayer_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Payer_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OutputSub_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaimStatusType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatchNumber_VC" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ReportDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NPI_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastProcessDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="LegacyClaim_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LastUpdateDate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsNoCharge_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsProcessNow_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InternalNotes_VC" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ApexPayerID_VC" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ClaimVendorID_VC" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EventPhase_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventType_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Vendor_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Provider_T_ClaimDentalBase_T" Member="Provider_T" ThisKey="Provider_ID" OtherKey="Provider_ID" Type="Provider_T" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClaimMedicalBase_T" Member="ClaimMedicalBase_Ts">
+    <Type Name="ClaimMedicalBase_T">
+      <Column Name="ClaimMedicalBase_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClaimMedicalBillingProvider_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Provider_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaimMedicalPayer_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Payer_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OutputSub_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaimStatusType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatchNumber_VC" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ReportDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NPI_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LastProcessDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="LegacyClaim_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LastUpdateDate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsNoCharge_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsProcessNow_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InternalNotes_VC" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ApexPayerID_VC" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ClaimVendorID_VC" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EventPhase_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventType_ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Vendor_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Provider_T_ClaimMedicalBase_T" Member="Provider_T" ThisKey="Provider_ID" OtherKey="Provider_ID" Type="Provider_T" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Client_T" Member="Client_Ts">
+    <Type Name="Client_T">
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.Doctor" Member="Doctors">
@@ -392,6 +437,37 @@
       <Column Name="Quit_DT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="PerClaimRateOverBlockThreshold_SM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
       <Column Name="Stat_ExcludeRemitToAddress_BT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Provider_T_ClaimDentalBase_T" Member="ClaimDentalBase_Ts" ThisKey="Provider_ID" OtherKey="Provider_ID" Type="ClaimDentalBase_T" />
+      <Association Name="Provider_T_ClaimMedicalBase_T" Member="ClaimMedicalBase_Ts" ThisKey="Provider_ID" OtherKey="Provider_ID" Type="ClaimMedicalBase_T" />
+      <Association Name="WhiteLabel_T_Provider_T" Member="WhiteLabel_T" ThisKey="WhiteLabel_ID" OtherKey="WhiteLabel_ID" Type="WhiteLabel_T" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WhiteLabel_T" Member="WhiteLabel_Ts">
+    <Type Name="WhiteLabel_T">
+      <Column Name="WhiteLabel_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title_VC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="URL_VC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="LogoImagePath_VC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Username_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password_VC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AccessToCodeReports_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryBackgroundColor_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryTextColor_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondaryBackgroundColor_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondaryTextColor_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="IconColor_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="WhiteLabel_T_Provider_T" Member="Provider_Ts" ThisKey="WhiteLabel_ID" OtherKey="WhiteLabel_ID" Type="Provider_T" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalesCode_T" Member="SalesCode_Ts">
+    <Type Name="SalesCode_T">
+      <Column Name="SalesCode_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastUpdate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Code_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesCodeType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SalesCodeType_T_SalesCode_T" Member="SalesCodeType_T" ThisKey="SalesCodeType_ID" OtherKey="SalesCodeType_ID" Type="SalesCodeType_T" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.SalesCodeType_T" Member="SalesCodeType_Ts">
@@ -445,15 +521,6 @@
       <Column Name="PerClaimRateOverBlockThreshold_SM" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
       <Column Name="EligibilityBaseAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="SalesCodeType_T_SalesCode_T" Member="SalesCode_Ts" ThisKey="SalesCodeType_ID" OtherKey="SalesCodeType_ID" Type="SalesCode_T" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SalesCode_T" Member="SalesCode_Ts">
-    <Type Name="SalesCode_T">
-      <Column Name="SalesCode_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="LastUpdate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Code_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="SalesCodeType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="SalesCodeType_T_SalesCode_T" Member="SalesCodeType_T" ThisKey="SalesCodeType_ID" OtherKey="SalesCodeType_ID" Type="SalesCodeType_T" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
 </Database>

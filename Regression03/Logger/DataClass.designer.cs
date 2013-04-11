@@ -324,6 +324,8 @@ namespace Logger
 		
 		private System.Nullable<bool> _PassFail;
 		
+		private System.Nullable<long> _ParentTest_ID;
+		
 		private EntitySet<TestErrorLog> _TestErrorLogs;
 		
     #region Extensibility Method Definitions
@@ -340,6 +342,8 @@ namespace Logger
     partial void OnNotes_VCChanged();
     partial void OnPassFailChanging(System.Nullable<bool> value);
     partial void OnPassFailChanged();
+    partial void OnParentTest_IDChanging(System.Nullable<long> value);
+    partial void OnParentTest_IDChanged();
     #endregion
 		
 		public TestLogs_T()
@@ -444,6 +448,26 @@ namespace Logger
 					this._PassFail = value;
 					this.SendPropertyChanged("PassFail");
 					this.OnPassFailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentTest_ID", DbType="BigInt")]
+		public System.Nullable<long> ParentTest_ID
+		{
+			get
+			{
+				return this._ParentTest_ID;
+			}
+			set
+			{
+				if ((this._ParentTest_ID != value))
+				{
+					this.OnParentTest_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ParentTest_ID = value;
+					this.SendPropertyChanged("ParentTest_ID");
+					this.OnParentTest_IDChanged();
 				}
 			}
 		}

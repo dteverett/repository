@@ -33,5 +33,16 @@ namespace DataVerification.Properties {
                 return ((string)(this["ClaimStakerConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=APEXEDI-DEV\\APEXEDIDEV;Initial Catalog=ClaimStakerDEV;Persist Securit" +
+            "y Info=True;User ID=dariantest;Password=23INTp23???")]
+        public string ClaimStakerDEVConnectionString {
+            get {
+                return ((string)(this["ClaimStakerDEVConnectionString"]));
+            }
+        }
     }
 }

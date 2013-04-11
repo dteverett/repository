@@ -8,6 +8,8 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using NUnit.Framework;
 using System.Text.RegularExpressions;
+using Logger;
+
 namespace WebTester
 {
     public class Test
@@ -17,6 +19,8 @@ namespace WebTester
 
         static IWebDriver Driver = new FirefoxDriver();
         static string baseURL = "http://onetouch.apexedi.com/";
+
+        SenderAPI logger = new SenderAPI();
 
         public static void Initialize()
         {
@@ -142,7 +146,7 @@ namespace WebTester
             {
                 Assert.AreEqual("$204.00", Driver.FindElement(By.Id("taxIDCtrl_tbBalanceDue"), 10).GetAttribute("value"));
             }
-            catch (AssertionException e)
+            catch (AssertionException ex)
             {
                
             }

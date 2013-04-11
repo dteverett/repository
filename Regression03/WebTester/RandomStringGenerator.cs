@@ -8,12 +8,16 @@ namespace WebTester
 {
     class RandomStringGenerator
     {
+        public RandomStringGenerator()
+        {
+            
+        }
         public string GetRandom()
         {
+            Random random = new Random(8372634);
             StringBuilder builder = new StringBuilder();
-            Random random = new Random();
             char ch;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 8; i++)
             {
                 ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
                 builder.Append(ch);
@@ -23,8 +27,8 @@ namespace WebTester
 
         public string GetLongRandom()
         {
-            StringBuilder builder = new StringBuilder();
             Random random = new Random();
+            StringBuilder builder = new StringBuilder();
             char ch;
             for (int i = 0; i < 10; i++)
             {

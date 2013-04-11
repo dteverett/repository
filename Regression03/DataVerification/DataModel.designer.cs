@@ -22,7 +22,7 @@ namespace DataVerification
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ClaimStaker")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ClaimStakerDEV")]
 	public partial class DataModelDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,25 +30,34 @@ namespace DataVerification
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertBatch_T(Batch_T instance);
-    partial void UpdateBatch_T(Batch_T instance);
-    partial void DeleteBatch_T(Batch_T instance);
+    partial void InsertClaimDentalBase_T(ClaimDentalBase_T instance);
+    partial void UpdateClaimDentalBase_T(ClaimDentalBase_T instance);
+    partial void DeleteClaimDentalBase_T(ClaimDentalBase_T instance);
+    partial void InsertClaimMedicalBase_T(ClaimMedicalBase_T instance);
+    partial void UpdateClaimMedicalBase_T(ClaimMedicalBase_T instance);
+    partial void DeleteClaimMedicalBase_T(ClaimMedicalBase_T instance);
+    partial void InsertClient_T(Client_T instance);
+    partial void UpdateClient_T(Client_T instance);
+    partial void DeleteClient_T(Client_T instance);
     partial void InsertDoctor(Doctor instance);
     partial void UpdateDoctor(Doctor instance);
     partial void DeleteDoctor(Doctor instance);
     partial void InsertProvider_T(Provider_T instance);
     partial void UpdateProvider_T(Provider_T instance);
     partial void DeleteProvider_T(Provider_T instance);
-    partial void InsertSalesCodeType_T(SalesCodeType_T instance);
-    partial void UpdateSalesCodeType_T(SalesCodeType_T instance);
-    partial void DeleteSalesCodeType_T(SalesCodeType_T instance);
+    partial void InsertWhiteLabel_T(WhiteLabel_T instance);
+    partial void UpdateWhiteLabel_T(WhiteLabel_T instance);
+    partial void DeleteWhiteLabel_T(WhiteLabel_T instance);
     partial void InsertSalesCode_T(SalesCode_T instance);
     partial void UpdateSalesCode_T(SalesCode_T instance);
     partial void DeleteSalesCode_T(SalesCode_T instance);
+    partial void InsertSalesCodeType_T(SalesCodeType_T instance);
+    partial void UpdateSalesCodeType_T(SalesCodeType_T instance);
+    partial void DeleteSalesCodeType_T(SalesCodeType_T instance);
     #endregion
 		
 		public DataModelDataContext() : 
-				base(global::DataVerification.Properties.Settings.Default.ClaimStakerConnectionString, mappingSource)
+				base(global::DataVerification.Properties.Settings.Default.ClaimStakerDEVConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -77,11 +86,27 @@ namespace DataVerification
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Batch_T> Batch_Ts
+		public System.Data.Linq.Table<ClaimDentalBase_T> ClaimDentalBase_Ts
 		{
 			get
 			{
-				return this.GetTable<Batch_T>();
+				return this.GetTable<ClaimDentalBase_T>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ClaimMedicalBase_T> ClaimMedicalBase_Ts
+		{
+			get
+			{
+				return this.GetTable<ClaimMedicalBase_T>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Client_T> Client_Ts
+		{
+			get
+			{
+				return this.GetTable<Client_T>();
 			}
 		}
 		
@@ -101,11 +126,11 @@ namespace DataVerification
 			}
 		}
 		
-		public System.Data.Linq.Table<SalesCodeType_T> SalesCodeType_Ts
+		public System.Data.Linq.Table<WhiteLabel_T> WhiteLabel_Ts
 		{
 			get
 			{
-				return this.GetTable<SalesCodeType_T>();
+				return this.GetTable<WhiteLabel_T>();
 			}
 		}
 		
@@ -116,130 +141,349 @@ namespace DataVerification
 				return this.GetTable<SalesCode_T>();
 			}
 		}
+		
+		public System.Data.Linq.Table<SalesCodeType_T> SalesCodeType_Ts
+		{
+			get
+			{
+				return this.GetTable<SalesCodeType_T>();
+			}
+		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Batch_T")]
-	public partial class Batch_T : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ClaimDentalBase_T")]
+	public partial class ClaimDentalBase_T : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Batch_ID;
+		private long _ClaimDentalBase_ID;
 		
-		private int _Profession_ID;
+		private System.Nullable<int> _ClaimDentalBillingProvider_ID;
 		
-		private int _BatchStatus_ID;
+		private System.Nullable<int> _Provider_ID;
+		
+		private System.Nullable<long> _ClaimDentalPayer_ID;
+		
+		private System.Nullable<int> _Payer_ID;
+		
+		private System.Nullable<int> _OutputSub_ID;
+		
+		private int _ClaimStatusType_ID;
+		
+		private string _BatchNumber_VC;
+		
+		private System.Nullable<System.DateTime> _ReportDate_DT;
+		
+		private string _NPI_VC;
+		
+		private System.Nullable<System.DateTime> _LastProcessDate_DT;
 		
 		private string _ClientID_VC;
 		
-		private string _BatchName_VC;
+		private System.Nullable<long> _LegacyClaim_ID;
 		
-		private System.DateTime _WhenUploaded_DT;
+		private System.DateTime _LastUpdateDate_DT;
 		
-		private int _NumFailed_IN;
+		private bool _IsNoCharge_BT;
 		
-		private int _NumTotal_IN;
+		private bool _IsProcessNow_BT;
 		
-		private string _UploadStatus_VC;
+		private string _InternalNotes_VC;
 		
-		private System.Nullable<bool> _IsCheckedForAttachment_BT;
+		private string _ApexPayerID_VC;
 		
-		private System.Nullable<bool> _IsFromWeb_BT;
+		private string _ClaimVendorID_VC;
+		
+		private System.Nullable<int> _EventPhase_ID;
+		
+		private System.Nullable<long> _EventType_ID;
+		
+		private System.Nullable<int> _Vendor_ID;
+		
+		private EntityRef<Provider_T> _Provider_T;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnBatch_IDChanging(int value);
-    partial void OnBatch_IDChanged();
-    partial void OnProfession_IDChanging(int value);
-    partial void OnProfession_IDChanged();
-    partial void OnBatchStatus_IDChanging(int value);
-    partial void OnBatchStatus_IDChanged();
+    partial void OnClaimDentalBase_IDChanging(long value);
+    partial void OnClaimDentalBase_IDChanged();
+    partial void OnClaimDentalBillingProvider_IDChanging(System.Nullable<int> value);
+    partial void OnClaimDentalBillingProvider_IDChanged();
+    partial void OnProvider_IDChanging(System.Nullable<int> value);
+    partial void OnProvider_IDChanged();
+    partial void OnClaimDentalPayer_IDChanging(System.Nullable<long> value);
+    partial void OnClaimDentalPayer_IDChanged();
+    partial void OnPayer_IDChanging(System.Nullable<int> value);
+    partial void OnPayer_IDChanged();
+    partial void OnOutputSub_IDChanging(System.Nullable<int> value);
+    partial void OnOutputSub_IDChanged();
+    partial void OnClaimStatusType_IDChanging(int value);
+    partial void OnClaimStatusType_IDChanged();
+    partial void OnBatchNumber_VCChanging(string value);
+    partial void OnBatchNumber_VCChanged();
+    partial void OnReportDate_DTChanging(System.Nullable<System.DateTime> value);
+    partial void OnReportDate_DTChanged();
+    partial void OnNPI_VCChanging(string value);
+    partial void OnNPI_VCChanged();
+    partial void OnLastProcessDate_DTChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastProcessDate_DTChanged();
     partial void OnClientID_VCChanging(string value);
     partial void OnClientID_VCChanged();
-    partial void OnBatchName_VCChanging(string value);
-    partial void OnBatchName_VCChanged();
-    partial void OnWhenUploaded_DTChanging(System.DateTime value);
-    partial void OnWhenUploaded_DTChanged();
-    partial void OnNumFailed_INChanging(int value);
-    partial void OnNumFailed_INChanged();
-    partial void OnNumTotal_INChanging(int value);
-    partial void OnNumTotal_INChanged();
-    partial void OnUploadStatus_VCChanging(string value);
-    partial void OnUploadStatus_VCChanged();
-    partial void OnIsCheckedForAttachment_BTChanging(System.Nullable<bool> value);
-    partial void OnIsCheckedForAttachment_BTChanged();
-    partial void OnIsFromWeb_BTChanging(System.Nullable<bool> value);
-    partial void OnIsFromWeb_BTChanged();
+    partial void OnLegacyClaim_IDChanging(System.Nullable<long> value);
+    partial void OnLegacyClaim_IDChanged();
+    partial void OnLastUpdateDate_DTChanging(System.DateTime value);
+    partial void OnLastUpdateDate_DTChanged();
+    partial void OnIsNoCharge_BTChanging(bool value);
+    partial void OnIsNoCharge_BTChanged();
+    partial void OnIsProcessNow_BTChanging(bool value);
+    partial void OnIsProcessNow_BTChanged();
+    partial void OnInternalNotes_VCChanging(string value);
+    partial void OnInternalNotes_VCChanged();
+    partial void OnApexPayerID_VCChanging(string value);
+    partial void OnApexPayerID_VCChanged();
+    partial void OnClaimVendorID_VCChanging(string value);
+    partial void OnClaimVendorID_VCChanged();
+    partial void OnEventPhase_IDChanging(System.Nullable<int> value);
+    partial void OnEventPhase_IDChanged();
+    partial void OnEventType_IDChanging(System.Nullable<long> value);
+    partial void OnEventType_IDChanged();
+    partial void OnVendor_IDChanging(System.Nullable<int> value);
+    partial void OnVendor_IDChanged();
     #endregion
 		
-		public Batch_T()
+		public ClaimDentalBase_T()
 		{
+			this._Provider_T = default(EntityRef<Provider_T>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Batch_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Batch_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimDentalBase_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long ClaimDentalBase_ID
 		{
 			get
 			{
-				return this._Batch_ID;
+				return this._ClaimDentalBase_ID;
 			}
 			set
 			{
-				if ((this._Batch_ID != value))
+				if ((this._ClaimDentalBase_ID != value))
 				{
-					this.OnBatch_IDChanging(value);
+					this.OnClaimDentalBase_IDChanging(value);
 					this.SendPropertyChanging();
-					this._Batch_ID = value;
-					this.SendPropertyChanged("Batch_ID");
-					this.OnBatch_IDChanged();
+					this._ClaimDentalBase_ID = value;
+					this.SendPropertyChanged("ClaimDentalBase_ID");
+					this.OnClaimDentalBase_IDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profession_ID", DbType="Int NOT NULL")]
-		public int Profession_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimDentalBillingProvider_ID", DbType="Int")]
+		public System.Nullable<int> ClaimDentalBillingProvider_ID
 		{
 			get
 			{
-				return this._Profession_ID;
+				return this._ClaimDentalBillingProvider_ID;
 			}
 			set
 			{
-				if ((this._Profession_ID != value))
+				if ((this._ClaimDentalBillingProvider_ID != value))
 				{
-					this.OnProfession_IDChanging(value);
+					this.OnClaimDentalBillingProvider_IDChanging(value);
 					this.SendPropertyChanging();
-					this._Profession_ID = value;
-					this.SendPropertyChanged("Profession_ID");
-					this.OnProfession_IDChanged();
+					this._ClaimDentalBillingProvider_ID = value;
+					this.SendPropertyChanged("ClaimDentalBillingProvider_ID");
+					this.OnClaimDentalBillingProvider_IDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchStatus_ID", DbType="Int NOT NULL")]
-		public int BatchStatus_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provider_ID", DbType="Int")]
+		public System.Nullable<int> Provider_ID
 		{
 			get
 			{
-				return this._BatchStatus_ID;
+				return this._Provider_ID;
 			}
 			set
 			{
-				if ((this._BatchStatus_ID != value))
+				if ((this._Provider_ID != value))
 				{
-					this.OnBatchStatus_IDChanging(value);
+					if (this._Provider_T.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProvider_IDChanging(value);
 					this.SendPropertyChanging();
-					this._BatchStatus_ID = value;
-					this.SendPropertyChanged("BatchStatus_ID");
-					this.OnBatchStatus_IDChanged();
+					this._Provider_ID = value;
+					this.SendPropertyChanged("Provider_ID");
+					this.OnProvider_IDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientID_VC", DbType="VarChar(3) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimDentalPayer_ID", DbType="BigInt")]
+		public System.Nullable<long> ClaimDentalPayer_ID
+		{
+			get
+			{
+				return this._ClaimDentalPayer_ID;
+			}
+			set
+			{
+				if ((this._ClaimDentalPayer_ID != value))
+				{
+					this.OnClaimDentalPayer_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimDentalPayer_ID = value;
+					this.SendPropertyChanged("ClaimDentalPayer_ID");
+					this.OnClaimDentalPayer_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payer_ID", DbType="Int")]
+		public System.Nullable<int> Payer_ID
+		{
+			get
+			{
+				return this._Payer_ID;
+			}
+			set
+			{
+				if ((this._Payer_ID != value))
+				{
+					this.OnPayer_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Payer_ID = value;
+					this.SendPropertyChanged("Payer_ID");
+					this.OnPayer_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OutputSub_ID", DbType="Int")]
+		public System.Nullable<int> OutputSub_ID
+		{
+			get
+			{
+				return this._OutputSub_ID;
+			}
+			set
+			{
+				if ((this._OutputSub_ID != value))
+				{
+					this.OnOutputSub_IDChanging(value);
+					this.SendPropertyChanging();
+					this._OutputSub_ID = value;
+					this.SendPropertyChanged("OutputSub_ID");
+					this.OnOutputSub_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimStatusType_ID", DbType="Int NOT NULL")]
+		public int ClaimStatusType_ID
+		{
+			get
+			{
+				return this._ClaimStatusType_ID;
+			}
+			set
+			{
+				if ((this._ClaimStatusType_ID != value))
+				{
+					this.OnClaimStatusType_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimStatusType_ID = value;
+					this.SendPropertyChanged("ClaimStatusType_ID");
+					this.OnClaimStatusType_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchNumber_VC", DbType="VarChar(14)")]
+		public string BatchNumber_VC
+		{
+			get
+			{
+				return this._BatchNumber_VC;
+			}
+			set
+			{
+				if ((this._BatchNumber_VC != value))
+				{
+					this.OnBatchNumber_VCChanging(value);
+					this.SendPropertyChanging();
+					this._BatchNumber_VC = value;
+					this.SendPropertyChanged("BatchNumber_VC");
+					this.OnBatchNumber_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportDate_DT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ReportDate_DT
+		{
+			get
+			{
+				return this._ReportDate_DT;
+			}
+			set
+			{
+				if ((this._ReportDate_DT != value))
+				{
+					this.OnReportDate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._ReportDate_DT = value;
+					this.SendPropertyChanged("ReportDate_DT");
+					this.OnReportDate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NPI_VC", DbType="VarChar(10)")]
+		public string NPI_VC
+		{
+			get
+			{
+				return this._NPI_VC;
+			}
+			set
+			{
+				if ((this._NPI_VC != value))
+				{
+					this.OnNPI_VCChanging(value);
+					this.SendPropertyChanging();
+					this._NPI_VC = value;
+					this.SendPropertyChanged("NPI_VC");
+					this.OnNPI_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastProcessDate_DT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastProcessDate_DT
+		{
+			get
+			{
+				return this._LastProcessDate_DT;
+			}
+			set
+			{
+				if ((this._LastProcessDate_DT != value))
+				{
+					this.OnLastProcessDate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._LastProcessDate_DT = value;
+					this.SendPropertyChanged("LastProcessDate_DT");
+					this.OnLastProcessDate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientID_VC", DbType="VarChar(3)")]
 		public string ClientID_VC
 		{
 			get
@@ -259,142 +503,929 @@ namespace DataVerification
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchName_VC", DbType="Char(14) NOT NULL", CanBeNull=false)]
-		public string BatchName_VC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LegacyClaim_ID", DbType="BigInt")]
+		public System.Nullable<long> LegacyClaim_ID
 		{
 			get
 			{
-				return this._BatchName_VC;
+				return this._LegacyClaim_ID;
 			}
 			set
 			{
-				if ((this._BatchName_VC != value))
+				if ((this._LegacyClaim_ID != value))
 				{
-					this.OnBatchName_VCChanging(value);
+					this.OnLegacyClaim_IDChanging(value);
 					this.SendPropertyChanging();
-					this._BatchName_VC = value;
-					this.SendPropertyChanged("BatchName_VC");
-					this.OnBatchName_VCChanged();
+					this._LegacyClaim_ID = value;
+					this.SendPropertyChanged("LegacyClaim_ID");
+					this.OnLegacyClaim_IDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WhenUploaded_DT", DbType="DateTime NOT NULL")]
-		public System.DateTime WhenUploaded_DT
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdateDate_DT", DbType="DateTime NOT NULL")]
+		public System.DateTime LastUpdateDate_DT
 		{
 			get
 			{
-				return this._WhenUploaded_DT;
+				return this._LastUpdateDate_DT;
 			}
 			set
 			{
-				if ((this._WhenUploaded_DT != value))
+				if ((this._LastUpdateDate_DT != value))
 				{
-					this.OnWhenUploaded_DTChanging(value);
+					this.OnLastUpdateDate_DTChanging(value);
 					this.SendPropertyChanging();
-					this._WhenUploaded_DT = value;
-					this.SendPropertyChanged("WhenUploaded_DT");
-					this.OnWhenUploaded_DTChanged();
+					this._LastUpdateDate_DT = value;
+					this.SendPropertyChanged("LastUpdateDate_DT");
+					this.OnLastUpdateDate_DTChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumFailed_IN", DbType="Int NOT NULL")]
-		public int NumFailed_IN
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsNoCharge_BT", DbType="Bit NOT NULL")]
+		public bool IsNoCharge_BT
 		{
 			get
 			{
-				return this._NumFailed_IN;
+				return this._IsNoCharge_BT;
 			}
 			set
 			{
-				if ((this._NumFailed_IN != value))
+				if ((this._IsNoCharge_BT != value))
 				{
-					this.OnNumFailed_INChanging(value);
+					this.OnIsNoCharge_BTChanging(value);
 					this.SendPropertyChanging();
-					this._NumFailed_IN = value;
-					this.SendPropertyChanged("NumFailed_IN");
-					this.OnNumFailed_INChanged();
+					this._IsNoCharge_BT = value;
+					this.SendPropertyChanged("IsNoCharge_BT");
+					this.OnIsNoCharge_BTChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumTotal_IN", DbType="Int NOT NULL")]
-		public int NumTotal_IN
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsProcessNow_BT", DbType="Bit NOT NULL")]
+		public bool IsProcessNow_BT
 		{
 			get
 			{
-				return this._NumTotal_IN;
+				return this._IsProcessNow_BT;
 			}
 			set
 			{
-				if ((this._NumTotal_IN != value))
+				if ((this._IsProcessNow_BT != value))
 				{
-					this.OnNumTotal_INChanging(value);
+					this.OnIsProcessNow_BTChanging(value);
 					this.SendPropertyChanging();
-					this._NumTotal_IN = value;
-					this.SendPropertyChanged("NumTotal_IN");
-					this.OnNumTotal_INChanged();
+					this._IsProcessNow_BT = value;
+					this.SendPropertyChanged("IsProcessNow_BT");
+					this.OnIsProcessNow_BTChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UploadStatus_VC", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string UploadStatus_VC
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InternalNotes_VC", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string InternalNotes_VC
 		{
 			get
 			{
-				return this._UploadStatus_VC;
+				return this._InternalNotes_VC;
 			}
 			set
 			{
-				if ((this._UploadStatus_VC != value))
+				if ((this._InternalNotes_VC != value))
 				{
-					this.OnUploadStatus_VCChanging(value);
+					this.OnInternalNotes_VCChanging(value);
 					this.SendPropertyChanging();
-					this._UploadStatus_VC = value;
-					this.SendPropertyChanged("UploadStatus_VC");
-					this.OnUploadStatus_VCChanged();
+					this._InternalNotes_VC = value;
+					this.SendPropertyChanged("InternalNotes_VC");
+					this.OnInternalNotes_VCChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsCheckedForAttachment_BT", DbType="Bit")]
-		public System.Nullable<bool> IsCheckedForAttachment_BT
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApexPayerID_VC", DbType="VarChar(5)")]
+		public string ApexPayerID_VC
 		{
 			get
 			{
-				return this._IsCheckedForAttachment_BT;
+				return this._ApexPayerID_VC;
 			}
 			set
 			{
-				if ((this._IsCheckedForAttachment_BT != value))
+				if ((this._ApexPayerID_VC != value))
 				{
-					this.OnIsCheckedForAttachment_BTChanging(value);
+					this.OnApexPayerID_VCChanging(value);
 					this.SendPropertyChanging();
-					this._IsCheckedForAttachment_BT = value;
-					this.SendPropertyChanged("IsCheckedForAttachment_BT");
-					this.OnIsCheckedForAttachment_BTChanged();
+					this._ApexPayerID_VC = value;
+					this.SendPropertyChanged("ApexPayerID_VC");
+					this.OnApexPayerID_VCChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsFromWeb_BT", DbType="Bit")]
-		public System.Nullable<bool> IsFromWeb_BT
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimVendorID_VC", DbType="VarChar(20)")]
+		public string ClaimVendorID_VC
 		{
 			get
 			{
-				return this._IsFromWeb_BT;
+				return this._ClaimVendorID_VC;
 			}
 			set
 			{
-				if ((this._IsFromWeb_BT != value))
+				if ((this._ClaimVendorID_VC != value))
 				{
-					this.OnIsFromWeb_BTChanging(value);
+					this.OnClaimVendorID_VCChanging(value);
 					this.SendPropertyChanging();
-					this._IsFromWeb_BT = value;
-					this.SendPropertyChanged("IsFromWeb_BT");
-					this.OnIsFromWeb_BTChanged();
+					this._ClaimVendorID_VC = value;
+					this.SendPropertyChanged("ClaimVendorID_VC");
+					this.OnClaimVendorID_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EventPhase_ID", DbType="Int")]
+		public System.Nullable<int> EventPhase_ID
+		{
+			get
+			{
+				return this._EventPhase_ID;
+			}
+			set
+			{
+				if ((this._EventPhase_ID != value))
+				{
+					this.OnEventPhase_IDChanging(value);
+					this.SendPropertyChanging();
+					this._EventPhase_ID = value;
+					this.SendPropertyChanged("EventPhase_ID");
+					this.OnEventPhase_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EventType_ID", DbType="BigInt")]
+		public System.Nullable<long> EventType_ID
+		{
+			get
+			{
+				return this._EventType_ID;
+			}
+			set
+			{
+				if ((this._EventType_ID != value))
+				{
+					this.OnEventType_IDChanging(value);
+					this.SendPropertyChanging();
+					this._EventType_ID = value;
+					this.SendPropertyChanged("EventType_ID");
+					this.OnEventType_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vendor_ID", DbType="Int")]
+		public System.Nullable<int> Vendor_ID
+		{
+			get
+			{
+				return this._Vendor_ID;
+			}
+			set
+			{
+				if ((this._Vendor_ID != value))
+				{
+					this.OnVendor_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Vendor_ID = value;
+					this.SendPropertyChanged("Vendor_ID");
+					this.OnVendor_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Provider_T_ClaimDentalBase_T", Storage="_Provider_T", ThisKey="Provider_ID", OtherKey="Provider_ID", IsForeignKey=true)]
+		public Provider_T Provider_T
+		{
+			get
+			{
+				return this._Provider_T.Entity;
+			}
+			set
+			{
+				Provider_T previousValue = this._Provider_T.Entity;
+				if (((previousValue != value) 
+							|| (this._Provider_T.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Provider_T.Entity = null;
+						previousValue.ClaimDentalBase_Ts.Remove(this);
+					}
+					this._Provider_T.Entity = value;
+					if ((value != null))
+					{
+						value.ClaimDentalBase_Ts.Add(this);
+						this._Provider_ID = value.Provider_ID;
+					}
+					else
+					{
+						this._Provider_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Provider_T");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ClaimMedicalBase_T")]
+	public partial class ClaimMedicalBase_T : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _ClaimMedicalBase_ID;
+		
+		private System.Nullable<int> _ClaimMedicalBillingProvider_ID;
+		
+		private System.Nullable<int> _Provider_ID;
+		
+		private System.Nullable<long> _ClaimMedicalPayer_ID;
+		
+		private System.Nullable<int> _Payer_ID;
+		
+		private System.Nullable<int> _OutputSub_ID;
+		
+		private int _ClaimStatusType_ID;
+		
+		private string _BatchNumber_VC;
+		
+		private System.Nullable<System.DateTime> _ReportDate_DT;
+		
+		private string _NPI_VC;
+		
+		private System.Nullable<System.DateTime> _LastProcessDate_DT;
+		
+		private string _ClientID_VC;
+		
+		private System.Nullable<long> _LegacyClaim_ID;
+		
+		private System.DateTime _LastUpdateDate_DT;
+		
+		private bool _IsNoCharge_BT;
+		
+		private bool _IsProcessNow_BT;
+		
+		private string _InternalNotes_VC;
+		
+		private string _ApexPayerID_VC;
+		
+		private string _ClaimVendorID_VC;
+		
+		private System.Nullable<int> _EventPhase_ID;
+		
+		private System.Nullable<long> _EventType_ID;
+		
+		private System.Nullable<int> _Vendor_ID;
+		
+		private EntityRef<Provider_T> _Provider_T;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnClaimMedicalBase_IDChanging(long value);
+    partial void OnClaimMedicalBase_IDChanged();
+    partial void OnClaimMedicalBillingProvider_IDChanging(System.Nullable<int> value);
+    partial void OnClaimMedicalBillingProvider_IDChanged();
+    partial void OnProvider_IDChanging(System.Nullable<int> value);
+    partial void OnProvider_IDChanged();
+    partial void OnClaimMedicalPayer_IDChanging(System.Nullable<long> value);
+    partial void OnClaimMedicalPayer_IDChanged();
+    partial void OnPayer_IDChanging(System.Nullable<int> value);
+    partial void OnPayer_IDChanged();
+    partial void OnOutputSub_IDChanging(System.Nullable<int> value);
+    partial void OnOutputSub_IDChanged();
+    partial void OnClaimStatusType_IDChanging(int value);
+    partial void OnClaimStatusType_IDChanged();
+    partial void OnBatchNumber_VCChanging(string value);
+    partial void OnBatchNumber_VCChanged();
+    partial void OnReportDate_DTChanging(System.Nullable<System.DateTime> value);
+    partial void OnReportDate_DTChanged();
+    partial void OnNPI_VCChanging(string value);
+    partial void OnNPI_VCChanged();
+    partial void OnLastProcessDate_DTChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastProcessDate_DTChanged();
+    partial void OnClientID_VCChanging(string value);
+    partial void OnClientID_VCChanged();
+    partial void OnLegacyClaim_IDChanging(System.Nullable<long> value);
+    partial void OnLegacyClaim_IDChanged();
+    partial void OnLastUpdateDate_DTChanging(System.DateTime value);
+    partial void OnLastUpdateDate_DTChanged();
+    partial void OnIsNoCharge_BTChanging(bool value);
+    partial void OnIsNoCharge_BTChanged();
+    partial void OnIsProcessNow_BTChanging(bool value);
+    partial void OnIsProcessNow_BTChanged();
+    partial void OnInternalNotes_VCChanging(string value);
+    partial void OnInternalNotes_VCChanged();
+    partial void OnApexPayerID_VCChanging(string value);
+    partial void OnApexPayerID_VCChanged();
+    partial void OnClaimVendorID_VCChanging(string value);
+    partial void OnClaimVendorID_VCChanged();
+    partial void OnEventPhase_IDChanging(System.Nullable<int> value);
+    partial void OnEventPhase_IDChanged();
+    partial void OnEventType_IDChanging(System.Nullable<long> value);
+    partial void OnEventType_IDChanged();
+    partial void OnVendor_IDChanging(System.Nullable<int> value);
+    partial void OnVendor_IDChanged();
+    #endregion
+		
+		public ClaimMedicalBase_T()
+		{
+			this._Provider_T = default(EntityRef<Provider_T>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimMedicalBase_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long ClaimMedicalBase_ID
+		{
+			get
+			{
+				return this._ClaimMedicalBase_ID;
+			}
+			set
+			{
+				if ((this._ClaimMedicalBase_ID != value))
+				{
+					this.OnClaimMedicalBase_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimMedicalBase_ID = value;
+					this.SendPropertyChanged("ClaimMedicalBase_ID");
+					this.OnClaimMedicalBase_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimMedicalBillingProvider_ID", DbType="Int")]
+		public System.Nullable<int> ClaimMedicalBillingProvider_ID
+		{
+			get
+			{
+				return this._ClaimMedicalBillingProvider_ID;
+			}
+			set
+			{
+				if ((this._ClaimMedicalBillingProvider_ID != value))
+				{
+					this.OnClaimMedicalBillingProvider_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimMedicalBillingProvider_ID = value;
+					this.SendPropertyChanged("ClaimMedicalBillingProvider_ID");
+					this.OnClaimMedicalBillingProvider_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provider_ID", DbType="Int")]
+		public System.Nullable<int> Provider_ID
+		{
+			get
+			{
+				return this._Provider_ID;
+			}
+			set
+			{
+				if ((this._Provider_ID != value))
+				{
+					if (this._Provider_T.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProvider_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Provider_ID = value;
+					this.SendPropertyChanged("Provider_ID");
+					this.OnProvider_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimMedicalPayer_ID", DbType="BigInt")]
+		public System.Nullable<long> ClaimMedicalPayer_ID
+		{
+			get
+			{
+				return this._ClaimMedicalPayer_ID;
+			}
+			set
+			{
+				if ((this._ClaimMedicalPayer_ID != value))
+				{
+					this.OnClaimMedicalPayer_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimMedicalPayer_ID = value;
+					this.SendPropertyChanged("ClaimMedicalPayer_ID");
+					this.OnClaimMedicalPayer_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payer_ID", DbType="Int")]
+		public System.Nullable<int> Payer_ID
+		{
+			get
+			{
+				return this._Payer_ID;
+			}
+			set
+			{
+				if ((this._Payer_ID != value))
+				{
+					this.OnPayer_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Payer_ID = value;
+					this.SendPropertyChanged("Payer_ID");
+					this.OnPayer_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OutputSub_ID", DbType="Int")]
+		public System.Nullable<int> OutputSub_ID
+		{
+			get
+			{
+				return this._OutputSub_ID;
+			}
+			set
+			{
+				if ((this._OutputSub_ID != value))
+				{
+					this.OnOutputSub_IDChanging(value);
+					this.SendPropertyChanging();
+					this._OutputSub_ID = value;
+					this.SendPropertyChanged("OutputSub_ID");
+					this.OnOutputSub_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimStatusType_ID", DbType="Int NOT NULL")]
+		public int ClaimStatusType_ID
+		{
+			get
+			{
+				return this._ClaimStatusType_ID;
+			}
+			set
+			{
+				if ((this._ClaimStatusType_ID != value))
+				{
+					this.OnClaimStatusType_IDChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimStatusType_ID = value;
+					this.SendPropertyChanged("ClaimStatusType_ID");
+					this.OnClaimStatusType_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BatchNumber_VC", DbType="VarChar(14)")]
+		public string BatchNumber_VC
+		{
+			get
+			{
+				return this._BatchNumber_VC;
+			}
+			set
+			{
+				if ((this._BatchNumber_VC != value))
+				{
+					this.OnBatchNumber_VCChanging(value);
+					this.SendPropertyChanging();
+					this._BatchNumber_VC = value;
+					this.SendPropertyChanged("BatchNumber_VC");
+					this.OnBatchNumber_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportDate_DT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ReportDate_DT
+		{
+			get
+			{
+				return this._ReportDate_DT;
+			}
+			set
+			{
+				if ((this._ReportDate_DT != value))
+				{
+					this.OnReportDate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._ReportDate_DT = value;
+					this.SendPropertyChanged("ReportDate_DT");
+					this.OnReportDate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NPI_VC", DbType="VarChar(10)")]
+		public string NPI_VC
+		{
+			get
+			{
+				return this._NPI_VC;
+			}
+			set
+			{
+				if ((this._NPI_VC != value))
+				{
+					this.OnNPI_VCChanging(value);
+					this.SendPropertyChanging();
+					this._NPI_VC = value;
+					this.SendPropertyChanged("NPI_VC");
+					this.OnNPI_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastProcessDate_DT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastProcessDate_DT
+		{
+			get
+			{
+				return this._LastProcessDate_DT;
+			}
+			set
+			{
+				if ((this._LastProcessDate_DT != value))
+				{
+					this.OnLastProcessDate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._LastProcessDate_DT = value;
+					this.SendPropertyChanged("LastProcessDate_DT");
+					this.OnLastProcessDate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientID_VC", DbType="VarChar(3)")]
+		public string ClientID_VC
+		{
+			get
+			{
+				return this._ClientID_VC;
+			}
+			set
+			{
+				if ((this._ClientID_VC != value))
+				{
+					this.OnClientID_VCChanging(value);
+					this.SendPropertyChanging();
+					this._ClientID_VC = value;
+					this.SendPropertyChanged("ClientID_VC");
+					this.OnClientID_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LegacyClaim_ID", DbType="BigInt")]
+		public System.Nullable<long> LegacyClaim_ID
+		{
+			get
+			{
+				return this._LegacyClaim_ID;
+			}
+			set
+			{
+				if ((this._LegacyClaim_ID != value))
+				{
+					this.OnLegacyClaim_IDChanging(value);
+					this.SendPropertyChanging();
+					this._LegacyClaim_ID = value;
+					this.SendPropertyChanged("LegacyClaim_ID");
+					this.OnLegacyClaim_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdateDate_DT", DbType="DateTime NOT NULL")]
+		public System.DateTime LastUpdateDate_DT
+		{
+			get
+			{
+				return this._LastUpdateDate_DT;
+			}
+			set
+			{
+				if ((this._LastUpdateDate_DT != value))
+				{
+					this.OnLastUpdateDate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdateDate_DT = value;
+					this.SendPropertyChanged("LastUpdateDate_DT");
+					this.OnLastUpdateDate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsNoCharge_BT", DbType="Bit NOT NULL")]
+		public bool IsNoCharge_BT
+		{
+			get
+			{
+				return this._IsNoCharge_BT;
+			}
+			set
+			{
+				if ((this._IsNoCharge_BT != value))
+				{
+					this.OnIsNoCharge_BTChanging(value);
+					this.SendPropertyChanging();
+					this._IsNoCharge_BT = value;
+					this.SendPropertyChanged("IsNoCharge_BT");
+					this.OnIsNoCharge_BTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsProcessNow_BT", DbType="Bit NOT NULL")]
+		public bool IsProcessNow_BT
+		{
+			get
+			{
+				return this._IsProcessNow_BT;
+			}
+			set
+			{
+				if ((this._IsProcessNow_BT != value))
+				{
+					this.OnIsProcessNow_BTChanging(value);
+					this.SendPropertyChanging();
+					this._IsProcessNow_BT = value;
+					this.SendPropertyChanged("IsProcessNow_BT");
+					this.OnIsProcessNow_BTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InternalNotes_VC", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string InternalNotes_VC
+		{
+			get
+			{
+				return this._InternalNotes_VC;
+			}
+			set
+			{
+				if ((this._InternalNotes_VC != value))
+				{
+					this.OnInternalNotes_VCChanging(value);
+					this.SendPropertyChanging();
+					this._InternalNotes_VC = value;
+					this.SendPropertyChanged("InternalNotes_VC");
+					this.OnInternalNotes_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApexPayerID_VC", DbType="VarChar(5)")]
+		public string ApexPayerID_VC
+		{
+			get
+			{
+				return this._ApexPayerID_VC;
+			}
+			set
+			{
+				if ((this._ApexPayerID_VC != value))
+				{
+					this.OnApexPayerID_VCChanging(value);
+					this.SendPropertyChanging();
+					this._ApexPayerID_VC = value;
+					this.SendPropertyChanged("ApexPayerID_VC");
+					this.OnApexPayerID_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaimVendorID_VC", DbType="VarChar(20)")]
+		public string ClaimVendorID_VC
+		{
+			get
+			{
+				return this._ClaimVendorID_VC;
+			}
+			set
+			{
+				if ((this._ClaimVendorID_VC != value))
+				{
+					this.OnClaimVendorID_VCChanging(value);
+					this.SendPropertyChanging();
+					this._ClaimVendorID_VC = value;
+					this.SendPropertyChanged("ClaimVendorID_VC");
+					this.OnClaimVendorID_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EventPhase_ID", DbType="Int")]
+		public System.Nullable<int> EventPhase_ID
+		{
+			get
+			{
+				return this._EventPhase_ID;
+			}
+			set
+			{
+				if ((this._EventPhase_ID != value))
+				{
+					this.OnEventPhase_IDChanging(value);
+					this.SendPropertyChanging();
+					this._EventPhase_ID = value;
+					this.SendPropertyChanged("EventPhase_ID");
+					this.OnEventPhase_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EventType_ID", DbType="BigInt")]
+		public System.Nullable<long> EventType_ID
+		{
+			get
+			{
+				return this._EventType_ID;
+			}
+			set
+			{
+				if ((this._EventType_ID != value))
+				{
+					this.OnEventType_IDChanging(value);
+					this.SendPropertyChanging();
+					this._EventType_ID = value;
+					this.SendPropertyChanged("EventType_ID");
+					this.OnEventType_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vendor_ID", DbType="Int")]
+		public System.Nullable<int> Vendor_ID
+		{
+			get
+			{
+				return this._Vendor_ID;
+			}
+			set
+			{
+				if ((this._Vendor_ID != value))
+				{
+					this.OnVendor_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Vendor_ID = value;
+					this.SendPropertyChanged("Vendor_ID");
+					this.OnVendor_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Provider_T_ClaimMedicalBase_T", Storage="_Provider_T", ThisKey="Provider_ID", OtherKey="Provider_ID", IsForeignKey=true)]
+		public Provider_T Provider_T
+		{
+			get
+			{
+				return this._Provider_T.Entity;
+			}
+			set
+			{
+				Provider_T previousValue = this._Provider_T.Entity;
+				if (((previousValue != value) 
+							|| (this._Provider_T.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Provider_T.Entity = null;
+						previousValue.ClaimMedicalBase_Ts.Remove(this);
+					}
+					this._Provider_T.Entity = value;
+					if ((value != null))
+					{
+						value.ClaimMedicalBase_Ts.Add(this);
+						this._Provider_ID = value.Provider_ID;
+					}
+					else
+					{
+						this._Provider_ID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Provider_T");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Client_T")]
+	public partial class Client_T : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Client_ID;
+		
+		private string _ClientID_VC;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnClient_IDChanging(int value);
+    partial void OnClient_IDChanged();
+    partial void OnClientID_VCChanging(string value);
+    partial void OnClientID_VCChanged();
+    #endregion
+		
+		public Client_T()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Client_ID
+		{
+			get
+			{
+				return this._Client_ID;
+			}
+			set
+			{
+				if ((this._Client_ID != value))
+				{
+					this.OnClient_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Client_ID = value;
+					this.SendPropertyChanged("Client_ID");
+					this.OnClient_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientID_VC", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string ClientID_VC
+		{
+			get
+			{
+				return this._ClientID_VC;
+			}
+			set
+			{
+				if ((this._ClientID_VC != value))
+				{
+					this.OnClientID_VCChanging(value);
+					this.SendPropertyChanging();
+					this._ClientID_VC = value;
+					this.SendPropertyChanged("ClientID_VC");
+					this.OnClientID_VCChanged();
 				}
 			}
 		}
@@ -4044,6 +5075,12 @@ namespace DataVerification
 		
 		private System.Nullable<bool> _Stat_ExcludeRemitToAddress_BT;
 		
+		private EntitySet<ClaimDentalBase_T> _ClaimDentalBase_Ts;
+		
+		private EntitySet<ClaimMedicalBase_T> _ClaimMedicalBase_Ts;
+		
+		private EntityRef<WhiteLabel_T> _WhiteLabel_T;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4536,6 +5573,9 @@ namespace DataVerification
 		
 		public Provider_T()
 		{
+			this._ClaimDentalBase_Ts = new EntitySet<ClaimDentalBase_T>(new Action<ClaimDentalBase_T>(this.attach_ClaimDentalBase_Ts), new Action<ClaimDentalBase_T>(this.detach_ClaimDentalBase_Ts));
+			this._ClaimMedicalBase_Ts = new EntitySet<ClaimMedicalBase_T>(new Action<ClaimMedicalBase_T>(this.attach_ClaimMedicalBase_Ts), new Action<ClaimMedicalBase_T>(this.detach_ClaimMedicalBase_Ts));
+			this._WhiteLabel_T = default(EntityRef<WhiteLabel_T>);
 			OnCreated();
 		}
 		
@@ -9290,6 +10330,10 @@ namespace DataVerification
 			{
 				if ((this._WhiteLabel_ID != value))
 				{
+					if (this._WhiteLabel_T.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnWhiteLabel_IDChanging(value);
 					this.SendPropertyChanging();
 					this._WhiteLabel_ID = value;
@@ -9375,6 +10419,667 @@ namespace DataVerification
 					this._Stat_ExcludeRemitToAddress_BT = value;
 					this.SendPropertyChanged("Stat_ExcludeRemitToAddress_BT");
 					this.OnStat_ExcludeRemitToAddress_BTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Provider_T_ClaimDentalBase_T", Storage="_ClaimDentalBase_Ts", ThisKey="Provider_ID", OtherKey="Provider_ID")]
+		public EntitySet<ClaimDentalBase_T> ClaimDentalBase_Ts
+		{
+			get
+			{
+				return this._ClaimDentalBase_Ts;
+			}
+			set
+			{
+				this._ClaimDentalBase_Ts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Provider_T_ClaimMedicalBase_T", Storage="_ClaimMedicalBase_Ts", ThisKey="Provider_ID", OtherKey="Provider_ID")]
+		public EntitySet<ClaimMedicalBase_T> ClaimMedicalBase_Ts
+		{
+			get
+			{
+				return this._ClaimMedicalBase_Ts;
+			}
+			set
+			{
+				this._ClaimMedicalBase_Ts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="WhiteLabel_T_Provider_T", Storage="_WhiteLabel_T", ThisKey="WhiteLabel_ID", OtherKey="WhiteLabel_ID", IsForeignKey=true)]
+		public WhiteLabel_T WhiteLabel_T
+		{
+			get
+			{
+				return this._WhiteLabel_T.Entity;
+			}
+			set
+			{
+				WhiteLabel_T previousValue = this._WhiteLabel_T.Entity;
+				if (((previousValue != value) 
+							|| (this._WhiteLabel_T.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._WhiteLabel_T.Entity = null;
+						previousValue.Provider_Ts.Remove(this);
+					}
+					this._WhiteLabel_T.Entity = value;
+					if ((value != null))
+					{
+						value.Provider_Ts.Add(this);
+						this._WhiteLabel_ID = value.WhiteLabel_ID;
+					}
+					else
+					{
+						this._WhiteLabel_ID = default(Nullable<long>);
+					}
+					this.SendPropertyChanged("WhiteLabel_T");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ClaimDentalBase_Ts(ClaimDentalBase_T entity)
+		{
+			this.SendPropertyChanging();
+			entity.Provider_T = this;
+		}
+		
+		private void detach_ClaimDentalBase_Ts(ClaimDentalBase_T entity)
+		{
+			this.SendPropertyChanging();
+			entity.Provider_T = null;
+		}
+		
+		private void attach_ClaimMedicalBase_Ts(ClaimMedicalBase_T entity)
+		{
+			this.SendPropertyChanging();
+			entity.Provider_T = this;
+		}
+		
+		private void detach_ClaimMedicalBase_Ts(ClaimMedicalBase_T entity)
+		{
+			this.SendPropertyChanging();
+			entity.Provider_T = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.WhiteLabel_T")]
+	public partial class WhiteLabel_T : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _WhiteLabel_ID;
+		
+		private string _Title_VC;
+		
+		private string _URL_VC;
+		
+		private string _LogoImagePath_VC;
+		
+		private string _Username_VC;
+		
+		private string _Password_VC;
+		
+		private System.Nullable<System.DateTime> _CreatedDate_DT;
+		
+		private bool _AccessToCodeReports_BT;
+		
+		private string _PrimaryBackgroundColor_VC;
+		
+		private string _PrimaryTextColor_VC;
+		
+		private string _SecondaryBackgroundColor_VC;
+		
+		private string _SecondaryTextColor_VC;
+		
+		private string _IconColor_VC;
+		
+		private bool _IsActive_BT;
+		
+		private EntitySet<Provider_T> _Provider_Ts;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnWhiteLabel_IDChanging(long value);
+    partial void OnWhiteLabel_IDChanged();
+    partial void OnTitle_VCChanging(string value);
+    partial void OnTitle_VCChanged();
+    partial void OnURL_VCChanging(string value);
+    partial void OnURL_VCChanged();
+    partial void OnLogoImagePath_VCChanging(string value);
+    partial void OnLogoImagePath_VCChanged();
+    partial void OnUsername_VCChanging(string value);
+    partial void OnUsername_VCChanged();
+    partial void OnPassword_VCChanging(string value);
+    partial void OnPassword_VCChanged();
+    partial void OnCreatedDate_DTChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedDate_DTChanged();
+    partial void OnAccessToCodeReports_BTChanging(bool value);
+    partial void OnAccessToCodeReports_BTChanged();
+    partial void OnPrimaryBackgroundColor_VCChanging(string value);
+    partial void OnPrimaryBackgroundColor_VCChanged();
+    partial void OnPrimaryTextColor_VCChanging(string value);
+    partial void OnPrimaryTextColor_VCChanged();
+    partial void OnSecondaryBackgroundColor_VCChanging(string value);
+    partial void OnSecondaryBackgroundColor_VCChanged();
+    partial void OnSecondaryTextColor_VCChanging(string value);
+    partial void OnSecondaryTextColor_VCChanged();
+    partial void OnIconColor_VCChanging(string value);
+    partial void OnIconColor_VCChanged();
+    partial void OnIsActive_BTChanging(bool value);
+    partial void OnIsActive_BTChanged();
+    #endregion
+		
+		public WhiteLabel_T()
+		{
+			this._Provider_Ts = new EntitySet<Provider_T>(new Action<Provider_T>(this.attach_Provider_Ts), new Action<Provider_T>(this.detach_Provider_Ts));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WhiteLabel_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long WhiteLabel_ID
+		{
+			get
+			{
+				return this._WhiteLabel_ID;
+			}
+			set
+			{
+				if ((this._WhiteLabel_ID != value))
+				{
+					this.OnWhiteLabel_IDChanging(value);
+					this.SendPropertyChanging();
+					this._WhiteLabel_ID = value;
+					this.SendPropertyChanged("WhiteLabel_ID");
+					this.OnWhiteLabel_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title_VC", DbType="VarChar(150)")]
+		public string Title_VC
+		{
+			get
+			{
+				return this._Title_VC;
+			}
+			set
+			{
+				if ((this._Title_VC != value))
+				{
+					this.OnTitle_VCChanging(value);
+					this.SendPropertyChanging();
+					this._Title_VC = value;
+					this.SendPropertyChanged("Title_VC");
+					this.OnTitle_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL_VC", DbType="VarChar(150)")]
+		public string URL_VC
+		{
+			get
+			{
+				return this._URL_VC;
+			}
+			set
+			{
+				if ((this._URL_VC != value))
+				{
+					this.OnURL_VCChanging(value);
+					this.SendPropertyChanging();
+					this._URL_VC = value;
+					this.SendPropertyChanged("URL_VC");
+					this.OnURL_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogoImagePath_VC", DbType="VarChar(150)")]
+		public string LogoImagePath_VC
+		{
+			get
+			{
+				return this._LogoImagePath_VC;
+			}
+			set
+			{
+				if ((this._LogoImagePath_VC != value))
+				{
+					this.OnLogoImagePath_VCChanging(value);
+					this.SendPropertyChanging();
+					this._LogoImagePath_VC = value;
+					this.SendPropertyChanged("LogoImagePath_VC");
+					this.OnLogoImagePath_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username_VC", DbType="VarChar(50)")]
+		public string Username_VC
+		{
+			get
+			{
+				return this._Username_VC;
+			}
+			set
+			{
+				if ((this._Username_VC != value))
+				{
+					this.OnUsername_VCChanging(value);
+					this.SendPropertyChanging();
+					this._Username_VC = value;
+					this.SendPropertyChanged("Username_VC");
+					this.OnUsername_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password_VC", DbType="VarChar(50)")]
+		public string Password_VC
+		{
+			get
+			{
+				return this._Password_VC;
+			}
+			set
+			{
+				if ((this._Password_VC != value))
+				{
+					this.OnPassword_VCChanging(value);
+					this.SendPropertyChanging();
+					this._Password_VC = value;
+					this.SendPropertyChanged("Password_VC");
+					this.OnPassword_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedDate_DT", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreatedDate_DT
+		{
+			get
+			{
+				return this._CreatedDate_DT;
+			}
+			set
+			{
+				if ((this._CreatedDate_DT != value))
+				{
+					this.OnCreatedDate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedDate_DT = value;
+					this.SendPropertyChanged("CreatedDate_DT");
+					this.OnCreatedDate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccessToCodeReports_BT", DbType="Bit NOT NULL")]
+		public bool AccessToCodeReports_BT
+		{
+			get
+			{
+				return this._AccessToCodeReports_BT;
+			}
+			set
+			{
+				if ((this._AccessToCodeReports_BT != value))
+				{
+					this.OnAccessToCodeReports_BTChanging(value);
+					this.SendPropertyChanging();
+					this._AccessToCodeReports_BT = value;
+					this.SendPropertyChanged("AccessToCodeReports_BT");
+					this.OnAccessToCodeReports_BTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaryBackgroundColor_VC", DbType="VarChar(7) NOT NULL", CanBeNull=false)]
+		public string PrimaryBackgroundColor_VC
+		{
+			get
+			{
+				return this._PrimaryBackgroundColor_VC;
+			}
+			set
+			{
+				if ((this._PrimaryBackgroundColor_VC != value))
+				{
+					this.OnPrimaryBackgroundColor_VCChanging(value);
+					this.SendPropertyChanging();
+					this._PrimaryBackgroundColor_VC = value;
+					this.SendPropertyChanged("PrimaryBackgroundColor_VC");
+					this.OnPrimaryBackgroundColor_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaryTextColor_VC", DbType="VarChar(7) NOT NULL", CanBeNull=false)]
+		public string PrimaryTextColor_VC
+		{
+			get
+			{
+				return this._PrimaryTextColor_VC;
+			}
+			set
+			{
+				if ((this._PrimaryTextColor_VC != value))
+				{
+					this.OnPrimaryTextColor_VCChanging(value);
+					this.SendPropertyChanging();
+					this._PrimaryTextColor_VC = value;
+					this.SendPropertyChanged("PrimaryTextColor_VC");
+					this.OnPrimaryTextColor_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecondaryBackgroundColor_VC", DbType="VarChar(7) NOT NULL", CanBeNull=false)]
+		public string SecondaryBackgroundColor_VC
+		{
+			get
+			{
+				return this._SecondaryBackgroundColor_VC;
+			}
+			set
+			{
+				if ((this._SecondaryBackgroundColor_VC != value))
+				{
+					this.OnSecondaryBackgroundColor_VCChanging(value);
+					this.SendPropertyChanging();
+					this._SecondaryBackgroundColor_VC = value;
+					this.SendPropertyChanged("SecondaryBackgroundColor_VC");
+					this.OnSecondaryBackgroundColor_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecondaryTextColor_VC", DbType="VarChar(7) NOT NULL", CanBeNull=false)]
+		public string SecondaryTextColor_VC
+		{
+			get
+			{
+				return this._SecondaryTextColor_VC;
+			}
+			set
+			{
+				if ((this._SecondaryTextColor_VC != value))
+				{
+					this.OnSecondaryTextColor_VCChanging(value);
+					this.SendPropertyChanging();
+					this._SecondaryTextColor_VC = value;
+					this.SendPropertyChanged("SecondaryTextColor_VC");
+					this.OnSecondaryTextColor_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IconColor_VC", DbType="VarChar(7) NOT NULL", CanBeNull=false)]
+		public string IconColor_VC
+		{
+			get
+			{
+				return this._IconColor_VC;
+			}
+			set
+			{
+				if ((this._IconColor_VC != value))
+				{
+					this.OnIconColor_VCChanging(value);
+					this.SendPropertyChanging();
+					this._IconColor_VC = value;
+					this.SendPropertyChanged("IconColor_VC");
+					this.OnIconColor_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive_BT", DbType="Bit NOT NULL")]
+		public bool IsActive_BT
+		{
+			get
+			{
+				return this._IsActive_BT;
+			}
+			set
+			{
+				if ((this._IsActive_BT != value))
+				{
+					this.OnIsActive_BTChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive_BT = value;
+					this.SendPropertyChanged("IsActive_BT");
+					this.OnIsActive_BTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="WhiteLabel_T_Provider_T", Storage="_Provider_Ts", ThisKey="WhiteLabel_ID", OtherKey="WhiteLabel_ID")]
+		public EntitySet<Provider_T> Provider_Ts
+		{
+			get
+			{
+				return this._Provider_Ts;
+			}
+			set
+			{
+				this._Provider_Ts.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Provider_Ts(Provider_T entity)
+		{
+			this.SendPropertyChanging();
+			entity.WhiteLabel_T = this;
+		}
+		
+		private void detach_Provider_Ts(Provider_T entity)
+		{
+			this.SendPropertyChanging();
+			entity.WhiteLabel_T = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SalesCode_T")]
+	public partial class SalesCode_T : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SalesCode_ID;
+		
+		private System.DateTime _LastUpdate_DT;
+		
+		private string _Code_VC;
+		
+		private int _SalesCodeType_ID;
+		
+		private EntityRef<SalesCodeType_T> _SalesCodeType_T;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSalesCode_IDChanging(int value);
+    partial void OnSalesCode_IDChanged();
+    partial void OnLastUpdate_DTChanging(System.DateTime value);
+    partial void OnLastUpdate_DTChanged();
+    partial void OnCode_VCChanging(string value);
+    partial void OnCode_VCChanged();
+    partial void OnSalesCodeType_IDChanging(int value);
+    partial void OnSalesCodeType_IDChanged();
+    #endregion
+		
+		public SalesCode_T()
+		{
+			this._SalesCodeType_T = default(EntityRef<SalesCodeType_T>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesCode_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int SalesCode_ID
+		{
+			get
+			{
+				return this._SalesCode_ID;
+			}
+			set
+			{
+				if ((this._SalesCode_ID != value))
+				{
+					this.OnSalesCode_IDChanging(value);
+					this.SendPropertyChanging();
+					this._SalesCode_ID = value;
+					this.SendPropertyChanged("SalesCode_ID");
+					this.OnSalesCode_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdate_DT", DbType="DateTime NOT NULL")]
+		public System.DateTime LastUpdate_DT
+		{
+			get
+			{
+				return this._LastUpdate_DT;
+			}
+			set
+			{
+				if ((this._LastUpdate_DT != value))
+				{
+					this.OnLastUpdate_DTChanging(value);
+					this.SendPropertyChanging();
+					this._LastUpdate_DT = value;
+					this.SendPropertyChanged("LastUpdate_DT");
+					this.OnLastUpdate_DTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code_VC", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Code_VC
+		{
+			get
+			{
+				return this._Code_VC;
+			}
+			set
+			{
+				if ((this._Code_VC != value))
+				{
+					this.OnCode_VCChanging(value);
+					this.SendPropertyChanging();
+					this._Code_VC = value;
+					this.SendPropertyChanged("Code_VC");
+					this.OnCode_VCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesCodeType_ID", DbType="Int NOT NULL")]
+		public int SalesCodeType_ID
+		{
+			get
+			{
+				return this._SalesCodeType_ID;
+			}
+			set
+			{
+				if ((this._SalesCodeType_ID != value))
+				{
+					if (this._SalesCodeType_T.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSalesCodeType_IDChanging(value);
+					this.SendPropertyChanging();
+					this._SalesCodeType_ID = value;
+					this.SendPropertyChanged("SalesCodeType_ID");
+					this.OnSalesCodeType_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SalesCodeType_T_SalesCode_T", Storage="_SalesCodeType_T", ThisKey="SalesCodeType_ID", OtherKey="SalesCodeType_ID", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
+		public SalesCodeType_T SalesCodeType_T
+		{
+			get
+			{
+				return this._SalesCodeType_T.Entity;
+			}
+			set
+			{
+				SalesCodeType_T previousValue = this._SalesCodeType_T.Entity;
+				if (((previousValue != value) 
+							|| (this._SalesCodeType_T.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SalesCodeType_T.Entity = null;
+						previousValue.SalesCode_Ts.Remove(this);
+					}
+					this._SalesCodeType_T.Entity = value;
+					if ((value != null))
+					{
+						value.SalesCode_Ts.Add(this);
+						this._SalesCodeType_ID = value.SalesCodeType_ID;
+					}
+					else
+					{
+						this._SalesCodeType_ID = default(int);
+					}
+					this.SendPropertyChanged("SalesCodeType_T");
 				}
 			}
 		}
@@ -10615,181 +12320,6 @@ namespace DataVerification
 		{
 			this.SendPropertyChanging();
 			entity.SalesCodeType_T = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SalesCode_T")]
-	public partial class SalesCode_T : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _SalesCode_ID;
-		
-		private System.DateTime _LastUpdate_DT;
-		
-		private string _Code_VC;
-		
-		private int _SalesCodeType_ID;
-		
-		private EntityRef<SalesCodeType_T> _SalesCodeType_T;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnSalesCode_IDChanging(int value);
-    partial void OnSalesCode_IDChanged();
-    partial void OnLastUpdate_DTChanging(System.DateTime value);
-    partial void OnLastUpdate_DTChanged();
-    partial void OnCode_VCChanging(string value);
-    partial void OnCode_VCChanged();
-    partial void OnSalesCodeType_IDChanging(int value);
-    partial void OnSalesCodeType_IDChanged();
-    #endregion
-		
-		public SalesCode_T()
-		{
-			this._SalesCodeType_T = default(EntityRef<SalesCodeType_T>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesCode_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int SalesCode_ID
-		{
-			get
-			{
-				return this._SalesCode_ID;
-			}
-			set
-			{
-				if ((this._SalesCode_ID != value))
-				{
-					this.OnSalesCode_IDChanging(value);
-					this.SendPropertyChanging();
-					this._SalesCode_ID = value;
-					this.SendPropertyChanged("SalesCode_ID");
-					this.OnSalesCode_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastUpdate_DT", DbType="DateTime NOT NULL")]
-		public System.DateTime LastUpdate_DT
-		{
-			get
-			{
-				return this._LastUpdate_DT;
-			}
-			set
-			{
-				if ((this._LastUpdate_DT != value))
-				{
-					this.OnLastUpdate_DTChanging(value);
-					this.SendPropertyChanging();
-					this._LastUpdate_DT = value;
-					this.SendPropertyChanged("LastUpdate_DT");
-					this.OnLastUpdate_DTChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code_VC", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Code_VC
-		{
-			get
-			{
-				return this._Code_VC;
-			}
-			set
-			{
-				if ((this._Code_VC != value))
-				{
-					this.OnCode_VCChanging(value);
-					this.SendPropertyChanging();
-					this._Code_VC = value;
-					this.SendPropertyChanged("Code_VC");
-					this.OnCode_VCChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SalesCodeType_ID", DbType="Int NOT NULL")]
-		public int SalesCodeType_ID
-		{
-			get
-			{
-				return this._SalesCodeType_ID;
-			}
-			set
-			{
-				if ((this._SalesCodeType_ID != value))
-				{
-					if (this._SalesCodeType_T.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnSalesCodeType_IDChanging(value);
-					this.SendPropertyChanging();
-					this._SalesCodeType_ID = value;
-					this.SendPropertyChanged("SalesCodeType_ID");
-					this.OnSalesCodeType_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SalesCodeType_T_SalesCode_T", Storage="_SalesCodeType_T", ThisKey="SalesCodeType_ID", OtherKey="SalesCodeType_ID", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
-		public SalesCodeType_T SalesCodeType_T
-		{
-			get
-			{
-				return this._SalesCodeType_T.Entity;
-			}
-			set
-			{
-				SalesCodeType_T previousValue = this._SalesCodeType_T.Entity;
-				if (((previousValue != value) 
-							|| (this._SalesCodeType_T.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SalesCodeType_T.Entity = null;
-						previousValue.SalesCode_Ts.Remove(this);
-					}
-					this._SalesCodeType_T.Entity = value;
-					if ((value != null))
-					{
-						value.SalesCode_Ts.Add(this);
-						this._SalesCodeType_ID = value.SalesCodeType_ID;
-					}
-					else
-					{
-						this._SalesCodeType_ID = default(int);
-					}
-					this.SendPropertyChanged("SalesCodeType_T");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 }
