@@ -68,6 +68,7 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Medical5010.cs" />
+    <Compile Include="OnlineLogin.cs" />
     <Compile Include="RandomStringGenerator.cs" />
     <Compile Include="RegiSalesCode.cs" />
     <Compile Include="RegiSalesCodeDental.cs" />

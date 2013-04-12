@@ -71,21 +71,12 @@ namespace WebTester
             string address = randomString.GetRandom();
             int counter = 0;
 
-            driver.Navigate().GoToUrl(baseURL + "/secure/Login.aspx?redir=%2fsecure%2fDefault.aspx");
-            driver.FindElement(By.Id("MainContent_tbUsername")).Clear();
-            driver.FindElement(By.Id("MainContent_tbUsername")).SendKeys(this.client.ClientLogin);
-            driver.FindElement(By.Id("MainContent_tbPassword")).Clear();
-            driver.FindElement(By.Id("MainContent_tbPassword")).SendKeys(this.client.ClientPassword == null ? defaultPassword : this.client.ClientPassword);
-            driver.FindElement(By.Id("MainContent_btnSubmit")).Click();
-            try
+            if (!driver.Login(this.client))
             {
-                driver.FindElement(By.Id("track_link"), 15).Click();
+                logger.Fatal("Unable to login to client account: Test terminated", TestID);
+                return;
             }
-            catch (NoSuchElementException ex)
-            {
-                counter++;
-                logger.Warn(ex.Message, TestID);
-            }
+
             try
             {
                 driver.FindElement(By.Id("MainContent_ctl00_AddBatchButton"), 15).Click();

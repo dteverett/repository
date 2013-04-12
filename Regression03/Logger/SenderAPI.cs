@@ -202,6 +202,7 @@ namespace Logger
             TestLogs_T log = new TestLogs_T();
             log.TestExecuted_VC = callerName;
             log.DateExecuted_DT = System.DateTime.Now;
+            log.PassFail = false;
 
             long returnValue = reciever.RegisterTest(log);
             return returnValue;

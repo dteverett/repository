@@ -52,5 +52,33 @@ namespace WebTester
             }
             return driver.FindElements(by);
         }
+
+        public static bool isElementPresent(this IWebDriver driver, By by)
+        {
+            try
+            {
+                driver.FindElement(by);
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
+
+        public static bool isElementPresent(this IWebDriver driver, By by, int timeoutInSeconds)
+        {
+            if (timeoutInSeconds <= 0)
+                timeoutInSeconds = 5;
+                try
+                {
+                    driver.FindElement(by, timeoutInSeconds);
+                    return true;
+                }
+                catch (NoSuchElementException)
+                {
+                    return false;
+                }
+        }
     }
 }
