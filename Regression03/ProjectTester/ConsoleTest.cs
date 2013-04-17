@@ -54,9 +54,16 @@ namespace ProjectTester
             //RegiSalesMultiple regi = new RegiSalesMultiple();
             //regi.MultipleProvidersTest(salesCode, false);
 
-            var array = buildMedicalForms();
+            //var array = buildMedicalForms();
             WebLayer web = new WebLayer();
-            web.Execute(array);
+            //web.Execute(array);
+
+            Client zzz = new Client("zzz", "demo1", "medical1");
+            Medical5010 release = new Medical5010(zzz);
+            for (int i = 0; i < 3; i++)
+            {
+                web.Execute(release);
+            }
 
             
         }

@@ -22,7 +22,7 @@ namespace WebTester
         public static bool Login(this IWebDriver driver, Client client, long TestID)
         {
             driver.Navigate().GoToUrl(baseURL + "/secure/Login.aspx?redir=%2fsecure%2fDefault.aspx");
-            driver.FindElement(By.Id("MainContent_tbUsername")).Clear();
+            driver.FindElement(By.Id("MainContent_tbUsername"), 15).Clear();
             driver.FindElement(By.Id("MainContent_tbUsername")).SendKeys(client.ClientLogin);
             driver.FindElement(By.Id("MainContent_tbPassword")).Clear();
             driver.FindElement(By.Id("MainContent_tbPassword")).SendKeys(client.ClientPassword == null ? defaultPassword : client.ClientPassword);

@@ -32,7 +32,7 @@ namespace WebTester
 
         public void Execute(WebForms form)
         {
-            form.Execute(form);
+            TestResults results = form.Execute(form);
         }
 
         public void Execute(WebForms[] forms, long parentTestID)

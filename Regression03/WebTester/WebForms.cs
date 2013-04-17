@@ -17,6 +17,7 @@ namespace WebTester
         public virtual TestResults Execute(WebForms form)
         {
             throw new NotImplementedException();
+            //Shouldn't be using base
         }
         public virtual TestResults Execute(WebForms form, long parentTestID)
         {
