@@ -17,6 +17,7 @@ using DataVerification;
 using System.Reflection;
 using System.Globalization;
 using Microsoft.Win32;
+using StatementsTesting;
 
 
 namespace ProjectTester
@@ -55,15 +56,19 @@ namespace ProjectTester
             //regi.MultipleProvidersTest(salesCode, false);
 
             //var array = buildMedicalForms();
-            WebLayer web = new WebLayer();
-            //web.Execute(array);
+            //WebLayer web = new WebLayer();
+            ////web.Execute(array);
 
-            Client zzz = new Client("zzz", "demo1", "medical1");
-            Medical5010 release = new Medical5010(zzz);
-            for (int i = 0; i < 3; i++)
-            {
-                web.Execute(release);
-            }
+            //Client zzz = new Client("zzz", "demo1", "medical1");
+            //Medical5010 release = new Medical5010(zzz);
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    web.Execute(release);
+            //}
+
+            StatementTest statements = new StatementTest();
+            string clientID = "avv";
+            statements.Execute(clientID, 2);
 
             
         }

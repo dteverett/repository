@@ -51,7 +51,7 @@ namespace Regression03
         Connection connection = new Connection();
 
         [TestMethod]
-        public void CodedUITestMethod1()
+        public void Dental4010Test()
         {
             string hardCopy;
             string claimContents;

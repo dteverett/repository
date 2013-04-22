@@ -51,7 +51,7 @@ namespace Regression03
         Connection connection = new Connection();
 
         [TestMethod]
-        public void CodedUITestMethod1()
+        public void DentalClientPDUTest()
         {
             long TestID = log.RegisterTest();
 

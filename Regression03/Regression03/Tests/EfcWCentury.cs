@@ -53,7 +53,7 @@ namespace Regression03
         /// Test an EC&F with Century input dental batch
         /// </summary>
         [TestMethod]
-        public void CodedUITestMethod()
+        public void EfcWithCenturyTest()
         {
             long TestID = log.RegisterTest();
             //Delete claims w/ same batch number to allow for auto-import

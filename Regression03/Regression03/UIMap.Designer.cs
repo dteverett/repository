@@ -181,7 +181,7 @@ namespace Regression03
         public void StartClaimStakerPlus()
         {
 
-            // Launch '\\apexdata\F_Drive_Test\ClaimStakerPlus\RunClaimStakerUI.exe'
+            // Launch 'C:\ClaimStakerPlus\RunClaimStakerUI.exe'
             ApplicationUnderTest runClaimStakerUIApplication = ApplicationUnderTest.Launch(this.StartClaimStakerPlusParams.ExePath, this.StartClaimStakerPlusParams.AlternateExePath);
         }
         
@@ -549,14 +549,14 @@ namespace Regression03
         
         #region Fields
         /// <summary>
-        /// Launch '\\apexdata\F_Drive_Test\ClaimStakerPlus\RunClaimStakerUI.exe'
+        /// Launch 'C:\ClaimStakerPlus\RunClaimStakerUI.exe'
         /// </summary>
-        public string ExePath = "\\\\apexdata\\F_Drive_Test\\ClaimStakerPlus\\RunClaimStakerUI.exe";
+        public string ExePath = "C:\\ClaimStakerPlus\\RunClaimStakerUI.exe";
         
         /// <summary>
-        /// Launch '\\apexdata\F_Drive_Test\ClaimStakerPlus\RunClaimStakerUI.exe'
+        /// Launch 'C:\ClaimStakerPlus\RunClaimStakerUI.exe'
         /// </summary>
-        public string AlternateExePath = "\\\\apexdata\\F_Drive_Test\\ClaimStakerPlus\\RunClaimStakerUI.exe";
+        public string AlternateExePath = "C:\\ClaimStakerPlus\\RunClaimStakerUI.exe";
         #endregion
     }
     

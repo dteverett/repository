@@ -275,8 +275,8 @@
     </TestStepMarkerAction>
     <LaunchApplicationAction>
       <ParameterName />
-      <FileName>\\apexdata\F_Drive_Test\ClaimStakerPlus\RunClaimStakerUI.exe</FileName>
-      <AlternateFileName>\\apexdata\F_Drive_Test\ClaimStakerPlus\RunClaimStakerUI.exe</AlternateFileName>
+      <FileName>C:\ClaimStakerPlus\RunClaimStakerUI.exe</FileName>
+      <AlternateFileName>C:\ClaimStakerPlus\RunClaimStakerUI.exe</AlternateFileName>
     </LaunchApplicationAction>
     <TestStepMarkerAction Comment="" MarkerInformation="StartClaimStakerPlus">
       <ParameterName />

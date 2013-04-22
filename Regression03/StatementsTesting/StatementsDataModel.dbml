@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ClaimStakerDEV" Class="StatementsDataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=APEXEDI-DEV\APEXEDIDEV;Initial Catalog=ClaimStakerDEV;Persist Security Info=True;User ID=dariantest" SettingsObjectName="StatementsTesting.Properties.Settings" SettingsPropertyName="ClaimStakerDEVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Statement_T" Member="Statement_Ts">
+    <Type Name="Statement_T">
+      <Column Name="Claim_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Parent_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdate_DT" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Payer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Provider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BatchNum_VC" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientID_VC" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="VendorClaimID_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDuplicateClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReportDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastProcessDate_DT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClaimStatus_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsProcessNow_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDoNotProcess_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsNoCharge_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsNewDocClaim_BT" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Errors_CH" Type="System.String" DbType="Char(225) NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfClaims_TI" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="OutputSub_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note_VC" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="F01_RecipientAccountNumber_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="F02_RecipientLastName_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="F02_RecipientFirstName_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F02_RecipientMI_VC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="F03A_RecipientAddress1_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="F03B_RecipientAddress2_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="F04_RecipientCity_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F05_RecipientST_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="F06_RecipientZip_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="F51_PatientLastName_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="F51_PatientFirstName_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F51_PatientMI_VC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="F07_OfficeName_VC" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="F08A_OfficeAddress1_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="F08B_OfficeAddress2_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="F09_OfficeCity_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F10_OfficeST_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="F11_OfficeZip_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="F12_OfficePhone_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="F13_PatientAccountNumber_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F14_StatementDate_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="F15_PageNumber_VC" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="F16_RemitToName_VC" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="F17_RemitToAddress1_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="F18_RemitToAddress2_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="F19_RemitToCity_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F20_RemitToST_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="F21_RemitToZip_VC" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="F22_RemitToPhone_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="F23_RenderingProviderLastName_VC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="F23_RenderingProviderFirstName_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F23_RenderingProviderMI_VC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="F24_RenderingProviderID_VC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="F25_RenderingProviderST_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="F26_PriorStatementDate_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="F27_PaymentDueDate_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="F28_PriorBalance_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F29_Adjustments_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F30_BalanceDue_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F30B_AccountBalance_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F31_FinanceCharge_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F32_Credits_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F33_EstimatedInsurancePayment_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F34_PatientShare_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F35_CurrentBalance_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F36_PastDue30_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F37_PastDue60_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F38_PastDue90_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="F39_PastDue120_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="TopNote_VC" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="F40_Notes1_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F41_Notes2_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F42_Notes3_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F43_Notes4_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F44_Notes5_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F45_Notes6_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F46_Notes7_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F47_Notes8_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F48_Notes9_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F49_Notes10_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="F00_StatementTitle_VC" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="F50_PendingAtInsurance_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceDate_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="UniqueNameOnClaim_VC" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Vendor_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OriginalDocumentPageCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OriginalDocumentName" Type="System.String" DbType="NVarChar(260)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RenderingProviderNameSuffix" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BillingContactFirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BillingContactMiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BillingContactLastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BillingContactSuffix" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RecipientNameSuffix" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="PatientNameSuffix" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DocumentSource" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Statement_T_StatementLineItem_T" Member="StatementLineItem_Ts" ThisKey="Claim_ID" OtherKey="Claim_ID" Type="StatementLineItem_T" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatementLineItem_T" Member="StatementLineItem_Ts">
+    <Type Name="StatementLineItem_T">
+      <Column Name="StatementLineItem_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Claim_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Parent_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LineItemNumber_TI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ServiceDate_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="ToothNumber_VC" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ToothSurface_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionOfServices_VC" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="PatientName_VC" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Charges_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Credits_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="InsuranceBilled_VC" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitsOrdered_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="QuantityProvided_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitPrice_VC" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="ReferenceNumber_VC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcedureCode_VC" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Error_VC" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="InsurancePaid_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Other_VC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PatientAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="InsuranceAdjustment_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PatientAdjustment_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TransactionDate_VC" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="BalanceAmount_VC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Statement_T_StatementLineItem_T" Member="Statement_T" ThisKey="Claim_ID" OtherKey="Claim_ID" Type="Statement_T" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
