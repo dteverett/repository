@@ -43,5 +43,10 @@ namespace WebTester
                 
             }
         }
+
+        public void Execute(WebForms form, long parentTestID)
+        {
+            TestResults results = form.Execute(form, parentTestID);
+        }
     }
 }

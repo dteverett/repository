@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Tests\CASSegmentTests.cs" />
     <Compile Include="Tests\DentalPDU.cs" />
     <Compile Include="EntityModel.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -16,7 +16,15 @@ namespace WebTester
 {
     public class CASSegment : WebForms
     {
+        public CASSegment()
+        {
+        }
 
+        public CASSegment(Client client)
+        {
+            this.client = client;
+            this.testResults = new TestResults();
+        }
 
         private IWebDriver driver;
         private StringBuilder verificationErrors;
@@ -75,9 +83,9 @@ namespace WebTester
             {
                 driver.Navigate().GoToUrl(baseURL + "/secure/Login.aspx?redir=%2fsecure%2fDefault.aspx");
                 driver.FindElement(By.Id("MainContent_tbUsername")).Clear();
-                driver.FindElement(By.Id("MainContent_tbUsername")).SendKeys("admin" + clientID);
+                driver.FindElement(By.Id("MainContent_tbUsername")).SendKeys(client.ClientLogin);
                 driver.FindElement(By.Id("MainContent_tbPassword")).Clear();
-                driver.FindElement(By.Id("MainContent_tbPassword")).SendKeys("hedge1!");
+                driver.FindElement(By.Id("MainContent_tbPassword")).SendKeys(client.ClientPassword);
                 driver.FindElement(By.Id("MainContent_btnSubmit")).Click();
             }
             catch (Exception ex)
@@ -88,34 +96,35 @@ namespace WebTester
             try
             {
                 driver.FindElement(By.Id("track_link"), 15).Click();
-                driver.FindElement(By.Id("MainContent_ctl00_AddBatchButton"), 15).Click();
-                driver.FindElement(By.Id("MainContent_ctl00_ClaimTypeBatchRadioButtonList_0"), 15).Click();
-                driver.FindElement(By.Id("MainContent_ctl00_StatementCreateButton"), 15).Click();
+                driver.FindElement(By.Id("ctl00_MainContent_ctl00_AddBatchButton")).Click();
+                driver.FindElement(By.Id("ctl00_MainContent_ctl00_ClaimTypeBatchRadioButtonList_0")).Click();
+                driver.FindElement(By.Id("ctl00_MainContent_ctl00_StatementCreateButton")).Click();
             }
             catch (Exception ex)
             {
                 logger.Fatal("Unable to create new batch: " + ex.Message, TestID);
                 counter++;
+                return;
             }
             try
             {
-                
-                new SelectElement(driver.FindElement(By.Id("electronicPayerCtrl_ddlOutputSubs"), 15)).SelectByText("BCBS NC (North Carolina)");
+
+                new SelectElement(driver.FindElement(By.Id("electronicPayerCtrl_ddlOutputSubs"), 15)).SelectByText("United Healthcare");
                 driver.FindElement(By.Id("electronicPayerCtrl_rblChangeIsFor_0")).Click();
-                driver.FindElement(By.Id("payerCtrl_tbID")).Clear();
-                driver.FindElement(By.Id("payerCtrl_tbID")).SendKeys("68415");
+                driver.FindElement(By.Id("electronicPayerCtrl_btnSaveChanges")).Click();
+                driver.FindElement(By.Id("payerCtrl_tbID"), 15).Clear();
+                driver.FindElement(By.Id("payerCtrl_tbID")).SendKeys("11889");
                 driver.FindElement(By.Id("payerCtrl_tbName")).Clear();
-                driver.FindElement(By.Id("payerCtrl_tbName")).SendKeys("BCBS NC");
+                driver.FindElement(By.Id("payerCtrl_tbName")).SendKeys("UNITED HEALTHCARE");
                 driver.FindElement(By.Id("payerCtrl_tbAddress1")).Clear();
-                driver.FindElement(By.Id("payerCtrl_tbAddress1")).SendKeys("P O BOX 1290");
+                driver.FindElement(By.Id("payerCtrl_tbAddress1")).SendKeys("PO BOX 30555");
                 driver.FindElement(By.Id("payerCtrl_tbCity")).Clear();
-                driver.FindElement(By.Id("payerCtrl_tbCity")).SendKeys("DURHAM");
-                new SelectElement(driver.FindElement(By.Id("payerCtrl_ddlState"))).SelectByText("NC");
+                driver.FindElement(By.Id("payerCtrl_tbCity")).SendKeys("SALT LAKE CITY");
+                new SelectElement(driver.FindElement(By.Id("payerCtrl_ddlState"))).SelectByText("UT");
                 driver.FindElement(By.Id("payerCtrl_tbZip")).Clear();
-                driver.FindElement(By.Id("payerCtrl_tbZip")).SendKeys("27702");
-                driver.FindElement(By.Id("box1Ctrl_cbOther")).Click();
+                driver.FindElement(By.Id("payerCtrl_tbZip")).SendKeys("80310");
                 driver.FindElement(By.Id("subscriberCtrl_tbSubscriberID")).Clear();
-                driver.FindElement(By.Id("subscriberCtrl_tbSubscriberID")).SendKeys("YPZW1314257507");
+                driver.FindElement(By.Id("subscriberCtrl_tbSubscriberID")).SendKeys("WXYZ0969666");
                 driver.FindElement(By.Id("patientCtrl_tbFirstName")).Clear();
                 driver.FindElement(By.Id("patientCtrl_tbFirstName")).SendKeys(fName);
                 driver.FindElement(By.Id("patientCtrl_tbMiddleName")).Clear();

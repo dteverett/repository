@@ -56,19 +56,20 @@ namespace ProjectTester
             //regi.MultipleProvidersTest(salesCode, false);
 
             //var array = buildMedicalForms();
-            //WebLayer web = new WebLayer();
+            WebLayer web = new WebLayer();
             ////web.Execute(array);
 
             //Client zzz = new Client("zzz", "demo1", "medical1");
             //Medical5010 release = new Medical5010(zzz);
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    web.Execute(release);
-            //}
+            WebForms[] clients = buildMedicalForms();
+            for (int i = 9; i < 10; i++)
+            {
+                web.Execute(clients[i]);
+            }
 
-            StatementTest statements = new StatementTest();
-            string clientID = "avv";
-            statements.Execute(clientID, 2);
+            //StatementTest statements = new StatementTest();
+            //string clientID = "avv";
+            //statements.Execute(clientID, 2);
 
             
         }
@@ -84,7 +85,10 @@ namespace ProjectTester
             Client acy = new Client("acy", "catalano", "apex10");
             Client cvs = new Client("cvs", "completevc", "claims123");
             Client plh = new Client("plh", "plh", "Innate12");
-            Client bdv = new Client("bdv", "johnbriles", "apex13");
+            //Client bdv = new Client("bdv", "johnbriles", "apex13");
+            Client pka = new Client("raa", "kenworthy", "apex11");
+            Client cnj = new Client("cnj", "childersandjackson", "claims123");
+            Client raa = new Client("raa", "robertgracey", "apex12");
 
 
 
@@ -99,9 +103,12 @@ namespace ProjectTester
             Medical5010 med6 = new Medical5010(acy);
             Medical5010 med7 = new Medical5010(cvs);
             Medical5010 med8 = new Medical5010(plh);
-            Medical5010 med9 = new Medical5010(bdv);
+            //Medical5010 med9 = new Medical5010(bdv);
+            Medical5010 med10 = new Medical5010(pka);
+            Medical5010 med11 = new Medical5010(cnj);
+            CASSegment med12 = new CASSegment(raa);
 
-            WebForms[] array = new WebForms[] { med, med1, med2, med3, med4, med5, med6, med7, med8, med9 };
+            WebForms[] array = new WebForms[] { med, med1, med2, med3, med4, med5, med6, med7, med8, med10, med11, med12 };
 
             return array;
         }

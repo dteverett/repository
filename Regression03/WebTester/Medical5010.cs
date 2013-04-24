@@ -61,7 +61,7 @@ namespace WebTester
             }
 
             driver = new FirefoxDriver();
-            baseURL = "https://onetouch.apexedi.com/";
+            baseURL = "polarshark/";
             verificationErrors = new StringBuilder();
 
             RandomStringGenerator randomString = new RandomStringGenerator();
@@ -79,9 +79,9 @@ namespace WebTester
 
             try
             {
-                driver.FindElement(By.Id("MainContent_ctl00_AddBatchButton"), 15).Click();
-                driver.FindElement(By.Id("MainContent_ctl00_ClaimTypeBatchRadioButtonList_0"), 15).Click();
-                driver.FindElement(By.Id("MainContent_ctl00_StatementCreateButton"), 5).Click();
+                driver.FindElement(By.Id("ctl00_MainContent_ctl00_AddBatchButton")).Click();
+                driver.FindElement(By.Id("ctl00_MainContent_ctl00_ClaimTypeBatchRadioButtonList_0")).Click();
+                driver.FindElement(By.Id("ctl00_MainContent_ctl00_StatementCreateButton")).Click();
                 new SelectElement(driver.FindElement(By.Id("electronicPayerCtrl_ddlOutputSubs"), 15)).SelectByText("United Healthcare");
                 driver.FindElement(By.Id("electronicPayerCtrl_rblChangeIsFor_0")).Click();
                 driver.FindElement(By.Id("electronicPayerCtrl_btnSaveChanges")).Click();
