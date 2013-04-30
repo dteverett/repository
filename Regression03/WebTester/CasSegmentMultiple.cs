@@ -16,6 +16,12 @@ namespace WebTester
 {
     public class CASSegmentMultiple : WebForms
     {
+        public CASSegmentMultiple(Client client)
+        {
+            this.client = client;
+            this.testResults = new TestResults();
+        }
+
         private IWebDriver driver;
         private StringBuilder verificationErrors;
         private string baseURL;
@@ -24,6 +30,8 @@ namespace WebTester
 
 
         static SenderAPI logger = new SenderAPI();
+
+        
 
         public override TestResults Execute(WebForms form)
         {

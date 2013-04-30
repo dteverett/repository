@@ -61,7 +61,7 @@
   <ItemGroup>
     <Compile Include="CASSegment.cs" />
     <Compile Include="CasSegmentMultiple.cs" />
-    <Compile Include="clients.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DataModel.Designer.cs">
       <AutoGen>True</AutoGen>

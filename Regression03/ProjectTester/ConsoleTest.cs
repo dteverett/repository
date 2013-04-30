@@ -55,23 +55,30 @@ namespace ProjectTester
             //RegiSalesMultiple regi = new RegiSalesMultiple();
             //regi.MultipleProvidersTest(salesCode, false);
 
-            //var array = buildMedicalForms();
-            WebLayer web = new WebLayer();
-            ////web.Execute(array);
+            ////var array = buildMedicalForms();
+            //WebLayer web = new WebLayer();
+            //////web.Execute(array);
 
-            //Client zzz = new Client("zzz", "demo1", "medical1");
-            //Medical5010 release = new Medical5010(zzz);
+            ////Client zzz = new Client("zzz", "demo1", "medical1");
+            ////Medical5010 release = new Medical5010(zzz);
+            //WebForms[] clients = buildMedicalForms();
+            //for (int i = 9; i < 10; i++)
+            //{
+            //    web.Execute(clients[i]);
+            //}
             WebForms[] clients = buildMedicalForms();
-            for (int i = 9; i < 10; i++)
-            {
-                web.Execute(clients[i]);
-            }
+            WebLayer web = new WebLayer();
+            web.Execute(clients);
 
-            //StatementTest statements = new StatementTest();
-            //string clientID = "avv";
-            //statements.Execute(clientID, 2);
 
-            
+
+
+            //Controller statements = new Controller();            
+            //string[] clientIDs = new string[3] {"aei", "avv", "ayl"};
+            //statements.Execute(clientIDs, 10);
+
+
+
         }
 
         private static WebForms[] buildMedicalForms()
@@ -94,7 +101,7 @@ namespace ProjectTester
 
             
             
-            Medical5010 med = new Medical5010(cui);
+            CASSegmentMultiple med = new CASSegmentMultiple(cui);
             Medical5010 med1 = new Medical5010(zzz);
             Medical5010 med2 = new Medical5010(cgf);
             Medical5010 med3 = new Medical5010(pcw);
